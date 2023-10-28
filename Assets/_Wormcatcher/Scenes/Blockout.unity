@@ -3542,6 +3542,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: PC_Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 743479196160101364, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: inputActionAsset
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: 447275ab7c9613549ac8084678b2b2c5,
+        type: 3}
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_LocalPosition.x
