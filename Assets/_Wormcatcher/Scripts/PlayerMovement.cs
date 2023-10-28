@@ -1,16 +1,20 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [SerializeField] private InputActionAsset inputActionAsset;
+    private InputAction movementAction; 
+    private InputAction sprintAction; 
     [SerializeField] CharacterController controller;
     [SerializeField] Transform groundCheck;
     
     private float xInput;
     private float zInput;
-    private bool sprintInput;
     
     
     [SerializeField] private float baseSpeed = 2f;
@@ -27,7 +31,19 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float decelerationRate = 5f;
     [SerializeField] private float accelerationRate = 3f;
 
-    // Start is called before the first frame update
+    private void OnEnable()
+    {
+        movementAction.Enable();
+        sprintAction.Enable();
+    }
+
+    private void Awake()
+    {
+        var inputActionMap = inputActionAsset.FindActionMap("KeyboardMovement");
+        movementAction = inputActionMap.FindAction("Movement");
+        sprintAction = inputActionMap.FindAction("Sprint");
+    }
+
     void Start()
     {
         if (controller == null)
@@ -42,14 +58,15 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded && velocity.y < 0)
             velocity.y = -2;
 
-        sprintInput = Input.GetKey(KeyCode.LeftShift);
+        Boolean sprintInput = sprintAction.ReadValue<float>() != 0;
         
         currentSpeed = sprintInput ? Mathf.Clamp((currentSpeed += (accelerationRate*Time.deltaTime)), 0, targetSpeed) : 
-            Mathf.Clamp((currentSpeed -= (decelerationRate*Time.deltaTime)), baseSpeed, targetSpeed); 
-        
-        xInput = Input.GetAxis("Horizontal");
-        zInput = Input.GetAxis("Vertical");
+            Mathf.Clamp((currentSpeed -= (decelerationRate*Time.deltaTime)), baseSpeed, targetSpeed);
 
+        xInput = movementAction.ReadValue<Vector2>().x;
+        zInput = movementAction.ReadValue<Vector2>().y;
+        
+        print(xInput + " " + zInput);
         Vector3 move = transform.right * xInput + transform.forward * zInput;
 
         controller.Move(move * currentSpeed * Time.deltaTime);
