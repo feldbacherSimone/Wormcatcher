@@ -333,6 +333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ad37290d0d40b45b53bc0bb679e915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputActionAsset: {fileID: -944628639613478452, guid: 447275ab7c9613549ac8084678b2b2c5,
+    type: 3}
   controller: {fileID: 743479196160101366}
   groundCheck: {fileID: 1416829606}
   baseSpeed: 2

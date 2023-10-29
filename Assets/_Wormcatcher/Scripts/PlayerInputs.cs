@@ -33,13 +33,21 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""eaaa0b2a-551c-478a-a0a4-6bd5793eb9c2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": ""2D Vector"",
                     ""id"": ""cebdd36c-eebd-49b5-b320-e823ccc3688c"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -93,12 +101,72 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""f052ae4f-14c3-4cef-b9cd-aeb4ff54aae7"",
+                    ""path"": ""<Gamepad>/dpad"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""b37990a4-9cfe-42ff-8bde-0b301d3695de"",
                     ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c2d20ef6-d1f3-4e95-bb13-72a1613b0e86"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7b56b18b-6e8e-48f8-8521-c117270313e5"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""ControllerMovement"",
+            ""id"": ""b16d0a8e-595e-4fd8-bc96-58f1efa16372"",
+            ""actions"": [
+                {
+                    ""name"": ""Movement"",
+                    ""type"": ""Value"",
+                    ""id"": ""0bce1a40-f454-4b40-89a2-e643a514fe83"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""69e0926b-20f9-4b12-b2a8-f231390afa66"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -111,6 +179,10 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
         m_KeyboardMovement = asset.FindActionMap("KeyboardMovement", throwIfNotFound: true);
         m_KeyboardMovement_Movement = m_KeyboardMovement.FindAction("Movement", throwIfNotFound: true);
         m_KeyboardMovement_Sprint = m_KeyboardMovement.FindAction("Sprint", throwIfNotFound: true);
+        m_KeyboardMovement_Interact = m_KeyboardMovement.FindAction("Interact", throwIfNotFound: true);
+        // ControllerMovement
+        m_ControllerMovement = asset.FindActionMap("ControllerMovement", throwIfNotFound: true);
+        m_ControllerMovement_Movement = m_ControllerMovement.FindAction("Movement", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -162,12 +234,14 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
     private IKeyboardMovementActions m_KeyboardMovementActionsCallbackInterface;
     private readonly InputAction m_KeyboardMovement_Movement;
     private readonly InputAction m_KeyboardMovement_Sprint;
+    private readonly InputAction m_KeyboardMovement_Interact;
     public struct KeyboardMovementActions
     {
         private @PlayerInputs m_Wrapper;
         public KeyboardMovementActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_KeyboardMovement_Movement;
         public InputAction @Sprint => m_Wrapper.m_KeyboardMovement_Sprint;
+        public InputAction @Interact => m_Wrapper.m_KeyboardMovement_Interact;
         public InputActionMap Get() { return m_Wrapper.m_KeyboardMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -183,6 +257,9 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                 @Sprint.started -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnSprint;
                 @Sprint.performed -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnSprint;
                 @Sprint.canceled -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnSprint;
+                @Interact.started -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnInteract;
             }
             m_Wrapper.m_KeyboardMovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -193,13 +270,54 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                 @Sprint.started += instance.OnSprint;
                 @Sprint.performed += instance.OnSprint;
                 @Sprint.canceled += instance.OnSprint;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
             }
         }
     }
     public KeyboardMovementActions @KeyboardMovement => new KeyboardMovementActions(this);
+
+    // ControllerMovement
+    private readonly InputActionMap m_ControllerMovement;
+    private IControllerMovementActions m_ControllerMovementActionsCallbackInterface;
+    private readonly InputAction m_ControllerMovement_Movement;
+    public struct ControllerMovementActions
+    {
+        private @PlayerInputs m_Wrapper;
+        public ControllerMovementActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_ControllerMovement_Movement;
+        public InputActionMap Get() { return m_Wrapper.m_ControllerMovement; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(ControllerMovementActions set) { return set.Get(); }
+        public void SetCallbacks(IControllerMovementActions instance)
+        {
+            if (m_Wrapper.m_ControllerMovementActionsCallbackInterface != null)
+            {
+                @Movement.started -= m_Wrapper.m_ControllerMovementActionsCallbackInterface.OnMovement;
+                @Movement.performed -= m_Wrapper.m_ControllerMovementActionsCallbackInterface.OnMovement;
+                @Movement.canceled -= m_Wrapper.m_ControllerMovementActionsCallbackInterface.OnMovement;
+            }
+            m_Wrapper.m_ControllerMovementActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Movement.started += instance.OnMovement;
+                @Movement.performed += instance.OnMovement;
+                @Movement.canceled += instance.OnMovement;
+            }
+        }
+    }
+    public ControllerMovementActions @ControllerMovement => new ControllerMovementActions(this);
     public interface IKeyboardMovementActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+    }
+    public interface IControllerMovementActions
+    {
+        void OnMovement(InputAction.CallbackContext context);
     }
 }
