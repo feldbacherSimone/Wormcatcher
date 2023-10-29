@@ -10,10 +10,12 @@ public class LightSwitch  : InteractionObject, IInteractable
     private Boolean lightState;
     [SerializeField] private Boolean debug; 
     
+    
     public void Interact()
     {
         if(light == null)
             return; DebugPrint("no light found");
+        lightState = light.enabled;
         lightState = !lightState;
         light.enabled = lightState;
         DebugPrint("light switched!" + lightState);

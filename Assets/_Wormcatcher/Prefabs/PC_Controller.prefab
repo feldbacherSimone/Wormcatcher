@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 743479195431046824}
   - component: {fileID: 743479195431046839}
   - component: {fileID: 122313654}
+  - component: {fileID: 639102040}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -206,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a844c748aa4b8da47a270ab81a3f331e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 300
+  mouseSensitivity: 50
   playerBody: {fileID: 0}
 --- !u!114 &122313654
 MonoBehaviour:
@@ -268,6 +269,23 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &639102040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743479195431046827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dfeff6ac31bc0644aac423d99638923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputActionAsset: {fileID: -944628639613478452, guid: 447275ab7c9613549ac8084678b2b2c5,
+    type: 3}
+  selectionResponseObject: {fileID: 0}
+  interactionDistance: 10
+  debug: 0
 --- !u!1 &743479196160101353
 GameObject:
   m_ObjectHideFlags: 0
