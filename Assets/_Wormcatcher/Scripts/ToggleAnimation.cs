@@ -5,19 +5,19 @@ using System;
 
 namespace _Wormcatcher.Scripts
 {
-    public class ToggleAnimation : InteractionObject, IInteractable
+    public class ToggleAnimation : InteractionObject
     {
         private bool animationOn = false;
         [SerializeField] private Animator animator;
 
         public void Reset()
         {
-            base.Reset();
             if (animator == null)
             {
                 animator = gameObject.AddComponent(typeof(Animator)) as Animator;
             }
             SetAnimationParent();
+            base.Reset();
         }
 
         private void SetAnimationParent()
@@ -41,7 +41,7 @@ namespace _Wormcatcher.Scripts
             transform.rotation.eulerAngles.Set(0, 0, 0);
         }
 
-        public void Interact()
+        public override void Interact()
         {
             animationOn = !animationOn;
             animator.SetBool("animationOn", animationOn);

@@ -5,6 +5,12 @@ namespace _Wormcatcher.Scripts
     public class SceneObjectHandler : MonoBehaviour
     {
         // TODO Alles implementieren lol 
-        [field: SerializeField] public bool ObjectIsActive { get; } = true;
+        [SerializeField] private bool objectIsActive;
+
+        public bool ObjectIsActive
+        {
+            get => objectIsActive;
+            set => objectIsActive = value;
+        }
     }
 }

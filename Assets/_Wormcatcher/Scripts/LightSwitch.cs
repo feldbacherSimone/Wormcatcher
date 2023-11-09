@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace _Wormcatcher.Scripts
 {
-    public class LightSwitch  : InteractionObject, IInteractable 
+    public class LightSwitch  : InteractionObject
     {
         [SerializeField] private Light light;
         private Boolean lightState;
 
 
-        public void Interact()
+        public override void Interact()
         {
             if(light == null)
                 return; DebugPrint("no light found");

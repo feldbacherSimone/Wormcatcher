@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 
 namespace _Wormcatcher.Scripts
 {
-    [System.Serializable]
+    [Serializable]
     public class SceneObjectInteraction : ConditionalInteraction
     {
         [SerializeField] private SceneObjectHandler sceneObjectHandler;  

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace _Wormcatcher.Scripts
 {
-    public abstract class InteractionObject : MonoBehaviour
+    public abstract class InteractionObject : MonoBehaviour, IInteractable
     {
         [SerializeField] private bool debug;
 
@@ -24,6 +24,11 @@ namespace _Wormcatcher.Scripts
             {
                 Debug.Log(msg);
             }
+        }
+
+        public virtual void Interact()
+        {
+            Debug.LogError($"No Interaction Defined in {this.name}");
         }
     }
 }

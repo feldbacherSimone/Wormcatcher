@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         xInput = movementAction.ReadValue<Vector2>().x;
         zInput = movementAction.ReadValue<Vector2>().y;
         
-        print(xInput + " " + zInput);
+        //print(xInput + " " + zInput);
         Vector3 move = transform.right * xInput + transform.forward * zInput;
 
         controller.Move(move * currentSpeed * Time.deltaTime);

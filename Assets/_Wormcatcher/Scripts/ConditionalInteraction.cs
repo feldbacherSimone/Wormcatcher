@@ -1,43 +1,33 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Wormcatcher.Scripts
 {
-    public abstract class ConditionalInteraction : InteractionObject, IInteractable
+    [System.Serializable]
+    public abstract class ConditionalInteraction : InteractionObject
     {
 
-        [SerializeField] private GameObject trueInteractionGameObject;
-        [SerializeField] private GameObject falseInteractionGameObject;
+        [FormerlySerializedAs("trueInteractionGameObject")] [SerializeField] private InteractionObject trueInteractionObject;
+        [FormerlySerializedAs("falseInteractionGameObject")] [SerializeField] private InteractionObject falseInteractionObject;
+        
 
-        private IInteractable trueInteraction;
-        private IInteractable falseInteraction;
-
-        private void Awake()
+        public override void Interact()
         {
-            if (!InteractablesNotNull())
+            DebugPrint($"Conditoinal Interaction called in {this.name}, condition = {GetCondition()}");
+            if (GetCondition())
             {
-                Debug.LogError($"No Interactables found on {gameObject.name}. Check {nameof(trueInteractionGameObject)} and {nameof(falseInteractionGameObject)}");
-
+                DebugPrint($"True interaction calling {trueInteractionObject.name}");
+                trueInteractionObject?.Interact();
             }
-        }
-
-        public void Interact()
-        {
-            if(GetCondition())
-                trueInteraction?.Interact();
             else
             {
-                falseInteraction?.Interact();
+                falseInteractionObject?.Interact();
             }
         }
 
         protected abstract bool GetCondition();
 
-        private bool InteractablesNotNull()
-        {
-            return trueInteractionGameObject != null && falseInteractionGameObject != null &&
-                    trueInteractionGameObject.TryGetComponent<IInteractable>(out trueInteraction) &&
-                   falseInteractionGameObject.TryGetComponent<IInteractable>(out falseInteraction);
-        }
+   
     }
 }
