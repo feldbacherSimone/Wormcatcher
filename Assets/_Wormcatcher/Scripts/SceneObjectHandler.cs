@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace _Wormcatcher.Scripts
@@ -6,11 +7,28 @@ namespace _Wormcatcher.Scripts
     {
         // TODO Alles implementieren lol 
         [SerializeField] private bool objectIsActive;
+        [SerializeField] private SceneObject sceneObject;
+
+        public static SceneObjectHandler _sceneObjectHandler;
+
+        private void Awake()
+        {
+            if (_sceneObjectHandler == null)
+            {
+                _sceneObjectHandler = this;
+            }
+            else
+            {
+                 Destroy(this);
+            }
+        }
 
         public bool ObjectIsActive
         {
-            get => objectIsActive;
+            get => sceneObject.State;
             set => objectIsActive = value;
         }
+        
+        
     }
 }

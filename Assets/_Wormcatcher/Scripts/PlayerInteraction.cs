@@ -51,20 +51,20 @@ namespace _Wormcatcher.Scripts
             }
         }
 
-        private void CheckForSelectable()
+        private InteractionObject CheckForSelectable()
         {
             DebugRay(transform.position, transform.forward * interactionDistance, Color.cyan);
+            
             if (Physics.Raycast(transform.position, transform.forward, out hit, interactionDistance))
             {
                 DebugRay(transform.position, transform.forward * interactionDistance, Color.red);
                 interactable = hit.transform.GetComponent<IInteractable>();
-                
             }
             else
             {
                 interactable = null; 
+                
             }
-            
         }
 
         #region Debugging

@@ -29,16 +29,20 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // get mouse inputs 
-        mouseX = Mouse.current.delta.x.ReadValue() * mouseSensitivity * Time.deltaTime;
-        mouseY = Mouse.current.delta.y.ReadValue() * mouseSensitivity * Time.deltaTime;
+        if (Cursor.lockState == CursorLockMode.Locked)
+        {
+            print(Cursor.lockState);
+            // get mouse inputs 
+            mouseX = Mouse.current.delta.x.ReadValue() * mouseSensitivity * Time.deltaTime;
+            mouseY = Mouse.current.delta.y.ReadValue() * mouseSensitivity * Time.deltaTime;
 
-        // up/down rotation 
-        xRoation -= mouseY;
-        xRoation = Mathf.Clamp(xRoation, -90f, 90f);
-        transform.localRotation = Quaternion.Euler(xRoation, 0f, 0f);
-        
-        // left/right rotation
-        playerBody.Rotate(Vector3.up * mouseX);
+            // up/down rotation 
+            xRoation -= mouseY;
+            xRoation = Mathf.Clamp(xRoation, -90f, 90f);
+            transform.localRotation = Quaternion.Euler(xRoation, 0f, 0f);
+
+            // left/right rotation
+            playerBody.Rotate(Vector3.up * mouseX);
+        }
     }
 }
