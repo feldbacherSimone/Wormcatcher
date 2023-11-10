@@ -23,10 +23,10 @@ namespace _Wormcatcher.Scripts
             }
         }
 
-        public bool ObjectIsActive
+        public bool ObjectIsActive()
         {
-            get => sceneObject.State;
-            set => objectIsActive = value;
+            objectIsActive = sceneObject.State;
+            return objectIsActive;
         }
         
         

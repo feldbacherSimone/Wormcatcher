@@ -9,7 +9,7 @@ namespace _Wormcatcher.Scripts
         [SerializeField] private SceneObjectHandler sceneObjectHandler;  
         protected override bool GetCondition()
         {
-            return sceneObjectHandler.ObjectIsActive;
+            return sceneObjectHandler.ObjectIsActive();
         }
     }
 }

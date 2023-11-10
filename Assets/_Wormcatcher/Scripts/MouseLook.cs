@@ -31,7 +31,7 @@ public class MouseLook : MonoBehaviour
     {
         if (Cursor.lockState == CursorLockMode.Locked)
         {
-            print(Cursor.lockState);
+            //print(Cursor.lockState);
             // get mouse inputs 
             mouseX = Mouse.current.delta.x.ReadValue() * mouseSensitivity * Time.deltaTime;
             mouseY = Mouse.current.delta.y.ReadValue() * mouseSensitivity * Time.deltaTime;

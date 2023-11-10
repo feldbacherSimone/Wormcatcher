@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: ScObj_Key
   m_EditorClassIdentifier: 
   model: {fileID: 7719161723070083652, guid: e1e2d219b7478634dbb266b29b3b007c, type: 3}
+  state: 1

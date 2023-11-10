@@ -6,7 +6,7 @@ namespace _Wormcatcher.Scripts
     public class SceneObject : ScriptableObject
     {
         [SerializeField] private GameObject model;
-        private bool state;
+        [SerializeField] private bool state = true;
 
         public bool State
         {
