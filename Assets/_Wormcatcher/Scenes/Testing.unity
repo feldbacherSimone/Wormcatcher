@@ -121,51 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &41822453
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 41822454}
-  - component: {fileID: 41822455}
-  m_Layer: 0
-  m_Name: SceneObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &41822454
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41822453}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.389, z: 1.193}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 125863372}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &41822455
+--- !u!114 &41822455 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 41822455, guid: 846b49896810a94488ad1ec6451fba85,
+    type: 3}
+  m_PrefabInstance: {fileID: 125863371}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41822453}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67436706f4d84b50b51672538b5829ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectIsActive: 0
-  sceneObject: {fileID: 11400000, guid: 5370b0425cd7ba64a83e19cd5244f94c, type: 2}
 --- !u!1001 &125863371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -177,11 +144,6 @@ PrefabInstance:
       propertyPath: selectionResponseObject
       value: 
       objectReference: {fileID: 1836257858}
-    - target: {fileID: 743479195431046839, guid: 846b49896810a94488ad1ec6451fba85,
-        type: 3}
-      propertyPath: mouseSensitivity
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 743479196160101353, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_Name
@@ -244,12 +206,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 846b49896810a94488ad1ec6451fba85, type: 3}
---- !u!4 &125863372 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
-    type: 3}
-  m_PrefabInstance: {fileID: 125863371}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &228878230
 GameObject:
   m_ObjectHideFlags: 0
