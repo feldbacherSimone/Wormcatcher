@@ -8,9 +8,11 @@ namespace _Wormcatcher.Scripts
     {
         [SerializeField] private InputActionAsset inputActionAsset;
         [SerializeField] GameObject selectionResponseObject;
+
         private ISelectableObject selectionResponse;
 
         private InputAction interactAction;
+        private InputAction sceneObjectAction;
 
         [SerializeField] private float interactionDistance = 10f;
 
@@ -23,14 +25,19 @@ namespace _Wormcatcher.Scripts
 
         private void Awake()
         {
-            InputActionMap inputActionMap = inputActionAsset.FindActionMap("KeyboardMovement");
+            var inputActionMap = inputActionAsset.FindActionMap("KeyboardMovement");
             interactAction = inputActionMap.FindAction("Interact");
+            sceneObjectAction = inputActionMap.FindAction("SceneObject");
             selectionResponse = selectionResponseObject.GetComponent<ISelectableObject>();
+
+            sceneObjectAction.started += _ => SceneObjectHandler._instance.SpawnObject();
+            sceneObjectAction.canceled += _ => SceneObjectHandler._instance.DespawnObject();
         }
 
         private void OnEnable()
         {
             interactAction.Enable();
+            sceneObjectAction.Enable();
         }
 
         private void Update()
@@ -40,6 +47,7 @@ namespace _Wormcatcher.Scripts
                 interactable.Interact();
                 DebugPrint("interaction Triggered");
             }
+            
         }
 
         private bool ValidObjectSelection()

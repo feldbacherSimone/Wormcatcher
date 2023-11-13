@@ -6,27 +6,18 @@ namespace _Wormcatcher.Scripts
     public class SceneObject : ScriptableObject
     {
         [SerializeField] private GameObject model;
+
+        public GameObject Model => model;
+
         [SerializeField] private bool state = true;
 
         public bool State
         {
             get => state;
+            set => state = value;
         }
 
-        public void SelectSceneObject()
-        {
-            //TODO Set state to true
-            //TODO Activate model 
-            //TODO animate model (float up) 
-        }
         
-        public  void DeselectSceneObject()
-        {
-            //TODO Set state to false
-            //TODO animate model (float down) 
-            //TODo deactivate model 
-
-        }
         public void OnInteraction()
         {
             //TODO What happens when we use a scene object? sound?, Animation?

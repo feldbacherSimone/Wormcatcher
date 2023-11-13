@@ -41,6 +41,14 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""SceneObject"",
+                    ""type"": ""Button"",
+                    ""id"": ""9706c5d8-a561-4bfd-ae35-0bd16124c34c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -142,6 +150,17 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4e72f200-e4d9-4d93-b18f-a6a9e4a448b6"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SceneObject"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -180,6 +199,7 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
         m_KeyboardMovement_Movement = m_KeyboardMovement.FindAction("Movement", throwIfNotFound: true);
         m_KeyboardMovement_Sprint = m_KeyboardMovement.FindAction("Sprint", throwIfNotFound: true);
         m_KeyboardMovement_Interact = m_KeyboardMovement.FindAction("Interact", throwIfNotFound: true);
+        m_KeyboardMovement_SceneObject = m_KeyboardMovement.FindAction("SceneObject", throwIfNotFound: true);
         // ControllerMovement
         m_ControllerMovement = asset.FindActionMap("ControllerMovement", throwIfNotFound: true);
         m_ControllerMovement_Movement = m_ControllerMovement.FindAction("Movement", throwIfNotFound: true);
@@ -235,6 +255,7 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
     private readonly InputAction m_KeyboardMovement_Movement;
     private readonly InputAction m_KeyboardMovement_Sprint;
     private readonly InputAction m_KeyboardMovement_Interact;
+    private readonly InputAction m_KeyboardMovement_SceneObject;
     public struct KeyboardMovementActions
     {
         private @PlayerInputs m_Wrapper;
@@ -242,6 +263,7 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
         public InputAction @Movement => m_Wrapper.m_KeyboardMovement_Movement;
         public InputAction @Sprint => m_Wrapper.m_KeyboardMovement_Sprint;
         public InputAction @Interact => m_Wrapper.m_KeyboardMovement_Interact;
+        public InputAction @SceneObject => m_Wrapper.m_KeyboardMovement_SceneObject;
         public InputActionMap Get() { return m_Wrapper.m_KeyboardMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -260,6 +282,9 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                 @Interact.started -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnInteract;
+                @SceneObject.started -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnSceneObject;
+                @SceneObject.performed -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnSceneObject;
+                @SceneObject.canceled -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnSceneObject;
             }
             m_Wrapper.m_KeyboardMovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -273,6 +298,9 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
+                @SceneObject.started += instance.OnSceneObject;
+                @SceneObject.performed += instance.OnSceneObject;
+                @SceneObject.canceled += instance.OnSceneObject;
             }
         }
     }
@@ -315,6 +343,7 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
         void OnMovement(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnSceneObject(InputAction.CallbackContext context);
     }
     public interface IControllerMovementActions
     {
