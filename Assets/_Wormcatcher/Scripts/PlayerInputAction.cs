@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/_Wormcatcher/Scripts/PlayerInputs.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/_Wormcatcher/Scripts/FPS_Inputs.inputactions'
 
 using System;
 using System.Collections;
@@ -6,16 +6,16 @@ using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @PlayerInputs : IInputActionCollection, IDisposable
+public class @PlayerInputAction : IInputActionCollection, IDisposable
 {
     public InputActionAsset asset { get; }
-    public @PlayerInputs()
+    public @PlayerInputAction()
     {
         asset = InputActionAsset.FromJson(@"{
-    ""name"": ""PlayerInputs"",
+    ""name"": ""FPS_Inputs"",
     ""maps"": [
         {
-            ""name"": ""KeyboardMovement"",
+            ""name"": ""WalkInput"",
             ""id"": ""18435f05-f574-4280-9139-e9bee0b28cd8"",
             ""actions"": [
                 {
@@ -47,6 +47,14 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                     ""type"": ""Button"",
                     ""id"": ""9706c5d8-a561-4bfd-ae35-0bd16124c34c"",
                     ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""MouseLook"",
+                    ""type"": ""Value"",
+                    ""id"": ""664de548-ab24-4926-8ec6-2fe6d5de0d55"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -161,18 +169,29 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                     ""action"": ""SceneObject"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b60740a2-3e19-4761-93bb-d80e1e7b3917"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseLook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
         {
-            ""name"": ""ControllerMovement"",
-            ""id"": ""b16d0a8e-595e-4fd8-bc96-58f1efa16372"",
+            ""name"": ""StaticInput"",
+            ""id"": ""3d33521b-0972-43f0-bbe8-d5240b0fde5c"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
-                    ""type"": ""Value"",
-                    ""id"": ""0bce1a40-f454-4b40-89a2-e643a514fe83"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""name"": ""New action"",
+                    ""type"": ""Button"",
+                    ""id"": ""fec2cf05-46ea-4d18-adfa-81be7e917451"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -180,12 +199,12 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""69e0926b-20f9-4b12-b2a8-f231390afa66"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""id"": ""45213cf0-d886-4d7c-9452-f285f4508c50"",
+                    ""path"": """",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""New action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -194,15 +213,16 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // KeyboardMovement
-        m_KeyboardMovement = asset.FindActionMap("KeyboardMovement", throwIfNotFound: true);
-        m_KeyboardMovement_Movement = m_KeyboardMovement.FindAction("Movement", throwIfNotFound: true);
-        m_KeyboardMovement_Sprint = m_KeyboardMovement.FindAction("Sprint", throwIfNotFound: true);
-        m_KeyboardMovement_Interact = m_KeyboardMovement.FindAction("Interact", throwIfNotFound: true);
-        m_KeyboardMovement_SceneObject = m_KeyboardMovement.FindAction("SceneObject", throwIfNotFound: true);
-        // ControllerMovement
-        m_ControllerMovement = asset.FindActionMap("ControllerMovement", throwIfNotFound: true);
-        m_ControllerMovement_Movement = m_ControllerMovement.FindAction("Movement", throwIfNotFound: true);
+        // WalkInput
+        m_WalkInput = asset.FindActionMap("WalkInput", throwIfNotFound: true);
+        m_WalkInput_Movement = m_WalkInput.FindAction("Movement", throwIfNotFound: true);
+        m_WalkInput_Sprint = m_WalkInput.FindAction("Sprint", throwIfNotFound: true);
+        m_WalkInput_Interact = m_WalkInput.FindAction("Interact", throwIfNotFound: true);
+        m_WalkInput_SceneObject = m_WalkInput.FindAction("SceneObject", throwIfNotFound: true);
+        m_WalkInput_MouseLook = m_WalkInput.FindAction("MouseLook", throwIfNotFound: true);
+        // StaticInput
+        m_StaticInput = asset.FindActionMap("StaticInput", throwIfNotFound: true);
+        m_StaticInput_Newaction = m_StaticInput.FindAction("New action", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -249,44 +269,49 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
         asset.Disable();
     }
 
-    // KeyboardMovement
-    private readonly InputActionMap m_KeyboardMovement;
-    private IKeyboardMovementActions m_KeyboardMovementActionsCallbackInterface;
-    private readonly InputAction m_KeyboardMovement_Movement;
-    private readonly InputAction m_KeyboardMovement_Sprint;
-    private readonly InputAction m_KeyboardMovement_Interact;
-    private readonly InputAction m_KeyboardMovement_SceneObject;
-    public struct KeyboardMovementActions
+    // WalkInput
+    private readonly InputActionMap m_WalkInput;
+    private IWalkInputActions m_WalkInputActionsCallbackInterface;
+    private readonly InputAction m_WalkInput_Movement;
+    private readonly InputAction m_WalkInput_Sprint;
+    private readonly InputAction m_WalkInput_Interact;
+    private readonly InputAction m_WalkInput_SceneObject;
+    private readonly InputAction m_WalkInput_MouseLook;
+    public struct WalkInputActions
     {
-        private @PlayerInputs m_Wrapper;
-        public KeyboardMovementActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_KeyboardMovement_Movement;
-        public InputAction @Sprint => m_Wrapper.m_KeyboardMovement_Sprint;
-        public InputAction @Interact => m_Wrapper.m_KeyboardMovement_Interact;
-        public InputAction @SceneObject => m_Wrapper.m_KeyboardMovement_SceneObject;
-        public InputActionMap Get() { return m_Wrapper.m_KeyboardMovement; }
+        private @PlayerInputAction m_Wrapper;
+        public WalkInputActions(@PlayerInputAction wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Movement => m_Wrapper.m_WalkInput_Movement;
+        public InputAction @Sprint => m_Wrapper.m_WalkInput_Sprint;
+        public InputAction @Interact => m_Wrapper.m_WalkInput_Interact;
+        public InputAction @SceneObject => m_Wrapper.m_WalkInput_SceneObject;
+        public InputAction @MouseLook => m_Wrapper.m_WalkInput_MouseLook;
+        public InputActionMap Get() { return m_Wrapper.m_WalkInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(KeyboardMovementActions set) { return set.Get(); }
-        public void SetCallbacks(IKeyboardMovementActions instance)
+        public static implicit operator InputActionMap(WalkInputActions set) { return set.Get(); }
+        public void SetCallbacks(IWalkInputActions instance)
         {
-            if (m_Wrapper.m_KeyboardMovementActionsCallbackInterface != null)
+            if (m_Wrapper.m_WalkInputActionsCallbackInterface != null)
             {
-                @Movement.started -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnMovement;
-                @Sprint.started -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnSprint;
-                @Sprint.performed -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnSprint;
-                @Sprint.canceled -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnSprint;
-                @Interact.started -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnInteract;
-                @Interact.performed -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnInteract;
-                @Interact.canceled -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnInteract;
-                @SceneObject.started -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnSceneObject;
-                @SceneObject.performed -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnSceneObject;
-                @SceneObject.canceled -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnSceneObject;
+                @Movement.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMovement;
+                @Movement.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMovement;
+                @Movement.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMovement;
+                @Sprint.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnSprint;
+                @Sprint.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnSprint;
+                @Sprint.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnSprint;
+                @Interact.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnInteract;
+                @SceneObject.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnSceneObject;
+                @SceneObject.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnSceneObject;
+                @SceneObject.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnSceneObject;
+                @MouseLook.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMouseLook;
+                @MouseLook.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMouseLook;
+                @MouseLook.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMouseLook;
             }
-            m_Wrapper.m_KeyboardMovementActionsCallbackInterface = instance;
+            m_Wrapper.m_WalkInputActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @Movement.started += instance.OnMovement;
@@ -301,52 +326,56 @@ public class @PlayerInputs : IInputActionCollection, IDisposable
                 @SceneObject.started += instance.OnSceneObject;
                 @SceneObject.performed += instance.OnSceneObject;
                 @SceneObject.canceled += instance.OnSceneObject;
+                @MouseLook.started += instance.OnMouseLook;
+                @MouseLook.performed += instance.OnMouseLook;
+                @MouseLook.canceled += instance.OnMouseLook;
             }
         }
     }
-    public KeyboardMovementActions @KeyboardMovement => new KeyboardMovementActions(this);
+    public WalkInputActions @WalkInput => new WalkInputActions(this);
 
-    // ControllerMovement
-    private readonly InputActionMap m_ControllerMovement;
-    private IControllerMovementActions m_ControllerMovementActionsCallbackInterface;
-    private readonly InputAction m_ControllerMovement_Movement;
-    public struct ControllerMovementActions
+    // StaticInput
+    private readonly InputActionMap m_StaticInput;
+    private IStaticInputActions m_StaticInputActionsCallbackInterface;
+    private readonly InputAction m_StaticInput_Newaction;
+    public struct StaticInputActions
     {
-        private @PlayerInputs m_Wrapper;
-        public ControllerMovementActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_ControllerMovement_Movement;
-        public InputActionMap Get() { return m_Wrapper.m_ControllerMovement; }
+        private @PlayerInputAction m_Wrapper;
+        public StaticInputActions(@PlayerInputAction wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Newaction => m_Wrapper.m_StaticInput_Newaction;
+        public InputActionMap Get() { return m_Wrapper.m_StaticInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(ControllerMovementActions set) { return set.Get(); }
-        public void SetCallbacks(IControllerMovementActions instance)
+        public static implicit operator InputActionMap(StaticInputActions set) { return set.Get(); }
+        public void SetCallbacks(IStaticInputActions instance)
         {
-            if (m_Wrapper.m_ControllerMovementActionsCallbackInterface != null)
+            if (m_Wrapper.m_StaticInputActionsCallbackInterface != null)
             {
-                @Movement.started -= m_Wrapper.m_ControllerMovementActionsCallbackInterface.OnMovement;
-                @Movement.performed -= m_Wrapper.m_ControllerMovementActionsCallbackInterface.OnMovement;
-                @Movement.canceled -= m_Wrapper.m_ControllerMovementActionsCallbackInterface.OnMovement;
+                @Newaction.started -= m_Wrapper.m_StaticInputActionsCallbackInterface.OnNewaction;
+                @Newaction.performed -= m_Wrapper.m_StaticInputActionsCallbackInterface.OnNewaction;
+                @Newaction.canceled -= m_Wrapper.m_StaticInputActionsCallbackInterface.OnNewaction;
             }
-            m_Wrapper.m_ControllerMovementActionsCallbackInterface = instance;
+            m_Wrapper.m_StaticInputActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Movement.started += instance.OnMovement;
-                @Movement.performed += instance.OnMovement;
-                @Movement.canceled += instance.OnMovement;
+                @Newaction.started += instance.OnNewaction;
+                @Newaction.performed += instance.OnNewaction;
+                @Newaction.canceled += instance.OnNewaction;
             }
         }
     }
-    public ControllerMovementActions @ControllerMovement => new ControllerMovementActions(this);
-    public interface IKeyboardMovementActions
+    public StaticInputActions @StaticInput => new StaticInputActions(this);
+    public interface IWalkInputActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnSceneObject(InputAction.CallbackContext context);
+        void OnMouseLook(InputAction.CallbackContext context);
     }
-    public interface IControllerMovementActions
+    public interface IStaticInputActions
     {
-        void OnMovement(InputAction.CallbackContext context);
+        void OnNewaction(InputAction.CallbackContext context);
     }
 }

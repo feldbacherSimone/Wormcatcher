@@ -9,6 +9,7 @@ namespace _Wormcatcher.Scripts
         [SerializeField] private InputActionAsset inputActionAsset;
         [SerializeField] GameObject selectionResponseObject;
 
+        private PlayerInputAction playerInputAction;
         private ISelectableObject selectionResponse;
 
         private InputAction interactAction;
@@ -25,24 +26,19 @@ namespace _Wormcatcher.Scripts
 
         private void Awake()
         {
-            var inputActionMap = inputActionAsset.FindActionMap("KeyboardMovement");
-            interactAction = inputActionMap.FindAction("Interact");
-            sceneObjectAction = inputActionMap.FindAction("SceneObject");
+            playerInputAction = new PlayerInputAction();
+            playerInputAction.WalkInput.Enable();
+
             selectionResponse = selectionResponseObject.GetComponent<ISelectableObject>();
 
-            sceneObjectAction.started += _ => SceneObjectHandler._instance.SpawnObject();
-            sceneObjectAction.canceled += _ => SceneObjectHandler._instance.DespawnObject();
+            playerInputAction.WalkInput.SceneObject.started += _ => SceneObjectHandler._instance.SpawnObject();
+            playerInputAction.WalkInput.SceneObject.canceled += _ => SceneObjectHandler._instance.DespawnObject();
         }
-
-        private void OnEnable()
-        {
-            interactAction.Enable();
-            sceneObjectAction.Enable();
-        }
+        
 
         private void Update()
         {
-            if (ValidObjectSelection() && interactAction.triggered)
+            if (ValidObjectSelection() && playerInputAction.WalkInput.Interact.triggered)
             {
                 interactable.Interact();
                 DebugPrint("interaction Triggered");
@@ -52,6 +48,7 @@ namespace _Wormcatcher.Scripts
 
         private bool ValidObjectSelection()
         {
+            
             GameObject newSelectable = CheckForSelectable();
             // Deselect the current object if it's not the same as the new one
             if (selectableObject != null && newSelectable != selectableObject)

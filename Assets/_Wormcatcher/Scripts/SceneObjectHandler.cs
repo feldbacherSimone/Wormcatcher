@@ -35,6 +35,10 @@ namespace _Wormcatcher.Scripts
 
         public void SpawnObject()
         {
+            if (sceneObject == null)
+            {
+                return;
+            }
             if (currentSceneObject == null)
             {
                 currentSceneObject = Instantiate(sceneObject.Model, transform);
@@ -46,6 +50,10 @@ namespace _Wormcatcher.Scripts
         }
         public void DespawnObject()
         {
+            if (sceneObject == null)
+            {
+                return;
+            }
             currentSceneObject.SetActive(false);
             sceneObject.State = false; 
             DebugPrint("DespawnObject called");

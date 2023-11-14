@@ -1,8 +1,8 @@
 {
-    "name": "PlayerInputs",
+    "name": "FPS_Inputs",
     "maps": [
         {
-            "name": "KeyboardMovement",
+            "name": "WalkInput",
             "id": "18435f05-f574-4280-9139-e9bee0b28cd8",
             "actions": [
                 {
@@ -34,6 +34,14 @@
                     "type": "Button",
                     "id": "9706c5d8-a561-4bfd-ae35-0bd16124c34c",
                     "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MouseLook",
+                    "type": "Value",
+                    "id": "664de548-ab24-4926-8ec6-2fe6d5de0d55",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
                 }
@@ -148,18 +156,29 @@
                     "action": "SceneObject",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b60740a2-3e19-4761-93bb-d80e1e7b3917",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseLook",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
         {
-            "name": "ControllerMovement",
-            "id": "b16d0a8e-595e-4fd8-bc96-58f1efa16372",
+            "name": "StaticInput",
+            "id": "3d33521b-0972-43f0-bbe8-d5240b0fde5c",
             "actions": [
                 {
-                    "name": "Movement",
-                    "type": "Value",
-                    "id": "0bce1a40-f454-4b40-89a2-e643a514fe83",
-                    "expectedControlType": "Vector2",
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "fec2cf05-46ea-4d18-adfa-81be7e917451",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -167,12 +186,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "69e0926b-20f9-4b12-b2a8-f231390afa66",
-                    "path": "<Gamepad>/rightStick",
+                    "id": "45213cf0-d886-4d7c-9452-f285f4508c50",
+                    "path": "",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Movement",
+                    "action": "New action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
