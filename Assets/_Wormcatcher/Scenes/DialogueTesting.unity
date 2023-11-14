@@ -472,12 +472,12 @@ PrefabInstance:
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.456
+      value: -5.573
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.814
+      value: 12.286
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -1345,7 +1345,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4096137185992647247}
-  m_LocalRotation: {x: -0, y: 0.9951121, z: -0, w: 0.098751895}
+  m_LocalRotation: {x: -0, y: 0.010178925, z: -0, w: 0.9999482}
   m_LocalPosition: {x: 0, y: 0, z: 2.96}
   m_LocalScale: {x: 0.006268896, y: 0.006268896, z: 0.006268896}
   m_Children:
@@ -1354,7 +1354,7 @@ RectTransform:
   - {fileID: 1220831325}
   m_Father: {fileID: 8746362518705848539}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 1.166, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -5.47, y: 11.08}
@@ -1412,7 +1412,7 @@ AimConstraint:
   m_Enabled: 1
   m_Weight: 1
   m_RotationAtRest: {x: -0, y: 0, z: 0}
-  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: 0, y: 180, z: 0}
   m_AimVector: {x: 0, y: 0, z: 1}
   m_UpVector: {x: 0, y: 1, z: 0}
   m_WorldUpVector: {x: 0, y: 1, z: 0}
