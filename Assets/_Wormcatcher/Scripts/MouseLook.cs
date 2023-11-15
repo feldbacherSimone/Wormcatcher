@@ -31,7 +31,7 @@ public class MouseLook : MonoBehaviour
         {
             playerBody = transform.parent; 
         }
-        Cursor.visible = false; 
+        //Cursor.visible = false; 
         Cursor.lockState = CursorLockMode.Locked;
         
     }
