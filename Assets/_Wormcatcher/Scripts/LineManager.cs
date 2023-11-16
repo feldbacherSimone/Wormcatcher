@@ -43,7 +43,7 @@ namespace _Wormcatcher.Scripts
                 linesObjects.Remove(lastLine);
                 Destroy(lastLine);
             }
-
+            newLine.LineTextField.text = "";
             return newLine; 
         }
     }
