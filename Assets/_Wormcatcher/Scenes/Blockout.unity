@@ -2633,8 +2633,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1564296181}
   - component: {fileID: 1564296180}
-  - component: {fileID: 1564296179}
   - component: {fileID: 1564296182}
+  - component: {fileID: 1564296179}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2642,14 +2642,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!81 &1564296179
-AudioListener:
+--- !u!114 &1564296179
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564296178}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!20 &1564296180
 Camera:
   m_ObjectHideFlags: 0
@@ -3597,8 +3602,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 846b49896810a94488ad1ec6451fba85, type: 3}
+--- !u!1 &1946987911 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 743479195431046827, guid: 846b49896810a94488ad1ec6451fba85,
+    type: 3}
+  m_PrefabInstance: {fileID: 1946987910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1946987912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946987911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1001 &2058590461
 PrefabInstance:
   m_ObjectHideFlags: 0
