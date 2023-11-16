@@ -1,21 +1,23 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Serialization;
 using Yarn.Unity;
 using UnityEngine.UI; 
 namespace _Wormcatcher.Scripts
 {
     public class LineManager : MonoBehaviour
     {
-        [SerializeField] private List<LineObject> lines = new List<LineObject>();
+        [FormerlySerializedAs("lines")] [SerializeField] private List<GameObject> linesObjects = new List<GameObject>();
         [SerializeField] private float maxHeight = 10;
 
         [SerializeField] private Transform playerLinePos;
         [SerializeField] private Transform npcLinePos;
 
         [SerializeField] private GameObject playerLineRef;
-        [SerializeField] private GameObject npcLineRef; 
+        [SerializeField] private GameObject npcLineRef;
 
-        public LineObject addLine(string name)
+        private int count = 0; 
+        public LineObject addLine(string name, string dialogueText)
         {
             LineObject newLine = null;
             GameObject currentRef; 
@@ -27,15 +29,21 @@ namespace _Wormcatcher.Scripts
                 default: currentRef = npcLineRef; break;
             }
             // create new line 
+            GameObject newLineObject = Instantiate(currentRef, transform);
+            newLineObject.name = "Line_" + ++count;
+            newLine = newLineObject.GetComponent<LineObject>();
+            newLine.LineTextField.text = dialogueText;
+            linesObjects.Add(newLineObject);
             
+            // Delete Overflowing Lines; 
             if (GetComponent<RectTransform>().sizeDelta.y > maxHeight)
             {
-                LineObject lastLine = lines[lines.Count - 1];
-                lines.Remove(lastLine);
-                Destroy(lastLine.LineContainerObject);
+                print(linesObjects.Count);
+                GameObject lastLine = linesObjects[0];
+                linesObjects.Remove(lastLine);
+                Destroy(lastLine);
             }
-            // Insert new line 
-            newLine = new LineObject(gameObject, currentRef);
+
             return newLine; 
         }
     }

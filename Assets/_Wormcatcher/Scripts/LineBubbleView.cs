@@ -15,8 +15,17 @@ namespace _Wormcatcher.Scripts
         
         public override void RunLine(LocalizedLine dialogueLine, Action onDialogueLineFinished)
         {
-            lineManager.addLine(dialogueLine.CharacterName);
-            base.RunLine(dialogueLine, onDialogueLineFinished);
+            StopAllCoroutines();
+            print($"name:{dialogueLine.CharacterName}, text: {dialogueLine.TextWithoutCharacterName.Text}");
+            LineObject currentLineObject = lineManager.addLine(dialogueLine.CharacterName, dialogueLine.TextWithoutCharacterName.Text);
+            //base.RunLine(dialogueLine, onDialogueLineFinished);
+            StartCoroutine(RunLineInternal(dialogueLine, onDialogueLineFinished));
+        }
+
+        private IEnumerator RunLineInternal(LocalizedLine dialogueLine, Action onDialogueLineFinished)
+        {
+            yield return new WaitForSeconds(0.5f);
+            onDialogueLineFinished();
         }
     }
 }
