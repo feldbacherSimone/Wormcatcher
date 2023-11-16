@@ -64,10 +64,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: dfasdfsadfsadfdsafsadfdsafasdfadsfdsfadsfdsafasdfasdfasafdsdfddddddddddddddddddddddddddddddddddddd
+  m_text: dsfasdfdsafdsafdsafsadfdsafdsafdsafdsfdsafdsafdsfdsafdsafdsfdsafdsafdsafdsafdsafdsafsdafasdfasdfasdfasfdsfdasfdasfsfaf
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0e411abd0f2f90e43b917167c080bf11, type: 2}
+  m_sharedMaterial: {fileID: 5830179480533551928, guid: 0e411abd0f2f90e43b917167c080bf11,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -99,9 +100,9 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -0.03
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -147,7 +148,7 @@ GameObject:
   - component: {fileID: 5146882484136522102}
   - component: {fileID: 5847276412120993733}
   m_Layer: 5
-  m_Name: LineObject (2)
+  m_Name: LineObject (2) 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -300,14 +301,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.2509804}
+  m_Color: {r: 0.745283, g: 0.37932423, b: 0.116011046, a: 0.88235295}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -349,10 +350,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 2
-    m_Right: 3
-    m_Top: 0
-    m_Bottom: 0
+    m_Left: 3
+    m_Right: 7
+    m_Top: 2
+    m_Bottom: 1
   m_ChildAlignment: 0
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
