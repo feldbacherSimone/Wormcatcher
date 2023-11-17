@@ -11,7 +11,7 @@ private void Awake()
     {
         if (instance != null )
         {
-            Debug.LogError("There's more than one Audio Manager in the Scene. You gotta decide who will be eliminated tonight")
+            Debug.LogError("There's more than one Audio Manager in the Scene. You gotta decide who will be eliminated tonight");
         }
         instance = this;
     }
