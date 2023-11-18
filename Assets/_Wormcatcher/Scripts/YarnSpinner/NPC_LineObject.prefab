@@ -64,10 +64,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: dsfasdfdsafdsafdsafsadfdsafdsafdsafdsfdsafdsafdsfdsafdsafdsfdsafdsafdsafdsafdsafdsafsdafasdfasdfasdfasfdsfdasfdasfsfaf
+  m_text: 'dsfasdfdsafdsafdsafsadfdsafdsafdsafdsfdsafdsafdsfdsafdsafdsfdsafdsafdsafdsafdsafdsafsdafasdfasdfasdfasfdsfdasfdasfsfaf '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 0e411abd0f2f90e43b917167c080bf11, type: 2}
-  m_sharedMaterial: {fileID: 5830179480533551928, guid: 0e411abd0f2f90e43b917167c080bf11,
+  m_fontAsset: {fileID: 11400000, guid: 9192dd8f6e4df4b4eb0bc78021c9f483, type: 2}
+  m_sharedMaterial: {fileID: -6917589276670986237, guid: 9192dd8f6e4df4b4eb0bc78021c9f483,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 5146882484136522102}
   - component: {fileID: 5847276412120993733}
   m_Layer: 5
-  m_Name: LineObject (2)
+  m_Name: NPC_LineObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Padding:
     m_Left: 0
-    m_Right: 0
+    m_Right: 20
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 3
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.88235295}
+  m_Color: {r: 0.745283, g: 0.37932423, b: 0.116011046, a: 0.88235295}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
