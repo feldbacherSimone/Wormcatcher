@@ -17,6 +17,12 @@ namespace _Wormcatcher.Scripts
         [SerializeField] private GameObject npcLineRef;
 
         private int count = 0; 
+        /// <summary>
+        /// afdaffdfa
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="dialogueText"></param>
+        /// <returns>it returns somthing</returns>
         public LineObject addLine(string name, string dialogueText)
         {
             LineObject newLine = null;
@@ -30,6 +36,7 @@ namespace _Wormcatcher.Scripts
             }
             // create new line 
             GameObject newLineObject = Instantiate(currentRef, transform);
+            newLineObject.transform.SetSiblingIndex(transform.childCount - 2);
             newLineObject.name = "Line_" + ++count;
             newLine = newLineObject.GetComponent<LineObject>();
             newLine.LineTextField.text = dialogueText;
