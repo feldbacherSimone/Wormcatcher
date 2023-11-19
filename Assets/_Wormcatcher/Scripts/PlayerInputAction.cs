@@ -57,6 +57,14 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""MousePosition"",
+                    ""type"": ""Value"",
+                    ""id"": ""d0be347f-c9ce-4fa3-8b78-196337e0784b"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -180,6 +188,17 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                     ""action"": ""MouseLook"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e3cf16b5-2186-4423-b4ea-c033fa23e998"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MousePosition"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -220,6 +239,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
         m_WalkInput_Interact = m_WalkInput.FindAction("Interact", throwIfNotFound: true);
         m_WalkInput_SceneObject = m_WalkInput.FindAction("SceneObject", throwIfNotFound: true);
         m_WalkInput_MouseLook = m_WalkInput.FindAction("MouseLook", throwIfNotFound: true);
+        m_WalkInput_MousePosition = m_WalkInput.FindAction("MousePosition", throwIfNotFound: true);
         // StaticInput
         m_StaticInput = asset.FindActionMap("StaticInput", throwIfNotFound: true);
         m_StaticInput_Newaction = m_StaticInput.FindAction("New action", throwIfNotFound: true);
@@ -277,6 +297,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
     private readonly InputAction m_WalkInput_Interact;
     private readonly InputAction m_WalkInput_SceneObject;
     private readonly InputAction m_WalkInput_MouseLook;
+    private readonly InputAction m_WalkInput_MousePosition;
     public struct WalkInputActions
     {
         private @PlayerInputAction m_Wrapper;
@@ -286,6 +307,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
         public InputAction @Interact => m_Wrapper.m_WalkInput_Interact;
         public InputAction @SceneObject => m_Wrapper.m_WalkInput_SceneObject;
         public InputAction @MouseLook => m_Wrapper.m_WalkInput_MouseLook;
+        public InputAction @MousePosition => m_Wrapper.m_WalkInput_MousePosition;
         public InputActionMap Get() { return m_Wrapper.m_WalkInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -310,6 +332,9 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 @MouseLook.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMouseLook;
                 @MouseLook.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMouseLook;
                 @MouseLook.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMouseLook;
+                @MousePosition.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMousePosition;
+                @MousePosition.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMousePosition;
+                @MousePosition.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMousePosition;
             }
             m_Wrapper.m_WalkInputActionsCallbackInterface = instance;
             if (instance != null)
@@ -329,6 +354,9 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 @MouseLook.started += instance.OnMouseLook;
                 @MouseLook.performed += instance.OnMouseLook;
                 @MouseLook.canceled += instance.OnMouseLook;
+                @MousePosition.started += instance.OnMousePosition;
+                @MousePosition.performed += instance.OnMousePosition;
+                @MousePosition.canceled += instance.OnMousePosition;
             }
         }
     }
@@ -373,6 +401,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnSceneObject(InputAction.CallbackContext context);
         void OnMouseLook(InputAction.CallbackContext context);
+        void OnMousePosition(InputAction.CallbackContext context);
     }
     public interface IStaticInputActions
     {

@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Debug = FMOD.Debug;
 
 public class MouseLook : MonoBehaviour
 {
     private InputAction mouseMovement; 
+    private InputAction mousePosition; 
     private float mouseX;
     private float mouseY;
     private PlayerInputAction playerInputAction; 
@@ -22,7 +24,8 @@ public class MouseLook : MonoBehaviour
     {
         playerInputAction = new PlayerInputAction();
         playerInputAction.WalkInput.Enable();
-        mouseMovement = playerInputAction.WalkInput.MouseLook; 
+        mouseMovement = playerInputAction.WalkInput.MouseLook;
+        mousePosition = playerInputAction.WalkInput.MousePosition;
     }
 
     void Start()
@@ -31,10 +34,11 @@ public class MouseLook : MonoBehaviour
         {
             playerBody = transform.parent; 
         }
-        Cursor.visible = false; 
-        Cursor.
-        //Cursor.lockState = CursorLockMode.None;
-        
+ 
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = false;
+
+
 
 
     }
@@ -44,6 +48,8 @@ public class MouseLook : MonoBehaviour
     {
         if (true)
         {
+           
+            print(mousePosition.ReadValue<Vector2>());
             //print(Cursor.lockState);
             // get mouse inputs 
             mouseX = mouseMovement.ReadValue<Vector2>().x * mouseSensitivity * Time.deltaTime;
