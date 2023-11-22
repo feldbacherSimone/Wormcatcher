@@ -35,7 +35,7 @@ public class MouseLook : MonoBehaviour
             playerBody = transform.parent; 
         }
  
-        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
 
@@ -49,7 +49,7 @@ public class MouseLook : MonoBehaviour
         if (true)
         {
            
-            print(mousePosition.ReadValue<Vector2>());
+            //print(mousePosition.ReadValue<Vector2>());
             //print(Cursor.lockState);
             // get mouse inputs 
             mouseX = mouseMovement.ReadValue<Vector2>().x * mouseSensitivity * Time.deltaTime;

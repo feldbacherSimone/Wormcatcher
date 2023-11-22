@@ -12,7 +12,7 @@ namespace _Wormcatcher.Scripts
          [SerializeField] CanvasGroup canvasGroup;
 
         [SerializeField] BubbleOptionView optionViewPrefab;
-        
+
         [SerializeField] float fadeTime = 0.1f;
 
         [SerializeField] bool showUnavailableOptions = false;
@@ -109,6 +109,7 @@ namespace _Wormcatcher.Scripts
                 {
                     yield return StartCoroutine(Effects.FadeAlpha(canvasGroup, 1, 0, fadeTime));
                     OnOptionSelected(selectedOption.DialogueOptionID);
+
 
                     foreach (BubbleOptionView optionView in optionViews)
                     {
