@@ -3,11 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Debug = FMOD.Debug;
 
 public class MouseLook : MonoBehaviour
 {
+    private InputAction mouseMovement; 
+    private InputAction mousePosition; 
     private float mouseX;
     private float mouseY;
+    private PlayerInputAction playerInputAction; 
 
     [SerializeField] private float mouseSensitivity = 1;
 
@@ -16,25 +20,40 @@ public class MouseLook : MonoBehaviour
     private float xRoation = 0; 
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        playerInputAction = new PlayerInputAction();
+        playerInputAction.WalkInput.Enable();
+        mouseMovement = playerInputAction.WalkInput.MouseLook;
+        mousePosition = playerInputAction.WalkInput.MousePosition;
+    }
+
     void Start()
     {
         if (playerBody == null)
         {
             playerBody = transform.parent; 
         }
-
+ 
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Cursor.lockState == CursorLockMode.Locked)
+        if (true)
         {
+           
+            //print(mousePosition.ReadValue<Vector2>());
             //print(Cursor.lockState);
             // get mouse inputs 
-            mouseX = Mouse.current.delta.x.ReadValue() * mouseSensitivity * Time.deltaTime;
-            mouseY = Mouse.current.delta.y.ReadValue() * mouseSensitivity * Time.deltaTime;
+            mouseX = mouseMovement.ReadValue<Vector2>().x * mouseSensitivity * Time.deltaTime;
+            mouseY = mouseMovement.ReadValue<Vector2>().y * mouseSensitivity * Time.deltaTime;
 
             // up/down rotation 
             xRoation -= mouseY;

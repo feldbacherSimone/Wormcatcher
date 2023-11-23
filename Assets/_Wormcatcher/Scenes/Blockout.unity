@@ -847,8 +847,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492412606}
   m_LocalRotation: {x: 0.5000002, y: -0.49999967, z: 0.5000003, w: 0.49999994}
-  m_LocalPosition: {x: 4.522, y: 2.486, z: 4.293}
-  m_LocalScale: {x: 0.309398, y: 0.5045279, z: 0.39393547}
+  m_LocalPosition: {x: 4.278, y: 2.692, z: 5.041}
+  m_LocalScale: {x: 0.08739537, y: 0.14251354, z: 0.13440858}
   m_Children: []
   m_Father: {fileID: 1632526815}
   m_RootOrder: 4
@@ -3542,6 +3542,21 @@ PrefabInstance:
       propertyPath: volumeTrigger
       value: 
       objectReference: {fileID: 1564296181}
+    - target: {fileID: 743479195431046825, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 34.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 743479195431046825, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: field of view
+      value: 38.77457
+      objectReference: {fileID: 0}
+    - target: {fileID: 743479195431046838, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.618
+      objectReference: {fileID: 0}
     - target: {fileID: 743479196160101353, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_Name
