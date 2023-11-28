@@ -3,13 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Yarn.Unity;
-using UnityEngine; 
+using UnityEngine;
 
 namespace _Wormcatcher.Scripts
 {
     public class BubbleOptionsListView : DialogueViewBase
     {
-         [SerializeField] CanvasGroup canvasGroup;
+        [SerializeField] CanvasGroup canvasGroup;
 
         [SerializeField] BubbleOptionView optionViewPrefab;
 
@@ -26,6 +26,7 @@ namespace _Wormcatcher.Scripts
         // The line we saw most recently.
         LocalizedLine lastSeenLine;
 
+        
         public void Start()
         {
             canvasGroup.alpha = 0;
@@ -37,7 +38,7 @@ namespace _Wormcatcher.Scripts
         {
             canvasGroup = GetComponentInParent<CanvasGroup>();
         }
-        
+
 
         public override void RunOptions(DialogueOption[] dialogueOptions, Action<int> onOptionSelected)
         {
@@ -81,7 +82,6 @@ namespace _Wormcatcher.Scripts
                 optionViewsCreated += 1;
             }
 
-            
 
             // Note the delegate to call when an option is selected
             OnOptionSelected = onOptionSelected;
@@ -124,7 +124,7 @@ namespace _Wormcatcher.Scripts
         /// If options are still shown dismisses them.
         /// </remarks>
         public override void DialogueComplete()
-        {   
+        {
             // do we still have any options being shown?
             if (canvasGroup.alpha > 0)
             {

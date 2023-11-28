@@ -1,5 +1,5 @@
 using UnityEngine;
-using TMPro; 
+using TMPro;
 
 namespace _Wormcatcher.Scripts
 {
@@ -14,6 +14,5 @@ namespace _Wormcatcher.Scripts
 
         public CanvasGroup CanvasGroup => canvasGroup;
         public GameObject LineContainerObject => lineContainerObject;
-        
     }
 }

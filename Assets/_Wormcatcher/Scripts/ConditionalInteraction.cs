@@ -7,10 +7,12 @@ namespace _Wormcatcher.Scripts
     [System.Serializable]
     public abstract class ConditionalInteraction : InteractionObject
     {
+        [FormerlySerializedAs("trueInteractionGameObject")] [SerializeField]
+        private InteractionObject trueInteractionObject;
 
-        [FormerlySerializedAs("trueInteractionGameObject")] [SerializeField] private InteractionObject trueInteractionObject;
-        [FormerlySerializedAs("falseInteractionGameObject")] [SerializeField] private InteractionObject falseInteractionObject;
-        
+        [FormerlySerializedAs("falseInteractionGameObject")] [SerializeField]
+        private InteractionObject falseInteractionObject;
+
 
         public override void Interact()
         {
@@ -27,7 +29,5 @@ namespace _Wormcatcher.Scripts
         }
 
         protected abstract bool GetCondition();
-
-   
     }
 }
