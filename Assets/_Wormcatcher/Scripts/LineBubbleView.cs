@@ -222,7 +222,7 @@ namespace _Wormcatcher.Scripts
                     // If we're using the typewriter effect, hide all of the
                     // text before we begin any possible fade (so we don't fade
                     // in on visible text).
-                    lineText.maxVisibleCharacters = 0;
+                    lineText.maxVisibleCharacters = int.MaxValue;
                 }
                 else
                 {
@@ -252,18 +252,14 @@ namespace _Wormcatcher.Scripts
                     canvasGroup.interactable = true;
                     canvasGroup.blocksRaycasts = true;
                     yield return StartCoroutine(
-                        Effects.Typewriter(
+                        CoolerTypewriter(
                             lineText,
+                            dialogueLine,
                             typewriterEffectSpeed,
-                            () => onCharacterTyped.Invoke(),
-                            currentStopToken
+                            () => onCharacterTyped.Invoke()
                         )
                     );
-                    if (currentStopToken.WasInterrupted) {
-                        // The typewriter effect was interrupted. Stop this
-                        // entire coroutine.
-                        yield break;
-                    }
+                    
                 }
             }
             currentLine = dialogueLine;
@@ -363,6 +359,65 @@ namespace _Wormcatcher.Scripts
                 currentLine = null;
                 StartCoroutine(DismissLineInternal(null));
             }
+        }
+
+        
+        //TODO put this in a helper class what is wrong with you! 
+        IEnumerator CoolerTypewriter(TextMeshProUGUI text,  LocalizedLine fullLine, float lettersPerSecond, Action onCharacterTyped)
+        {
+
+            int visibleCharacters = 0; 
+            
+            var maxCharacters = fullLine.TextWithoutCharacterName.Text.Length;
+            print($"Typewriter called with character count:{maxCharacters}");
+            // Start with everything invisible
+            text.text = "";
+            
+            
+            // Wait a single frame to let the text component process its
+            // content, otherwise text.textInfo.characterCount won't be
+            // accurate
+            yield return null;
+
+            // How many visible characters are present in the text?
+            
+
+            
+            // Early out if letter speed is zero, text length is zero
+            if (lettersPerSecond <= 0 || maxCharacters == 0)
+            {
+                print("maxletters less than 1");
+                // Show everything and return
+                text.maxVisibleCharacters = maxCharacters;
+                yield break;
+            }
+
+            // Convert 'letters per second' into its inverse
+            float secondsPerLetter = 1.0f / lettersPerSecond;
+            
+            var accumulator = Time.deltaTime;
+
+            while (visibleCharacters < maxCharacters)
+            {
+                
+                // We need to show as many letters as we have accumulated
+                // time for.
+                while (accumulator >= secondsPerLetter)
+                {
+                    text.text = fullLine.TextWithoutCharacterName.Text.Substring(0, visibleCharacters);
+                    onCharacterTyped?.Invoke();
+                    accumulator -= secondsPerLetter;
+                    visibleCharacters += 1;
+                }
+                accumulator += Time.deltaTime;
+
+                yield return null;
+            }
+
+            // We either finished displaying everything, or were
+            // interrupted. Either way, display everything now.
+            text.maxVisibleCharacters = maxCharacters;
+            
         }
     }
 }
