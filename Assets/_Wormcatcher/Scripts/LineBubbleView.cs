@@ -41,7 +41,13 @@ namespace _Wormcatcher.Scripts
         [Min(0)]
         internal float typewriterEffectSpeed = 0f;
 
-        
+        public float TypewriterEffectSpeed
+        {
+            get => typewriterEffectSpeed;
+            set => typewriterEffectSpeed = value;
+        }
+
+
         [SerializeField]
         internal GameObject continueButton = null;
 
@@ -54,8 +60,14 @@ namespace _Wormcatcher.Scripts
         internal bool autoAdvance = false;
         
         LocalizedLine currentLine = null;
+
+        [SerializeField] private Boolean hideLineOnStart; // awful name 
+
         
-        
+        public void setHideLineOnStart()
+        {
+            hideLineOnStart = true; 
+        }
         
         Effects.CoroutineInterruptToken currentStopToken = new Effects.CoroutineInterruptToken();
 
@@ -156,11 +168,14 @@ namespace _Wormcatcher.Scripts
             // Stop any coroutines currently running on this line view (for
             // example, any other RunLine that might be running)
             StopAllCoroutines();
-            
-            LineObject currentLineObject = lineManager.addLine(dialogueLine.CharacterName, dialogueLine.TextWithoutCharacterName.Text);
-            lineText = currentLineObject.LineTextField;
-            canvasGroup = currentLineObject.CanvasGroup;
-            // Begin running the line as a coroutine.
+
+          
+                LineObject currentLineObject = lineManager.addLine(dialogueLine.CharacterName, "");
+                lineText = currentLineObject.LineTextField;
+                canvasGroup = currentLineObject.CanvasGroup;
+                // Begin running the line as a coroutine.
+
+                LocalizedLine line = new LocalizedLine();
             StartCoroutine(RunLineInternal(dialogueLine, onDialogueLineFinished));
         }
 
