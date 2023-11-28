@@ -7,10 +7,10 @@ namespace _Wormcatcher.Scripts
     public class Inputs : MonoBehaviour
     {
         [SerializeField] private InputActionAsset inputActionAsset;
-        
+
         private InputAction interactAction;
         private InputAction sceneObjectAction;
-        private InputAction movementAction; 
+        private InputAction movementAction;
         private InputAction sprintAction;
 
         private InputActionMap inputActionMap;
@@ -20,9 +20,9 @@ namespace _Wormcatcher.Scripts
         {
             if (Instance == null)
             {
-                Instance = this; 
+                Instance = this;
             }
-            
+
             inputActionMap = inputActionAsset.FindActionMap("KeyboardMovement");
             interactAction = inputActionMap.FindAction("Interact");
             sceneObjectAction = inputActionMap.FindAction("SceneObject");

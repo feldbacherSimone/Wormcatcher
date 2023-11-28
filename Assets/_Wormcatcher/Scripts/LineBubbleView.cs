@@ -3,43 +3,39 @@ using System;
 using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace _Wormcatcher.Scripts
 {
-    
-    public class LineBubbleView : DialogueViewBase
+    public class LineBubbleView : DialogueViewBase, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
-       
-        [SerializeField] private LineManager lineManager; 
+        [SerializeField] private LineManager lineManager;
         [SerializeField] internal CanvasGroup canvasGroup;
 
-        
+
         [SerializeField] internal bool useFadeEffect = true;
 
-        
+
         [SerializeField] [Min(0)] internal float fadeInTime = 0.25f;
 
-        
-        [SerializeField] [Min(0)] internal float fadeOutTime = 0.05f;
-        
-        [SerializeField] internal TextMeshProUGUI lineText = null;
 
-        [SerializeField]
-        [UnityEngine.Serialization.FormerlySerializedAs("showCharacterName")]
-        internal bool showCharacterNameInLineView = true;
-        
+        [SerializeField] [Min(0)] internal float fadeOutTime = 0.05f;
+
+        [SerializeField] internal TextMeshProUGUI lineText = null;
+        private Image lineBackground;
+        private Color backgroundColor;
+
+
         [SerializeField] internal TextMeshProUGUI characterNameText = null;
 
         [SerializeField] internal bool useTypewriterEffect = false;
 
-        
+
         [SerializeField] internal UnityEngine.Events.UnityEvent onCharacterTyped;
 
-        
-        [SerializeField]
-        [Min(0)]
-        internal float typewriterEffectSpeed = 0f;
+
+        [SerializeField] [Min(0)] internal float typewriterEffectSpeed = 0f;
 
         public float TypewriterEffectSpeed
         {
@@ -48,28 +44,23 @@ namespace _Wormcatcher.Scripts
         }
 
 
-        [SerializeField]
-        internal GameObject continueButton = null;
+        [SerializeField] [Min(0)] internal float holdTime = 1f;
 
-       
-        [SerializeField]
-        [Min(0)]
-        internal float holdTime = 1f;
-        
-        [SerializeField]
-        internal bool autoAdvance = false;
-        
+        [SerializeField] internal bool autoAdvance = false;
+
         LocalizedLine currentLine = null;
 
         [SerializeField] private Boolean hideLineOnStart; // awful name 
 
-        
+
         public void setHideLineOnStart()
         {
-            hideLineOnStart = true; 
+            hideLineOnStart = true;
         }
-        
+
         Effects.CoroutineInterruptToken currentStopToken = new Effects.CoroutineInterruptToken();
+        private LocalizedLine currentDialogueLine;
+        private Action dialogueLineFinished;
 
         private void Awake()
         {
@@ -103,12 +94,12 @@ namespace _Wormcatcher.Scripts
                 yield return StartCoroutine(Effects.FadeAlpha(canvasGroup, 1, 0, fadeOutTime, currentStopToken));
                 currentStopToken.Complete();
             }
-            
+
             //canvasGroup.alpha = 0;
             canvasGroup.blocksRaycasts = false;
             // turning interaction back on, if it needs it
             canvasGroup.interactable = interactable;
-            
+
             if (onDismissalComplete != null)
             {
                 onDismissalComplete();
@@ -123,7 +114,7 @@ namespace _Wormcatcher.Scripts
             // Cancel all coroutines that we're currently running. This will
             // stop the RunLineInternal coroutine, if it's running.
             StopAllCoroutines();
-            
+
             // for now we are going to just immediately show everything
             // later we will make it fade in
             lineText.gameObject.SetActive(true);
@@ -133,16 +124,8 @@ namespace _Wormcatcher.Scripts
 
             if (characterNameText == null)
             {
-                if (showCharacterNameInLineView)
-                {
-                    lineText.text = dialogueLine.Text.Text;
-                    length = dialogueLine.Text.Text.Length;
-                }
-                else
-                {
-                    lineText.text = dialogueLine.TextWithoutCharacterName.Text;
-                    length = dialogueLine.TextWithoutCharacterName.Text.Length;
-                }
+                lineText.text = dialogueLine.TextWithoutCharacterName.Text;
+                length = dialogueLine.TextWithoutCharacterName.Text.Length;
             }
             else
             {
@@ -169,14 +152,23 @@ namespace _Wormcatcher.Scripts
             // example, any other RunLine that might be running)
             StopAllCoroutines();
 
-          
-                LineObject currentLineObject = lineManager.addLine(dialogueLine.CharacterName, "");
-                lineText = currentLineObject.LineTextField;
-                canvasGroup = currentLineObject.CanvasGroup;
-                // Begin running the line as a coroutine.
 
-                LocalizedLine line = new LocalizedLine();
-            StartCoroutine(RunLineInternal(dialogueLine, onDialogueLineFinished));
+            currentDialogueLine = dialogueLine;
+            dialogueLineFinished = onDialogueLineFinished;
+            LineObject currentLineObject = lineManager.addLine(currentDialogueLine.CharacterName, "");
+            lineText = currentLineObject.LineTextField;
+            canvasGroup = currentLineObject.CanvasGroup;
+            // Begin running the line as a coroutine.
+
+            if (hideLineOnStart)
+            {
+                lineText.text = currentDialogueLine.TextWithoutCharacterName.Text.Substring(0, 1) + "...";
+                lineBackground = lineText.transform.parent.GetComponent<Image>();
+                return;
+            }
+
+
+            StartCoroutine(RunLineInternal(currentDialogueLine, dialogueLineFinished));
         }
 
         private IEnumerator RunLineInternal(LocalizedLine dialogueLine, Action onDialogueLineFinished)
@@ -188,10 +180,7 @@ namespace _Wormcatcher.Scripts
 
                 // Hide the continue button until presentation is complete (if
                 // we have one).
-                if (continueButton != null)
-                {
-                    continueButton.SetActive(false);
-                }
+
 
                 if (characterNameText != null)
                 {
@@ -203,18 +192,7 @@ namespace _Wormcatcher.Scripts
                 }
                 else
                 {
-                    // We don't have a character name text view. Should we show
-                    // the character name in the main text view?
-                    if (showCharacterNameInLineView)
-                    {
-                        // Yep! Show the entire text.
-                        lineText.text = dialogueLine.Text.Text;
-                    }
-                    else
-                    {
-                        // Nope! Show just the text without the character name.
-                        lineText.text = dialogueLine.TextWithoutCharacterName.Text;
-                    }
+                    lineText.text = dialogueLine.TextWithoutCharacterName.Text;
                 }
 
                 if (useTypewriterEffect)
@@ -236,7 +214,8 @@ namespace _Wormcatcher.Scripts
                 if (useFadeEffect)
                 {
                     yield return StartCoroutine(Effects.FadeAlpha(canvasGroup, 0, 1, fadeInTime, currentStopToken));
-                    if (currentStopToken.WasInterrupted) {
+                    if (currentStopToken.WasInterrupted)
+                    {
                         // The fade effect was interrupted. Stop this entire
                         // coroutine.
                         yield break;
@@ -252,16 +231,16 @@ namespace _Wormcatcher.Scripts
                     canvasGroup.interactable = true;
                     canvasGroup.blocksRaycasts = true;
                     yield return StartCoroutine(
-                        CoolerTypewriter(
+                        TextEffects.CoolerTypewriter(
                             lineText,
                             dialogueLine,
                             typewriterEffectSpeed,
                             () => onCharacterTyped.Invoke()
                         )
                     );
-                    
                 }
             }
+
             currentLine = dialogueLine;
 
             // Run any presentations as a single coroutine. If this is stopped,
@@ -279,10 +258,6 @@ namespace _Wormcatcher.Scripts
             canvasGroup.blocksRaycasts = true;
 
             // Show the continue button, if we have one.
-            if (continueButton != null)
-            {
-                continueButton.SetActive(true);
-            }
 
             // If we have a hold time, wait that amount of time, and then
             // continue.
@@ -322,7 +297,7 @@ namespace _Wormcatcher.Scripts
             // animation coroutine is what actually interrupts
             // for now this is fine.
             // Is an animation running that we can stop?
-            if (currentStopToken.CanInterrupt) 
+            if (currentStopToken.CanInterrupt)
             {
                 // Stop the current animation, and skip to the end of whatever
                 // started it.
@@ -336,16 +311,6 @@ namespace _Wormcatcher.Scripts
             }
         }
 
-        /// <summary>
-        /// Called when the <see cref="continueButton"/> is clicked.
-        /// </summary>
-        public void OnContinueClicked()
-        {
-            // When the Continue button is clicked, we'll do the same thing as
-            // if we'd received a signal from any other part of the game (for
-            // example, if a DialogueAdvanceInput had signalled us.)
-            UserRequestedViewAdvancement();
-        }
 
         /// <inheritdoc />
         /// <remarks>
@@ -361,63 +326,33 @@ namespace _Wormcatcher.Scripts
             }
         }
 
-        
+
         //TODO put this in a helper class what is wrong with you! 
-        IEnumerator CoolerTypewriter(TextMeshProUGUI text,  LocalizedLine fullLine, float lettersPerSecond, Action onCharacterTyped)
+        
+
+        public void OnPointerClick(PointerEventData eventData)
         {
-
-            int visibleCharacters = 0; 
-            
-            var maxCharacters = fullLine.TextWithoutCharacterName.Text.Length;
-            print($"Typewriter called with character count:{maxCharacters}");
-            // Start with everything invisible
-            text.text = "";
-            
-            
-            // Wait a single frame to let the text component process its
-            // content, otherwise text.textInfo.characterCount won't be
-            // accurate
-            yield return null;
-
-            // How many visible characters are present in the text?
-            
-
-            
-            // Early out if letter speed is zero, text length is zero
-            if (lettersPerSecond <= 0 || maxCharacters == 0)
+            if (hideLineOnStart)
             {
-                print("maxletters less than 1");
-                // Show everything and return
-                text.maxVisibleCharacters = maxCharacters;
-                yield break;
+                lineBackground.color = backgroundColor;
+                hideLineOnStart = false;
+                StartCoroutine(RunLineInternal(currentDialogueLine, dialogueLineFinished));
             }
+        }
 
-            // Convert 'letters per second' into its inverse
-            float secondsPerLetter = 1.0f / lettersPerSecond;
-            
-            var accumulator = Time.deltaTime;
-
-            while (visibleCharacters < maxCharacters)
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            if (hideLineOnStart)
             {
-                
-                // We need to show as many letters as we have accumulated
-                // time for.
-                while (accumulator >= secondsPerLetter)
-                {
-                    text.text = fullLine.TextWithoutCharacterName.Text.Substring(0, visibleCharacters);
-                    onCharacterTyped?.Invoke();
-                    accumulator -= secondsPerLetter;
-                    visibleCharacters += 1;
-                }
-                accumulator += Time.deltaTime;
-
-                yield return null;
+                backgroundColor = lineBackground.color;
+                lineBackground.color = Color.grey;
             }
+        }
 
-            // We either finished displaying everything, or were
-            // interrupted. Either way, display everything now.
-            text.maxVisibleCharacters = maxCharacters;
-            
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            if (hideLineOnStart)
+                lineBackground.color = backgroundColor;
         }
     }
 }
