@@ -7,21 +7,25 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private InputActionAsset inputActionAsset;
+    // Input 
+    private PlayerInputAction playerInputAction;
+    private InputAction sprintAction;
     private InputAction movementAction; 
-    private InputAction sprintAction; 
+    
+    
     [SerializeField] CharacterController controller;
     [SerializeField] Transform groundCheck;
     
     private float xInput;
     private float zInput;
     
-    
+    // Movement Parameters 
     [SerializeField] private float baseSpeed = 2f;
     [SerializeField] private float targetSpeed;
     [SerializeField]private float currentSpeed; 
     [SerializeField] private float gravity = -9.81f;
 
+    // Collision
     [SerializeField] private float groundDistance = 0.4f;
     [SerializeField] private LayerMask groundMask;
     
@@ -31,17 +35,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float decelerationRate = 5f;
     [SerializeField] private float accelerationRate = 3f;
 
-    private void OnEnable()
-    {
-        movementAction.Enable();
-        sprintAction.Enable();
-    }
+   
 
     private void Awake()
     {
-        var inputActionMap = inputActionAsset.FindActionMap("KeyboardMovement");
-        movementAction = inputActionMap.FindAction("Movement");
-        sprintAction = inputActionMap.FindAction("Sprint");
+        playerInputAction = new PlayerInputAction(); 
+        playerInputAction.WalkInput.Enable();
+        sprintAction = playerInputAction.WalkInput.Sprint;
+        movementAction = playerInputAction.WalkInput.Movement;
     }
 
     void Start()
