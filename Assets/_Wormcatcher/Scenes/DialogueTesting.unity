@@ -1123,6 +1123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 3708512360121593490}
+  lineBubbleView: {fileID: 224902141}
   optionViewPrefab: {fileID: 5473699817250769959, guid: 03f414a3d0851ac44a55f09024117388,
     type: 3}
   fadeTime: 0.1

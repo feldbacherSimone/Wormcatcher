@@ -10,6 +10,7 @@ namespace _Wormcatcher.Scripts
     public class BubbleOptionsListView : DialogueViewBase
     {
         [SerializeField] CanvasGroup canvasGroup;
+        [SerializeField] private LineBubbleView lineBubbleView; 
 
         [SerializeField] BubbleOptionView optionViewPrefab;
 
@@ -108,7 +109,7 @@ namespace _Wormcatcher.Scripts
             void OptionViewWasSelected(DialogueOption option)
             {
                 StartCoroutine(OptionViewWasSelectedInternal(option));
-
+                lineBubbleView.useTypewriterEffect = false; 
                 IEnumerator OptionViewWasSelectedInternal(DialogueOption selectedOption)
                 {
                     yield return StartCoroutine(Effects.FadeAlpha(canvasGroup, 1, 0, fadeTime));

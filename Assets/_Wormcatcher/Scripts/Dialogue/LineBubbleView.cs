@@ -41,6 +41,12 @@ namespace _Wormcatcher.Scripts
 
         [SerializeField] [Min(0)] internal float typewriterEffectSpeed = 0f;
 
+        public bool UseTypewriterEffect
+        {
+            get => useTypewriterEffect;
+            set => useTypewriterEffect = value;
+        }
+
         public float TypewriterEffectSpeed
         {
             get => typewriterEffectSpeed;
@@ -159,7 +165,6 @@ namespace _Wormcatcher.Scripts
             // example, any other RunLine that might be running)
             StopAllCoroutines();
 
-
             currentDialogueLine = dialogueLine;
             dialogueLineFinished = onDialogueLineFinished;
             LineObject currentLineObject = lineManager.addLine(currentDialogueLine.CharacterName, "");
@@ -251,8 +256,11 @@ namespace _Wormcatcher.Scripts
                             typewriterEffectSpeed,
                             () => onCharacterTyped.Invoke()
                         )
+                        
                     );
+                    
                 }
+                useTypewriterEffect = true; 
             }
 
             currentLine = dialogueLine;
