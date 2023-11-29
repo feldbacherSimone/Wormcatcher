@@ -4,6 +4,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace _Wormcatcher.Scripts
@@ -13,7 +14,7 @@ namespace _Wormcatcher.Scripts
         [SerializeField] private LineManager lineManager;
         [SerializeField] internal CanvasGroup canvasGroup;
 
-
+        
         [SerializeField] internal bool useFadeEffect = true;
 
 
@@ -24,7 +25,10 @@ namespace _Wormcatcher.Scripts
 
         [SerializeField] internal TextMeshProUGUI lineText = null;
         private Image lineBackground;
+
         private Color backgroundColor;
+        [SerializeField] private Color backgroundHighlightColor = Color.gray;
+        
 
 
         [SerializeField] internal TextMeshProUGUI characterNameText = null;
@@ -50,8 +54,11 @@ namespace _Wormcatcher.Scripts
 
         LocalizedLine currentLine = null;
 
-        [SerializeField] private Boolean hideLineOnStart; // awful name 
-
+        private Boolean hideLineOnStart; // awful name 
+        private bool expanded = false; 
+        
+        [Tooltip("Overrides the yarn commands for line expanding forcing every line to be expanded")]
+        [SerializeField] private bool forceHideLineOnStart;
 
         public void setHideLineOnStart()
         {
@@ -160,13 +167,20 @@ namespace _Wormcatcher.Scripts
             canvasGroup = currentLineObject.CanvasGroup;
             // Begin running the line as a coroutine.
 
+            if (forceHideLineOnStart && dialogueLine.CharacterName.Equals("PC"))
+            {
+                hideLineOnStart = true; 
+            }
             if (hideLineOnStart)
             {
                 lineText.text = currentDialogueLine.TextWithoutCharacterName.Text.Substring(0, 1) + "...";
                 lineBackground = lineText.transform.parent.GetComponent<Image>();
+                backgroundColor = lineBackground.color;
+                lineBackground.color = backgroundHighlightColor;
+                expanded = false; 
                 return;
             }
-
+            
 
             StartCoroutine(RunLineInternal(currentDialogueLine, dialogueLineFinished));
         }
@@ -328,7 +342,7 @@ namespace _Wormcatcher.Scripts
 
 
         //TODO put this in a helper class what is wrong with you! 
-        
+
 
         public void OnPointerClick(PointerEventData eventData)
         {
@@ -337,6 +351,7 @@ namespace _Wormcatcher.Scripts
                 lineBackground.color = backgroundColor;
                 hideLineOnStart = false;
                 StartCoroutine(RunLineInternal(currentDialogueLine, dialogueLineFinished));
+                expanded = true;
             }
         }
 
@@ -344,15 +359,14 @@ namespace _Wormcatcher.Scripts
         {
             if (hideLineOnStart)
             {
-                backgroundColor = lineBackground.color;
-                lineBackground.color = Color.grey;
+                lineBackground.color = backgroundColor; 
             }
         }
 
         public void OnPointerExit(PointerEventData eventData)
         {
-            if (hideLineOnStart)
-                lineBackground.color = backgroundColor;
+            if (hideLineOnStart && !expanded)
+                lineBackground.color = backgroundHighlightColor;
         }
     }
 }

@@ -16,6 +16,8 @@ namespace _Wormcatcher.Scripts
         [SerializeField] float fadeTime = 0.1f;
 
         [SerializeField] bool showUnavailableOptions = false;
+        
+        [SerializeField] private bool revealOnHover;
 
         // A cached pool of OptionView objects so that we can reuse them
         List<BubbleOptionView> optionViews = new List<BubbleOptionView>();
@@ -45,6 +47,7 @@ namespace _Wormcatcher.Scripts
             // Hide all existing option views
             foreach (var optionView in optionViews)
             {
+                
                 optionView.gameObject.SetActive(false);
             }
 
@@ -68,7 +71,8 @@ namespace _Wormcatcher.Scripts
                     // Don't show this option.
                     continue;
                 }
-
+                optionView.Expanded = false;
+                optionView.RevealOnHover = revealOnHover; 
                 optionView.gameObject.SetActive(true);
 
                 optionView.Option = option;

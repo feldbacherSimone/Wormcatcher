@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &4503401843684238994
+--- !u!114 &5473699817250769959
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 645508667913161403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0ac1630cc8a4c4c9cece210c2cb26b3, type: 3}
+  m_Script: {fileID: 11500000, guid: b52cd03e3d93b7840a4201b0dfedb788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -20,11 +20,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 0.2}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.29803923}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_NormalColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_SelectedColor: {r: 0, g: 0, b: 0, a: 1}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -42,6 +42,9 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 645508668020599164}
   text: {fileID: 645508667746663298}
   showCharacterName: 0
+  onCharacterTyped:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &6471950136692458877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -209,6 +212,21 @@ PrefabInstance:
     - target: {fileID: 5847276412120993735, guid: 7c545f611d8a1e5428f666eb2a3c978f,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847276412210637825, guid: 7c545f611d8a1e5428f666eb2a3c978f,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847276412210637825, guid: 7c545f611d8a1e5428f666eb2a3c978f,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847276412210637825, guid: 7c545f611d8a1e5428f666eb2a3c978f,
+        type: 3}
+      propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5847276412210637839, guid: 7c545f611d8a1e5428f666eb2a3c978f,

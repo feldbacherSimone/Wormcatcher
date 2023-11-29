@@ -13,6 +13,13 @@ namespace _Wormcatcher.Scripts
         [SerializeField] TextMeshProUGUI text;
         [SerializeField] bool showCharacterName = false;
         [SerializeField] internal UnityEngine.Events.UnityEvent onCharacterTyped;
+        private bool revealOnHover;
+
+        public bool RevealOnHover
+        {
+            get => revealOnHover;
+            set => revealOnHover = value;
+        }
 
         public Action<DialogueOption> OnOptionSelected;
 
@@ -20,7 +27,14 @@ namespace _Wormcatcher.Scripts
 
         bool hasSubmittedOptionSelection = false;
 
-        private bool expanded; // EXPANDED ANIIIIMATION (ja da bin ich ja da ist er auchhhhh) 
+        private bool expanded = false; // EXPANDED ANIIIIMATION (ja da bin ich ja da ist er auchhhhh) 
+
+        public bool Expanded
+        {
+            get => expanded;
+            set => expanded = value;
+        }
+
         private bool isRevealing = false;
 
         public DialogueOption Option
@@ -72,13 +86,13 @@ namespace _Wormcatcher.Scripts
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            if (expanded)
-            {
-                InvokeOptionSelected();
-            }
-            else if (!isRevealing)
+            if (!revealOnHover && !expanded && !isRevealing)
             {
                 StartCoroutine(RevealOption());
+            }
+            else if(expanded)
+            {
+                InvokeOptionSelected();
             }
         }
 
@@ -86,7 +100,16 @@ namespace _Wormcatcher.Scripts
         // the currently 'selected' (i.e. focused) element. 
         public override void OnPointerEnter(PointerEventData eventData)
         {
-            base.Select();
+            
+            
+            if (expanded || !revealOnHover)
+            {
+                base.Select();
+            }
+            else if (!isRevealing && RevealOnHover)
+            {
+                StartCoroutine(RevealOption());
+            }
         }
 
         private IEnumerator RevealOption()

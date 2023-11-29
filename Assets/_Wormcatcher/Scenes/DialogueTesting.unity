@@ -344,7 +344,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 224902135}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff11033aad194793bc6056e89e5a9bee, type: 3}
+  m_Script: {fileID: 11500000, guid: d80eb3b4ad574604b94e39371e4f4788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lineManager: {fileID: 224902142}
@@ -353,6 +353,7 @@ MonoBehaviour:
   fadeInTime: 0.25
   fadeOutTime: 0.05
   lineText: {fileID: 0}
+  backgroundHighlightColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   characterNameText: {fileID: 0}
   useTypewriterEffect: 1
   onCharacterTyped:
@@ -361,7 +362,7 @@ MonoBehaviour:
   typewriterEffectSpeed: 22
   holdTime: 1
   autoAdvance: 1
-  hideLineOnStart: 0
+  forceHideLineOnStart: 0
 --- !u!114 &224902142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,7 +372,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 224902135}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f46df8dff7344c1ac0cfb3f3eb531fa, type: 3}
+  m_Script: {fileID: 11500000, guid: a4c86faa552d05d408c2622fde384c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   linesObjects: []
@@ -425,7 +426,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 327792482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec06c1e49dad9204ea3fa02b0c24e160, type: 3}
+  m_Script: {fileID: 11500000, guid: d125f6e76ee70af4aa95da8f440bdb8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 327792485}
@@ -896,6 +897,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   templateOutline: {fileID: 0}
+  outline: {fileID: 0}
   debug: 0
 --- !u!4 &747730422
 Transform:
@@ -1061,7 +1063,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 93, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &3708512360121593485
 GameObject:
@@ -1117,14 +1119,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3708512360121593485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c342a16078454fa186bdfb016af42e34, type: 3}
+  m_Script: {fileID: 11500000, guid: 5283d8d24af1ffc4c92a95ae48cf3222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 3708512360121593490}
-  optionViewPrefab: {fileID: 4503401843684238994, guid: 03f414a3d0851ac44a55f09024117388,
+  optionViewPrefab: {fileID: 5473699817250769959, guid: 03f414a3d0851ac44a55f09024117388,
     type: 3}
   fadeTime: 0.1
   showUnavailableOptions: 0
+  revealOnHover: 0
 --- !u!225 &3708512360121593490
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1308,7 +1311,7 @@ PrefabInstance:
     - target: {fileID: 5847276412120993735, guid: 7c545f611d8a1e5428f666eb2a3c978f,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5847276412120993735, guid: 7c545f611d8a1e5428f666eb2a3c978f,
         type: 3}
@@ -1318,7 +1321,7 @@ PrefabInstance:
     - target: {fileID: 5847276412120993735, guid: 7c545f611d8a1e5428f666eb2a3c978f,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5847276412120993735, guid: 7c545f611d8a1e5428f666eb2a3c978f,
         type: 3}
