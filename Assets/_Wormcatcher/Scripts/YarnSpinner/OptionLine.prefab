@@ -52,6 +52,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1626284141764434670, guid: 7c545f611d8a1e5428f666eb2a3c978f,
+        type: 3}
+      propertyPath: maxWidth
+      value: 77
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626284141764434670, guid: 7c545f611d8a1e5428f666eb2a3c978f,
+        type: 3}
+      propertyPath: minWidth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1626284141764434670, guid: 7c545f611d8a1e5428f666eb2a3c978f,
+        type: 3}
+      propertyPath: maxPadding
+      value: 77
+      objectReference: {fileID: 0}
     - target: {fileID: 5847276411951382270, guid: 7c545f611d8a1e5428f666eb2a3c978f,
         type: 3}
       propertyPath: m_AnchorMin.y
