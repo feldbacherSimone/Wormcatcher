@@ -1,6 +1,7 @@
 using Yarn.Unity;
 using System;
 using System.Collections;
+using _Wormcatcher.Scripts.Dialogue;
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
@@ -40,6 +41,7 @@ namespace _Wormcatcher.Scripts
 
 
         [SerializeField] [Min(0)] internal float typewriterEffectSpeed = 0f;
+        
 
         public bool UseTypewriterEffect
         {
@@ -61,7 +63,8 @@ namespace _Wormcatcher.Scripts
         LocalizedLine currentLine = null;
 
         private Boolean hideLineOnStart; // awful name 
-        private bool expanded = false; 
+        private bool expanded = false;
+        private LineObject currentLineObject;
         
         [Tooltip("Overrides the yarn commands for line expanding forcing every line to be expanded")]
         [SerializeField] private bool forceHideLineOnStart;
@@ -167,7 +170,7 @@ namespace _Wormcatcher.Scripts
 
             currentDialogueLine = dialogueLine;
             dialogueLineFinished = onDialogueLineFinished;
-            LineObject currentLineObject = lineManager.addLine(currentDialogueLine.CharacterName, "");
+            currentLineObject = lineManager.addLine(currentDialogueLine.CharacterName, "");
             lineText = currentLineObject.LineTextField;
             canvasGroup = currentLineObject.CanvasGroup;
             // Begin running the line as a coroutine.
@@ -200,7 +203,8 @@ namespace _Wormcatcher.Scripts
                 // Hide the continue button until presentation is complete (if
                 // we have one).
 
-
+                if(currentLineObject.LineLayout != null)
+                    yield return currentLineObject.LineLayout.SetPadding(dialogueLine.TextWithoutCharacterName.Text);
                 if (characterNameText != null)
                 {
                     // If we have a character name text view, show the character
@@ -228,6 +232,9 @@ namespace _Wormcatcher.Scripts
                     lineText.maxVisibleCharacters = int.MaxValue;
                 }
 
+                
+                
+                
                 // If we're using the fade effect, start it, and wait for it to
                 // finish.
                 if (useFadeEffect)

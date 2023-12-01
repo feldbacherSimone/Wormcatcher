@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: fdsfasdfdsafdsfadsafsdfdsafsdfsdfsdfdsfdsfdfsdfdsafdsfdsfadsfdsdsfdafddsfdsfsdafsfddsfsfdf
+  m_text: sdfasdfdasfdsafdasfasdfsa
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9192dd8f6e4df4b4eb0bc78021c9f483, type: 2}
   m_sharedMaterial: {fileID: -6917589276670986237, guid: 9192dd8f6e4df4b4eb0bc78021c9f483,
@@ -202,6 +202,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 5847276412120993753}
   lineContainerObject: {fileID: 5847276412210637838}
   lineTextField: {fileID: 5847276411951382271}
+  lineLayout: {fileID: 1626284141764434670}
 --- !u!114 &5146882484136522102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +234,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 3
+  m_ChildAlignment: 5
   m_Spacing: 0
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
@@ -255,8 +256,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxWidth: 77
   minWidth: 10
-  maxPadding: 80
   minPadding: 21
+  maxPadding: 87
+  textField: {fileID: 5847276411951382271}
+  layoutGroup: {fileID: 5847276412120993733}
+  canvasGroup: {fileID: 5847276412120993753}
+  rectTransform: {fileID: 5847276412210637839}
 --- !u!1 &5847276412210637838
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +346,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5847276412210637838}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
   m_Name: 

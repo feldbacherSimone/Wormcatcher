@@ -29,7 +29,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Movement"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""2c9b27ce-f5a4-48ff-a3b5-e1727436e092"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
@@ -141,7 +141,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f052ae4f-14c3-4cef-b9cd-aeb4ff54aae7"",
-                    ""path"": ""<Gamepad>/dpad"",
+                    ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

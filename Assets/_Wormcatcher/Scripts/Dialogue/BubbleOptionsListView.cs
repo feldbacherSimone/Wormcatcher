@@ -10,14 +10,14 @@ namespace _Wormcatcher.Scripts
     public class BubbleOptionsListView : DialogueViewBase
     {
         [SerializeField] CanvasGroup canvasGroup;
-        [SerializeField] private LineBubbleView lineBubbleView; 
+        [SerializeField] private LineBubbleView lineBubbleView;
 
         [SerializeField] BubbleOptionView optionViewPrefab;
 
         [SerializeField] float fadeTime = 0.1f;
 
         [SerializeField] bool showUnavailableOptions = false;
-        
+
         [SerializeField] private bool revealOnHover;
 
         // A cached pool of OptionView objects so that we can reuse them
@@ -29,7 +29,7 @@ namespace _Wormcatcher.Scripts
         // The line we saw most recently.
         LocalizedLine lastSeenLine;
 
-        
+
         public void Start()
         {
             canvasGroup.alpha = 0;
@@ -48,7 +48,6 @@ namespace _Wormcatcher.Scripts
             // Hide all existing option views
             foreach (var optionView in optionViews)
             {
-                
                 optionView.gameObject.SetActive(false);
             }
 
@@ -72,11 +71,12 @@ namespace _Wormcatcher.Scripts
                     // Don't show this option.
                     continue;
                 }
-                optionView.Expanded = false;
-                optionView.RevealOnHover = revealOnHover; 
-                optionView.gameObject.SetActive(true);
 
+                optionView.Expanded = false;
+                optionView.RevealOnHover = revealOnHover;
+                optionView.gameObject.SetActive(true);
                 optionView.Option = option;
+
 
                 // The first available option is selected by default
                 if (optionViewsCreated == 0)
@@ -109,7 +109,8 @@ namespace _Wormcatcher.Scripts
             void OptionViewWasSelected(DialogueOption option)
             {
                 StartCoroutine(OptionViewWasSelectedInternal(option));
-                lineBubbleView.useTypewriterEffect = false; 
+                lineBubbleView.useTypewriterEffect = false;
+
                 IEnumerator OptionViewWasSelectedInternal(DialogueOption selectedOption)
                 {
                     yield return StartCoroutine(Effects.FadeAlpha(canvasGroup, 1, 0, fadeTime));

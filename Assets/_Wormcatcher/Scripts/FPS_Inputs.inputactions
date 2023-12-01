@@ -7,11 +7,12 @@
             "actions": [
                 {
                     "name": "Movement",
-                    "type": "Value",
+                    "type": "PassThrough",
                     "id": "2c9b27ce-f5a4-48ff-a3b5-e1727436e092",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Sprint",
@@ -19,7 +20,8 @@
                     "id": "8af11688-173c-409b-abe5-d1931754f8cd",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Interact",
@@ -27,7 +29,8 @@
                     "id": "eaaa0b2a-551c-478a-a0a4-6bd5793eb9c2",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "SceneObject",
@@ -35,7 +38,8 @@
                     "id": "9706c5d8-a561-4bfd-ae35-0bd16124c34c",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "MouseLook",
@@ -43,7 +47,8 @@
                     "id": "664de548-ab24-4926-8ec6-2fe6d5de0d55",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "MousePosition",
@@ -51,7 +56,8 @@
                     "id": "d0be347f-c9ce-4fa3-8b78-196337e0784b",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -113,7 +119,7 @@
                 {
                     "name": "",
                     "id": "f052ae4f-14c3-4cef-b9cd-aeb4ff54aae7",
-                    "path": "<Gamepad>/dpad",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -199,7 +205,8 @@
                     "id": "fec2cf05-46ea-4d18-adfa-81be7e917451",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [

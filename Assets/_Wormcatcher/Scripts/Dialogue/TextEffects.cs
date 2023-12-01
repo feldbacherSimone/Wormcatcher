@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using TMPro;
 using UnityEngine;
 using Yarn.Unity;
@@ -16,6 +17,8 @@ namespace _Wormcatcher.Scripts
 
             var maxCharacters = fullLine.TextWithoutCharacterName.Text.Length;
             // Start with everything invisible
+            
+            //text.text = fullLine.TextWithoutCharacterName.Text;
             text.text = "";
 
 
@@ -47,7 +50,8 @@ namespace _Wormcatcher.Scripts
                 while (accumulator >= secondsPerLetter)
                 {
                     visibleCharacters += 1;
-                    text.text = fullLine.TextWithoutCharacterName.Text.Substring(0, visibleCharacters);
+                    String newText = fullLine.TextWithoutCharacterName.Text.Substring(0, visibleCharacters);
+                    text.text = newText;
                     onCharacterTyped?.Invoke();
                     accumulator -= secondsPerLetter;
                 }
