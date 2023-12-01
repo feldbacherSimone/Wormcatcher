@@ -58,5 +58,11 @@ namespace _Wormcatcher.Scripts.Dialogue
             print($"current Width: {currenWidth}, width frac: {currentWithFrac}");
             layoutGroup.padding.left = Mathf.RoundToInt(Mathf.Lerp(maxPadding, minPadding, currentWithFrac));
         }
+
+        public void ResetAlignment()
+        {
+            layoutGroup.childAlignment = TextAnchor.MiddleRight;
+            layoutGroup.padding.left = minPadding;
+        }
     }
 }

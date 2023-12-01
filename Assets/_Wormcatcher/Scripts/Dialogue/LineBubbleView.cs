@@ -261,7 +261,8 @@ namespace _Wormcatcher.Scripts
                             lineText,
                             dialogueLine,
                             typewriterEffectSpeed,
-                            () => onCharacterTyped.Invoke()
+                            () => onCharacterTyped.Invoke(),
+                            () => currentLineObject.LineLayout?.ResetAlignment()
                         )
                         
                     );

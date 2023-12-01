@@ -11,7 +11,7 @@ namespace _Wormcatcher.Scripts
     public static class TextEffects 
     {
         public static IEnumerator CoolerTypewriter(TextMeshProUGUI text, LocalizedLine fullLine, float lettersPerSecond,
-            Action onCharacterTyped)
+            Action onCharacterTyped, Action onAnimationComplete = null)
         {
             int visibleCharacters = 0;
 
@@ -64,6 +64,7 @@ namespace _Wormcatcher.Scripts
             // We either finished displaying everything, or were
             // interrupted. Either way, display everything now.
             text.maxVisibleCharacters = maxCharacters;
+            onAnimationComplete?.Invoke();
         }
     }
 }
