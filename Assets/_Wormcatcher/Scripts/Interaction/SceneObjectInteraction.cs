@@ -3,13 +3,17 @@ using UnityEngine;
 
 namespace _Wormcatcher.Scripts
 {
+    /// <summary>
+    /// implementation of conditional interaction. Only performs interaction if the Scene object is active (held) 
+    /// </summary>
     [Serializable]
     public class SceneObjectInteraction : ConditionalInteraction
     {
-        [SerializeField] private SceneObjectHandler sceneObjectHandler;  
-        protected override bool GetCondition()
+        protected override bool InteracionCondition()
         {
-            return sceneObjectHandler.ObjectIsActive();
+            
+            DebugPrint($"{this.name} condition is {SceneObjectHandler._instance.ObjectIsActive()}");
+            return SceneObjectHandler._instance.ObjectIsActive();
         }
     }
 }

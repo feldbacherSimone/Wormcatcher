@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/_Wormcatcher/Scenes/DialogueTesting.unity
+  - enabled: 0
+    path: Assets/_Wormcatcher/Scenes/Testing/DialogueTesting.unity
     guid: fa77c614d104d474797c93860c366f87
   - enabled: 1
-    path: Assets/_Wormcatcher/Scenes/Testing.unity
+    path: Assets/_Wormcatcher/Scenes/Testing/InteractionTesting.unity
     guid: 1f1a731ff56797a4bb5a700c15686d89
   m_configObjects: {}

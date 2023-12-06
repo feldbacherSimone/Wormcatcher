@@ -8,6 +8,9 @@ using Yarn.Unity;
 
 namespace _Wormcatcher.Scripts
 {
+    /// <summary>
+    /// Handles a dialogue option 
+    /// </summary>
     public class BubbleOptionView : UnityEngine.UI.Selectable, ISubmitHandler, IPointerClickHandler,
         IPointerEnterHandler
     {

@@ -4,6 +4,10 @@ using UnityEngine.Serialization;
 
 namespace _Wormcatcher.Scripts
 {
+    /// <summary>
+    /// Base Class for conditional interaction, triggers one interaction if conditions is true and nother if condition is false
+    /// if a condition is unassigned, nothing will happen
+    /// </summary>
     [System.Serializable]
     public abstract class ConditionalInteraction : InteractionObject
     {
@@ -14,20 +18,36 @@ namespace _Wormcatcher.Scripts
         private InteractionObject falseInteractionObject;
 
 
+        private void Awake()
+        {
+            trueInteractionObject.Active = false;
+            if(falseInteractionObject != null)
+                falseInteractionObject.Active = false; 
+        }
+
         public override void Interact()
         {
-            DebugPrint($"Conditoinal Interaction called in {this.name}, condition = {GetCondition()}");
-            if (GetCondition())
+            DebugPrint($"Conditoinal Interaction called in {this.name}, condition = {InteracionCondition()}");
+            if (InteracionCondition())
             {
-                DebugPrint($"True interaction calling {trueInteractionObject.name}");
-                trueInteractionObject?.Interact();
+                CallInteraction(trueInteractionObject);
             }
             else
             {
-                falseInteractionObject?.Interact();
+                CallInteraction(falseInteractionObject);
             }
         }
 
-        protected abstract bool GetCondition();
+        private void CallInteraction(InteractionObject interactionObject)
+        {
+            if(interactionObject == null)
+                return;
+            DebugPrint($"{InteracionCondition()} interaction calling {interactionObject.name}");
+            interactionObject.Active = true;
+            interactionObject.Interact();
+            interactionObject.Active = false;
+        }
+
+        protected abstract bool InteracionCondition();
     }
 }

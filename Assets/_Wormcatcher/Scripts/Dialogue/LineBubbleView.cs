@@ -10,6 +10,9 @@ using UnityEngine.UI;
 
 namespace _Wormcatcher.Scripts
 {
+    /// <summary>
+    /// Displays Dialogue lines 
+    /// </summary>
     public class LineBubbleView : DialogueViewBase, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] private LineManager lineManager;

@@ -3,9 +3,11 @@ using UnityEngine;
 
 namespace _Wormcatcher.Scripts
 {
+    /**
+     * Hanldes showing and hiding the a scene object 
+     */
     public class SceneObjectHandler : MonoBehaviour
     {
-        // TODO Alles implementieren lol 
         [SerializeField] private bool objectIsActive;
         [SerializeField] private SceneObject sceneObject;
         [SerializeField] private bool debug;
@@ -15,6 +17,7 @@ namespace _Wormcatcher.Scripts
         public static SceneObjectHandler _instance;
         
 
+        // there should only ever be one scene object per scene so we can use a sigelton
         private void Awake()
         {
             if (_instance == null)
@@ -48,6 +51,7 @@ namespace _Wormcatcher.Scripts
             sceneObject.State = true; 
             DebugPrint("SpawnObject called");
         }
+        
         public void DespawnObject()
         {
             if (sceneObject == null)

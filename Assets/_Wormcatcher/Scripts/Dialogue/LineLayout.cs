@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 namespace _Wormcatcher.Scripts.Dialogue
 {
+    /// <summary>
+    /// Sets proper padding for PC lines, for clearer animation 
+    /// </summary>
     public class LineLayout : MonoBehaviour
     {
         [SerializeField] float maxWidth = 77;

@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 namespace _Wormcatcher.Scripts
 {
+    /// <summary>
+    /// Adds and removes dialogue bubbles
+    /// </summary>
     public class LineManager : MonoBehaviour
     {
         [FormerlySerializedAs("lines")] [SerializeField]

@@ -3,6 +3,9 @@ using Yarn.Unity;
 
 namespace _Wormcatcher.Scripts
 {
+    /// <summary>
+    /// Defines custom commands for Dialogue files 
+    /// </summary>
     public class CustomCommands : MonoBehaviour
     {
         [SerializeField] private DialogueRunner dialogueRunner;

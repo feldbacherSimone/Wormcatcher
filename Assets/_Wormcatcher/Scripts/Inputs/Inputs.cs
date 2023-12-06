@@ -1,9 +1,11 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace _Wormcatcher.Scripts
+namespace _Wormcatcher.Scripts.Inputs
 {
+    // UNUSED 
+    // I think i tried to outsource all the input assigning to this class but never finished it so it's unused 
+    // Might work on it in the future if inputs get more complex in the future 
     public class Inputs : MonoBehaviour
     {
         [SerializeField] private InputActionAsset inputActionAsset;

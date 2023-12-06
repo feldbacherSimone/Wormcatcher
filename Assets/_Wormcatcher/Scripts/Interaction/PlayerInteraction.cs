@@ -4,6 +4,10 @@ using UnityEngine.InputSystem;
 
 namespace _Wormcatcher.Scripts
 {
+    /// <summary>
+    /// Handles all the player input and logic for interacting with objects
+    /// Assigned to the player controller, calls implementations of ISelectable and IInteractable 
+    /// </summary>
     public class PlayerInteraction : MonoBehaviour
     {
         [SerializeField] private InputActionAsset inputActionAsset;
@@ -26,15 +30,18 @@ namespace _Wormcatcher.Scripts
 
         private void Awake()
         {
+            // fetch a selection response from the refernced object 
+            selectionResponse = selectionResponseObject.GetComponent<ISelectableObject>();
+
+            // Enable interact input action 
             playerInputAction = new PlayerInputAction();
             playerInputAction.WalkInput.Enable();
 
-            selectionResponse = selectionResponseObject.GetComponent<ISelectableObject>();
-
+            // Assign the scene object handler methods to the mouse click hold events
             playerInputAction.WalkInput.SceneObject.started += _ => SceneObjectHandler._instance.SpawnObject();
             playerInputAction.WalkInput.SceneObject.canceled += _ => SceneObjectHandler._instance.DespawnObject();
         }
-        
+
 
         private void Update()
         {
@@ -43,12 +50,14 @@ namespace _Wormcatcher.Scripts
                 interactable.Interact();
                 DebugPrint("interaction Triggered");
             }
-            
         }
 
+        /// <summary>
+        /// Check if an interactable Object is selected 
+        /// </summary>
+        /// <returns></returns>
         private bool ValidObjectSelection()
         {
-            
             GameObject newSelectable = CheckForSelectable();
             // Deselect the current object if it's not the same as the new one
             if (selectableObject != null && newSelectable != selectableObject)
@@ -82,10 +91,14 @@ namespace _Wormcatcher.Scripts
         private void SelectNewObject(GameObject newSelectable)
         {
             selectableObject = newSelectable;
-            Debug.Log("Found Interactable " + interactable + " Interaction Object " + selectableObject);
+            DebugPrint("Found Interactable " + interactable + " Interaction Object " + selectableObject);
             selectionResponse.OnSelect(selectableObject);
         }
 
+        /// <summary>
+        /// Check if an object contains a class implementing IInteractable
+        /// </summary>
+        /// <returns>true if object contains an Interact Method</returns>
         private GameObject CheckForSelectable()
         {
             DebugRay(transform.position, transform.forward * interactionDistance, Color.cyan);
@@ -95,7 +108,12 @@ namespace _Wormcatcher.Scripts
                 DebugRay(transform.position, transform.forward * interactionDistance, Color.red);
 
                 GameObject selectedObject = hit.transform.gameObject;
-                interactable = selectedObject.TryGetComponent(out interactable) ? interactable : null;
+                InteractionObject[] interactionObjects = selectedObject.GetComponents<InteractionObject>();
+                interactable = null;
+                foreach (var interactionObject in interactionObjects)
+                {
+                    interactable = interactionObject.Active ? interactionObject : null;
+                }
 
                 return interactable != null ? selectedObject : null;
             }

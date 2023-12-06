@@ -8,6 +8,9 @@ using Yarn.Unity;
 
 namespace _Wormcatcher.Scripts
 {
+    /// <summary>
+    /// Helper class for various text effects
+    /// </summary>
     public static class TextEffects 
     {
         public static IEnumerator CoolerTypewriter(TextMeshProUGUI text, LocalizedLine fullLine, float lettersPerSecond,

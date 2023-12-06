@@ -7,6 +7,9 @@ using UnityEngine;
 
 namespace _Wormcatcher.Scripts
 {
+    /// <summary>
+    /// Displays dialogue option unsing multible BubbleOptionViews 
+    /// </summary>
     public class BubbleOptionsListView : DialogueViewBase
     {
         [SerializeField] CanvasGroup canvasGroup;

@@ -4,6 +4,9 @@ using TMPro;
 
 namespace _Wormcatcher.Scripts
 {
+    /// <summary>
+    /// Object containing references to a differnt components in a dialogue line, for easier access in LineManager
+    /// </summary>
     public class LineObject : MonoBehaviour
 
     {
