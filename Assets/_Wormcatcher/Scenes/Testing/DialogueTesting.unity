@@ -442,13 +442,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yarnProject: {fileID: 7545569452688597077, guid: 4528eb6598c9e5a41ac8becf797a1cf4,
+  yarnProject: {fileID: 7545569452688597077, guid: 61827328da848a24dbf4653d63994d2e,
     type: 3}
   _variableStorage: {fileID: 0}
   dialogueViews:
   - {fileID: 224902141}
   - {fileID: 3708512360121593487}
-  startNode: Start
+  startNode: V1
   startAutomatically: 1
   runSelectedOptionAsLine: 1
   lineProvider: {fileID: 0}
