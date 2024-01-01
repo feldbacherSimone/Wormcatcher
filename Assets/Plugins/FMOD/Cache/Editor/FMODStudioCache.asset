@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638356540138058158
+  lastModified: 638356958139326782
   FileSizes:
   - Name: Desktop
     Value: 758
@@ -69,7 +69,7 @@ MonoBehaviour:
   - {fileID: 6101576862161281281}
   StringsBanks:
   - {fileID: -2300738075331474776}
-  cacheTime: 638356540138058158
+  cacheTime: 638356958139326782
   cacheVersion: 131608
 --- !u!114 &6101576862161281281
 MonoBehaviour:
@@ -86,7 +86,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638356540137992796
+  lastModified: 638356958139315702
   FileSizes:
   - Name: Desktop
     Value: 1574
