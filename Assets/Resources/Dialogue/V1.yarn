@@ -1,17 +1,20 @@
 ﻿title: V1
 tags:
 ---
+<<update_stat Relationship -10>>
+
 <<first_letter>>
 PC: Hello honey, I’m home!
 
 Partner: Oh hey. You just get in?
 
 -> PC: Yeah
--> PC: Like always, 8 o’clock. Did I wake you up?
+-> PC: Like always, 8 o’clock. Did I wake you up? 
 
 PC:  Feeling any better?
 
 S:  No, not really. How was work?
+
 
 PC:  Work is work, you know. What’s that look for?
 
