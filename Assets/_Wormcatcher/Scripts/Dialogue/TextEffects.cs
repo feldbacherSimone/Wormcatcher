@@ -11,7 +11,7 @@ namespace _Wormcatcher.Scripts
     /// <summary>
     /// Helper class for various text effects
     /// </summary>
-    public static class TextEffects 
+    public static class TextEffects
     {
         public static IEnumerator CoolerTypewriter(TextMeshProUGUI text, LocalizedLine fullLine, float lettersPerSecond,
             Action onCharacterTyped, Action onAnimationComplete = null)
@@ -20,7 +20,7 @@ namespace _Wormcatcher.Scripts
 
             var maxCharacters = fullLine.TextWithoutCharacterName.Text.Length;
             // Start with everything invisible
-            
+
             //text.text = fullLine.TextWithoutCharacterName.Text;
             text.text = "";
 
@@ -68,6 +68,75 @@ namespace _Wormcatcher.Scripts
             // interrupted. Either way, display everything now.
             text.maxVisibleCharacters = maxCharacters;
             onAnimationComplete?.Invoke();
+        }
+
+
+        public static IEnumerator AnimateTextRoutine(string fullText, TextMeshProUGUI textComponent,
+            float charactersPerSecond, Action<char> onLetterCallback, Action onCompleteCallback)
+        {
+            float delay = 1f / charactersPerSecond;
+
+            for (int i = 0; i <= fullText.Length; i++)
+            {
+                if (i < fullText.Length)
+                {
+                    char letter = fullText[i];
+                    textComponent.text = fullText.Substring(0, i + 1);
+
+                    onLetterCallback?.Invoke(letter);
+                }
+                else
+                {
+                    onCompleteCallback?.Invoke();
+                }
+
+                yield return new WaitForSeconds(delay);
+            }
+        }
+
+        public static IEnumerator FadeOut(CanvasGroup canvasGroup, float duration, System.Action onComplete = null)
+        {
+            float startAlpha = canvasGroup.alpha;
+            float targetAlpha = 0f;
+
+            float startTime = Time.time;
+            float elapsedTime = 0f;
+
+
+            while (elapsedTime < duration)
+            {
+                canvasGroup.alpha = Mathf.Lerp(startAlpha, targetAlpha, elapsedTime / duration);
+
+                elapsedTime = Time.time - startTime;
+                yield return null;
+            }
+
+            canvasGroup.alpha = targetAlpha;
+
+            onComplete?.Invoke();
+        }
+
+        public static IEnumerator FadeIn(CanvasGroup canvasGroup, float duration, System.Action onComplete = null)
+        {
+            canvasGroup.alpha = 0f;
+            float startAlpha = canvasGroup.alpha;
+            float targetAlpha = 1f;
+
+            float startTime = Time.time;
+            float elapsedTime = 0f;
+
+
+            while (elapsedTime < duration)
+            {
+                canvasGroup.alpha = Mathf.Lerp(startAlpha, targetAlpha, elapsedTime / duration);
+
+                elapsedTime = Time.time - startTime;
+                yield return null;
+            }
+
+            canvasGroup.alpha = targetAlpha;
+
+            onComplete?.Invoke();
         }
     }
 }

@@ -13,6 +13,16 @@ namespace _Wormcatcher.Scripts
 
     public static class PlayerData
     {
+
+        private static int vignette;
+
+        public static int Vignette
+        {
+            get => vignette;
+            set => vignette = value;
+        }
+
+
         private static Dictionary<PlayerStat, int> playerStats = new Dictionary<PlayerStat, int>
         {
             {PlayerStat.Relationship, 0},
