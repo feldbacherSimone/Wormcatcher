@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'dsfasdfdsafdsafdsafsadfdsafdsafdsafdsfdsafdsafdsfdsafdsafdsfdsafdsafdsafdsafdsafdsafsdafasdfasdfasdfasfdsfdasfdasfsfaf '
+  m_text: ' '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9192dd8f6e4df4b4eb0bc78021c9f483, type: 2}
   m_sharedMaterial: {fileID: -6917589276670986237, guid: 9192dd8f6e4df4b4eb0bc78021c9f483,
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 4096
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: -0.03
   m_wordSpacing: 0
@@ -201,6 +201,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 5847276412120993753}
   lineContainerObject: {fileID: 5847276412210637838}
   lineTextField: {fileID: 5847276411951382271}
+  lineLayout: {fileID: 0}
 --- !u!114 &5146882484136522102
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -22,7 +22,7 @@ namespace _Wormcatcher.Scripts
             // Start with everything invisible
 
             //text.text = fullLine.TextWithoutCharacterName.Text;
-            text.text = "";
+            text.text = " ";
 
 
             // Wait a single frame to let the text component process its

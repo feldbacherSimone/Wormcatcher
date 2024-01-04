@@ -13,7 +13,7 @@ namespace _Wormcatcher.Scripts.Dialogue
     {
         [SerializeField] float maxWidth = 77;
         [SerializeField] private float minWidth = 10;
-        [SerializeField] private int minPadding = 21;
+        [SerializeField] private int minPadding = 10;
         [SerializeField] private int maxPadding = 87;
 
         private float currentWidth;
@@ -42,24 +42,25 @@ namespace _Wormcatcher.Scripts.Dialogue
 
         IEnumerator SetPaddingInternal(String fullLine)
         {
-            canvasGroup.alpha = 0;
             textField.text = fullLine;
+            canvasGroup.alpha = 0;
+
             yield return null;
             currentWidth = rectTransform.rect.width;
             canvasGroup.alpha = 1;
 
-            print($"text: {fullLine}");
-            setPadding(currentWidth);
+            //print($"text: {fullLine}");
+            SetPadding(currentWidth);
         }
 
-        private void setPadding(float currenWidth)
+        private void SetPadding(float currenWidth)
         {
             if (currenWidth >= maxWidth)
                 return;
             layoutGroup.childAlignment = TextAnchor.MiddleLeft;
             float currentWithFrac = (currentWidth - minWidth) / (maxWidth - minWidth);
-            print($"current Width: {currenWidth}, width frac: {currentWithFrac}");
-            layoutGroup.padding.left = Mathf.RoundToInt(Mathf.Lerp(maxPadding, minPadding, currentWithFrac));
+            //print($"current Width: {currenWidth}, width frac: {currentWithFrac}");
+            layoutGroup.padding.left = Mathf.FloorToInt(Mathf.Lerp(maxPadding, minPadding, currentWithFrac));
         }
 
         public void ResetAlignment()

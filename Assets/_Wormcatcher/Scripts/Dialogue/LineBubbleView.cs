@@ -173,7 +173,7 @@ namespace _Wormcatcher.Scripts
 
             currentDialogueLine = dialogueLine;
             dialogueLineFinished = onDialogueLineFinished;
-            currentLineObject = lineManager.addLine(currentDialogueLine.CharacterName, "");
+            currentLineObject = lineManager.AddLine(currentDialogueLine.CharacterName, " ");
             lineText = currentLineObject.LineTextField;
             canvasGroup = currentLineObject.CanvasGroup;
             // Begin running the line as a coroutine.
@@ -184,11 +184,22 @@ namespace _Wormcatcher.Scripts
             }
             if (hideLineOnStart)
             {
-                lineText.text = currentDialogueLine.TextWithoutCharacterName.Text.Substring(0, 1) + "...";
+                // Find the index of the first space to identify the end of the first word
+                int spaceIndex = currentDialogueLine.TextWithoutCharacterName.Text.IndexOf(' ');
+
+                // If there is no space, use the entire text as the first word
+                string firstWord = (spaceIndex != -1)
+                    ? currentDialogueLine.TextWithoutCharacterName.Text.Substring(0, spaceIndex)
+                    : currentDialogueLine.TextWithoutCharacterName.Text;
+
+                // Set the text to the first word followed by "..."
+                lineText.text = firstWord + "...";
+
+                // Rest of your code remains unchanged...
                 lineBackground = lineText.transform.parent.GetComponent<Image>();
                 backgroundColor = lineBackground.color;
                 lineBackground.color = backgroundHighlightColor;
-                expanded = false; 
+                expanded = false;
                 return;
             }
             
@@ -214,11 +225,11 @@ namespace _Wormcatcher.Scripts
                     // name in it, and show the rest of the text in our main
                     // text view.
                     characterNameText.text = dialogueLine.CharacterName;
-                    lineText.text = dialogueLine.TextWithoutCharacterName.Text;
+                    //lineText.text = dialogueLine.TextWithoutCharacterName.Text;
                 }
                 else
                 {
-                    lineText.text = dialogueLine.TextWithoutCharacterName.Text;
+                    //lineText.text = dialogueLine.TextWithoutCharacterName.Text;
                 }
 
                 if (useTypewriterEffect)
