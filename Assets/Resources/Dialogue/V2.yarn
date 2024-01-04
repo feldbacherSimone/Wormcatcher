@@ -3,6 +3,7 @@ tags:
 ---
 Date: How was traffic? 
 
+
 -> PC: Kind of a nightmare, they’re doing construction downtown 
 -> PC: Yeah, it was... fine I guess.
 
@@ -73,6 +74,7 @@ Date: leaving audiences in a perpetual state of suspension.
 
 Date: So - do you prefer cats or dogs?
 
+<<change_line  "Who is Celviky?">>
 -> PC: Cats 
 -> PC: Dogs
 

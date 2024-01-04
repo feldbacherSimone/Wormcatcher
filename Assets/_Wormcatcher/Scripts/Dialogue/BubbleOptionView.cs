@@ -143,7 +143,7 @@ namespace _Wormcatcher.Scripts
         {
             isRevealing = true;
             yield return lineLayout.SetPadding(_option.Line.TextWithoutCharacterName.Text); //set right padding for line on the right. 
-            yield return StartCoroutine(TextEffects.CoolerTypewriter(text, _option.Line, 30,
+            yield return StartCoroutine(TextEffects.CoolerTypewriter(text, _option.Line.TextWithoutCharacterName.Text, 30,
                 () => onCharacterTyped.Invoke(), () => lineLayout?.ResetAlignment()));
             expanded = true;
             isRevealing = false;

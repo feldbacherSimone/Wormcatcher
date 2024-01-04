@@ -11,6 +11,7 @@ namespace _Wormcatcher.Scripts
     {
         [SerializeField] private DialogueRunner dialogueRunner;
         [SerializeField] private LineBubbleView lineBubbleView;
+        [SerializeField] private BubbleOptionView bubbleOptionView;
         private void Awake()
         {
             dialogueRunner.AddCommandHandler(
@@ -25,6 +26,11 @@ namespace _Wormcatcher.Scripts
                 "update_stat",
                 UpdatePlayerStat
                 );
+            
+            dialogueRunner.AddCommandHandler<String>(
+                "change_line",
+                ChangeLine
+            );
         }
 
         
@@ -50,6 +56,10 @@ namespace _Wormcatcher.Scripts
             {
                 Debug.LogError($"Invalid playerStat: {playerStat}");
             }
+        }
+        private void ChangeLine(String line)
+        {
+            lineBubbleView.LineSwap = line; 
         }
     }
 }
