@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: sdfasdfdasfdsafdasfasdfsa
+  m_text: "fdafdfdsfdsfdsfdsafds4454.,,,dff\xB4\xB4"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9192dd8f6e4df4b4eb0bc78021c9f483, type: 2}
   m_sharedMaterial: {fileID: -6917589276670986237, guid: 9192dd8f6e4df4b4eb0bc78021c9f483,
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 4096
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: -0.03
   m_wordSpacing: 0
@@ -254,9 +254,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93cc8508db69d5345b6f7e119b6ff577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxWidth: 77
+  maxWidth: 79
   minWidth: 10
-  minPadding: 21
+  minPadding: 17
   maxPadding: 87
   textField: {fileID: 5847276411951382271}
   layoutGroup: {fileID: 5847276412120993733}

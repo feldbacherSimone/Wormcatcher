@@ -13,16 +13,16 @@ namespace _Wormcatcher.Scripts
     /// </summary>
     public static class TextEffects
     {
-        public static IEnumerator CoolerTypewriter(TextMeshProUGUI text, LocalizedLine fullLine, float lettersPerSecond,
+        public static IEnumerator CoolerTypewriter(TextMeshProUGUI text, String fullLine, float lettersPerSecond,
             Action onCharacterTyped, Action onAnimationComplete = null)
         {
             int visibleCharacters = 0;
 
-            var maxCharacters = fullLine.TextWithoutCharacterName.Text.Length;
+            var maxCharacters = fullLine.Length;
             // Start with everything invisible
 
             //text.text = fullLine.TextWithoutCharacterName.Text;
-            text.text = "";
+            text.text = " ";
 
 
             // Wait a single frame to let the text component process its
@@ -53,7 +53,7 @@ namespace _Wormcatcher.Scripts
                 while (accumulator >= secondsPerLetter)
                 {
                     visibleCharacters += 1;
-                    String newText = fullLine.TextWithoutCharacterName.Text.Substring(0, visibleCharacters);
+                    String newText = fullLine.Substring(0, visibleCharacters);
                     text.text = newText;
                     onCharacterTyped?.Invoke();
                     accumulator -= secondsPerLetter;

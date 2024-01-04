@@ -54,10 +54,17 @@ namespace _Wormcatcher.Scripts
                 hasSubmittedOptionSelection = false;
 
                 // When we're given an Option, use its text and update our
-                // interactibility.
+                // interactability.
 
-                text.text = value.Line.TextWithoutCharacterName.Text.Substring(0, 1) + "...";
+                // Find the index of the first space to identify the end of the first word
+                int spaceIndex = value.Line.TextWithoutCharacterName.Text.IndexOf(' ');
 
+                // If there is no space, use the entire text as the first word
+                string firstWord = (spaceIndex != -1)
+                    ? value.Line.TextWithoutCharacterName.Text.Substring(0, spaceIndex)
+                    : value.Line.TextWithoutCharacterName.Text;
+
+                text.text = firstWord + "...";
 
                 interactable = value.IsAvailable;
             }
@@ -66,7 +73,16 @@ namespace _Wormcatcher.Scripts
         IEnumerator Layout(String text)
         {
             yield return lineLayout.SetPadding(text); //set right padding for line on the right. 
-            this.text.text = text.Substring(0, 1) + "...";
+            
+            int spaceIndex = _option.Line.TextWithoutCharacterName.Text.IndexOf(' ');
+
+            // If there is no space, use the entire text as the first word
+            string firstWord = (spaceIndex != -1)
+                ? _option.Line.TextWithoutCharacterName.Text.Substring(0, spaceIndex)
+                : _option.Line.TextWithoutCharacterName.Text;
+
+            
+            this.text.text = firstWord + "...";
         }
         
         // If we receive a submit or click event, invoke our "we just selected
@@ -127,7 +143,7 @@ namespace _Wormcatcher.Scripts
         {
             isRevealing = true;
             yield return lineLayout.SetPadding(_option.Line.TextWithoutCharacterName.Text); //set right padding for line on the right. 
-            yield return StartCoroutine(TextEffects.CoolerTypewriter(text, _option.Line, 30,
+            yield return StartCoroutine(TextEffects.CoolerTypewriter(text, _option.Line.TextWithoutCharacterName.Text, 30,
                 () => onCharacterTyped.Invoke(), () => lineLayout?.ResetAlignment()));
             expanded = true;
             isRevealing = false;

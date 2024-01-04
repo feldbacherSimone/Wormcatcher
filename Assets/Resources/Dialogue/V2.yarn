@@ -3,12 +3,13 @@ tags:
 ---
 Date: How was traffic? 
 
+
 -> PC: Kind of a nightmare, they’re doing construction downtown 
 -> PC: Yeah, it was... fine I guess.
 
 Date: So… on your profile you said you like...eating out?
 
-Pc: Sustenance, I love that. I mean who doesn’t?
+PC: Sustenance, I love that. I mean who doesn’t?
 
 Date: Sort of the thing you write if you don’t know what else to write. Like.. I love adventures, I love movies..
 
@@ -68,10 +69,12 @@ PC: Your contributions?
 Date: Climactic voidelessness, as elucidated by Celviky, embodies an avant-garde approach to storytelling, one that vehemently challenges conventional cinematic resolutions. 
 Date: It is a deliberate negation of the expected crescendo, a rejection of catharsis in favor of thematic and psychological dissonance. 
 Date: Within this aesthetic paradigm, climaxes remain conspicuously absent, suspended in a state of perpetual ambiguity. 
-Date: Characters' arcs do not resolve neatly; narratives remain suspended, poised on the precipice of fulfillment, leaving audiences in a perpetual state of suspension.
+Date: Characters' arcs do not resolve neatly; narratives remain suspended, poised on the precipice of fulfillment, 
+Date: leaving audiences in a perpetual state of suspension.
 
 Date: So - do you prefer cats or dogs?
 
+<<change_line  "Who is Celviky?">>
 -> PC: Cats 
 -> PC: Dogs
 

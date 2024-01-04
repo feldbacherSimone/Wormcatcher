@@ -24,7 +24,7 @@ namespace _Wormcatcher.Scripts
 
         private int count = 0;
 
-        public LineObject addLine(string name, string dialogueText)
+        public LineObject AddLine(string name, string dialogueText)
         {
             LineObject newLine = null;
             GameObject currentRef;
@@ -42,10 +42,11 @@ namespace _Wormcatcher.Scripts
 
             // create new line 
             GameObject newLineObject = Instantiate(currentRef, transform);
+            newLine = newLineObject.GetComponent<LineObject>();
             newLineObject.transform.SetSiblingIndex(transform.childCount - 2);
             newLineObject.name = "Line_" + ++count;
-            newLine = newLineObject.GetComponent<LineObject>();
-            newLine.LineTextField.text = dialogueText;
+           
+            
             linesObjects.Add(newLineObject);
 
             // Delete Overflowing Lines; 
@@ -57,7 +58,7 @@ namespace _Wormcatcher.Scripts
                 Destroy(lastLine);
             }
 
-            newLine.LineTextField.text = "";
+            newLine.LineTextField.text = " ";
             return newLine;
         }
     }

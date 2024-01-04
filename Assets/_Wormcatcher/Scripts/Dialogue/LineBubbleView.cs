@@ -65,7 +65,15 @@ namespace _Wormcatcher.Scripts
 
         LocalizedLine currentLine = null;
 
-        private Boolean hideLineOnStart; // awful name 
+        private bool hideLineOnStart; // awful name 
+        private string lineSwap;
+
+        public string LineSwap
+        {
+            get => lineSwap;
+            set => lineSwap = value;
+        }
+
         private bool expanded = false;
         private LineObject currentLineObject;
         
@@ -76,6 +84,7 @@ namespace _Wormcatcher.Scripts
         {
             hideLineOnStart = true;
         }
+        
 
         Effects.CoroutineInterruptToken currentStopToken = new Effects.CoroutineInterruptToken();
         private LocalizedLine currentDialogueLine;
@@ -104,6 +113,7 @@ namespace _Wormcatcher.Scripts
         {
             // disabling interaction temporarily while dismissing the line
             // we don't want people to interrupt a dismissal
+            
             var interactable = canvasGroup.interactable;
             canvasGroup.interactable = false;
 
@@ -173,7 +183,7 @@ namespace _Wormcatcher.Scripts
 
             currentDialogueLine = dialogueLine;
             dialogueLineFinished = onDialogueLineFinished;
-            currentLineObject = lineManager.addLine(currentDialogueLine.CharacterName, "");
+            currentLineObject = lineManager.AddLine(currentDialogueLine.CharacterName, " ");
             lineText = currentLineObject.LineTextField;
             canvasGroup = currentLineObject.CanvasGroup;
             // Begin running the line as a coroutine.
@@ -184,13 +194,26 @@ namespace _Wormcatcher.Scripts
             }
             if (hideLineOnStart)
             {
-                lineText.text = currentDialogueLine.TextWithoutCharacterName.Text.Substring(0, 1) + "...";
+                // Find the index of the first space to identify the end of the first word
+                int spaceIndex = currentDialogueLine.TextWithoutCharacterName.Text.IndexOf(' ');
+
+                // If there is no space, use the entire text as the first word
+                string firstWord = (spaceIndex != -1)
+                    ? currentDialogueLine.TextWithoutCharacterName.Text.Substring(0, spaceIndex)
+                    : currentDialogueLine.TextWithoutCharacterName.Text;
+
+                // Set the text to the first word followed by "..."
+                lineText.text = firstWord + "...";
+
+                // Rest of your code remains unchanged...
                 lineBackground = lineText.transform.parent.GetComponent<Image>();
                 backgroundColor = lineBackground.color;
                 lineBackground.color = backgroundHighlightColor;
-                expanded = false; 
+                expanded = false;
                 return;
             }
+
+            
             
 
             StartCoroutine(RunLineInternal(currentDialogueLine, dialogueLineFinished));
@@ -205,20 +228,26 @@ namespace _Wormcatcher.Scripts
 
                 // Hide the continue button until presentation is complete (if
                 // we have one).
+                string dialogueText = dialogueLine.TextWithoutCharacterName.Text; 
+                
+                if (lineSwap != null)
+                {
+                    dialogueText = lineSwap;
+                }
 
                 if(currentLineObject.LineLayout != null)
-                    yield return currentLineObject.LineLayout.SetPadding(dialogueLine.TextWithoutCharacterName.Text);
+                    yield return currentLineObject.LineLayout.SetPadding(dialogueText);
                 if (characterNameText != null)
                 {
                     // If we have a character name text view, show the character
                     // name in it, and show the rest of the text in our main
                     // text view.
                     characterNameText.text = dialogueLine.CharacterName;
-                    lineText.text = dialogueLine.TextWithoutCharacterName.Text;
+                    //lineText.text = dialogueLine.TextWithoutCharacterName.Text;
                 }
                 else
                 {
-                    lineText.text = dialogueLine.TextWithoutCharacterName.Text;
+                    //lineText.text = dialogueLine.TextWithoutCharacterName.Text;
                 }
 
                 if (useTypewriterEffect)
@@ -262,14 +291,15 @@ namespace _Wormcatcher.Scripts
                     yield return StartCoroutine(
                         TextEffects.CoolerTypewriter(
                             lineText,
-                            dialogueLine,
+                            dialogueText,
                             typewriterEffectSpeed,
                             () => onCharacterTyped.Invoke(),
                             () => currentLineObject.LineLayout?.ResetAlignment()
                         )
                         
                     );
-                    
+                    lineSwap = null; 
+
                 }
                 useTypewriterEffect = true; 
             }
