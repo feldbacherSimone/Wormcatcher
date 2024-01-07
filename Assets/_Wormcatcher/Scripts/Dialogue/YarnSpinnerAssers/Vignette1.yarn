@@ -12,7 +12,7 @@ PC: Sustenance, I love that. I mean who doesn't?
 Date: Sort of the thing you write if you don't know what else to write. 
 Date: Like... I love adventures, I love movies..
 
-PC: [interruption] ... I like to travel. I know.** 
+PC: ... I like to travel. I know.
 
 Date: It's been a while since I’ve had a first date. What kind of conversations do people even have on those?
 
@@ -52,19 +52,21 @@ PC: I've used it before - but the worm?
 Date: Mhm. So - have you thought about having kids?
 
 
-PC: H - Hi?
+PC: H- Hi?
 
 <<change_speed 50>>
 Date: My research into the Void Diaries have left me utterly in awe of what Merplat’s theorem has done for us scholars of Lasckivism. We’re at a pivotal moment of enlightment - an opening of mind so to say - of wht really is ossible when it comes to film. 
 
 <<change_speed 30>>
 -> PC: Merplat’s my favourite 
+    <<update_stat Mean 1>>
 -> PC: What’s the void diaries?
+    <<update_stat Nice 1>>
 
 <<change_speed 60>>
 Date: Of course, nothing even gets close to Celvikiy’s use of the third person in this sort of- transcendental, interactive way. Not even the staunchest exponents of liminal hermeneutics would disagree I daresay.
 
-PC: I - 
+PC: I- 
 
 <<change_speed 70>>
 Date: Of course, my contribution to the Codices of the BFJ Criteria collection where a big part of the emergence of cannibalistic traditions within the liminal hermeneutics of cinema.
@@ -77,8 +79,11 @@ Date: Climactic voidelessness, as elucidated by Celviky, embodies an avant-garde
 
 Date: So - do you prefer cats or dogs?
 
+<<change_line "Who is Celviky?">>
 -> PC: Cat
+    <<update_stat Nice 1>>
 -> PC: Dog
+    <<update_stat Mean 1>>
 
 Date: Never heard of him? Should I?
 
@@ -90,7 +95,9 @@ Date: Okay -
 Date: I gotta head out early tomorrow. Do you want to get the bill?
 
 -> PC: Already? 
+    <<update_stat Mean 2>>
 -> PC: Yeah - I’m tired
+    <<update_stat Nice 1>>
 
 
 ===

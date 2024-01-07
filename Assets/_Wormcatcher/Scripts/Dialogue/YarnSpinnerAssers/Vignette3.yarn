@@ -15,6 +15,7 @@ Partner: You may proceed
 Partner: Go wash your hands, you filthy animal.
 
 ->PC: Such tender words from my lover.
+    <<update_stat Nice 1>>
 ->PC: No need to be rude.
 
 Partner: I called the plumber today, should be fixed by tomorrow.
@@ -40,24 +41,32 @@ So what's the occasion for all this?
 Partner: Well... I told you about the grant? For the project?
 
 ->PC: That....thing with the...thingies?
+    <<update_stat Mean 2>>
 ->PC: Yes?! For the string installation?
+    <<update_stat Nice 1>>
 
 Partner: The interview went really well! They said I'm in the final three.
 
 ->PC: I know you'll get it.
+    <<update_stat Nice 2>>
 ->PC: Well, it's still uncertain then...
+    <<update_stat Mean 2>>
 
 Partner: If this doesn't work out... 
 
 ->PC: It will!
+    <<update_stat Nice 1>>
 ->PC: Nothing new then.
+    <<update_stat Mean 2>>
 
 PC: I'm proud of you anyway for going for it.
 
 PC: Who knows, maybe if everything works out we can finally travel to
 
 ->PC: Samarkand
+    <<update_stat Nice 1>>
 ->PC: Paris
+    <<update_stat Mean 1>>
 
 Partner: Hmm..that would be something...
 
