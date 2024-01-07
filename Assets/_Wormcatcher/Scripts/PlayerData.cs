@@ -35,7 +35,7 @@ namespace _Wormcatcher.Scripts
 
         private static Dictionary<PlayerAction, bool> playerActions = new Dictionary<PlayerAction, bool>
         {
-            { PlayerAction.ToggleLight, false}
+            { PlayerAction.ToggleLight, true}
         };
 
         public static void UpdateStat(PlayerStat stat, int amount)
