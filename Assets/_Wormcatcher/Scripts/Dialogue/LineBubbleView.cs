@@ -301,6 +301,10 @@ namespace _Wormcatcher.Scripts
                     lineSwap = null; 
 
                 }
+                else
+                {
+                    currentLineObject.LineLayout?.ResetAlignment();
+                }
                 useTypewriterEffect = true; 
             }
 

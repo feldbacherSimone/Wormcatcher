@@ -52,7 +52,7 @@ namespace _Wormcatcher.Scripts
             // Delete Overflowing Lines; 
             if (GetComponent<RectTransform>().sizeDelta.y > maxHeight)
             {
-                print(linesObjects.Count);
+                //print(linesObjects.Count);
                 GameObject lastLine = linesObjects[0];
                 linesObjects.Remove(lastLine);
                 Destroy(lastLine);

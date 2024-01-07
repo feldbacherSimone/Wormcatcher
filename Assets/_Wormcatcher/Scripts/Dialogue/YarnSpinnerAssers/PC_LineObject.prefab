@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "fdafdfdsfdsfdsfdsafds4454.,,,dff\xB4\xB4"
+  m_text: "fdafdfdsfdsfdsfdsafds4454.,,,dff\xB4\xB4....."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9192dd8f6e4df4b4eb0bc78021c9f483, type: 2}
   m_sharedMaterial: {fileID: -6917589276670986237, guid: 9192dd8f6e4df4b4eb0bc78021c9f483,
@@ -173,7 +173,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 92.99994, y: 0}
+  m_SizeDelta: {x: 93, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!225 &5847276412120993753
 CanvasGroup:
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxWidth: 79
   minWidth: 10
-  minPadding: 17
+  minPadding: 10
   maxPadding: 87
   textField: {fileID: 5847276411951382271}
   layoutGroup: {fileID: 5847276412120993733}

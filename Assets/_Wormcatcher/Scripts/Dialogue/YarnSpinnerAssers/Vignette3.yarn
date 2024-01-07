@@ -1,4 +1,4 @@
-title: Vignette 3
+title: V3
 tags:
 ---
 
@@ -15,6 +15,7 @@ Partner: You may proceed
 Partner: Go wash your hands, you filthy animal.
 
 ->PC: Such tender words from my lover.
+    <<update_stat Nice 1>>
 ->PC: No need to be rude.
 
 Partner: I called the plumber today, should be fixed by tomorrow.
@@ -23,13 +24,13 @@ Partner: A mucky pup no more.
 
 PC:  How did you know I had a hankering for mash? And are those your..
 
-Partner: [interruption] ... my peas de resistance? In all their minty gloriness **
+Partner:  ... my peas de resistance? In all their minty gloriness 
 
 Partner:Excel treat you nicely today.
 
 PC: The gods of the picot table were merciful at last. And Helen...
 
-Partner: [interruption] Yes?! **
+Partner:  Yes?! 
 
 PC: She wasn't a complete cunt!
 
@@ -40,24 +41,32 @@ So what's the occasion for all this?
 Partner: Well... I told you about the grant? For the project?
 
 ->PC: That....thing with the...thingies?
+    <<update_stat Mean 2>>
 ->PC: Yes?! For the string installation?
+    <<update_stat Nice 1>>
 
 Partner: The interview went really well! They said I'm in the final three.
 
 ->PC: I know you'll get it.
+    <<update_stat Nice 2>>
 ->PC: Well, it's still uncertain then...
+    <<update_stat Mean 2>>
 
 Partner: If this doesn't work out... 
 
 ->PC: It will!
+    <<update_stat Nice 1>>
 ->PC: Nothing new then.
+    <<update_stat Mean 2>>
 
 PC: I'm proud of you anyway for going for it.
 
 PC: Who knows, maybe if everything works out we can finally travel to
 
-->PC:Samarkand
-->PC:Paris
+->PC: Samarkand
+    <<update_stat Nice 1>>
+->PC: Paris
+    <<update_stat Mean 1>>
 
 Partner: Hmm..that would be something...
 
