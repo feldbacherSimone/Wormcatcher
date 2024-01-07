@@ -173,7 +173,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 92.99994, y: 0}
+  m_SizeDelta: {x: 93, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!225 &5847276412120993753
 CanvasGroup:
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxWidth: 79
   minWidth: 10
-  minPadding: 17
+  minPadding: 10
   maxPadding: 87
   textField: {fileID: 5847276411951382271}
   layoutGroup: {fileID: 5847276412120993733}

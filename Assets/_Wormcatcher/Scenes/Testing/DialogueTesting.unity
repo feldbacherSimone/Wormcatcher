@@ -430,6 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 327792485}
   lineBubbleView: {fileID: 224902141}
+  bubbleOptionView: {fileID: 0}
 --- !u!114 &327792485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,7 +449,7 @@ MonoBehaviour:
   dialogueViews:
   - {fileID: 224902141}
   - {fileID: 3708512360121593487}
-  startNode: V2
+  startNode: Intro and Start
   startAutomatically: 1
   runSelectedOptionAsLine: 1
   lineProvider: {fileID: 0}

@@ -1,4 +1,4 @@
-﻿title: Start
+﻿title: V2
 tags:
 ---
 
@@ -23,7 +23,9 @@ Date: So you just broke up?
 PC: I guess 
 
 -> PC: They had - have this Condition - complicated to explain - and it just didn’t work out for me
+        <<update_stat Mean 2>>
 -> PC: but it doesn’t matter now. I’m here with you
+        <<update_stat Nice 1>>
 
 Date: I’m glad you could make it - they have the best fish here. 
 

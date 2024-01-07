@@ -41,7 +41,6 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 645508668020599164}
   text: {fileID: 645508667746663298}
-  showCharacterName: 0
   onCharacterTyped:
     m_PersistentCalls:
       m_Calls: []
@@ -56,7 +55,7 @@ PrefabInstance:
     - target: {fileID: 1626284141764434670, guid: 7c545f611d8a1e5428f666eb2a3c978f,
         type: 3}
       propertyPath: maxWidth
-      value: 77
+      value: 79
       objectReference: {fileID: 0}
     - target: {fileID: 1626284141764434670, guid: 7c545f611d8a1e5428f666eb2a3c978f,
         type: 3}

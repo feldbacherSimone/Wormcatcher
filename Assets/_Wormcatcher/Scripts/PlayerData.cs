@@ -6,9 +6,8 @@ namespace _Wormcatcher.Scripts
 {
     public enum PlayerStat
     {
-        Relationship,
-        Happiness,
-        Sanity
+        Nice,
+        Mean
     }
 
     public static class PlayerData
@@ -25,9 +24,8 @@ namespace _Wormcatcher.Scripts
 
         private static Dictionary<PlayerStat, int> playerStats = new Dictionary<PlayerStat, int>
         {
-            {PlayerStat.Relationship, 0},
-            {PlayerStat.Happiness, 20},
-            {PlayerStat.Sanity, 100}
+            {PlayerStat.Nice, 0},
+            {PlayerStat.Mean, 0},
         };
 
         public static void UpdateStat(PlayerStat stat, int amount)

@@ -15,7 +15,7 @@ namespace _Wormcatcher.Scripts
         IPointerEnterHandler
     {
         [SerializeField] TextMeshProUGUI text;
-        [SerializeField] bool showCharacterName = false;
+        //[SerializeField] bool showCharacterName = false;
         [SerializeField] internal UnityEngine.Events.UnityEvent onCharacterTyped;
         [SerializeField] private LineLayout lineLayout; 
         private bool revealOnHover;
