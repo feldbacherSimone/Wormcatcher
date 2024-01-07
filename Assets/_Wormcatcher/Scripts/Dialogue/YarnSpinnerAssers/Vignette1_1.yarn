@@ -3,6 +3,10 @@ tags:
 ---
 
 <<change_speed 30>>
+
+<<first_letter>> 
+PC: H- Hello?
+
 Partner: Oh hey, You just get in?
 
 ->PC:Yeah.
@@ -29,16 +33,19 @@ Partner: This is a sickbed. I was taught those are sacred.
 
 Partner: I feel sick.
 
-Partner: Were you fucking with the light switch?
+<<if get_player_action("ToggleLight")>>
+    Partner: Were you fucking with the light switch?
+    ->PC: Yup.
+        <<update_stat Mean 1>>
+    ->PC: Stop avoiding the subject. You still feel down?
+        <<update_stat Nice 2>>
+        
+    Partner: Turning on a light once uses as much power as running it for a week, just FYI.
+    PC: Did you consider that before turning on your desk lamp? Anyway, back to you. 
+<<endif>>
 
-->PC: Yup.
-    <<update_stat Mean 1>>
-->PC: Stop avoiding the subject. You still feel down?
-    <<update_stat Nice 2>>
 
-Partner: Turning on a light once uses as much power as running it for a week, just FYI.
-
-PC: Did you consider that before turning on your desk lamp? Anyway, back to you. You feel sick?
+PC: You feel sick?
 
 Partner: I've been in bed all day today. It's getting worse...
 

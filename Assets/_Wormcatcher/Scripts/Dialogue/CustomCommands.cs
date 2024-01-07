@@ -12,6 +12,7 @@ namespace _Wormcatcher.Scripts
         [SerializeField] private DialogueRunner dialogueRunner;
         [SerializeField] private LineBubbleView lineBubbleView;
         [SerializeField] private BubbleOptionView bubbleOptionView;
+
         private void Awake()
         {
             dialogueRunner.AddCommandHandler(
@@ -25,15 +26,26 @@ namespace _Wormcatcher.Scripts
             dialogueRunner.AddCommandHandler<String, int>(
                 "update_stat",
                 UpdatePlayerStat
-                );
-            
+            );
+
             dialogueRunner.AddCommandHandler<String>(
                 "change_line",
                 ChangeLine
             );
         }
 
-        
+        [YarnFunction("get_player_action")]
+        public static bool GetPlayerAction(string playerActionName)
+        {
+            if (Enum.TryParse<PlayerAction>(playerActionName, out var parsedAction))
+            {
+                return PlayerData.GetActionValue(parsedAction);
+            }
+
+            Debug.LogError($"Invalid playerStat: {playerActionName}");
+            return false;
+        }
+
         private void ToggleFirstLetterDialogue()
         {
             lineBubbleView.setHideLineOnStart();
@@ -41,7 +53,7 @@ namespace _Wormcatcher.Scripts
 
         private void ChangeLineSpeed(float newSpeed)
         {
-            lineBubbleView.TypewriterEffectSpeed = newSpeed; 
+            lineBubbleView.TypewriterEffectSpeed = newSpeed;
         }
 
         private void UpdatePlayerStat(string playerStat, int amount)
@@ -57,9 +69,10 @@ namespace _Wormcatcher.Scripts
                 Debug.LogError($"Invalid playerStat: {playerStat}");
             }
         }
+
         private void ChangeLine(String line)
         {
-            lineBubbleView.LineSwap = line; 
+            lineBubbleView.LineSwap = line;
         }
     }
 }

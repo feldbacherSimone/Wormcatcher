@@ -9,6 +9,11 @@ namespace _Wormcatcher.Scripts
         Nice,
         Mean
     }
+    
+    public enum PlayerAction
+    {
+        ToggleLight,
+    }
 
     public static class PlayerData
     {
@@ -28,6 +33,11 @@ namespace _Wormcatcher.Scripts
             {PlayerStat.Mean, 0},
         };
 
+        private static Dictionary<PlayerAction, bool> playerActions = new Dictionary<PlayerAction, bool>
+        {
+            { PlayerAction.ToggleLight, false}
+        };
+
         public static void UpdateStat(PlayerStat stat, int amount)
         {
             playerStats[stat] += amount; 
@@ -36,6 +46,15 @@ namespace _Wormcatcher.Scripts
         public static void SetStat(PlayerStat stat, int amount)
         {
             playerStats[stat] = amount; 
+        }
+        
+        public static void SetAction(PlayerAction playerAction)
+        {
+            playerActions[playerAction] = true; 
+        }
+        public static bool GetActionValue(PlayerAction playerAction)
+        {
+            return playerActions[playerAction]; 
         }
 
         public static int GetStat(PlayerStat stat)
@@ -49,6 +68,10 @@ namespace _Wormcatcher.Scripts
             foreach (var stat in playerStats)
             {
                 Debug.Log($"{stat.Key}: {stat.Value}");
+            }
+            foreach (var action in playerActions)
+            {
+                Debug.Log($"{action.Key}: {action.Value}");
             }
         }
     }
