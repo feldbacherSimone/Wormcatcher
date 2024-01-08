@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 namespace _Wormcatcher.Scripts
@@ -17,6 +18,13 @@ namespace _Wormcatcher.Scripts
         [FormerlySerializedAs("falseInteractionGameObject")] [SerializeField]
         private InteractionObject falseInteractionObject;
 
+        [Header("Unity Events")] //Use these to call sounds and so on
+        [SerializeField]private UnityEvent trueInteractionEvent;
+        [SerializeField]private UnityEvent falseInteractionEvent;
+        
+        [Header("Interaction Overrides")] //Use these if eg. a door should always be locked but still rattle
+        [SerializeField]private bool alwaysSendTrue = false;
+        [SerializeField]private bool alwaysSendFalse = false;
 
         private void Awake()
         {
@@ -27,14 +35,23 @@ namespace _Wormcatcher.Scripts
 
         public override void Interact()
         {
-            DebugPrint($"Conditoinal Interaction called in {this.name}, condition = {InteracionCondition()}");
-            if (InteracionCondition())
-            {
-                CallInteraction(trueInteractionObject);
-            }
-            else
+            DebugPrint($"Conditoinal Interaction called in {this.name}, condition = {InteractionCondition()}");
+            
+            //Send condition data. Overriden by alwaysSendFalse and alwaysSendTrue. False takes priority.
+            if (alwaysSendFalse)
             {
                 CallInteraction(falseInteractionObject);
+                falseInteractionEvent.Invoke();
+            }
+            else if (InteractionCondition() || alwaysSendTrue)
+            {
+                CallInteraction(trueInteractionObject);
+                trueInteractionEvent.Invoke();
+            }
+            else if (!InteractionCondition())
+            {
+                CallInteraction(falseInteractionObject);
+                falseInteractionEvent.Invoke();
             }
         }
 
@@ -42,12 +59,12 @@ namespace _Wormcatcher.Scripts
         {
             if(interactionObject == null)
                 return;
-            DebugPrint($"{InteracionCondition()} interaction calling {interactionObject.name}");
+            DebugPrint($"{InteractionCondition()} interaction calling {interactionObject.name}");
             interactionObject.Active = true;
             interactionObject.Interact();
             interactionObject.Active = false;
         }
 
-        protected abstract bool InteracionCondition();
+        protected abstract bool InteractionCondition();
     }
 }

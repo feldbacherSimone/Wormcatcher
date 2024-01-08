@@ -32,6 +32,9 @@ namespace _Wormcatcher.Scripts
 
         public bool ObjectIsActive()
         {
+            //fallback to avoid error if no scene object is found
+            if (!sceneObject) return true;
+            
             objectIsActive = sceneObject.State;
             return objectIsActive;
         }

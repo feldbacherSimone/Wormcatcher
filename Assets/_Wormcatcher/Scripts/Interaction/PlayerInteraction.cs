@@ -18,14 +18,17 @@ namespace _Wormcatcher.Scripts
 
         private InputAction interactAction;
         private InputAction sceneObjectAction;
-
+        
+        [Header("Ray Data")]
         [SerializeField] private float interactionDistance = 10f;
 
         [SerializeField] private Boolean debug;
+        [SerializeField] private LayerMask hitMask;
         private RaycastHit hit;
         private IInteractable interactable;
 
         private GameObject selectableObject;
+        
 
 
         private void Awake()
@@ -103,7 +106,7 @@ namespace _Wormcatcher.Scripts
         {
             DebugRay(transform.position, transform.forward * interactionDistance, Color.cyan);
 
-            if (Physics.Raycast(transform.position, transform.forward, out hit, interactionDistance))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, interactionDistance, hitMask))
             {
                 DebugRay(transform.position, transform.forward * interactionDistance, Color.red);
 

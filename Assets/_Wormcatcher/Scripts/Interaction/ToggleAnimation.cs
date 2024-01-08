@@ -11,8 +11,11 @@ namespace _Wormcatcher.Scripts
     /// </summary>
     public class ToggleAnimation : InteractionObject
     {
-        private bool animationOn = false;
+        public bool isOpen = false;
         [SerializeField] private Animator animator;
+        [SerializeField] private string interactTrigger = "Interact";
+        [SerializeField] private string lockedBool = "Locked";
+        
 
         public void Reset()
         {
@@ -23,7 +26,7 @@ namespace _Wormcatcher.Scripts
             }
             
             // create an animation parent so our own transforms are all 0,0,0 (to reuse animations, there probably a better way for this) 
-            SetAnimationParent();
+            //SetAnimationParent();
             base.Reset();
         }
         
@@ -59,10 +62,19 @@ namespace _Wormcatcher.Scripts
                 return;
             
             base.Interact();
-            animationOn = !animationOn;
-            animator.SetBool("animationOn", animationOn);
-            DebugPrint(gameObject.name + " interacted, animationOn = " + animationOn);
+            animator.SetTrigger(interactTrigger);
+            DebugPrint(gameObject.name + " interacted, animationOn = " + isOpen);
             
+        }
+
+        public void SetLocked(bool locked)
+        {
+            animator.SetBool(lockedBool, locked);
+        }
+
+        public void SetOpened(bool open)
+        {
+            isOpen = open;
         }
         
     }

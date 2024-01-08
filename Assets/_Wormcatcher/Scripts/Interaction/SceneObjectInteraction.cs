@@ -9,7 +9,7 @@ namespace _Wormcatcher.Scripts
     [Serializable]
     public class SceneObjectInteraction : ConditionalInteraction
     {
-        protected override bool InteracionCondition()
+        protected override bool InteractionCondition()
         {
             
             DebugPrint($"{this.name} condition is {SceneObjectHandler._instance.ObjectIsActive()}");
