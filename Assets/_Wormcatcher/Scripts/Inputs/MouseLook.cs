@@ -15,6 +15,10 @@ namespace _Wormcatcher.Scripts.Inputs
         private PlayerInputAction playerInputAction; 
 
         [SerializeField] private float mouseSensitivity = 1;
+        [SerializeField] private bool smoothMovement = false;
+        [SerializeField] private float xAccumulator = 1;
+        [SerializeField] private float yAccumulator = 1;
+        [SerializeField] private float snappiness = 10;
 
         [SerializeField] private Transform playerBody;
 
@@ -46,6 +50,21 @@ namespace _Wormcatcher.Scripts.Inputs
                 mouseX = mouseMovement.ReadValue<Vector2>().x * mouseSensitivity * Time.deltaTime;
                 mouseY = mouseMovement.ReadValue<Vector2>().y * mouseSensitivity * Time.deltaTime;
 
+                if (smoothMovement)
+                {
+                    xAccumulator = Mathf.Lerp(xAccumulator, mouseX, snappiness * Time.deltaTime);
+                    yAccumulator = Mathf.Lerp(yAccumulator, mouseY, snappiness * Time.deltaTime);
+
+                    // left/right rotation
+                    playerBody.Rotate(Vector3.up * xAccumulator);
+                    
+                    // up/down rotation 
+                    xRoation -= yAccumulator;
+                    xRoation = Mathf.Clamp(xRoation, -90f, 90f);
+                    transform.localRotation = Quaternion.Euler(xRoation, 0f, 0f);
+                    return;
+                }
+                
                 // up/down rotation 
                 xRoation -= mouseY;
                 xRoation = Mathf.Clamp(xRoation, -90f, 90f);
