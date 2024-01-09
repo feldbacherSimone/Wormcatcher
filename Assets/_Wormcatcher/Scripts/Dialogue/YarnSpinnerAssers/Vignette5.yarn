@@ -16,6 +16,8 @@ PC: Weren't you supposed to...
 
 PC: [interruption] Yeah yeah** 
 
+*** New Node*** --> starts when player interacts with partner/ comes close
+
 PC: You shouldn't be watching this stuff.
 PC: It makes you anxious.
 
@@ -30,6 +32,9 @@ Partner: Shh... this one is EF 3.
 
 PC: But...
 
+*** New Node*** --> starts when player interacts with partner/ comes close
+
+
 Partner: I think I have worms.
 
 -> PC: Why do you think that?
@@ -43,6 +48,9 @@ PC: You're anxious, that's it.
 Partner: I know it's serious.
 Partner: Especially for someone with my condition.
 
+*** New Node*** --> starts when player interacts with partner/ comes close
+
+
 Partner: I can't look at this?
 
 PC: At what?
@@ -55,6 +63,9 @@ Partner: What they're doing to people like me. You. What they're saying about us
     <<update_stat Mean 1>>
 
 Partner: You're not helping
+
+*** New Node*** --> starts when player interacts with partner/ comes close
+
 
 Partner: I'm so tired.
 

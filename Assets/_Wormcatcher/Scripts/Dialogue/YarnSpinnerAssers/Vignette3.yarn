@@ -18,7 +18,12 @@ Partner: Go wash your hands, you filthy animal.
     <<update_stat Nice 1>>
 ->PC: No need to be rude.
 
+*** New Node***
+//if the player tries to interact with the kitchen sink
+
 Partner: I called the plumber today, should be fixed by tomorrow.
+
+*** New Node*** --> starts when player sits down
 
 Partner: A mucky pup no more.
 
@@ -74,11 +79,15 @@ PC: Still up for a movie night?
 
 Partner:Oh, enticing... we've got some new DVDs from that subscription. Check the shelf.
 
+*** New Node*** --> starts when player interacts with dvds
+
 PC: Who are you?
 
 Partner: I am Death.
 
 PC: Iconic. But not really feeling ready to "Seal" the deal.
+
+*** New Node*** --> starts when player interacts with next dvd
 
 PC: We haven't seen this one in a while?
 
@@ -88,6 +97,8 @@ PC: I thought you liked Lynch?
 
 Partner: Not today.
 
+*** New Node*** --> starts when player interacts with next dvd
+
 PC: Czech this out.
 
 Partner: Get out.
@@ -96,7 +107,11 @@ Partner: For this alone it's a no from me.
 
 PC: So-ve-it.
 
+*** New Node*** --> starts when player interacts with next dvd
+
 PC: In the mood for some Regina George?
+
+*** New Node*** --> starts when player interacts with next dvd
 
 Partner: What about that one at the end?
 
