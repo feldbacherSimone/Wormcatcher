@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ExitSign&Screens
-  m_Shader: {fileID: 4800000, guid: 878159d452632f74e91c9809616c230c, type: 3}
+  m_Name: Clothes1
+  m_Shader: {fileID: 4800000, guid: b4f039d8717f646419a1271225c1adc7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d35083da950616d4daa15c97568235b1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 855b1c240b18f3543b281b7a622b9f08, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:

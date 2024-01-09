@@ -1,16 +1,23 @@
 fileFormatVersion: 2
-guid: 148cadaed3997154fab6fe127fbfac47
+guid: 25f0c73f85168fc46b3a967ee8796815
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable:
+  internalIDToNameTable: []
+  externalObjects:
   - first:
-      74: -623603649343465320
-    second: Scene
-  externalObjects: {}
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metall
+    second: {fileID: 2100000, guid: 12b529b3b5f4adf43a130b8561a84039, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodMat
+    second: {fileID: 2100000, guid: e8771bdd03311084ba1da50606ac0893, type: 2}
   materials:
     materialImportMode: 1
-    materialName: 0
-    materialSearch: 1
+    materialName: 1
+    materialSearch: 2
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
