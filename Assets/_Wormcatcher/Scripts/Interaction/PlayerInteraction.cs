@@ -14,7 +14,7 @@ namespace _Wormcatcher.Scripts
         [SerializeField] GameObject selectionResponseObject;
 
         private PlayerInputAction playerInputAction;
-        private ISelectableObject selectionResponse;
+        private ISelectionResponse selectionResponse;
 
         private InputAction interactAction;
         private InputAction sceneObjectAction;
@@ -34,7 +34,7 @@ namespace _Wormcatcher.Scripts
         private void Awake()
         {
             // fetch a selection response from the refernced object 
-            selectionResponse = selectionResponseObject.GetComponent<ISelectableObject>();
+            selectionResponse = selectionResponseObject.GetComponent<ISelectionResponse>();
 
             // Enable interact input action 
             playerInputAction = new PlayerInputAction();

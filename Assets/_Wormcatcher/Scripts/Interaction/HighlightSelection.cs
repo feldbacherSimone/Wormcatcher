@@ -7,7 +7,7 @@ namespace _Wormcatcher.Scripts
     /// implementation of ISelectable, used my Player interaction
     /// add an Outline to a selected object
     /// </summary>
-    public class HighlightSelection : MonoBehaviour, ISelectableObject
+    public class HighlightSelection : MonoBehaviour, ISelectionResponse
     {
         [SerializeField] private Outline templateOutline; 
         private Outline outline;
