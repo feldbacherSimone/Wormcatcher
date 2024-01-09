@@ -16,8 +16,8 @@ namespace _Wormcatcher.Scripts.Inputs
 
         [SerializeField] private float mouseSensitivity = 1;
         [SerializeField] private bool smoothMovement = false;
-        [SerializeField] private float xAccumulator = 1;
-        [SerializeField] private float yAccumulator = 1;
+        private float xAccumulator = 1;
+        private float yAccumulator = 1;
         [SerializeField] private float snappiness = 10;
 
         [SerializeField] private Transform playerBody;

@@ -246,6 +246,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 25
+  smoothMovement: 1
+  snappiness: 22
   playerBody: {fileID: 0}
 --- !u!114 &122313654
 MonoBehaviour:
