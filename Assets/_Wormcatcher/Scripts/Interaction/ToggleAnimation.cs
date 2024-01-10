@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 
 
 namespace _Wormcatcher.Scripts
@@ -15,7 +16,8 @@ namespace _Wormcatcher.Scripts
         [SerializeField] private Animator animator;
         [SerializeField] private string interactTrigger = "Interact";
         [SerializeField] private string lockedBool = "Locked";
-        
+        [SerializeField] private UnityEvent InteractEvent;
+
 
         public void Reset()
         {
@@ -64,7 +66,13 @@ namespace _Wormcatcher.Scripts
             base.Interact();
             animator.SetTrigger(interactTrigger);
             DebugPrint(gameObject.name + " interacted, animationOn = " + isOpen);
+            InteractEvent.Invoke();
             
+        }
+
+        public void CloseIfOpened()
+        {
+            if(isOpen) Interact();
         }
 
         public void SetLocked(bool locked)

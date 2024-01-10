@@ -324,7 +324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputActionAsset: {fileID: 0}
   selectionResponseObject: {fileID: 9093836828666275269}
-  interactionDistance: 10
+  interactionDistance: 1.6
   debug: 0
   hitMask:
     serializedVersion: 2
