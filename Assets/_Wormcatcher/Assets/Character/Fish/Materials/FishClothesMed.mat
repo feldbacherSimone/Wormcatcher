@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TapWater
+  m_Name: FishClothesMed
   m_Shader: {fileID: 4800000, guid: b4f039d8717f646419a1271225c1adc7, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -40,9 +40,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: cc76a80d3e2c0d944b957371c5ca314b, type: 3}
+        m_Texture: {fileID: 2800000, guid: e1e870835faf41a4dbf91dce5cd5f10c, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 6.2399964, y: 1.491988}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -68,10 +68,10 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
-    - _SnapStrength: 1
+    - _SnapStrength: 0.69
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Transparency: 0.908
+    - _Transparency: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
