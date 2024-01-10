@@ -39,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.748
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.32433596, g: 0.33108824, b: 0.3115838, a: 0.748}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0.748}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -175,6 +175,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 991612837937509307, guid: ee90edd86280ce340b8701fc75f89c37,
     type: 3}
   m_PrefabInstance: {fileID: 1863345499306320083}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &621239563 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8471181101773212567, guid: e2dee9611f644594abfed16a7ecb9847,
+    type: 3}
+  m_PrefabInstance: {fileID: 7772924827162690190}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &661456212 stripped
 Transform:
@@ -1327,7 +1333,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.8867924, g: 0.84296805, b: 0.52287287, a: 1}
-  m_Intensity: 8.55
+  m_Intensity: 11.95
   m_Range: 3.458945
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1383,12 +1389,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1635847887714888423}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.5715325, y: 3.3111503, z: 4.1633797}
+  m_LocalRotation: {x: 0.000000037748947, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.027532458, y: -0.4199288, z: -0.0026202518}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1863345499454048482}
-  m_RootOrder: 7
+  m_Father: {fileID: 621239563}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1635847887714888423
 GameObject:
@@ -2705,7 +2711,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  isOpen: 1
+  isOpen: 0
   animator: {fileID: 1863345497451064229}
   interactTrigger: Interact
   lockedBool: Locked
@@ -3455,8 +3461,12 @@ PrefabInstance:
         type: 3}
       propertyPath: OnObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 1635847889345061101, guid: 3ea6ad903c62633479ffbf06c7d9c8f7,
+      objectReference: {fileID: 1635847887900479247}
+    - target: {fileID: 1390217080348779922, guid: e2dee9611f644594abfed16a7ecb9847,
         type: 3}
+      propertyPath: isOn
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8215998561929458727, guid: e2dee9611f644594abfed16a7ecb9847,
         type: 3}
       propertyPath: m_Name
@@ -6839,7 +6849,6 @@ Transform:
   - {fileID: 7921096}
   - {fileID: 1863345498690873559}
   - {fileID: 850853289}
-  - {fileID: 1635847887714888422}
   m_Father: {fileID: 1863345497880768082}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
