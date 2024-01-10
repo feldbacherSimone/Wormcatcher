@@ -527,6 +527,52 @@ Transform:
   m_Father: {fileID: 693807250}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &178204306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 743479195431046827, guid: 846b49896810a94488ad1ec6451fba85,
+    type: 3}
+  m_PrefabInstance: {fileID: 1066343794}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &178204313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178204306}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5e2c741e414724bb82e6b18576760a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 739c6569a1eb0c448804a9e0e49f34b1, type: 3}
+  FilterQuality: 0
+  VideoMode: 1
+  DisplaySizeX: 960
+  DisplaySizeY: 480
+  StretchToDisplay: 1
+  AspectRatio: 1.33
+  EnableTVCurvature: 1
+  Curvature: 0.036
+  TVOverlay: {fileID: 2800000, guid: 983b4e2248d599443981d96b39576aeb, type: 3}
+  EnablePixelMask: 1
+  PixelMaskTexture: {fileID: 2800000, guid: 55b9f85457b9afc46834d927aa2e61cc, type: 3}
+  MaskRepeatX: 160
+  MaskRepeatY: 90
+  PixelMaskBrightness: 1.036
+  IQOffset: {x: 0, y: 0}
+  IQScale: {x: 1, y: 1}
+  RFNoise: 0.25
+  LumaSharpen: 0
+  QuantizeRGB: 0
+  RBits: 8
+  GBits: 8
+  BBits: 8
+  EnableBurstCountAnimation: 1
+  AntiFlicker: 0
+  EnableRollingFlicker: 1
+  RollingFlickerFactor: 0.28
+  RollingVSyncTime: 1.0031
 --- !u!1 &194412862
 GameObject:
   m_ObjectHideFlags: 0
@@ -2473,16 +2519,6 @@ PrefabInstance:
         type: 3}
       propertyPath: field of view
       value: 56.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 743479195431046839, guid: 846b49896810a94488ad1ec6451fba85,
-        type: 3}
-      propertyPath: smoothMovement
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 743479195431046839, guid: 846b49896810a94488ad1ec6451fba85,
-        type: 3}
-      propertyPath: snappiness
-      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101353, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
