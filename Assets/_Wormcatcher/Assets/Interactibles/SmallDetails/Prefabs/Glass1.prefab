@@ -43,7 +43,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5253414069517681371}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.08671921, y: 0.119098544, z: 0.07516435}
@@ -85,6 +85,9 @@ MonoBehaviour:
   animator: {fileID: 5253414069517681382}
   interactTrigger: Interact
   lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5253414069768895879
 GameObject:
   m_ObjectHideFlags: 0
