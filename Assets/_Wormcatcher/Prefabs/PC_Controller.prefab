@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 122313654}
   - component: {fileID: 639102040}
   - component: {fileID: -4583741789801358153}
+  - component: {fileID: 5655998579498082466}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Player
@@ -206,7 +207,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 22.286419
+  m_FocalLength: 29.626581
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -215,7 +216,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 56.6
+  field of view: 44.1
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -327,7 +328,7 @@ MonoBehaviour:
   debug: 0
   hitMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 529
 --- !u!114 &-4583741789801358153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,6 +342,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 743479195431046827}
+--- !u!114 &5655998579498082466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743479195431046827}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e5e2c741e414724bb82e6b18576760a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 739c6569a1eb0c448804a9e0e49f34b1, type: 3}
+  FilterQuality: 0
+  VideoMode: 1
+  DisplaySizeX: 960
+  DisplaySizeY: 480
+  StretchToDisplay: 1
+  AspectRatio: 1.33
+  EnableTVCurvature: 1
+  Curvature: 0.036
+  TVOverlay: {fileID: 2800000, guid: 983b4e2248d599443981d96b39576aeb, type: 3}
+  EnablePixelMask: 1
+  PixelMaskTexture: {fileID: 2800000, guid: 55b9f85457b9afc46834d927aa2e61cc, type: 3}
+  MaskRepeatX: 160
+  MaskRepeatY: 90
+  PixelMaskBrightness: 1.036
+  IQOffset: {x: 0, y: 0}
+  IQScale: {x: 1, y: 1}
+  RFNoise: 0.25
+  LumaSharpen: 0
+  QuantizeRGB: 0
+  RBits: 8
+  GBits: 8
+  BBits: 8
+  EnableBurstCountAnimation: 1
+  AntiFlicker: 0
+  EnableRollingFlicker: 1
+  RollingFlickerFactor: 0.28
+  RollingVSyncTime: 1.0031
 --- !u!1 &743479196160101353
 GameObject:
   m_ObjectHideFlags: 0
