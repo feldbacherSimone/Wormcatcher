@@ -65,6 +65,7 @@ namespace _Wormcatcher.Scripts
             
             base.Interact();
             animator.SetTrigger(interactTrigger);
+            
             DebugPrint(gameObject.name + " interacted, animationOn = " + isOpen);
             InteractEvent.Invoke();
             

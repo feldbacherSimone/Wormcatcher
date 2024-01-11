@@ -310,6 +310,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &243236753
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6270083826253298569, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.524473
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3902266
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.5034072
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f, type: 3}
 --- !u!1 &281166844
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,7 +520,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 1
   active: 1
+  isOpen: 0
   animator: {fileID: 312331558}
+  interactTrigger: Interact
+  lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!95 &312331558
 Animator:
   serializedVersion: 3
@@ -500,6 +575,14 @@ MonoBehaviour:
   active: 1
   trueInteractionObject: {fileID: 312331557}
   falseInteractionObject: {fileID: 0}
+  trueInteractionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  falseInteractionEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  alwaysSendTrue: 0
+  alwaysSendFalse: 0
 --- !u!1 &376852091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,6 +1279,9 @@ MonoBehaviour:
   selectionResponseObject: {fileID: 1836257858}
   interactionDistance: 10
   debug: 0
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1001 &1261693790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1936,7 +2022,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  isOpen: 0
   animator: {fileID: 2587927807753995268}
+  interactTrigger: Interact
+  lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2870979113783329239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,7 +2096,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  isOpen: 0
   animator: {fileID: 2870979113783329240}
+  interactTrigger: Interact
+  lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!33 &3469287837203074498
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2153,7 +2251,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  isOpen: 0
   animator: {fileID: 6397203823207034680}
+  interactTrigger: Interact
+  lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!33 &6508909647923976716
 MeshFilter:
   m_ObjectHideFlags: 0
