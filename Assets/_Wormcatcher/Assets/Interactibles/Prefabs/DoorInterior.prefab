@@ -102,10 +102,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 2910417898185854628}
   interactTrigger: Interact
   lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2910417898185854633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,6 +436,7 @@ GameObject:
   - component: {fileID: 8688017732457442163}
   - component: {fileID: 2910417898185854634}
   - component: {fileID: 2910417898185854635}
+  - component: {fileID: 1189046877126808146}
   m_Layer: 0
   m_Name: DoorHinge
   m_TagString: Untagged
@@ -474,6 +485,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   trueInteractionObject: {fileID: 2910417898185854638}
   falseInteractionObject: {fileID: 2910417898185854638}
   trueInteractionEvent:
@@ -482,6 +500,17 @@ MonoBehaviour:
       - m_Target: {fileID: 2910417898185854638}
         m_MethodName: SetLocked
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1189046877126808146}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -506,6 +535,25 @@ MonoBehaviour:
         m_CallState: 2
   alwaysSendTrue: 0
   alwaysSendFalse: 0
+--- !u!114 &1189046877126808146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6066522608269369326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
 --- !u!1 &8186511853120522136
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638406591803597511
+  lastModified: 638406622007513469
   FileSizes:
   - Name: Desktop
     Value: 800
@@ -70,7 +70,7 @@ MonoBehaviour:
   - {fileID: 6101576862161281281}
   StringsBanks:
   - {fileID: -2300738075331474776}
-  cacheTime: 638406591803607525
+  cacheTime: 638406622007518664
   cacheVersion: 131608
 --- !u!114 &1554840527494419877
 MonoBehaviour:
@@ -87,7 +87,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638406591803607525
+  lastModified: 638406622007518664
   FileSizes:
   - Name: Desktop
     Value: 8064
@@ -107,7 +107,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638406591803562369
+  lastModified: 638406622007503094
   FileSizes:
   - Name: Desktop
     Value: 1036
