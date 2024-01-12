@@ -1,5 +1,6 @@
 
 using System;
+using FMODUnity;
 using UnityEngine;
 
 namespace _Wormcatcher.Scripts
@@ -16,13 +17,22 @@ namespace _Wormcatcher.Scripts
         private Collider collider;
         [SerializeField]private bool active = true;
 
+        [SerializeField] private EventReference sound;
+        
+        
         public bool Active
         {
             get => active;
             set => active = value;
         }
 
-        
+        private void Awake()
+        {
+            if (sound.IsNull)
+            {
+                Debug.LogWarning($"No Sound in {name}!", this);
+            }
+        }
 
         protected void Reset()
         {
@@ -43,7 +53,11 @@ namespace _Wormcatcher.Scripts
 
         public virtual void Interact()
         {
-
+            if (AudioManager.Instance && !sound.IsNull )
+            {
+                AudioManager.Instance.PlayOneShot(sound, transform.position);
+            }
+            
         }
     }
 }

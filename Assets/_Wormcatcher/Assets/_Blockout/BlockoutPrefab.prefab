@@ -516,10 +516,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 1863345498904095767}
   interactTrigger: Interact
   lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1520676302184684599
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,10 +611,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 1863345498911749165}
   interactTrigger: Interact
   lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1520676302663437592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,7 +1668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1635847889345061100
 Transform:
   m_ObjectHideFlags: 0
@@ -2059,6 +2079,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   trueInteractionObject: {fileID: 1863345498957105641}
   falseInteractionObject: {fileID: 1863345498957105641}
   trueInteractionEvent:
@@ -2399,6 +2426,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOn: 0
   OnObjects:
   - {fileID: 1320552650033903173}
@@ -2935,6 +2969,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   trueInteractionObject: {fileID: 1863345499187940447}
   falseInteractionObject: {fileID: 1863345499187940447}
   trueInteractionEvent:
@@ -3310,10 +3351,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 1863345498444890009}
   interactTrigger: Interact
   lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1863345498587136439
 GameObject:
   m_ObjectHideFlags: 0
@@ -3555,10 +3606,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 1863345499185710139}
   interactTrigger: Interact
   lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1863345498921929652
 GameObject:
   m_ObjectHideFlags: 0
@@ -3618,10 +3679,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 1863345498928712328}
   interactTrigger: Interact
   lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1863345498928712334
 GameObject:
   m_ObjectHideFlags: 0
@@ -3771,10 +3842,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 1863345498957105642}
   interactTrigger: Interact
   lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1863345498957105643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4087,10 +4168,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 1863345499187940440}
   interactTrigger: Interact
   lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1863345499187940441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4513,10 +4604,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 1863345498209316928}
   interactTrigger: Interact
   lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2651576142697948536
 GameObject:
   m_ObjectHideFlags: 0
@@ -5319,10 +5420,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 1
   animator: {fileID: 1863345498761020487}
   interactTrigger: Interact
   lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5538200768180145117
 GameObject:
   m_ObjectHideFlags: 0
@@ -5420,6 +5531,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOn: 1
   OnObjects:
   - {fileID: 1520676301453922697}

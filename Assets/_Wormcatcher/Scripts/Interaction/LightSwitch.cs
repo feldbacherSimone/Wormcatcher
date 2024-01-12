@@ -1,11 +1,12 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Wormcatcher.Scripts
 {
     public class LightSwitch  : InteractionObject
     {
-        [SerializeField] private Light light;
+        [FormerlySerializedAs("light")] [SerializeField] private Light _light;
         private Boolean lightState;
 
 
@@ -14,12 +15,12 @@ namespace _Wormcatcher.Scripts
             if(!Active)
                 return;
             
-            if(light == null)
+            if(_light == null)
                 return; DebugPrint("no light found");
             
-            lightState = light.enabled;
+            lightState = _light.enabled;
             lightState = !lightState;
-            light.enabled = lightState;
+            _light.enabled = lightState;
             DebugPrint("light switched!" + lightState);
         }
     }

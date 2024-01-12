@@ -641,6 +641,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 84958037}
   interactTrigger: Interact
@@ -776,6 +783,12 @@ Transform:
   m_Father: {fileID: 446197028}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &307294239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6270083826253298569, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1437514115}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &382230662
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -914,6 +927,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 1
   animator: {fileID: 382230667}
   interactTrigger: Interact
@@ -967,6 +987,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 415837764}
   interactTrigger: Interact
@@ -1197,6 +1224,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 1231941614
+      Data2: 1240400300
+      Data3: 158738320
+      Data4: 1125573162
+    Path: event:/Keys
   isOpen: 0
   animator: {fileID: 431048923}
   interactTrigger: Interact
@@ -1230,6 +1264,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 432279777}
   interactTrigger: Interact
@@ -1321,6 +1362,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 446197030}
   interactTrigger: Interact
@@ -1440,6 +1488,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 695771383}
   interactTrigger: Interact
@@ -1840,6 +1895,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 693807252}
   interactTrigger: Interact
@@ -2780,6 +2842,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   trueInteractionObject: {fileID: 446197029}
   falseInteractionObject: {fileID: 446197029}
   trueInteractionEvent:
@@ -3681,6 +3750,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOn: 0
   OnObjects:
   - {fileID: 831025700437332617}
@@ -4239,6 +4315,51 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4787049489302027450, guid: 80922e3bb29653046bfb796a68001a2c,
+        type: 3}
+      propertyPath: InteractEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787049489302027450, guid: 80922e3bb29653046bfb796a68001a2c,
+        type: 3}
+      propertyPath: InteractEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787049489302027450, guid: 80922e3bb29653046bfb796a68001a2c,
+        type: 3}
+      propertyPath: InteractEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787049489302027450, guid: 80922e3bb29653046bfb796a68001a2c,
+        type: 3}
+      propertyPath: InteractEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 307294239}
+    - target: {fileID: 4787049489302027450, guid: 80922e3bb29653046bfb796a68001a2c,
+        type: 3}
+      propertyPath: sound.Path
+      value: event:/Keys
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787049489302027450, guid: 80922e3bb29653046bfb796a68001a2c,
+        type: 3}
+      propertyPath: sound.Guid.Data1
+      value: 1231941614
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787049489302027450, guid: 80922e3bb29653046bfb796a68001a2c,
+        type: 3}
+      propertyPath: sound.Guid.Data2
+      value: 1240400300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787049489302027450, guid: 80922e3bb29653046bfb796a68001a2c,
+        type: 3}
+      propertyPath: sound.Guid.Data3
+      value: 158738320
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787049489302027450, guid: 80922e3bb29653046bfb796a68001a2c,
+        type: 3}
+      propertyPath: sound.Guid.Data4
+      value: 1125573162
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80922e3bb29653046bfb796a68001a2c, type: 3}
 --- !u!4 &1834988454 stripped
@@ -4485,6 +4606,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   trueInteractionObject: {fileID: 693807251}
   falseInteractionObject: {fileID: 693807251}
   trueInteractionEvent:
@@ -4557,6 +4685,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOpen: 0
   animator: {fileID: 1999099020}
   interactTrigger: Interact
@@ -8402,6 +8537,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
+  sound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   isOn: 1
   OnObjects:
   - {fileID: 792201238}

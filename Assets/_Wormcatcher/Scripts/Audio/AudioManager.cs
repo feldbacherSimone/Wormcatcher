@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     { if (Instance != null)
         {
             Debug.LogError("More than one Audio Manager");
+            
         }
         Instance = this;
     }
