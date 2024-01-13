@@ -516,13 +516,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 0
   animator: {fileID: 1863345498904095767}
   interactTrigger: Interact
@@ -611,13 +604,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 0
   animator: {fileID: 1863345498911749165}
   interactTrigger: Interact
@@ -2079,13 +2065,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   trueInteractionObject: {fileID: 1863345498957105641}
   falseInteractionObject: {fileID: 1863345498957105641}
   trueInteractionEvent:
@@ -2426,13 +2405,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOn: 0
   OnObjects:
   - {fileID: 1320552650033903173}
@@ -2969,13 +2941,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   trueInteractionObject: {fileID: 1863345499187940447}
   falseInteractionObject: {fileID: 1863345499187940447}
   trueInteractionEvent:
@@ -3351,13 +3316,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 0
   animator: {fileID: 1863345498444890009}
   interactTrigger: Interact
@@ -3606,13 +3564,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 0
   animator: {fileID: 1863345499185710139}
   interactTrigger: Interact
@@ -3679,13 +3630,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 0
   animator: {fileID: 1863345498928712328}
   interactTrigger: Interact
@@ -3842,13 +3786,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 0
   animator: {fileID: 1863345498957105642}
   interactTrigger: Interact
@@ -4168,13 +4105,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 0
   animator: {fileID: 1863345499187940440}
   interactTrigger: Interact
@@ -4604,13 +4534,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 0
   animator: {fileID: 1863345498209316928}
   interactTrigger: Interact
@@ -5420,13 +5343,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 1
   animator: {fileID: 1863345498761020487}
   interactTrigger: Interact
@@ -5531,13 +5447,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOn: 1
   OnObjects:
   - {fileID: 1520676301453922697}

@@ -189,6 +189,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KitchenStructure
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 962106c8cab59394e802ce3b4576455b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Concrete
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 962106c8cab59394e802ce3b4576455b, type: 3}
 --- !u!4 &7431003 stripped
@@ -641,13 +646,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 0
   animator: {fileID: 84958037}
   interactTrigger: Interact
@@ -927,13 +925,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 1
   animator: {fileID: 382230667}
   interactTrigger: Interact
@@ -987,13 +978,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 0
   animator: {fileID: 415837764}
   interactTrigger: Interact
@@ -1224,13 +1208,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 1231941614
-      Data2: 1240400300
-      Data3: 158738320
-      Data4: 1125573162
-    Path: event:/Keys
   isOpen: 0
   animator: {fileID: 431048923}
   interactTrigger: Interact
@@ -1264,13 +1241,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 0
   animator: {fileID: 432279777}
   interactTrigger: Interact
@@ -1362,13 +1332,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 0
   animator: {fileID: 446197030}
   interactTrigger: Interact
@@ -1488,13 +1451,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 0
   animator: {fileID: 695771383}
   interactTrigger: Interact
@@ -1801,6 +1757,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MudroomStructure
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 15712220b22e1f84fbcdab6d68ee553e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carpet
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15712220b22e1f84fbcdab6d68ee553e, type: 3}
 --- !u!4 &580182367 stripped
@@ -1895,13 +1856,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 0
   animator: {fileID: 693807252}
   interactTrigger: Interact
@@ -2607,6 +2561,47 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 995868460310914890, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bdeed03e08d292d40be868d34f1000cc,
+        type: 3}
+    - target: {fileID: 8138932649286559971, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: stepSounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138932649286559971, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: stepSounds.Array.data[1].fmodEvent.Guid.Data1
+      value: 1231941614
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138932649286559971, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: stepSounds.Array.data[1].fmodEvent.Guid.Data2
+      value: 1240400300
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138932649286559971, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: stepSounds.Array.data[1].fmodEvent.Guid.Data3
+      value: 158738320
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138932649286559971, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: stepSounds.Array.data[1].fmodEvent.Guid.Data4
+      value: 1125573162
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138932649286559971, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: stepSounds.Array.data[1].fmodEvent.Path
+      value: event:/Keys
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138932649286559971, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: stepSounds.Array.data[1].floorType
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 846b49896810a94488ad1ec6451fba85, type: 3}
 --- !u!1001 &1080149693
@@ -2842,13 +2837,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   trueInteractionObject: {fileID: 446197029}
   falseInteractionObject: {fileID: 446197029}
   trueInteractionEvent:
@@ -3750,13 +3738,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOn: 0
   OnObjects:
   - {fileID: 831025700437332617}
@@ -4606,13 +4587,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   trueInteractionObject: {fileID: 693807251}
   falseInteractionObject: {fileID: 693807251}
   trueInteractionEvent:
@@ -4685,13 +4659,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOpen: 0
   animator: {fileID: 1999099020}
   interactTrigger: Interact
@@ -6429,6 +6396,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: -8181850628795388889, guid: 3686f078f416d8847bdcbca6daa6f3ee,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tiles
+      objectReference: {fileID: 0}
     - target: {fileID: -6589146953314300459, guid: 3686f078f416d8847bdcbca6daa6f3ee,
         type: 3}
       propertyPath: m_Layer
@@ -6533,6 +6505,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3686f078f416d8847bdcbca6daa6f3ee,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carpet
       objectReference: {fileID: 0}
     - target: {fileID: 1870820882544123138, guid: 3686f078f416d8847bdcbca6daa6f3ee,
         type: 3}
@@ -8339,7 +8316,7 @@ GameObject:
   - component: {fileID: 3590048558891611118}
   m_Layer: 0
   m_Name: Livingroom
-  m_TagString: Untagged
+  m_TagString: Carpet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8537,13 +8514,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  sound:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
   isOn: 1
   OnObjects:
   - {fileID: 792201238}
