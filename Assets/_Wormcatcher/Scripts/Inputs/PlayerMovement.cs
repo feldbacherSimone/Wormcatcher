@@ -1,6 +1,8 @@
 ﻿using System;
+using _Wormcatcher.Scripts.Audio;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Debug = FMOD.Debug;
 
 namespace _Wormcatcher.Scripts.Inputs
 {
@@ -38,14 +40,18 @@ namespace _Wormcatcher.Scripts.Inputs
         [SerializeField] private float decelerationRate = 5f;
         [SerializeField] private float accelerationRate = 3f;
 
-   
-
+        private float time;
+        [SerializeField] private float stepBaseRate = 0.2f;
+        private StepSoundManager stepSoundManager;
+        private bool isWalking;
+        
         private void Awake()
         {
             playerInputAction = new PlayerInputAction(); 
             playerInputAction.WalkInput.Enable();
             sprintAction = playerInputAction.WalkInput.Sprint;
             movementAction = playerInputAction.WalkInput.Movement;
+            stepSoundManager = GetComponent<StepSoundManager>();
         }
 
         void Start()
@@ -57,27 +63,48 @@ namespace _Wormcatcher.Scripts.Inputs
         // Update is called once per frame
         void Update()
         {
-            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+            HandleGravity();
+            HandleSprintInput();
+            MoveCharacter();
+            time += Time.deltaTime;
+            if (isWalking && time >= 1/currentSpeed*stepBaseRate)
+            {
+                stepSoundManager.PlayStepSound();
+                time = 0; 
+            }
+        }
 
-            if (isGrounded && velocity.y < 0)
-                velocity.y = -2;
-
-            Boolean sprintInput = sprintAction.ReadValue<float>() != 0;
-        
-            currentSpeed = sprintInput ? Mathf.Clamp((currentSpeed += (accelerationRate*Time.deltaTime)), 0, targetSpeed) : 
-                Mathf.Clamp((currentSpeed -= (decelerationRate*Time.deltaTime)), baseSpeed, targetSpeed);
-
-            xInput = movementAction.ReadValue<Vector2>().x;
-            zInput = movementAction.ReadValue<Vector2>().y;
-        
-            //print(xInput + " " + zInput);
+        private void MoveCharacter()
+        {
             Vector3 move = transform.right * xInput + transform.forward * zInput;
 
             controller.Move(move * currentSpeed * Time.deltaTime);
+            isWalking = move.magnitude > 0.2f; 
+            
 
             velocity.y += gravity * Time.deltaTime;
 
             controller.Move(velocity * Time.deltaTime);
+        }
+
+        private void HandleSprintInput()
+        {
+            Boolean sprintInput = sprintAction.ReadValue<float>() != 0;
+
+            currentSpeed = sprintInput
+                ? Mathf.Clamp((currentSpeed += (accelerationRate * Time.deltaTime)), 0, targetSpeed)
+                : Mathf.Clamp((currentSpeed -= (decelerationRate * Time.deltaTime)), baseSpeed, targetSpeed);
+
+            xInput = movementAction.ReadValue<Vector2>().x;
+            zInput = movementAction.ReadValue<Vector2>().y;
+        }
+
+        private void HandleGravity()
+        {
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+            if (isGrounded && velocity.y < -2)
+                velocity.y = -2;
         }
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 41822454}
   - component: {fileID: 41822455}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SceneObject
   m_TagString: Player
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
@@ -55,7 +55,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1416829606}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GroundCheck
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 743479195279676482}
   - component: {fileID: 743479195279676480}
   - component: {fileID: 743479195279676483}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cylinder
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 639102040}
   - component: {fileID: -4583741789801358153}
   - component: {fileID: 5655998579498082466}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Main Camera
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -391,7 +391,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 743479196160101367}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PC_Controller
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -426,7 +426,8 @@ GameObject:
   - component: {fileID: 6776153794198133593}
   - component: {fileID: 424961181308548073}
   - component: {fileID: 63110171445187586}
-  m_Layer: 0
+  - component: {fileID: 8138932649286559971}
+  m_Layer: 2
   m_Name: Controller
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -476,6 +477,7 @@ MonoBehaviour:
   isGrounded: 0
   decelerationRate: 5
   accelerationRate: 4.17
+  stepBaseRate: 1
 --- !u!143 &63110171445187586
 CharacterController:
   m_ObjectHideFlags: 0
@@ -494,6 +496,36 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: -0.1, z: 0}
+--- !u!114 &8138932649286559971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106668527476439641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62166f0f24bd40bdb6fc52929c0e46d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stepSounds:
+  - fmodEvent:
+      Guid:
+        Data1: 1231941614
+        Data2: 1240400300
+        Data3: 158738320
+        Data4: 1125573162
+      Path: event:/Keys
+    floorType: 0
+  currentClip:
+    Guid:
+      Data1: 1231941614
+      Data2: 1240400300
+      Data3: 158738320
+      Data4: 1125573162
+    Path: event:/Keys
+  rayLength: 1.81
+  debug: 1
 --- !u!1 &3704757632406305793
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +677,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &5738115686461685803
 MonoBehaviour:
@@ -679,7 +711,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7986673402767676866}
   - component: {fileID: 1893103110}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SelectionResponse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
