@@ -128,6 +128,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 41822454, guid: 846b49896810a94488ad1ec6451fba85, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 41822455, guid: 846b49896810a94488ad1ec6451fba85, type: 3}
+      propertyPath: sceneObject
+      value: 
+      objectReference: {fileID: 11400000, guid: 5370b0425cd7ba64a83e19cd5244f94c,
+        type: 2}
     - target: {fileID: 743479196160101353, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_Name
