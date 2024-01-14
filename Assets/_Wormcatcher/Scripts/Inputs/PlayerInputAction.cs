@@ -85,7 +85,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                     ""name"": ""MenuZoom"",
                     ""type"": ""Value"",
                     ""id"": ""baecb609-5e8c-4d7e-ad90-8f0dc3671e11"",
-                    ""expectedControlType"": ""Delta"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true

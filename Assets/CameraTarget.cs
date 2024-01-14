@@ -16,6 +16,9 @@ public class CameraTarget : MonoBehaviour
     private PlayerInputAction playerInputAction; 
     private InputAction mouseMovement; 
     private InputAction mouseScroll; 
+    
+    [SerializeField] float minDepth = -10;
+    [SerializeField] float maxDepth = 4;
     private void Start()
     {
         initPos = gameObject.transform.position; 
@@ -37,18 +40,19 @@ public class CameraTarget : MonoBehaviour
 
         if (camera)
         {
-            if (zDepth >= -10 && zDepth <= 4)
+            
+            if (zDepth >= minDepth && zDepth <= maxDepth)
             {
-                zDepth += mouseScroll.ReadValue<float>();
+                zDepth += mouseScroll.ReadValue<Vector2>().y/1000;
                 //print("mouse Scroll: " + Input.mouseScrollDelta.y);
             }
-            else if (zDepth < -10)
+            else if (zDepth < minDepth)
             {
-                zDepth = -10;
+                zDepth = minDepth;
             }
-            else if (zDepth > 4)
+            else if (zDepth > maxDepth)
             {
-                zDepth = 4;
+                zDepth = maxDepth;
             }
         }
         
