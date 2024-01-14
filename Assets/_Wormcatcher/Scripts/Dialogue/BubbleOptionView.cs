@@ -72,7 +72,7 @@ namespace _Wormcatcher.Scripts
 
         IEnumerator Layout(String text)
         {
-            yield return lineLayout.SetPadding(text); //set right padding for line on the right. 
+            //yield return lineLayout.SetPadding(text); //set right padding for line on the right. 
             
             int spaceIndex = _option.Line.TextWithoutCharacterName.Text.IndexOf(' ');
 
@@ -83,6 +83,7 @@ namespace _Wormcatcher.Scripts
 
             
             this.text.text = firstWord + "...";
+            yield return null;
         }
         
         // If we receive a submit or click event, invoke our "we just selected
@@ -142,9 +143,9 @@ namespace _Wormcatcher.Scripts
         private IEnumerator RevealOption()
         {
             isRevealing = true;
-            yield return lineLayout.SetPadding(_option.Line.TextWithoutCharacterName.Text); //set right padding for line on the right. 
+            //yield return lineLayout.SetPadding(_option.Line.TextWithoutCharacterName.Text); //set right padding for line on the right. 
             yield return StartCoroutine(TextEffects.CoolerTypewriter(text, _option.Line.TextWithoutCharacterName.Text, 30,
-                () => onCharacterTyped.Invoke(), () => lineLayout?.ResetAlignment()));
+                () => onCharacterTyped.Invoke()));
             expanded = true;
             isRevealing = false;
         }

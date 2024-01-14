@@ -24,6 +24,15 @@ namespace _Wormcatcher.Scripts
 
         private int count = 0;
 
+        public void ClearLines()
+        {
+            foreach (var line in linesObjects)
+            {
+                Destroy(line);
+            }
+          linesObjects.Clear();
+        }
+
         public LineObject AddLine(string name, string dialogueText)
         {
             LineObject newLine = null;

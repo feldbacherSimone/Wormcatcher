@@ -207,8 +207,8 @@ namespace _Wormcatcher.Scripts
 
                 // Rest of your code remains unchanged...
                 lineBackground = lineText.transform.parent.GetComponent<Image>();
-                backgroundColor = lineBackground.color;
-                lineBackground.color = backgroundHighlightColor;
+                backgroundColor = lineText.color;
+                lineText.color = backgroundHighlightColor;
                 expanded = false;
                 return;
             }
@@ -401,7 +401,7 @@ namespace _Wormcatcher.Scripts
         {
             if (hideLineOnStart)
             {
-                lineBackground.color = backgroundColor;
+                lineText.color = backgroundColor;
                 hideLineOnStart = false;
                 StartCoroutine(RunLineInternal(currentDialogueLine, dialogueLineFinished));
                 expanded = true;
@@ -412,7 +412,7 @@ namespace _Wormcatcher.Scripts
         {
             if (hideLineOnStart)
             {
-                lineBackground.color = backgroundColor; 
+                lineText.color = backgroundColor; 
             }
         }
 

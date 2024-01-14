@@ -2,8 +2,7 @@
 tags:
 ---
 
-<<change_speed 30>>
-
+<<change_speed 20>>
 <<first_letter>> 
 PC: H- Hello?
 
@@ -18,7 +17,8 @@ PC: Feeling any better?
 
 Partner: No, not really. How was work?
 
-PC: Work is work, is work, you know. That's that look for?
+PC: Work is work, is work, you know. 
+PC: That's that look for?
 
 Partner: You ought to remove thy hat in the presence of God, honey.
 
@@ -41,7 +41,8 @@ Partner: I feel sick.
         <<update_stat Nice 2>>
         
     Partner: Turning on a light once uses as much power as running it for a week, just FYI.
-    PC: Did you consider that before turning on your desk lamp? Anyway, back to you. 
+    PC: Did you consider that before turning on your desk lamp? 
+    PC: Anyway, back to you. 
 <<endif>>
 
 
@@ -58,21 +59,20 @@ Partner: Look, I didn't do the dishes, okay?
 ->PC: Great. Great. I guess you'll have to wait on dinner then. Good.
     <<update_stat Mean 0>>
 
-Partner: Look, don't bother with dinner for me. I'm sorry okay? I'm not that hungry.
-
-Partner: I can do them tomorrow morning if you want.
-
-PC: No, I'll go take care of it. 
+    Partner: Look, don't bother with dinner for me. I'm sorry okay? I'm not that hungry.
+    Partner: I can do them tomorrow morning if you want.
+    PC: No, I'll go take care of it. 
 
 PC: I wish you'd go see a doctor.
 
 Partner: In my condition?
 
-PC: What Condition? Look, you seem your usual peachy self to me. Can't you give me one symptom?
+PC: What Condition? Look, you seem your usual peachy self to me. 
+PC: Can't you give me one symptom?
 
 Partner: Exhaustion.
 Partner: Listen, let's talk about this tomorrow. I'm not in the mood for this....
 Partner: Domestic stuff.
-
-
 ===
+
+
