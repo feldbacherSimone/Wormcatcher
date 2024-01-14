@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "MenuZoom",
+                    "type": "Value",
+                    "id": "baecb609-5e8c-4d7e-ad90-8f0dc3671e11",
+                    "expectedControlType": "Delta",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -223,6 +232,17 @@
                     "processors": "",
                     "groups": "Mouse+Keyboard",
                     "action": "MousePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "91ad74a1-5075-4030-a044-66f0448df6c2",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Mouse+Keyboard;Gamepad",
+                    "action": "MenuZoom",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -80,6 +80,15 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""MenuZoom"",
+                    ""type"": ""Value"",
+                    ""id"": ""baecb609-5e8c-4d7e-ad90-8f0dc3671e11"",
+                    ""expectedControlType"": ""Delta"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -247,6 +256,17 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                     ""action"": ""MousePosition"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""91ad74a1-5075-4030-a044-66f0448df6c2"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse+Keyboard;Gamepad"",
+                    ""action"": ""MenuZoom"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -300,6 +320,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         m_WalkInput_SceneObject = m_WalkInput.FindAction("SceneObject", throwIfNotFound: true);
         m_WalkInput_MouseLook = m_WalkInput.FindAction("MouseLook", throwIfNotFound: true);
         m_WalkInput_MousePosition = m_WalkInput.FindAction("MousePosition", throwIfNotFound: true);
+        m_WalkInput_MenuZoom = m_WalkInput.FindAction("MenuZoom", throwIfNotFound: true);
         // StaticInput
         m_StaticInput = asset.FindActionMap("StaticInput", throwIfNotFound: true);
         m_StaticInput_Newaction = m_StaticInput.FindAction("New action", throwIfNotFound: true);
@@ -368,6 +389,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
     private readonly InputAction m_WalkInput_SceneObject;
     private readonly InputAction m_WalkInput_MouseLook;
     private readonly InputAction m_WalkInput_MousePosition;
+    private readonly InputAction m_WalkInput_MenuZoom;
     public struct WalkInputActions
     {
         private @PlayerInputAction m_Wrapper;
@@ -378,6 +400,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         public InputAction @SceneObject => m_Wrapper.m_WalkInput_SceneObject;
         public InputAction @MouseLook => m_Wrapper.m_WalkInput_MouseLook;
         public InputAction @MousePosition => m_Wrapper.m_WalkInput_MousePosition;
+        public InputAction @MenuZoom => m_Wrapper.m_WalkInput_MenuZoom;
         public InputActionMap Get() { return m_Wrapper.m_WalkInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -405,6 +428,9 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 @MousePosition.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMousePosition;
                 @MousePosition.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMousePosition;
                 @MousePosition.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMousePosition;
+                @MenuZoom.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMenuZoom;
+                @MenuZoom.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMenuZoom;
+                @MenuZoom.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMenuZoom;
             }
             m_Wrapper.m_WalkInputActionsCallbackInterface = instance;
             if (instance != null)
@@ -427,6 +453,9 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 @MousePosition.started += instance.OnMousePosition;
                 @MousePosition.performed += instance.OnMousePosition;
                 @MousePosition.canceled += instance.OnMousePosition;
+                @MenuZoom.started += instance.OnMenuZoom;
+                @MenuZoom.performed += instance.OnMenuZoom;
+                @MenuZoom.canceled += instance.OnMenuZoom;
             }
         }
     }
@@ -490,6 +519,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         void OnSceneObject(InputAction.CallbackContext context);
         void OnMouseLook(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
+        void OnMenuZoom(InputAction.CallbackContext context);
     }
     public interface IStaticInputActions
     {
