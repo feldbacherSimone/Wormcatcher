@@ -89,6 +89,15 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Pause Game"",
+                    ""type"": ""Button"",
+                    ""id"": ""f0fc5e40-dc01-4dbe-8d3a-940c7f40d02d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -267,6 +276,28 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                     ""action"": ""MenuZoom"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d0a87ff7-651a-4adf-8013-1e324feb8f11"",
+                    ""path"": ""<Keyboard>/tab"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse+Keyboard"",
+                    ""action"": ""Pause Game"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4f63c1a6-9eeb-4112-ad27-d8df61ae7da0"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse+Keyboard"",
+                    ""action"": ""Pause Game"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -321,6 +352,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         m_WalkInput_MouseLook = m_WalkInput.FindAction("MouseLook", throwIfNotFound: true);
         m_WalkInput_MousePosition = m_WalkInput.FindAction("MousePosition", throwIfNotFound: true);
         m_WalkInput_MenuZoom = m_WalkInput.FindAction("MenuZoom", throwIfNotFound: true);
+        m_WalkInput_PauseGame = m_WalkInput.FindAction("Pause Game", throwIfNotFound: true);
         // StaticInput
         m_StaticInput = asset.FindActionMap("StaticInput", throwIfNotFound: true);
         m_StaticInput_Newaction = m_StaticInput.FindAction("New action", throwIfNotFound: true);
@@ -390,6 +422,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
     private readonly InputAction m_WalkInput_MouseLook;
     private readonly InputAction m_WalkInput_MousePosition;
     private readonly InputAction m_WalkInput_MenuZoom;
+    private readonly InputAction m_WalkInput_PauseGame;
     public struct WalkInputActions
     {
         private @PlayerInputAction m_Wrapper;
@@ -401,6 +434,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         public InputAction @MouseLook => m_Wrapper.m_WalkInput_MouseLook;
         public InputAction @MousePosition => m_Wrapper.m_WalkInput_MousePosition;
         public InputAction @MenuZoom => m_Wrapper.m_WalkInput_MenuZoom;
+        public InputAction @PauseGame => m_Wrapper.m_WalkInput_PauseGame;
         public InputActionMap Get() { return m_Wrapper.m_WalkInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -431,6 +465,9 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 @MenuZoom.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMenuZoom;
                 @MenuZoom.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMenuZoom;
                 @MenuZoom.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnMenuZoom;
+                @PauseGame.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnPauseGame;
+                @PauseGame.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnPauseGame;
+                @PauseGame.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnPauseGame;
             }
             m_Wrapper.m_WalkInputActionsCallbackInterface = instance;
             if (instance != null)
@@ -456,6 +493,9 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 @MenuZoom.started += instance.OnMenuZoom;
                 @MenuZoom.performed += instance.OnMenuZoom;
                 @MenuZoom.canceled += instance.OnMenuZoom;
+                @PauseGame.started += instance.OnPauseGame;
+                @PauseGame.performed += instance.OnPauseGame;
+                @PauseGame.canceled += instance.OnPauseGame;
             }
         }
     }
@@ -520,6 +560,7 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         void OnMouseLook(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
         void OnMenuZoom(InputAction.CallbackContext context);
+        void OnPauseGame(InputAction.CallbackContext context);
     }
     public interface IStaticInputActions
     {

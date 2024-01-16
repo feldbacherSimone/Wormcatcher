@@ -12,8 +12,15 @@ namespace _Wormcatcher.Scripts.Inputs
         private InputAction mousePosition; 
         private float mouseX;
         private float mouseY;
-        private PlayerInputAction playerInputAction; 
+        private PlayerInputAction playerInputAction;
 
+        public float[] MouseSensitivityBounds
+        {
+            get => mouseSensitivityBounds;
+            set => mouseSensitivityBounds = value;
+        }
+
+        [SerializeField] private float[] mouseSensitivityBounds = {0.2f, 2}; 
         [SerializeField] private float mouseSensitivity = 1;
         [SerializeField] private bool smoothMovement = false;
         private float xAccumulator = 1;

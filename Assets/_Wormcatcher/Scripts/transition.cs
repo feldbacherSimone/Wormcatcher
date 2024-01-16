@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class transition : MonoBehaviour
 {
     [SerializeField] private GameObject[] titles;
+    [SerializeField] private GameObject menuTitle; 
     [SerializeField] private CanvasGroup canvasGroup;
 
     [SerializeField] private GameObject canvas;
@@ -19,7 +20,9 @@ public class transition : MonoBehaviour
         StartCoroutine(TextEffects.FadeIn(canvasGroup, 2.0f, () =>
         {
             SceneLoader.LoadNextScene();
-            GameObject.Instantiate(titles[PlayerData.Vignette - 1], canvas.transform);
+            int currentVignette = PlayerData.Vignette; 
+            GameObject currentTitle = currentVignette != 0 ? titles[currentVignette] : menuTitle; 
+            GameObject.Instantiate(currentTitle, canvas.transform);
             SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
             AnimateText typewriter = FindObjectOfType<AnimateText>();
             if (typewriter != null)
