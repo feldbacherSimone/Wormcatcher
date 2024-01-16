@@ -11,11 +11,11 @@ namespace _Wormcatcher.Scripts
         [SerializeField] private static float fadeTime;
         private static String next;
 
-        public static void SwitchScene(string name)
+        public static void SwitchToMenu()
         {
-            next = name;
+            next = "MainMenu";
             PlayerData.Vignette = 0; 
-            SwitchScene("TransitionScene");
+            SwitchSceneInternal("TransitionScene");
         }
 
         public static void SwitchScene(int vignette)

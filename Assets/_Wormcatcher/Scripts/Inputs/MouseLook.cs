@@ -14,14 +14,17 @@ namespace _Wormcatcher.Scripts.Inputs
         private float mouseY;
         private PlayerInputAction playerInputAction;
 
-        public float[] MouseSensitivityBounds
+        public float[] MouseSensitivityBounds => mouseSensitivityBounds;
+
+        [SerializeField] private float[] mouseSensitivityBounds = {10, 80}; 
+        [SerializeField] private float mouseSensitivity = 25;
+
+        public float MouseSensitivity
         {
-            get => mouseSensitivityBounds;
-            set => mouseSensitivityBounds = value;
+            get => mouseSensitivity;
+            set => mouseSensitivity = value;
         }
 
-        [SerializeField] private float[] mouseSensitivityBounds = {0.2f, 2}; 
-        [SerializeField] private float mouseSensitivity = 1;
         [SerializeField] private bool smoothMovement = false;
         private float xAccumulator = 1;
         private float yAccumulator = 1;
@@ -57,7 +60,7 @@ namespace _Wormcatcher.Scripts.Inputs
                 mouseX = mouseMovement.ReadValue<Vector2>().x * mouseSensitivity * Time.deltaTime;
                 mouseY = mouseMovement.ReadValue<Vector2>().y * mouseSensitivity * Time.deltaTime;
 
-                if (smoothMovement)
+                if (smoothMovement && Time.timeScale > 0)
                 {
                     xAccumulator = Mathf.Lerp(xAccumulator, mouseX, snappiness * Time.deltaTime);
                     yAccumulator = Mathf.Lerp(yAccumulator, mouseY, snappiness * Time.deltaTime);

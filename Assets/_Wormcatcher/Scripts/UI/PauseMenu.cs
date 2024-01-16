@@ -1,43 +1,67 @@
 using System;
+using _Wormcatcher.Scripts.Inputs;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
+using Button = UnityEngine.UI.Button;
 using Cursor = UnityEngine.Cursor;
+using Slider = UnityEngine.UI.Slider;
 
 namespace _Wormcatcher.Scripts.UI
 {
+    [Serializable]
     public class PauseMenu : MonoBehaviour
     {
-        [SerializeField]private GameObject pauseScreenGameObject;
+        [SerializeField] private GameObject pauseScreenGameObject;
+        [SerializeField] private GameObject resumeButtonObject;
+        [SerializeField] private GameObject menuButtonGameObject;
+
+        [SerializeField] private Slider mouseSensitivitySlider;
+        [SerializeField] private MouseLook mouseLook;
+
 
         private PlayerInputAction playerInputAction;
-        private InputAction pauseInput; 
-        private bool gameIsPaused;
+        private InputAction pauseInput;
+        [SerializeField] private bool gameIsPaused;
 
-        [SerializeField] private Button resumeButton;
-        [SerializeField] private Button menuButton;
 
         private void Start()
         {
+            SetupButtons();
+            SetupSliders();
             playerInputAction = new PlayerInputAction();
             pauseInput = playerInputAction.WalkInput.PauseGame;
             pauseInput.Enable();
+            if (!gameIsPaused) Resume();
+            else Pause();
         }
 
         private void SetupButtons()
         {
-            resumeButton.clicked += Resume;
-            menuButton.clicked += () =>
+            menuButtonGameObject.GetComponent<Button>().onClick.AddListener(() =>
             {
-                SceneLoader.SwitchScene();
-            };
+                Resume();
+                Cursor.lockState = CursorLockMode.Confined;
+                SceneLoader.SwitchToMenu();
+            });
+            resumeButtonObject.GetComponent<Button>().onClick.AddListener(Resume);
         }
-        
+
+        private void SetupSliders()
+        {
+            mouseSensitivitySlider.minValue = mouseLook.MouseSensitivityBounds[0];
+            mouseSensitivitySlider.maxValue = mouseLook.MouseSensitivityBounds[1];
+            mouseSensitivitySlider.value = mouseLook.MouseSensitivity;
+
+            mouseSensitivitySlider.onValueChanged.AddListener((value) => { mouseLook.MouseSensitivity = value; });
+        }
+
         private void Update()
         {
             if (pauseInput.triggered)
             {
-                if(!gameIsPaused) Pause();
+                if (!gameIsPaused) Pause();
                 else Resume();
             }
         }
@@ -45,19 +69,20 @@ namespace _Wormcatcher.Scripts.UI
         void Pause()
         {
             Cursor.lockState = CursorLockMode.None;
+            playerInputAction.WalkInput.MouseLook.Disable();
 
             pauseScreenGameObject.SetActive(true);
-            Time.timeScale = 0f; 
-            gameIsPaused = true; 
+            Time.timeScale = 0f;
+            gameIsPaused = true;
         }
-        
+
         void Resume()
         {
             Cursor.lockState = CursorLockMode.Locked;
 
             pauseScreenGameObject.SetActive(false);
-            Time.timeScale = 1f; 
-            gameIsPaused = false; 
+            Time.timeScale = 1f;
+            gameIsPaused = false;
         }
     }
 }

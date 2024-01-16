@@ -33,7 +33,7 @@ namespace _Wormcatcher.Scripts
 
         private void Awake()
         {
-            // fetch a selection response from the refernced object 
+            // fetch a selection response from the referenced object 
             selectionResponse = selectionResponseObject.GetComponent<ISelectionResponse>();
 
             // Enable interact input action 
