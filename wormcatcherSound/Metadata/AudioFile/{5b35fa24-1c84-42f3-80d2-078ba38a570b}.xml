@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5b35fa24-1c84-42f3-80d2-078ba38a570b}">
+		<property name="assetPath">
+			<value>plasticbottle-008.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2f930e37-c42b-41f8-b734-0157cf260748}</destination>
+		</relationship>
+	</object>
+</objects>

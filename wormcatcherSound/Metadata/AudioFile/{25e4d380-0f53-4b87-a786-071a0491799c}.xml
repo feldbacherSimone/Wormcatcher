@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{25e4d380-0f53-4b87-a786-071a0491799c}">
+		<property name="assetPath">
+			<value>326371__charlenez__restaurantcoffee-shop-ambience(1).wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>190.48191666666668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2f930e37-c42b-41f8-b734-0157cf260748}</destination>
+		</relationship>
+	</object>
+</objects>
