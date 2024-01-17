@@ -4937,6 +4937,37 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 600482038}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1129346444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129346441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -814894057
+      Data2: 1315514338
+      Data3: -103893605
+      Data4: -1692506507
+    Path: event:/LocalisedAmbience/loc_amb_LampBuzz
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 0.95
+  OverrideMaxDistance: 4.2
 --- !u!1 &1130158361
 GameObject:
   m_ObjectHideFlags: 0
@@ -5360,7 +5391,7 @@ MonoBehaviour:
   AllowNonRigidbodyDoppler: 0
   Params: []
   OverrideAttenuation: 1
-  OverrideMinDistance: 13.46
+  OverrideMinDistance: 20
   OverrideMaxDistance: 20
 --- !u!1 &1214506697 stripped
 GameObject:
@@ -5454,10 +5485,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 860751845, guid: 846b49896810a94488ad1ec6451fba85, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 247309567192846259, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 743479195431046825, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 743479195431046839, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: mouseSensitivityBounds.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 743479195431046839, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: mouseSensitivityBounds.Array.data[1]
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101353, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -5519,6 +5569,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2444649444222807981, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2444649444222807981, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3911533511127521471, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -5527,6 +5587,26 @@ PrefabInstance:
     - target: {fileID: 5024410531068981598, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088917368853607946, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5088917368853607946, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062581582358081633, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062581582358081633, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8667312585354876377, guid: 846b49896810a94488ad1ec6451fba85,
