@@ -1273,7 +1273,7 @@ MonoBehaviour:
       Data2: 1240400300
       Data3: 158738320
       Data4: 1125573162
-    Path: event:/Keys
+    Path: event:/SFX/sfx_Keys
   rayLength: 1.81
   debug: 1
 --- !u!1 &2394850708014224578
