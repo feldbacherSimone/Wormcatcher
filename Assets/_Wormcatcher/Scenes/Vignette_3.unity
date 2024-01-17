@@ -9488,6 +9488,7 @@ GameObject:
   - component: {fileID: 2184623667314833472}
   - component: {fileID: 1863345499047419810}
   - component: {fileID: 1520676301219193595}
+  - component: {fileID: 1520676301219193596}
   m_Layer: 0
   m_Name: FridgeDoor
   m_TagString: Untagged
@@ -9526,6 +9527,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 1
           m_CallState: 2
+        - m_Target: {fileID: 1520676301219193596}
+          m_MethodName: SetParameter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   - name: Toggle Light Off
     id: 632949337
     action:
@@ -9542,6 +9554,39 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1520676301219193596}
+          m_MethodName: UnsetParameter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1520676301219193596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520676301219193594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ab9df10a8e54f82acf56a7e690ee6f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  parameterName: 
+  onValue: 0
+  offValue: 0
 --- !u!1 &1520676301961727955
 GameObject:
   m_ObjectHideFlags: 0
