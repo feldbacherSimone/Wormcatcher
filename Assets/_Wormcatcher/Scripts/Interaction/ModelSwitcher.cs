@@ -12,6 +12,7 @@ namespace _Wormcatcher.Scripts
         [SerializeField] private GameObject[] OnObjects;
         [SerializeField] private GameObject[] OffObjects;
 
+       
         private void Awake()
         {
             SwitchObjects(isOn);
