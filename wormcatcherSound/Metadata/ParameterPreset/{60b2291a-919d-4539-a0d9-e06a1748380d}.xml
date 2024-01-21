@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{60b2291a-919d-4539-a0d9-e06a1748380d}">
+		<property name="name">
+			<value>wurmSteps</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7efca07d-dfbf-4559-a901-e4c352e1a7de}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{e7e4189f-f0ac-400c-94d0-81bf87e8acd4}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{e7e4189f-f0ac-400c-94d0-81bf87e8acd4}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

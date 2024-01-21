@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{a1ef4a07-674a-4133-bef1-fc4032b3540d}">
+		<property name="name">
+			<value>ShowerEQ</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7efca07d-dfbf-4559-a901-e4c352e1a7de}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{405a5523-3f61-4f14-adf5-a8df26ffda2b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{405a5523-3f61-4f14-adf5-a8df26ffda2b}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

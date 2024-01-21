@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{c2b27dbb-63ce-43e2-8b65-c9fdce7540b0}">
+		<property name="name">
+			<value>ShowerEnde</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7efca07d-dfbf-4559-a901-e4c352e1a7de}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{6c0a4a20-c15f-4989-a574-f268fd6b1588}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{6c0a4a20-c15f-4989-a574-f268fd6b1588}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{ea3c0577-c49f-4b78-b8b6-af71328cc3cd}">
+		<property name="name">
+			<value>SurroundMove</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7efca07d-dfbf-4559-a901-e4c352e1a7de}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c43f3d5d-b03d-4120-80bf-65c94284b63a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c43f3d5d-b03d-4120-80bf-65c94284b63a}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{03b45973-0bb7-4818-90c9-09c625251215}">
+		<property name="name">
+			<value>TurnOffSink</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7efca07d-dfbf-4559-a901-e4c352e1a7de}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{4ee90649-faf2-4b7e-b4da-74d01942f65c}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{4ee90649-faf2-4b7e-b4da-74d01942f65c}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

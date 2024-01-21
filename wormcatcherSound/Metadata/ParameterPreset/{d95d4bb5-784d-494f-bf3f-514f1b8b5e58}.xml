@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{d95d4bb5-784d-494f-bf3f-514f1b8b5e58}">
+		<property name="name">
+			<value>ShowerReverb</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7efca07d-dfbf-4559-a901-e4c352e1a7de}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{548592f6-39db-4df7-bf16-7186d094dc1b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{548592f6-39db-4df7-bf16-7186d094dc1b}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
