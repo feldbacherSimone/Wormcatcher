@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{9e4e02e8-4380-417b-9986-377d60496764}">
+		<property name="name">
+			<value>TVOff</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7efca07d-dfbf-4559-a901-e4c352e1a7de}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{ac119e74-d91a-4379-9907-10d5733db2d6}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{ac119e74-d91a-4379-9907-10d5733db2d6}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

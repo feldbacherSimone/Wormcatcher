@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{c1a8f0a2-3f63-4165-aca6-fd4c6e79eae6}">
+		<property name="assetPath">
+			<value>ABC_Tampa-004.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>150.73539682539683</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2f930e37-c42b-41f8-b734-0157cf260748}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -75,6 +75,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{9e8f548c-8cec-4c5f-9e98-0f685322ee5a}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{5e85174e-f2a2-466b-a801-b5f0b9e6b809}</destination>
 		</relationship>
@@ -103,6 +106,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{2b035615-8744-4528-960e-f6e7a1e3c177}">
+		<property name="volume">
+			<value>4</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -132,6 +138,8 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{5e85174e-f2a2-466b-a801-b5f0b9e6b809}">
 		<relationship name="effects">
+			<destination>{4fdcd2f7-264a-4f36-ac4b-4d3d19937133}</destination>
+			<destination>{9f61e86e-81b5-4929-9e7c-13dec1a7d34b}</destination>
 			<destination>{b871b029-ab40-4039-86ea-f0ca100a9e9d}</destination>
 			<destination>{207263b3-c7d4-4c92-af2b-79fdae1230d9}</destination>
 		</relationship>
@@ -140,11 +148,33 @@
 	<object class="MixerBusFader" id="{540ee9c9-ff12-4b6b-af6f-f7ed9d76a53f}" />
 	<object class="MixerBusEffectChain" id="{6c2d5f2f-cc07-4889-a1b1-3de558f5d6bd}">
 		<relationship name="effects">
+			<destination>{71d5c039-e491-478b-abc4-9c0cb8101f7a}</destination>
 			<destination>{ed1bb74a-8913-466c-8920-6dd51d45c016}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{152d2f33-f510-4d63-9f28-c097aee49810}" />
+	<object class="GainEffect" id="{4fdcd2f7-264a-4f36-ac4b-4d3d19937133}">
+		<property name="gain">
+			<value>5.5</value>
+		</property>
+	</object>
+	<object class="GainEffect" id="{9f61e86e-81b5-4929-9e7c-13dec1a7d34b}">
+		<property name="gain">
+			<value>8.5</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{b871b029-ab40-4039-86ea-f0ca100a9e9d}" />
 	<object class="SpatialiserEffect" id="{207263b3-c7d4-4c92-af2b-79fdae1230d9}" />
+	<object class="MultibandEqEffect" id="{71d5c039-e491-478b-abc4-9c0cb8101f7a}">
+		<property name="filterTypeA">
+			<value>6</value>
+		</property>
+		<property name="frequencyA">
+			<value>1068.27954</value>
+		</property>
+		<property name="qualityA">
+			<value>0.455827594</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{ed1bb74a-8913-466c-8920-6dd51d45c016}" />
 </objects>
