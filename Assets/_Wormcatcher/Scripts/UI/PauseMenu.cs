@@ -1,9 +1,7 @@
 using System;
 using _Wormcatcher.Scripts.Inputs;
-using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
 using Cursor = UnityEngine.Cursor;
 using Slider = UnityEngine.UI.Slider;
@@ -69,6 +67,7 @@ namespace _Wormcatcher.Scripts.UI
         void Pause()
         {
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true; 
             playerInputAction.WalkInput.MouseLook.Disable();
 
             pauseScreenGameObject.SetActive(true);
@@ -79,6 +78,7 @@ namespace _Wormcatcher.Scripts.UI
         void Resume()
         {
             Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false; 
 
             pauseScreenGameObject.SetActive(false);
             Time.timeScale = 1f;

@@ -38,6 +38,15 @@ namespace _Wormcatcher.Scripts
             { PlayerAction.ToggleLight, true}
         };
 
+        private static int vignette1Position = 0;
+
+        public static int Vignette1Position
+        {
+            get => vignette1Position;
+            set => vignette1Position = value;
+        }
+
+
         public static void UpdateStat(PlayerStat stat, int amount)
         {
             playerStats[stat] += amount; 
