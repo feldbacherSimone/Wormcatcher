@@ -5,7 +5,7 @@
 			<value>sfx_Sink</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{2ad18ad4-74c2-46f4-a6e2-67f2cb172468}</destination>
@@ -23,7 +23,6 @@
 			<destination>{3b3c3c31-ba2a-43b1-b59a-5a7feec62baa}</destination>
 		</relationship>
 		<relationship name="markerTracks">
-			<destination>{914b0790-48f2-45d8-acd7-74366b895aa8}</destination>
 			<destination>{ab0cdb71-f6e6-4e82-bc16-7313b04cb410}</destination>
 			<destination>{602ab36f-9d0e-46ee-ac5c-ec85000b910c}</destination>
 		</relationship>
@@ -66,7 +65,6 @@
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{3b3c3c31-ba2a-43b1-b59a-5a7feec62baa}" />
-	<object class="MarkerTrack" id="{914b0790-48f2-45d8-acd7-74366b895aa8}" />
 	<object class="MarkerTrack" id="{ab0cdb71-f6e6-4e82-bc16-7313b04cb410}" />
 	<object class="MarkerTrack" id="{602ab36f-9d0e-46ee-ac5c-ec85000b910c}" />
 	<object class="GroupTrack" id="{563d152e-9bdf-4b73-9394-4803263e2e31}">
@@ -84,8 +82,7 @@
 		<relationship name="markers">
 			<destination>{2b5b335f-2067-4c65-809f-ef81c90c5eb6}</destination>
 			<destination>{8df52df9-3eeb-4597-ac48-5399d306ec90}</destination>
-			<destination>{dd501104-c066-456c-b98b-11ea4ecfff1b}</destination>
-			<destination>{0b17334a-bb0e-414a-be53-983ab2eeba84}</destination>
+			<destination>{9dd57a94-a41a-4495-b2ce-d1985e88b84d}</destination>
 		</relationship>
 	</object>
 	<object class="ActionSheet" id="{0b879cb5-2e56-44f9-af4e-b627c40e9b97}">
@@ -182,9 +179,12 @@
 			<destination>{602ab36f-9d0e-46ee-ac5c-ec85000b910c}</destination>
 		</relationship>
 	</object>
-	<object class="TransitionMarker" id="{dd501104-c066-456c-b98b-11ea4ecfff1b}">
+	<object class="TransitionRegion" id="{9dd57a94-a41a-4495-b2ce-d1985e88b84d}">
 		<property name="position">
-			<value>3</value>
+			<value>0</value>
+		</property>
+		<property name="length">
+			<value>4.545340050377833</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{2f88bb4d-2948-4f65-8448-2625b6e6fac7}</destination>
@@ -196,30 +196,14 @@
 			<destination>{8df52df9-3eeb-4597-ac48-5399d306ec90}</destination>
 		</relationship>
 		<relationship name="triggerConditions">
-			<destination>{6752c487-ea90-43b6-b96e-21bd2b62bfd6}</destination>
-		</relationship>
-	</object>
-	<object class="TransitionMarker" id="{0b17334a-bb0e-414a-be53-983ab2eeba84}">
-		<property name="position">
-			<value>3.5</value>
-		</property>
-		<relationship name="timeline">
-			<destination>{2f88bb4d-2948-4f65-8448-2625b6e6fac7}</destination>
-		</relationship>
-		<relationship name="markerTrack">
-			<destination>{914b0790-48f2-45d8-acd7-74366b895aa8}</destination>
-		</relationship>
-		<relationship name="destination">
-			<destination>{8df52df9-3eeb-4597-ac48-5399d306ec90}</destination>
-		</relationship>
-		<relationship name="triggerConditions">
-			<destination>{ea7b62b7-f211-4f2c-b1d0-fa417e311ae5}</destination>
+			<destination>{95a21bdb-7b4f-4264-af2d-fcbb5ff52a77}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{4f1b7b76-e620-4a04-ac79-cde89b567a7d}">
 		<relationship name="effects">
 			<destination>{4e209d51-7fc3-4f0b-9993-a804c7f1d7b0}</destination>
 			<destination>{f0d77b10-7d7f-4ea8-a7c1-75b7eb6550ad}</destination>
+			<destination>{5b984cb7-0b66-4397-9e63-b6bbbb818542}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{6f1687a4-8452-418c-a4c1-0c31239ac722}" />
@@ -250,21 +234,7 @@
 			<destination>{4ee90649-faf2-4b7e-b4da-74d01942f65c}</destination>
 		</relationship>
 	</object>
-	<object class="ParameterCondition" id="{6752c487-ea90-43b6-b96e-21bd2b62bfd6}">
-		<property name="minimum">
-			<value>0</value>
-		</property>
-		<property name="maximum">
-			<value>0</value>
-		</property>
-		<property name="isInverted">
-			<value>true</value>
-		</property>
-		<relationship name="parameter">
-			<destination>{4ee90649-faf2-4b7e-b4da-74d01942f65c}</destination>
-		</relationship>
-	</object>
-	<object class="ParameterCondition" id="{ea7b62b7-f211-4f2c-b1d0-fa417e311ae5}">
+	<object class="ParameterCondition" id="{95a21bdb-7b4f-4264-af2d-fcbb5ff52a77}">
 		<property name="minimum">
 			<value>0</value>
 		</property>
@@ -290,6 +260,7 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{f0d77b10-7d7f-4ea8-a7c1-75b7eb6550ad}" />
+	<object class="SpatialiserEffect" id="{5b984cb7-0b66-4397-9e63-b6bbbb818542}" />
 	<object class="AutomationPoint" id="{a97c4740-e2dd-40d0-99a8-5dcde7c8e763}">
 		<property name="position">
 			<value>18</value>
