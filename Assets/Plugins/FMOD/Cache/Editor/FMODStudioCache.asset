@@ -42,7 +42,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638410959308507676
+  lastModified: 638410962154204002
   FileSizes:
   - Name: Desktop
     Value: 15469504
@@ -225,7 +225,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Loc_Ambience.bank
   Name: Loc_Ambience
   StudioPath: bank:/Loc_Ambience
-  lastModified: 638410959308807091
+  lastModified: 638410944366619029
   FileSizes:
   - Name: Desktop
     Value: 4055520
@@ -272,7 +272,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638410959308817129
+  lastModified: 638410944368302022
   FileSizes:
   - Name: Desktop
     Value: 2042
@@ -381,7 +381,7 @@ MonoBehaviour:
   - {fileID: 6101576862161281281}
   StringsBanks:
   - {fileID: -2300738075331474776}
-  cacheTime: 638410959308827099
+  cacheTime: 638410962154204002
   cacheVersion: 131608
 --- !u!114 &173395439245063683
 MonoBehaviour:
@@ -425,7 +425,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638410959308827099
+  lastModified: 638410944368422615
   FileSizes:
   - Name: Desktop
     Value: 136288
@@ -713,7 +713,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638410959308817129
+  lastModified: 638410944366744888
   FileSizes:
   - Name: Desktop
     Value: 1220

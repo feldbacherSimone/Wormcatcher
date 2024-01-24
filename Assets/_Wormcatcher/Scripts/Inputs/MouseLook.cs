@@ -8,16 +8,21 @@ namespace _Wormcatcher.Scripts.Inputs
     /// </summary>
     public class MouseLook : MonoBehaviour
     {
-        private InputAction mouseMovement; 
-        private InputAction mousePosition; 
+        private InputAction mouseMovement;
+        private InputAction mousePosition;
         private float mouseX;
         private float mouseY;
         private PlayerInputAction playerInputAction;
 
+        [SerializeField] private float initRotation;
+
+        [SerializeField] float lookAngle;
         public float[] MouseSensitivityBounds => mouseSensitivityBounds;
 
-        [SerializeField] private float[] mouseSensitivityBounds = {10, 80}; 
+        [SerializeField] private float[] mouseSensitivityBounds = { 10, 80 };
         [SerializeField] private float mouseSensitivity = 25;
+
+        private Quaternion lastRotation;
 
         public float MouseSensitivity
         {
@@ -32,10 +37,13 @@ namespace _Wormcatcher.Scripts.Inputs
 
         [SerializeField] private Transform playerBody;
 
-        private float xRoation = 0; 
+        private float xRoation = 0;
 
         private void Awake()
         {
+            initRotation = playerBody.rotation.eulerAngles.y;
+
+
             playerInputAction = new PlayerInputAction();
             playerInputAction.WalkInput.Enable();
             mouseMovement = playerInputAction.WalkInput.MouseLook;
@@ -46,14 +54,19 @@ namespace _Wormcatcher.Scripts.Inputs
         {
             if (playerBody == null)
             {
-                playerBody = transform.parent; 
+                playerBody = transform.parent;
             }
- 
+            lastRotation = playerBody.rotation; 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+
         void Update()
         {
+            print(playerBody.rotation.eulerAngles.y);
+
+           
+            lastRotation = playerBody.rotation; 
             if (true)
             {
                 // get mouse inputs 
@@ -64,17 +77,27 @@ namespace _Wormcatcher.Scripts.Inputs
                 {
                     xAccumulator = Mathf.Lerp(xAccumulator, mouseX, snappiness * Time.deltaTime);
                     yAccumulator = Mathf.Lerp(yAccumulator, mouseY, snappiness * Time.deltaTime);
-
-                    // left/right rotation
-                    playerBody.Rotate(Vector3.up * xAccumulator);
                     
                     // up/down rotation 
                     xRoation -= yAccumulator;
                     xRoation = Mathf.Clamp(xRoation, -90f, 90f);
                     transform.localRotation = Quaternion.Euler(xRoation, 0f, 0f);
+
+
+                    
+
+                    // left/right rotation
+                    playerBody.Rotate(Vector3.up * xAccumulator);
+
+                    if (playerBody.rotation.eulerAngles.y > initRotation + lookAngle / 2 ||
+                        playerBody.rotation.eulerAngles.y < initRotation - lookAngle / 2)
+                    {
+                        playerBody.rotation = lastRotation;
+                    }
+                    
                     return;
                 }
-                
+
                 // up/down rotation 
                 xRoation -= mouseY;
                 xRoation = Mathf.Clamp(xRoation, -90f, 90f);
@@ -82,6 +105,12 @@ namespace _Wormcatcher.Scripts.Inputs
 
                 // left/right rotation
                 playerBody.Rotate(Vector3.up * mouseX);
+                if (playerBody.rotation.eulerAngles.y > initRotation + lookAngle / 2 ||
+                    playerBody.rotation.eulerAngles.y < initRotation - lookAngle / 2)
+                {
+                    playerBody.rotation = lastRotation;
+                }
+              
             }
         }
     }

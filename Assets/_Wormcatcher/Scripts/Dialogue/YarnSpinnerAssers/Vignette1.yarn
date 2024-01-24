@@ -2,11 +2,14 @@
 tags:
 ---
 
-<<change_speed 30>>
+<<change_speed 15>>
 Date: How was traffic? 
 
+-> PC: Kind of a nightmare, they're doing construction downtown 
+-> PC: Yeah, it was... fine I guess.
 
-<<first_letter>>
+Date: So... on your profile you said you liked...eating out?
+
 PC: Sustenance, I love that. I mean who doesn't?
 
 Date: Sort of the thing you write if you don't know what else to write. 
@@ -54,17 +57,18 @@ Date: Mhm. So - have you thought about having kids?
 
 PC: H- Hi?
 
-<<change_speed 50>>
+<<change_speed 30>>
 Date: My research into the Void Diaries have left me utterly in awe of what Merplat’s theorem has done for us scholars of Lasckivism. We’re at a pivotal moment of enlightment - an opening of mind so to say - of wht really is ossible when it comes to film. 
 
-<<change_speed 30>>
+<<change_speed 15>>
 -> PC: Merplat’s my favourite 
     <<update_stat Mean 1>>
 -> PC: What’s the void diaries?
     <<update_stat Nice 1>>
 
 <<change_speed 60>>
-Date: Of course, nothing even gets close to Celvikiy’s use of the third person in this sort of- transcendental, interactive way. Not even the staunchest exponents of liminal hermeneutics would disagree I daresay.
+Date: Of course, nothing even gets close to Celvikiy’s use of the third person in this sort of- transcendental, interactive way. 
+Date: Not even the staunchest exponents of liminal hermeneutics would disagree I daresay.
 
 PC: I- 
 
@@ -74,7 +78,11 @@ Date: Of course, my contribution to the Codices of the BFJ Criteria collection w
 PC: Your contributions?
 
 <<change_speed 80>>
-Date: Climactic voidelessness, as elucidated by Celviky, embodies an avant-garde approach to storytelling, one that vehemently challenges conventional cinematic resolutions. It is a deliberate negation of the expected crescendo, a rejection of catharsis in favor of thematic and psychological dissonance. Within this aesthetic paradigm, climaxes remain conspicuously absent, suspended in a state of perpetual ambiguity. Characters' arcs do not resolve neatly; narratives remain suspended, poised on the precipice of fulfillment, leaving audiences in a perpetual state of suspension.
+Date: Climactic voidelessness, as elucidated by Celviky, embodies an avant-garde approach to storytelling, 
+Date: one that vehemently challenges conventional cinematic resolutions. 
+Date: It is a deliberate negation of the expected crescendo, a rejection of catharsis in favor of thematic and psychological dissonance. 
+Date: Within this aesthetic paradigm, climaxes remain conspicuously absent, suspended in a state of perpetual ambiguity. 
+Date: Characters' arcs do not resolve neatly; narratives remain suspended, poised on the precipice of fulfillment, leaving audiences in a perpetual state of suspension.
 
 
 Date: So - do you prefer cats or dogs?

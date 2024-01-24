@@ -8,6 +8,7 @@ TagManager:
   - Wood
   - Concrete
   - Tiles
+  - Canvas
   layers:
   - Default
   - TransparentFX

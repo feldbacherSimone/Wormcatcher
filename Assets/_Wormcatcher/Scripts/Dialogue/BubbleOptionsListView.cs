@@ -52,6 +52,7 @@ namespace _Wormcatcher.Scripts
             foreach (var optionView in optionViews)
             {
                 optionView.gameObject.SetActive(false);
+                
             }
 
             // If we don't already have enough option views, create more
@@ -59,6 +60,7 @@ namespace _Wormcatcher.Scripts
             {
                 var optionView = CreateNewOptionView();
                 optionView.gameObject.SetActive(false);
+                Canvas.ForceUpdateCanvases();
             }
 
             // Set up all of the option views
@@ -86,7 +88,7 @@ namespace _Wormcatcher.Scripts
                 {
                     optionView.Select();
                 }
-
+                Canvas.ForceUpdateCanvases();
                 optionViewsCreated += 1;
             }
 
