@@ -395,6 +395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a844c748aa4b8da47a270ab81a3f331e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initRotation: 0
+  lookAngle: 360
   mouseSensitivityBounds:
   - 0.2
   - 2
@@ -616,6 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10ad37290d0d40b45b53bc0bb679e915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movable: 1
   controller: {fileID: 63110171445187586}
   groundCheck: {fileID: 1416829606}
   baseSpeed: 2

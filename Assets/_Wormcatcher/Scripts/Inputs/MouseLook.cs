@@ -41,7 +41,7 @@ namespace _Wormcatcher.Scripts.Inputs
 
         private void Awake()
         {
-            initRotation = playerBody.rotation.y;
+            initRotation = playerBody.rotation.eulerAngles.y;
 
 
             playerInputAction = new PlayerInputAction();
@@ -63,11 +63,9 @@ namespace _Wormcatcher.Scripts.Inputs
 
         void Update()
         {
-            if (playerBody.rotation.y >  lookAngle / 2 ||
-                playerBody.rotation.y < -lookAngle / 2)
-            {
-                playerBody.rotation = lastRotation; 
-            }
+            print(playerBody.rotation.eulerAngles.y);
+
+           
             lastRotation = playerBody.rotation; 
             if (true)
             {
@@ -85,11 +83,17 @@ namespace _Wormcatcher.Scripts.Inputs
                     xRoation = Mathf.Clamp(xRoation, -90f, 90f);
                     transform.localRotation = Quaternion.Euler(xRoation, 0f, 0f);
 
+
                     
-                
+
                     // left/right rotation
                     playerBody.Rotate(Vector3.up * xAccumulator);
-                   
+
+                    if (playerBody.rotation.eulerAngles.y > initRotation + lookAngle / 2 ||
+                        playerBody.rotation.eulerAngles.y < initRotation - lookAngle / 2)
+                    {
+                        playerBody.rotation = lastRotation;
+                    }
                     
                     return;
                 }
@@ -101,7 +105,11 @@ namespace _Wormcatcher.Scripts.Inputs
 
                 // left/right rotation
                 playerBody.Rotate(Vector3.up * mouseX);
-                
+                if (playerBody.rotation.eulerAngles.y > initRotation + lookAngle / 2 ||
+                    playerBody.rotation.eulerAngles.y < initRotation - lookAngle / 2)
+                {
+                    playerBody.rotation = lastRotation;
+                }
               
             }
         }
