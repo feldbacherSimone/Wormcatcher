@@ -586,6 +586,7 @@ MonoBehaviour:
   - Master
   Banks:
   - Ambience
+  - Footies
   - Loc_Ambience
   - SFX
   BanksToLoad: []

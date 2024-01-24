@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638410962154204002
+  lastModified: 638417191142537042
   FileSizes:
   - Name: Desktop
-    Value: 15469504
+    Value: 25069376
   Exists: 1
 --- !u!114 &-7664976401293962892
 MonoBehaviour:
@@ -67,13 +67,41 @@ MonoBehaviour:
     Data4: -450162268
   Banks:
   - {fileID: 1554840527494419877}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -4814838773927354122}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 154164
+--- !u!114 &-6990177771548691139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/sfx_UI_Click
+  m_EditorClassIdentifier: 
+  Path: event:/UI/sfx_UI_Click
+  Guid:
+    Data1: 554887567
+    Data2: 1291867352
+    Data3: 34571188
+    Data4: 2113475539
+  Banks:
+  - {fileID: 1554840527494419877}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 275
 --- !u!114 &-6374654616365768282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,7 +156,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 660
 --- !u!114 &-5678050552059016917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +184,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 104000
+--- !u!114 &-5291076683378804221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Footies.bank
+  m_EditorClassIdentifier: 
+  Path: wormcatcherSound/Build/Desktop/Footies.bank
+  Name: Footies
+  StudioPath: bank:/Footies
+  lastModified: 638417191142547011
+  FileSizes:
+  - Name: Desktop
+    Value: 59008
+  Exists: 1
 --- !u!114 &-4877665895805775880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,14 +224,15 @@ MonoBehaviour:
     Data4: -559388029
   Banks:
   - {fileID: -7852053009145756493}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
-  IsOneShot: 1
-  Parameters: []
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 9002775211820759916}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
---- !u!114 &-4749764585475023298
+  Length: 76785
+--- !u!114 &-4814838773927354122
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,24 +241,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/LocalisedAmbience/loc_amb_FridgeBus
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_TV/TVOff
   m_EditorClassIdentifier: 
-  Path: event:/LocalisedAmbience/loc_amb_FridgeBus
-  Guid:
-    Data1: 770884073
-    Data2: 1339608414
-    Data3: -1429051762
-    Data4: -39507813
-  Banks:
-  - {fileID: -2516274572830282263}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
+  Name: TVOff
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 287386619
+    data2: 493307010
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2516274572830282263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,10 +271,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Loc_Ambience.bank
   Name: Loc_Ambience
   StudioPath: bank:/Loc_Ambience
-  lastModified: 638410944366619029
+  lastModified: 638417191142711699
   FileSizes:
   - Name: Desktop
-    Value: 4055520
+    Value: 5156928
   Exists: 1
 --- !u!114 &-2324262809769324494
 MonoBehaviour:
@@ -272,10 +318,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638410944368302022
+  lastModified: 638417191142723060
   FileSizes:
   - Name: Desktop
-    Value: 2042
+    Value: 2826
   Exists: 1
 --- !u!114 &-2232101933129465904
 MonoBehaviour:
@@ -297,6 +343,89 @@ MonoBehaviour:
     Data4: 771125031
   Banks:
   - {fileID: -7852053009145756493}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 7675732713966886652}
+  - {fileID: -817533075396309529}
+  - {fileID: 3306626999321280253}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 445000
+--- !u!114 &-1823461413499368202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/FootstepsSpeed
+  m_EditorClassIdentifier: 
+  Name: FootstepsSpeed
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2049927008
+    data2: 3384067840
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Walk
+  - Run
+  Exists: 1
+--- !u!114 &-1661775172854927612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Ground
+  m_EditorClassIdentifier: 
+  Name: Ground
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 3206159562
+    data2: 1958525144
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Concrete
+  - Wood
+  - Carpet
+  Exists: 1
+--- !u!114 &-1266696317357581660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/sfx_Meds
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/sfx_Meds
+  Guid:
+    Data1: 1505818355
+    Data2: 1252519551
+    Data3: 1466956735
+    Data4: 306129897
+  Banks:
+  - {fileID: 1554840527494419877}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -318,14 +447,65 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/sfx_Keys
   Guid:
-    Data1: 1231941614
-    Data2: 1240400300
-    Data3: 158738320
-    Data4: 1125573162
+    Data1: -623640151
+    Data2: 1223784100
+    Data3: 1334039701
+    Data4: -2136336924
   Banks:
   - {fileID: 1554840527494419877}
   IsStream: 0
   Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-817533075396309529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/amb_Shower/ShowerEQ
+  m_EditorClassIdentifier: 
+  Name: ShowerEQ
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3092793589
+    data2: 2828944562
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-272678473351880469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/sfx_Schachtel
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/sfx_Schachtel
+  Guid:
+    Data1: 1917920901
+    Data2: 1074649598
+    Data3: -980709446
+    Data4: -1830181546
+  Banks:
+  - {fileID: 1554840527494419877}
+  IsStream: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -349,6 +529,7 @@ MonoBehaviour:
   - {fileID: 1554840527494419877}
   - {fileID: -7852053009145756493}
   - {fileID: -2516274572830282263}
+  - {fileID: -5291076683378804221}
   EditorEvents:
   - {fileID: 1631556957639212718}
   - {fileID: 2254218285206584020}
@@ -373,15 +554,22 @@ MonoBehaviour:
   - {fileID: 6511672555545278987}
   - {fileID: -2232101933129465904}
   - {fileID: -5678050552059016917}
-  - {fileID: -4749764585475023298}
   - {fileID: 2338405912607356530}
+  - {fileID: 3437749328105925905}
+  - {fileID: 7968349152496760415}
+  - {fileID: 5542690313712169018}
+  - {fileID: -272678473351880469}
+  - {fileID: -6990177771548691139}
+  - {fileID: 9115761760377798344}
+  - {fileID: 4450904899718297014}
+  - {fileID: -1266696317357581660}
   EditorParameters:
   - {fileID: 2253051553571400041}
   MasterBanks:
   - {fileID: 6101576862161281281}
   StringsBanks:
   - {fileID: -2300738075331474776}
-  cacheTime: 638410962154204002
+  cacheTime: 638417191142937638
   cacheVersion: 131608
 --- !u!114 &173395439245063683
 MonoBehaviour:
@@ -404,12 +592,12 @@ MonoBehaviour:
   Banks:
   - {fileID: 1554840527494419877}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1550
 --- !u!114 &1554840527494419877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,10 +613,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638410944368422615
+  lastModified: 638417191142937638
   FileSizes:
   - Name: Desktop
-    Value: 136288
+    Value: 6587072
   Exists: 1
 --- !u!114 &1631556957639212718
 MonoBehaviour:
@@ -456,7 +644,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 190481
+  Length: 256960
 --- !u!114 &1808622271005694472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,13 +665,14 @@ MonoBehaviour:
     Data4: 1915951490
   Banks:
   - {fileID: 1554840527494419877}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3842158963536632823}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 19000
 --- !u!114 &1853369427796851266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,12 +721,12 @@ MonoBehaviour:
   Banks:
   - {fileID: 1554840527494419877}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 900
 --- !u!114 &2253051553571400041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,12 +800,12 @@ MonoBehaviour:
   Banks:
   - {fileID: 1554840527494419877}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 400
 --- !u!114 &2721543881705571679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,6 +833,108 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1020
+--- !u!114 &3306626999321280253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/amb_Shower/ShowerEnde
+  m_EditorClassIdentifier: 
+  Name: ShowerEnde
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1735299948
+    data2: 1886011426
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &3437749328105925905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Footsteps
+  Guid:
+    Data1: 654818311
+    Data2: 1321521900
+    Data3: 2040770454
+    Data4: -696750056
+  Banks:
+  - {fileID: -5291076683378804221}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1823461413499368202}
+  - {fileID: 7001803757751057348}
+  - {fileID: -1661775172854927612}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5397
+--- !u!114 &3575921477370924978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/loc_amb_FridgeBuzz/FridgeVerb
+  m_EditorClassIdentifier: 
+  Name: FridgeVerb
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3891875835
+    data2: 1966109794
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &3842158963536632823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_Sink/TurnOffSink
+  m_EditorClassIdentifier: 
+  Name: TurnOffSink
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3608235938
+    data2: 2496634499
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &4028695727884410103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,6 +962,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7000
+--- !u!114 &4450904899718297014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/sfx_KeysDoorOpen
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/sfx_KeysDoorOpen
+  Guid:
+    Data1: 1231941614
+    Data2: 1240400300
+    Data3: 158738320
+    Data4: 1125573162
+  Banks:
+  - {fileID: 1554840527494419877}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2800
 --- !u!114 &4987418370064827274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,12 +1010,39 @@ MonoBehaviour:
   Banks:
   - {fileID: 1554840527494419877}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1050
+--- !u!114 &5542690313712169018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/sfx_UI_ButtonSlide
+  m_EditorClassIdentifier: 
+  Path: event:/UI/sfx_UI_ButtonSlide
+  Guid:
+    Data1: -1690284986
+    Data2: 1166766741
+    Data3: 769870244
+    Data4: 1996499928
+  Banks:
+  - {fileID: 1554840527494419877}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 13500
 --- !u!114 &6101576862161281281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,7 +1058,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638410944366744888
+  lastModified: 638410959308817129
   FileSizes:
   - Name: Desktop
     Value: 1220
@@ -769,6 +1114,82 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &7001803757751057348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Reverb
+  m_EditorClassIdentifier: 
+  Name: Reverb
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3540727824
+    data2: 302705777
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7675732713966886652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/amb_Shower/ShowerReverb
+  m_EditorClassIdentifier: 
+  Name: ShowerReverb
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 274650773
+    data2: 506996432
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7968349152496760415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/LocalisedAmbience/loc_amb_FridgeBuzz
+  m_EditorClassIdentifier: 
+  Path: event:/LocalisedAmbience/loc_amb_FridgeBuzz
+  Guid:
+    Data1: 770884073
+    Data2: 1339608414
+    Data3: -1429051762
+    Data4: -39507813
+  Banks:
+  - {fileID: -2516274572830282263}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3575921477370924978}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 26500
 --- !u!114 &8340741092462418909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -795,7 +1216,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1500
 --- !u!114 &8342879367444553823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,6 +1271,57 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 233059
+--- !u!114 &9002775211820759916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/amb_Worm/wurmSteps
+  m_EditorClassIdentifier: 
+  Name: wurmSteps
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 709070945
+    data2: 2554279665
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &9115761760377798344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/sfx_Cloth
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/sfx_Cloth
+  Guid:
+    Data1: -881698604
+    Data2: 1255890926
+    Data3: 1039570095
+    Data4: -1174037789
+  Banks:
+  - {fileID: 1554840527494419877}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &9202700217297906459
 MonoBehaviour:
   m_ObjectHideFlags: 0
