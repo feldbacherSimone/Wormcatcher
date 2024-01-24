@@ -12,6 +12,8 @@ namespace _Wormcatcher.Scripts.Inputs
     /// </summary>
     public class PlayerMovement : MonoBehaviour
     {
+
+        [SerializeField] private bool movable = true; 
         // Input 
         private PlayerInputAction playerInputAction;
         private InputAction sprintAction;
@@ -48,7 +50,8 @@ namespace _Wormcatcher.Scripts.Inputs
         private void Awake()
         {
             playerInputAction = new PlayerInputAction(); 
-            playerInputAction.WalkInput.Enable();
+            if(movable)
+                playerInputAction.WalkInput.Enable();
             sprintAction = playerInputAction.WalkInput.Sprint;
             movementAction = playerInputAction.WalkInput.Movement;
             stepSoundManager = GetComponent<StepSoundManager>();
