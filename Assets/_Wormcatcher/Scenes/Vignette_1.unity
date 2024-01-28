@@ -2060,6 +2060,68 @@ Transform:
   m_Father: {fileID: 1199772479}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &650942360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 650942362}
+  - component: {fileID: 650942361}
+  m_Layer: 0
+  m_Name: ArguingCouple
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &650942361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650942360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 809761269
+      Data2: 1080563258
+      Data3: -84504641
+      Data4: -2121125048
+    Path: event:/LocalisedAmbience/loc_amb_arguingcouple
+  Event: 
+  PlayEvent: 1
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0.1
+  OverrideMaxDistance: 4.2000003
+--- !u!4 &650942362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650942360}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.11, y: 1.16, z: 1.08}
+  m_LocalScale: {x: 1.0317, y: 1.0317, z: 1.0317}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &693807249
 GameObject:
   m_ObjectHideFlags: 0
@@ -3065,7 +3127,7 @@ PrefabInstance:
     - target: {fileID: 3264859948194358838, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: baseReverb
-      value: 0.85
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3704757632406305793, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -3565,9 +3627,9 @@ MonoBehaviour:
   Preload: 0
   AllowNonRigidbodyDoppler: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 0.39
-  OverrideMaxDistance: 2.65
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0.1
+  OverrideMaxDistance: 3.8
 --- !u!1 &1199667756
 GameObject:
   m_ObjectHideFlags: 0
@@ -9408,9 +9470,9 @@ MonoBehaviour:
   Preload: 0
   AllowNonRigidbodyDoppler: 0
   Params: []
-  OverrideAttenuation: 1
-  OverrideMinDistance: 0.39
-  OverrideMaxDistance: 2.65
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &3849157432850723384
 Transform:
   m_ObjectHideFlags: 0
@@ -9522,6 +9584,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3409603207115285164, guid: 9140231022a06be4a8e27544a7963bc3,
+        type: 3}
+      propertyPath: onValue
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4193186413482855172, guid: 9140231022a06be4a8e27544a7963bc3,
         type: 3}
       propertyPath: m_Name

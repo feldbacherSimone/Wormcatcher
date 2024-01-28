@@ -70,7 +70,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638417870254344608
+  lastModified: 638420823047954795
   FileSizes:
   - Name: Desktop
     Value: 25069856
@@ -278,10 +278,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Footies.bank
   Name: Footies
   StudioPath: bank:/Footies
-  lastModified: 638420802876283652
+  lastModified: 638420803621068195
   FileSizes:
   - Name: Desktop
-    Value: 149568
+    Value: 113856
   Exists: 1
 --- !u!114 &-4877665895805775880
 MonoBehaviour:
@@ -413,7 +413,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 247965
+  Length: 246465
 --- !u!114 &-2516274572830282263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,7 +429,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Loc_Ambience.bank
   Name: Loc_Ambience
   StudioPath: bank:/Loc_Ambience
-  lastModified: 638416383640966940
+  lastModified: 638420825596504628
   FileSizes:
   - Name: Desktop
     Value: 5156928
@@ -678,7 +678,7 @@ MonoBehaviour:
   - {fileID: 6101576862161281281}
   StringsBanks:
   - {fileID: -2300738075331474776}
-  cacheTime: 638420802877277121
+  cacheTime: 638420825596504628
   cacheVersion: 131608
 --- !u!114 &173395439245063683
 MonoBehaviour:
@@ -885,8 +885,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0.1
+  MaxDistance: 4.2000003
   Length: 132447
 --- !u!114 &2338405912607356530
 MonoBehaviour:
@@ -981,7 +981,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638420802877277121
+  lastModified: 638420803621838929
   FileSizes:
   - Name: Desktop
     Value: 11466176
@@ -1058,8 +1058,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
+  MinDistance: 0.1
+  MaxDistance: 3.8
   Length: 7000
 --- !u!114 &4107020475517351434
 MonoBehaviour:
@@ -1371,7 +1371,7 @@ MonoBehaviour:
   - {fileID: -6645394864662970774}
   MinDistance: 1
   MaxDistance: 20
-  Length: 5397
+  Length: 3100
 --- !u!114 &7675732713966886652
 MonoBehaviour:
   m_ObjectHideFlags: 0
