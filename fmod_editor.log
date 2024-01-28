@@ -2,18 +2,667 @@
 [LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20218 (137105), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=44100, nAvgBytesPerSec=352800, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
 [LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] OutputWASAPI::init                       : Output buffer size: 3760 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001A6B7AB4428 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001E43CBEA998 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E449AB7278, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E449AB7278
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4EC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-001', format=5, channels=2, frequency=48000, lengthbytes=7136, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.011017.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E449AB7278
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E43EDAC248, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E43EDAC248
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4D80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-003', format=5, channels=2, frequency=48000, lengthbytes=6880, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.013977.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E43EDAC248
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Loc_Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E43EDACAB8, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E43EDACAB8
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Loc_Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5141376
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15552
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4740
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 15000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='sfx_buzzing_light_electric', format=5, channels=1, frequency=48000, lengthbytes=540704, lengthpcm=3390275, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.014709.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E43EDACAB8
+[LOG] SoundI::release                          : CarpetFooties2-001 (000001E449AB7278)
+[LOG] SoundI::release                          :     CarpetFooties2-001 (000001E4C6ACCB58)
+[LOG] SoundI::release                          :     CarpetFooties2-001 (000001E4C15CC4D8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E43EDACE18, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E43EDACE18
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4880
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-003', format=5, channels=2, frequency=48000, lengthbytes=6880, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.013977.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E43EDACE18
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2E18, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2E18
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4C40
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-004', format=5, channels=2, frequency=48000, lengthbytes=8288, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.015381.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2E18
+[LOG] SoundI::release                          : CarpetFooties2-003 (000001E43EDAC248)
+[LOG] SoundI::release                          :     CarpetFooties2-003 (000001E4C6ACCE98)
+[LOG] SoundI::release                          :     CarpetFooties2-003 (000001E4C15CC9E8)
+[LOG] SoundI::release                          : CarpetFooties2-003 (000001E43EDACE18)
+[LOG] SoundI::release                          :     CarpetFooties2-003 (000001E4C6ACCCF8)
+[LOG] SoundI::release                          :     CarpetFooties2-003 (000001E4C15CB098)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2908, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2908
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF44C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-002', format=5, channels=2, frequency=48000, lengthbytes=7104, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.014008.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2908
+[LOG] SoundI::release                          : CarpetFooties2-004 (000001E4C83E2E18)
+[LOG] SoundI::release                          :     CarpetFooties2-004 (000001E449B7E868)
+[LOG] SoundI::release                          :     CarpetFooties2-004 (000001E4C15CC4D8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E23F8, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E23F8
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4100
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-002', format=5, channels=2, frequency=48000, lengthbytes=7104, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.014008.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E23F8
+[LOG] SoundI::release                          : sfx_buzzing_light_electric (000001E43EDACAB8)
+[LOG] SoundI::release                          :     sfx_buzzing_light_electric (000001E4C6ACD1D8)
+[LOG] SoundI::release                          :     sfx_buzzing_light_electric (000001E4C15CC688)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E449AB6D68, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E449AB6D68
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4EC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-001', format=5, channels=2, frequency=48000, lengthbytes=7136, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.011017.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E449AB6D68
+[LOG] SoundI::release                          : CarpetFooties2-002 (000001E4C83E2908)
+[LOG] SoundI::release                          :     CarpetFooties2-002 (000001E449B7E388)
+[LOG] SoundI::release                          :     CarpetFooties2-002 (000001E4C15CB098)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E25A8, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E25A8
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4B00
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-005', format=5, channels=2, frequency=48000, lengthbytes=7456, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.025024.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E25A8
+[LOG] SoundI::release                          : CarpetFooties2-001 (000001E449AB6D68)
+[LOG] SoundI::release                          :     CarpetFooties2-001 (000001E449B7ED48)
+[LOG] SoundI::release                          :     CarpetFooties2-001 (000001E4C15CC4D8)
+[LOG] SoundI::release                          : CarpetFooties2-002 (000001E4C83E23F8)
+[LOG] SoundI::release                          :     CarpetFooties2-002 (000001E449B7EA08)
+[LOG] SoundI::release                          :     CarpetFooties2-002 (000001E4C15CBFC8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2758, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2758
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF49C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-002', format=5, channels=2, frequency=48000, lengthbytes=7104, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.014008.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2758
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2908, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2908
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4D80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-004', format=5, channels=2, frequency=48000, lengthbytes=8288, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.015381.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2908
+[LOG] SoundI::release                          : CarpetFooties2-002 (000001E4C83E2758)
+[LOG] SoundI::release                          :     CarpetFooties2-002 (000001E449B7EBA8)
+[LOG] SoundI::release                          :     CarpetFooties2-002 (000001E4C15CB3F8)
+[LOG] SoundI::release                          : CarpetFooties2-005 (000001E4C83E25A8)
+[LOG] SoundI::release                          :     CarpetFooties2-005 (000001E449B7E1E8)
+[LOG] SoundI::release                          :     CarpetFooties2-005 (000001E4C15CC688)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2248, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2248
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4740
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-001', format=5, channels=2, frequency=48000, lengthbytes=7136, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.011017.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2248
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Loc_Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E449AB6D68, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E449AB6D68
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Loc_Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5141376
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15552
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4600
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 15000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='sfx_buzzing_light_electric', format=5, channels=1, frequency=48000, lengthbytes=540704, lengthpcm=3390275, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.014709.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E449AB6D68
+[LOG] SoundI::release                          : CarpetFooties2-004 (000001E4C83E2908)
+[LOG] SoundI::release                          :     CarpetFooties2-004 (000001E449B7EA08)
+[LOG] SoundI::release                          :     CarpetFooties2-004 (000001E4C15CB5A8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E449AB70C8, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E449AB70C8
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4D80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-005', format=5, channels=2, frequency=48000, lengthbytes=7456, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.025024.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E449AB70C8
+[LOG] SoundI::release                          : CarpetFooties2-001 (000001E4C83E2248)
+[LOG] SoundI::release                          :     CarpetFooties2-001 (000001E449B7E1E8)
+[LOG] SoundI::release                          :     CarpetFooties2-001 (000001E4C15CBFC8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2248, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2248
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4B00
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-005', format=5, channels=2, frequency=48000, lengthbytes=7456, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.025024.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2248
+[LOG] SoundI::release                          : CarpetFooties2-005 (000001E449AB70C8)
+[LOG] SoundI::release                          :     CarpetFooties2-005 (000001E449B7E388)
+[LOG] SoundI::release                          :     CarpetFooties2-005 (000001E4C15CB5A8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E25A8, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E25A8
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4EC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-001', format=5, channels=2, frequency=48000, lengthbytes=7136, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.011017.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E25A8
+[LOG] SoundI::release                          : CarpetFooties2-005 (000001E4C83E2248)
+[LOG] SoundI::release                          :     CarpetFooties2-005 (000001E449B7EBA8)
+[LOG] SoundI::release                          :     CarpetFooties2-005 (000001E4C15CB3F8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2C68, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2C68
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4100
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-004', format=5, channels=2, frequency=48000, lengthbytes=8288, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.015381.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2C68
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E449AB7278, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E449AB7278
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 25033504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36352
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF44C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Arguing_FEmale', format=5, channels=2, frequency=48000, lengthbytes=681088, lengthpcm=5914997, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.827928.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E449AB7278
+[LOG] SoundI::release                          : CarpetFooties2-001 (000001E4C83E25A8)
+[LOG] SoundI::release                          :     CarpetFooties2-001 (000001E449B7E1E8)
+[LOG] SoundI::release                          :     CarpetFooties2-001 (000001E4C15CBFC8)
+[LOG] SoundI::release                          : sfx_buzzing_light_electric (000001E449AB6D68)
+[LOG] SoundI::release                          :     sfx_buzzing_light_electric (000001E449B7E868)
+[LOG] SoundI::release                          :     sfx_buzzing_light_electric (000001E4C15CC4D8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2AB8, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2AB8
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4600
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-002', format=5, channels=2, frequency=48000, lengthbytes=7104, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.014008.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2AB8
+[LOG] SoundI::release                          : CarpetFooties2-004 (000001E4C83E2C68)
+[LOG] SoundI::release                          :     CarpetFooties2-004 (000001E449B7EBA8)
+[LOG] SoundI::release                          :     CarpetFooties2-004 (000001E4C15CC688)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2E18, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2E18
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4740
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-001', format=5, channels=2, frequency=48000, lengthbytes=7136, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.011017.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2E18
+[LOG] SoundI::release                          : CarpetFooties2-002 (000001E4C83E2AB8)
+[LOG] SoundI::release                          :     CarpetFooties2-002 (000001E4C6ACCE98)
+[LOG] SoundI::release                          :     CarpetFooties2-002 (000001E4C15CC9E8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2758, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2758
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4880
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-003', format=5, channels=2, frequency=48000, lengthbytes=6880, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.013977.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2758
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Loc_Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E449AB6D68, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E449AB6D68
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Loc_Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 5141376
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 15552
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF49C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 15000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='sfx_buzzing_light_electric', format=5, channels=1, frequency=48000, lengthbytes=540704, lengthpcm=3390275, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.014709.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E449AB6D68
+[LOG] SoundI::release                          : CarpetFooties2-001 (000001E4C83E2E18)
+[LOG] SoundI::release                          :     CarpetFooties2-001 (000001E4C6ACD038)
+[LOG] SoundI::release                          :     CarpetFooties2-001 (000001E4C15CB3F8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2E18, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2E18
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4B00
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-005', format=5, channels=2, frequency=48000, lengthbytes=7456, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.025024.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2E18
+[LOG] SoundI::release                          : CarpetFooties2-003 (000001E4C83E2758)
+[LOG] SoundI::release                          :     CarpetFooties2-003 (000001E4C6ACCE98)
+[LOG] SoundI::release                          :     CarpetFooties2-003 (000001E4C15CBFC8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2908, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2908
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4EC0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-002', format=5, channels=2, frequency=48000, lengthbytes=7104, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.014008.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2908
+[LOG] SoundI::release                          : CarpetFooties2-005 (000001E4C83E2E18)
+[LOG] SoundI::release                          :     CarpetFooties2-005 (000001E449B7EA08)
+[LOG] SoundI::release                          :     CarpetFooties2-005 (000001E4C15CC9E8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2E18, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2E18
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4600
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-002', format=5, channels=2, frequency=48000, lengthbytes=7104, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.014008.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2E18
+[LOG] SoundI::release                          : CarpetFooties2-002 (000001E4C83E2908)
+[LOG] SoundI::release                          :     CarpetFooties2-002 (000001E449B7E1E8)
+[LOG] SoundI::release                          :     CarpetFooties2-002 (000001E4C15CC688)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2908, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2908
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4B00
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-005', format=5, channels=2, frequency=48000, lengthbytes=7456, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.025024.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2908
+[LOG] SoundI::release                          : CarpetFooties2-002 (000001E4C83E2E18)
+[LOG] SoundI::release                          :     CarpetFooties2-002 (000001E449B7EBA8)
+[LOG] SoundI::release                          :     CarpetFooties2-002 (000001E4C15CBFC8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E23F8, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E23F8
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4600
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-003', format=5, channels=2, frequency=48000, lengthbytes=6880, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.013977.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E23F8
+[LOG] SoundI::release                          : CarpetFooties2-005 (000001E4C83E2908)
+[LOG] SoundI::release                          :     CarpetFooties2-005 (000001E449B7ED48)
+[LOG] SoundI::release                          :     CarpetFooties2-005 (000001E4C15CB3F8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2908, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2908
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4740
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-001', format=5, channels=2, frequency=48000, lengthbytes=7136, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.011017.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2908
+[LOG] SoundI::release                          : CarpetFooties2-003 (000001E4C83E23F8)
+[LOG] SoundI::release                          :     CarpetFooties2-003 (000001E449B7EBA8)
+[LOG] SoundI::release                          :     CarpetFooties2-003 (000001E4C15CBFC8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2E18, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2E18
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4600
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-001', format=5, channels=2, frequency=48000, lengthbytes=7136, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.011017.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2E18
+[LOG] SoundI::release                          : CarpetFooties2-001 (000001E4C83E2908)
+[LOG] SoundI::release                          :     CarpetFooties2-001 (000001E449B7EA08)
+[LOG] SoundI::release                          :     CarpetFooties2-001 (000001E4C15CC4D8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2758, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2758
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4740
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-004', format=5, channels=2, frequency=48000, lengthbytes=8288, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.015381.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2758
+[LOG] SoundI::release                          : sfx_buzzing_light_electric (000001E449AB6D68)
+[LOG] SoundI::release                          :     sfx_buzzing_light_electric (000001E449B7E868)
+[LOG] SoundI::release                          :     sfx_buzzing_light_electric (000001E4C15CB5A8)
+[LOG] SoundI::release                          : CarpetFooties2-001 (000001E4C83E2E18)
+[LOG] SoundI::release                          :     CarpetFooties2-001 (000001E449B7EBA8)
+[LOG] SoundI::release                          :     CarpetFooties2-001 (000001E4C15CB3F8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2C68, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2C68
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4600
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-005', format=5, channels=2, frequency=48000, lengthbytes=7456, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.025024.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2C68
+[LOG] SoundI::release                          : CarpetFooties2-004 (000001E4C83E2758)
+[LOG] SoundI::release                          :     CarpetFooties2-004 (000001E449B7E528)
+[LOG] SoundI::release                          :     CarpetFooties2-004 (000001E4C15CBFC8)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Footies.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E2758, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E2758
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Footies.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 84352
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 29504
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4D80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='CarpetFooties2-005', format=5, channels=2, frequency=48000, lengthbytes=7456, lengthpcm=913470, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.025024.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E2758
+[LOG] SoundI::release                          : CarpetFooties2-005 (000001E4C83E2C68)
+[LOG] SoundI::release                          :     CarpetFooties2-005 (000001E449B7EBA8)
+[LOG] SoundI::release                          :     CarpetFooties2-005 (000001E4C15CB3F8)
+[LOG] SoundI::release                          : CarpetFooties2-005 (000001E4C83E2758)
+[LOG] SoundI::release                          :     CarpetFooties2-005 (000001E449B7E868)
+[LOG] SoundI::release                          :     CarpetFooties2-005 (000001E4C15CC688)
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001E4C83E25A8, queue head = 000001E4EAFC9478, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001E4C83E25A8
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 25033504
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 36352
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001E4C1BF4600
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 22000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Man_Talking', format=5, channels=2, frequency=48000, lengthbytes=1072448, lengthpcm=4437472, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.999969.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001E4C83E25A8
+[LOG] SoundI::release                          : Man_Talking (000001E4C83E25A8)
+[LOG] SoundI::release                          :     Man_Talking (000001E449B7E868)
+[LOG] SoundI::release                          :     Man_Talking (000001E4C15CBFC8)
+[LOG] SoundI::release                          : Arguing_FEmale (000001E449AB7278)
+[LOG] SoundI::release                          :     Arguing_FEmale (000001E4C6ACCCF8)
+[LOG] SoundI::release                          :     Arguing_FEmale (000001E4C15CB098)
+[LOG] SoundI::release                          :  (000001E4C799DDA8)
+[LOG] SoundI::release                          :     620342__marb7e__footsteps_stiletto_stone_walk02 (000001E4C73261E8)
+[LOG] SoundI::release                          :  (000001E43DFAB808)
+[LOG] SoundI::release                          :     620343__marb7e__footsteps_stiletto_stone_walk01 (000001E4C7607E98)
+[LOG] SoundI::release                          :  (000001E4C799D228)
+[LOG] SoundI::release                          :     620341__marb7e__footsteps_stiletto_stone_walk03 (000001E4C73266C8)
+[LOG] SoundI::release                          :  (000001E4EAB60518)
+[LOG] SoundI::release                          :     620345__marb7e__footsteps_stiletto_stone_walk05 (000001E4C7DC8CC8)
+[LOG] SoundI::release                          :  (000001E4C799D7E8)
+[LOG] SoundI::release                          :     WoodFot-001 (000001E4C7326388)
+[LOG] SoundI::release                          :  (000001E4EAB600C8)
+[LOG] SoundI::release                          :     WoodFot-002 (000001E4C7DC8B28)
+[LOG] SoundI::release                          :  (000001E43DFAB3B8)
+[LOG] SoundI::release                          :     WoodFot-003 (000001E4C76079B8)
+[LOG] SoundI::release                          :  (000001E43DFAB978)
+[LOG] SoundI::release                          :     WoodFot-004 (000001E4C7607678)
+[LOG] SoundI::release                          :  (000001E4C799DC38)
+[LOG] SoundI::release                          :     WoodFot-005 (000001E4C7326528)
+[LOG] SoundI::release                          :  (000001E4C799D508)
+[LOG] SoundI::release                          :     WoodFot-006 (000001E4C7326A08)
+[LOG] SoundI::release                          :  (000001E4EAB603A8)
+[LOG] SoundI::release                          :     WoodFot-007 (000001E4C7607338)
+[LOG] SoundI::release                          :  (000001E4EAB60DB8)
+[LOG] SoundI::release                          :     WoodFot-008 (000001E4C7DC91A8)
+[LOG] SoundI::release                          :  (000001E4EAB60C48)
+[LOG] SoundI::release                          :     click (000001E4C7DC9348)
+[LOG] SoundI::release                          :  (000001E4EAB60AD8)
+[LOG] SoundI::release                          :     clcik (000001E4C7DC94E8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -21,3 +670,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
