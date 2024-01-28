@@ -582,7 +582,7 @@ GameObject:
   - component: {fileID: 6776153794198133593}
   - component: {fileID: 424961181308548073}
   - component: {fileID: 63110171445187586}
-  - component: {fileID: 8138932649286559971}
+  - component: {fileID: 3264859948194358838}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Player
@@ -653,7 +653,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: -0.1, z: 0}
---- !u!114 &8138932649286559971
+--- !u!114 &3264859948194358838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -662,34 +662,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 2106668527476439641}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62166f0f24bd40bdb6fc52929c0e46d2, type: 3}
+  m_Script: {fileID: 11500000, guid: b677022958d32c94ab87aebc7611fee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepSounds:
-  - fmodEvent:
-      Guid:
-        Data1: 1231941614
-        Data2: 1240400300
-        Data3: 158738320
-        Data4: 1125573162
-      Path: event:/Keys
-    floorType: 0
-  - fmodEvent:
-      Guid:
-        Data1: 1231941614
-        Data2: 1240400300
-        Data3: 158738320
-        Data4: 1125573162
-      Path: event:/Keys
-    floorType: 1
-  currentClip:
+  fmodEvent:
     Guid:
-      Data1: -623640151
-      Data2: 1223784100
-      Data3: 1334039701
-      Data4: -2136336924
-    Path: event:/SFX/sfx_Keys
-  rayLength: 1.81
+      Data1: 654818311
+      Data2: 1321521900
+      Data3: 2040770454
+      Data4: -696750056
+    Path: event:/Footsteps/sfx_foot_Steps
+  floorType: 0
+  rayLength: 3.94
+  baseReverb: 0
+  baseSwirling: 0
   debug: 1
 --- !u!1 &2394850708014224578
 GameObject:

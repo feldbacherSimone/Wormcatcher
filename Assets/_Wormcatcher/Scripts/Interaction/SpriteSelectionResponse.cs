@@ -24,7 +24,7 @@ namespace _Wormcatcher.Scripts
 
         public void OnDeselect(GameObject selected)
         {
-            animator.Play("Default");
+            animator.Play("EyeOpen");
             curserImage.gameObject.SetActive(false);
            
         }

@@ -65,7 +65,7 @@ namespace _Wormcatcher.Scripts.Inputs
 
         void Update()
         {
-            print(playerBody.rotation.eulerAngles.y);
+           // print(playerBody.rotation.eulerAngles.y);
 
            
             lastRotation = playerBody.rotation; 

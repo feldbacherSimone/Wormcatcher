@@ -21,6 +21,7 @@ namespace _Wormcatcher.Scripts.UI
             {
                 SceneLoader.SwitchScene(1);
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false; 
             });
             settingButton.onClick.AddListener(() =>
             {

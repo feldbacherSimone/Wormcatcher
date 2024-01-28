@@ -335,6 +335,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 424961181308548073, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: movable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 582063139317997603, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_Camera
@@ -349,6 +354,11 @@ PrefabInstance:
         type: 3}
       propertyPath: lookAngle
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 743479195431046839, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: limitLookAngle
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101353, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}

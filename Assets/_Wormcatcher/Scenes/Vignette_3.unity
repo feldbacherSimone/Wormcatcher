@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 25886591}
   m_Layer: 0
   m_Name: Bedroom
-  m_TagString: Untagged
+  m_TagString: Carpet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1114,10 +1114,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8181850628795388889, guid: 7020a60180ef4b24494f2fc8ab226319,
+        type: 3}
+      propertyPath: m_TagString
+      value: Concrete
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7020a60180ef4b24494f2fc8ab226319,
         type: 3}
       propertyPath: m_Name
       value: Bathroom_Structure
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7020a60180ef4b24494f2fc8ab226319,
+        type: 3}
+      propertyPath: m_TagString
+      value: Tiles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7020a60180ef4b24494f2fc8ab226319, type: 3}
@@ -3093,6 +3103,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BedroomStructure
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5c6f891d7e7c2454cb2e3d694b58473c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carpet
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535087674405009197, guid: 5c6f891d7e7c2454cb2e3d694b58473c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carpet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c6f891d7e7c2454cb2e3d694b58473c, type: 3}
@@ -5661,6 +5681,16 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 582063139317997603, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 103
+      objectReference: {fileID: 0}
+    - target: {fileID: 582063139317997603, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2009174794}
     - target: {fileID: 743479195431046825, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -5745,6 +5775,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264859948194358838, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: floorType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264859948194358838, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264859948194358838, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: rayLength
+      value: 27.54
       objectReference: {fileID: 0}
     - target: {fileID: 3911533511127521471, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -12805,6 +12850,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 5815930058960889454, guid: 962106c8cab59394e802ce3b4576455b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Wood
+      objectReference: {fileID: 0}
     - target: {fileID: 6595009288870302972, guid: 962106c8cab59394e802ce3b4576455b,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -18446,7 +18496,7 @@ GameObject:
   - component: {fileID: 2884983267672438976}
   m_Layer: 0
   m_Name: Livingroom
-  m_TagString: Untagged
+  m_TagString: Carpet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 18

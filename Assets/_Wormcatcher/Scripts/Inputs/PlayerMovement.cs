@@ -44,7 +44,7 @@ namespace _Wormcatcher.Scripts.Inputs
 
         private float time;
         [SerializeField] private float stepBaseRate = 0.2f;
-        private StepSoundManager stepSoundManager;
+        private StepSoundManager2 stepSoundManager;
         private bool isWalking;
         
         private void Awake()
@@ -54,7 +54,9 @@ namespace _Wormcatcher.Scripts.Inputs
                 playerInputAction.WalkInput.Enable();
             sprintAction = playerInputAction.WalkInput.Sprint;
             movementAction = playerInputAction.WalkInput.Movement;
-            stepSoundManager = GetComponent<StepSoundManager>();
+            stepSoundManager = GetComponent<StepSoundManager2>();
+            sprintAction.started += _ => setSprintSound(walkState.Run);
+            sprintAction.canceled += _ => setSprintSound(walkState.Walk);
         }
 
         void Start()
@@ -70,11 +72,21 @@ namespace _Wormcatcher.Scripts.Inputs
             HandleSprintInput();
             MoveCharacter();
             time += Time.deltaTime;
-            if (isWalking && time >= 1/currentSpeed*stepBaseRate)
+           
+            if (isWalking )
             {
-                stepSoundManager.PlayStepSound();
-                time = 0; 
+                stepSoundManager.StartSteps();
             }
+            else
+            {
+                stepSoundManager.StopSteps();
+            }
+            
+        }
+
+        private void setSprintSound(walkState walkState)
+        {
+            stepSoundManager.setFootstepSpeed(walkState);
         }
 
         private void MoveCharacter()

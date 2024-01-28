@@ -41,6 +41,7 @@ namespace _Wormcatcher.Scripts.UI
             {
                 Resume();
                 Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
                 SceneLoader.SwitchToMenu();
             });
             resumeButtonObject.GetComponent<Button>().onClick.AddListener(Resume);
