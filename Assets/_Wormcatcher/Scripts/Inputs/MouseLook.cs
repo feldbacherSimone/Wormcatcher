@@ -91,8 +91,8 @@ namespace _Wormcatcher.Scripts.Inputs
                     // left/right rotation
                     playerBody.Rotate(Vector3.up * xAccumulator);
 
-                    if (limitLookAngle && playerBody.rotation.eulerAngles.y > initRotation + lookAngle / 2 ||
-                        playerBody.rotation.eulerAngles.y < initRotation - lookAngle / 2)
+                    if (limitLookAngle && (playerBody.rotation.eulerAngles.y > initRotation + lookAngle / 2 ||
+                        playerBody.rotation.eulerAngles.y < initRotation - lookAngle / 2))
                     {
                         playerBody.rotation = lastRotation;
                     }
@@ -107,8 +107,8 @@ namespace _Wormcatcher.Scripts.Inputs
 
                 // left/right rotation
                 playerBody.Rotate(Vector3.up * mouseX);
-                if (limitLookAngle && playerBody.rotation.eulerAngles.y > initRotation + lookAngle / 2 ||
-                    playerBody.rotation.eulerAngles.y < initRotation - lookAngle / 2)
+                if (limitLookAngle && (playerBody.rotation.eulerAngles.y > initRotation + lookAngle / 2 ||
+                    playerBody.rotation.eulerAngles.y < initRotation - lookAngle / 2))
                 {
                     playerBody.rotation = lastRotation;
                 }

@@ -1,5 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8408255238523050669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/sfx_FridgeOpenClose
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/sfx_FridgeOpenClose
+  Guid:
+    Data1: -354051463
+    Data2: 1104147484
+    Data3: 1656556679
+    Data4: -882142434
+  Banks:
+  - {fileID: 1554840527494419877}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6592821090963091195}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 6000
 --- !u!114 &-8156401263819528895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22,7 +50,7 @@ MonoBehaviour:
   - {fileID: 1554840527494419877}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -42,10 +70,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638417191142537042
+  lastModified: 638420036470995181
   FileSizes:
   - Name: Desktop
-    Value: 25069376
+    Value: 25069856
   Exists: 1
 --- !u!114 &-7664976401293962892
 MonoBehaviour:
@@ -102,6 +130,57 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 275
+--- !u!114 &-6645394864662970774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_foot_Steps/Ground
+  m_EditorClassIdentifier: 
+  Name: Ground
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 3206159562
+    data2: 1958525144
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Concrete
+  - Wood
+  - Carpet
+  Exists: 1
+--- !u!114 &-6592821090963091195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_FridgeOpenClose/FridgeClose
+  m_EditorClassIdentifier: 
+  Name: FridgeClose
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3191390115
+    data2: 4029556658
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-6374654616365768282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,10 +278,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Footies.bank
   Name: Footies
   StudioPath: bank:/Footies
-  lastModified: 638417191142547011
+  lastModified: 638420036471035010
   FileSizes:
   - Name: Desktop
-    Value: 59008
+    Value: 149568
   Exists: 1
 --- !u!114 &-4877665895805775880
 MonoBehaviour:
@@ -256,6 +335,85 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3663320669648737103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/music_amb_Jazz_v1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/music_amb_Jazz_v1
+  Guid:
+    Data1: -1665654847
+    Data2: 1339955176
+    Data3: -809878865
+    Data4: 1639507926
+  Banks:
+  - {fileID: 3512890417836010131}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3524374717836210730}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 174405
+--- !u!114 &-3524374717836210730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/music_amb_Jazz_v1/ReverbMusic
+  m_EditorClassIdentifier: 
+  Name: ReverbMusic
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2240943837
+    data2: 323744129
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-2561281922086582630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/music_amb_Crackling
+  m_EditorClassIdentifier: 
+  Path: event:/Music/music_amb_Crackling
+  Guid:
+    Data1: 322028541
+    Data2: 1175822616
+    Data3: 1958953345
+    Data4: 77298408
+  Banks:
+  - {fileID: 3512890417836010131}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 247965
 --- !u!114 &-2516274572830282263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +429,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Loc_Ambience.bank
   Name: Loc_Ambience
   StudioPath: bank:/Loc_Ambience
-  lastModified: 638417191142711699
+  lastModified: 638417190982169783
   FileSizes:
   - Name: Desktop
     Value: 5156928
@@ -318,10 +476,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638417191142723060
+  lastModified: 638420036471044978
   FileSizes:
   - Name: Desktop
-    Value: 2826
+    Value: 3178
   Exists: 1
 --- !u!114 &-2232101933129465904
 MonoBehaviour:
@@ -353,59 +511,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 445000
---- !u!114 &-1823461413499368202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Footsteps/FootstepsSpeed
-  m_EditorClassIdentifier: 
-  Name: FootstepsSpeed
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2049927008
-    data2: 3384067840
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Walk
-  - Run
-  Exists: 1
---- !u!114 &-1661775172854927612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Footsteps/Ground
-  m_EditorClassIdentifier: 
-  Name: Ground
-  StudioPath: 
-  Min: 0
-  Max: 2
-  Default: 0
-  ID:
-    data1: 3206159562
-    data2: 1958525144
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - Concrete
-  - Wood
-  - Carpet
-  Exists: 1
 --- !u!114 &-1266696317357581660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,13 +531,13 @@ MonoBehaviour:
     Data4: 306129897
   Banks:
   - {fileID: 1554840527494419877}
-  IsStream: 0
+  IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 900
 --- !u!114 &-1096502850849504144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,13 +558,13 @@ MonoBehaviour:
     Data4: -2136336924
   Banks:
   - {fileID: 1554840527494419877}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1000
 --- !u!114 &-817533075396309529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,6 +635,7 @@ MonoBehaviour:
   - {fileID: -7852053009145756493}
   - {fileID: -2516274572830282263}
   - {fileID: -5291076683378804221}
+  - {fileID: 3512890417836010131}
   EditorEvents:
   - {fileID: 1631556957639212718}
   - {fileID: 2254218285206584020}
@@ -537,13 +643,11 @@ MonoBehaviour:
   - {fileID: -2324262809769324494}
   - {fileID: 1853369427796851266}
   - {fileID: -8156401263819528895}
-  - {fileID: 9202700217297906459}
   - {fileID: 1808622271005694472}
   - {fileID: -6049603487255700268}
   - {fileID: 4987418370064827274}
   - {fileID: 2183269797540069903}
   - {fileID: -7664976401293962892}
-  - {fileID: 8342879367444553823}
   - {fileID: 173395439245063683}
   - {fileID: 8340741092462418909}
   - {fileID: -1096502850849504144}
@@ -555,7 +659,6 @@ MonoBehaviour:
   - {fileID: -2232101933129465904}
   - {fileID: -5678050552059016917}
   - {fileID: 2338405912607356530}
-  - {fileID: 3437749328105925905}
   - {fileID: 7968349152496760415}
   - {fileID: 5542690313712169018}
   - {fileID: -272678473351880469}
@@ -563,13 +666,19 @@ MonoBehaviour:
   - {fileID: 9115761760377798344}
   - {fileID: 4450904899718297014}
   - {fileID: -1266696317357581660}
+  - {fileID: 7296355040075271308}
+  - {fileID: 5783965165202595958}
+  - {fileID: 5270990453067328669}
+  - {fileID: -3663320669648737103}
+  - {fileID: -2561281922086582630}
+  - {fileID: -8408255238523050669}
   EditorParameters:
   - {fileID: 2253051553571400041}
   MasterBanks:
   - {fileID: 6101576862161281281}
   StringsBanks:
   - {fileID: -2300738075331474776}
-  cacheTime: 638417191142937638
+  cacheTime: 638420036472900095
   cacheVersion: 131608
 --- !u!114 &173395439245063683
 MonoBehaviour:
@@ -613,10 +722,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638417191142937638
+  lastModified: 638420036472900095
   FileSizes:
   - Name: Desktop
-    Value: 6587072
+    Value: 6773216
   Exists: 1
 --- !u!114 &1631556957639212718
 MonoBehaviour:
@@ -857,7 +966,7 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &3437749328105925905
+--- !u!114 &3512890417836010131
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -866,27 +975,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Footsteps
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
   m_EditorClassIdentifier: 
-  Path: event:/Footsteps
-  Guid:
-    Data1: 654818311
-    Data2: 1321521900
-    Data3: 2040770454
-    Data4: -696750056
-  Banks:
-  - {fileID: -5291076683378804221}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -1823461413499368202}
-  - {fileID: 7001803757751057348}
-  - {fileID: -1661775172854927612}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 5397
+  Path: wormcatcherSound/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638420036472220768
+  FileSizes:
+  - Name: Desktop
+    Value: 11466176
+  Exists: 1
 --- !u!114 &3575921477370924978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -962,6 +1061,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7000
+--- !u!114 &4107020475517351434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_foot_Steps/Reverb
+  m_EditorClassIdentifier: 
+  Name: Reverb
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3540727824
+    data2: 302705777
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &4450904899718297014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1016,6 +1139,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1050
+--- !u!114 &5270990453067328669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/music_amb_Voices
+  m_EditorClassIdentifier: 
+  Path: event:/Music/music_amb_Voices
+  Guid:
+    Data1: -1782017875
+    Data2: 1118268541
+    Data3: -1479093873
+    Data4: 659169421
+  Banks:
+  - {fileID: 3512890417836010131}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 156331
 --- !u!114 &5542690313712169018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,6 +1193,83 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 13500
+--- !u!114 &5783965165202595958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/music_amb_Jazz_v2
+  m_EditorClassIdentifier: 
+  Path: event:/Music/music_amb_Jazz_v2
+  Guid:
+    Data1: 99955764
+    Data2: 1336230007
+    Data3: -1966877310
+    Data4: -1710325833
+  Banks:
+  - {fileID: 3512890417836010131}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 345600
+--- !u!114 &6056857026543941637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_foot_Steps/Swirling
+  m_EditorClassIdentifier: 
+  Name: Swirling
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 530402069
+    data2: 724125176
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6077130565309805740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/sfx_foot_Steps/FootstepsSpeed
+  m_EditorClassIdentifier: 
+  Name: FootstepsSpeed
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2049927008
+    data2: 3384067840
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Walk
+  - Run
+  Exists: 1
 --- !u!114 &6101576862161281281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1058,7 +1285,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638410959308817129
+  lastModified: 638410944366744888
   FileSizes:
   - Name: Desktop
     Value: 1220
@@ -1114,7 +1341,7 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &7001803757751057348
+--- !u!114 &7296355040075271308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1123,21 +1350,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Footsteps/Reverb
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footsteps/sfx_foot_Steps
   m_EditorClassIdentifier: 
-  Name: Reverb
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3540727824
-    data2: 302705777
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
+  Path: event:/Footsteps/sfx_foot_Steps
+  Guid:
+    Data1: 654818311
+    Data2: 1321521900
+    Data3: 2040770454
+    Data4: -696750056
+  Banks:
+  - {fileID: -5291076683378804221}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6056857026543941637}
+  - {fileID: 6077130565309805740}
+  - {fileID: 4107020475517351434}
+  - {fileID: -6645394864662970774}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5397
 --- !u!114 &7675732713966886652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1217,33 +1451,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1500
---- !u!114 &8342879367444553823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/sfx_FridgeClose
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/sfx_FridgeClose
-  Guid:
-    Data1: -354051463
-    Data2: 1104147484
-    Data3: 1656556679
-    Data4: -882142434
-  Banks:
-  - {fileID: 1554840527494419877}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &8688226407978181977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1317,33 +1524,6 @@ MonoBehaviour:
   - {fileID: 1554840527494419877}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &9202700217297906459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/sfx_FridgeOpen
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/sfx_FridgeOpen
-  Guid:
-    Data1: -1741281524
-    Data2: 1248207592
-    Data3: 1296721803
-    Data4: -85493754
-  Banks:
-  - {fileID: 1554840527494419877}
-  IsStream: 0
-  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1

@@ -684,10 +684,10 @@ MonoBehaviour:
     floorType: 1
   currentClip:
     Guid:
-      Data1: 1231941614
-      Data2: 1240400300
-      Data3: 158738320
-      Data4: 1125573162
+      Data1: -623640151
+      Data2: 1223784100
+      Data3: 1334039701
+      Data4: -2136336924
     Path: event:/SFX/sfx_Keys
   rayLength: 1.81
   debug: 1

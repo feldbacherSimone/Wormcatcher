@@ -588,6 +588,7 @@ MonoBehaviour:
   - Ambience
   - Footies
   - Loc_Ambience
+  - Music
   - SFX
   BanksToLoad: []
   LiveUpdatePort: 9264
