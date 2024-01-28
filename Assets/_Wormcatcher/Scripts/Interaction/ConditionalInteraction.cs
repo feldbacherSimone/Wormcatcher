@@ -1,9 +1,8 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 
-namespace _Wormcatcher.Scripts
+namespace _Wormcatcher.Scripts.Interaction
 {
     /// <summary>
     /// Base Class for conditional interaction, triggers one interaction if conditions is true and nother if condition is false

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace _Wormcatcher.Scripts
+namespace _Wormcatcher.Scripts.Interaction
 {
     /// <summary>
     /// implementation of ISelectable, used my Player interaction

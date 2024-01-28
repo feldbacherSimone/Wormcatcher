@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using Yarn.Unity;
 
-namespace _Wormcatcher.Scripts
+namespace _Wormcatcher.Scripts.Interaction
 {
     public class DialogeInteraction : InteractionObject
     {

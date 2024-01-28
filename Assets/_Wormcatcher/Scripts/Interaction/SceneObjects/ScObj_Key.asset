@@ -13,4 +13,18 @@ MonoBehaviour:
   m_Name: ScObj_Key
   m_EditorClassIdentifier: 
   model: {fileID: 7719161723070083652, guid: de26634c5bde17c4383e7e6a4ed88931, type: 3}
+  holdingSound:
+    Guid:
+      Data1: -623640151
+      Data2: 1223784100
+      Data3: 1334039701
+      Data4: -2136336924
+    Path: event:/SFX/sfx_Keys
+  usingSound:
+    Guid:
+      Data1: -623640151
+      Data2: 1223784100
+      Data3: 1334039701
+      Data4: -2136336924
+    Path: event:/SFX/sfx_Keys
   state: 0

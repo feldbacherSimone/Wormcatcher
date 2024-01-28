@@ -12,33 +12,39 @@ namespace _Wormcatcher.Scripts.Inputs
     /// </summary>
     public class PlayerMovement : MonoBehaviour
     {
+        [SerializeField] private bool movable = true;
 
-        [SerializeField] private bool movable = true; 
+        public bool Movable
+        {
+            get => movable;
+            set => movable = value;
+        }
+
         // Input 
         private PlayerInputAction playerInputAction;
         private InputAction sprintAction;
-        private InputAction movementAction; 
-    
-    
+        private InputAction movementAction;
+
+
         [SerializeField] CharacterController controller;
         [SerializeField] Transform groundCheck;
-    
+
         private float xInput;
         private float zInput;
-    
+
         // Movement Parameters 
         [SerializeField] private float baseSpeed = 2f;
         [SerializeField] private float targetSpeed;
-        [SerializeField]private float currentSpeed; 
+        [SerializeField] private float currentSpeed;
         [SerializeField] private float gravity = -9.81f;
 
         // Collision
         [SerializeField] private float groundDistance = 0.4f;
         [SerializeField] private LayerMask groundMask;
-    
+
         private Vector3 velocity;
-        [SerializeField]private bool isGrounded;
-    
+        [SerializeField] private bool isGrounded;
+
         [SerializeField] private float decelerationRate = 5f;
         [SerializeField] private float accelerationRate = 3f;
 
@@ -46,17 +52,30 @@ namespace _Wormcatcher.Scripts.Inputs
         [SerializeField] private float stepBaseRate = 0.2f;
         private StepSoundManager2 stepSoundManager;
         private bool isWalking;
-        
+
+
+        public void DisableWalk()
+        {
+            movable = false; 
+            playerInputAction.WalkInput.Disable();
+        }
         private void Awake()
         {
-            playerInputAction = new PlayerInputAction(); 
-            if(movable)
+            playerInputAction = new PlayerInputAction();
+            if (movable)
+            {
                 playerInputAction.WalkInput.Enable();
-            sprintAction = playerInputAction.WalkInput.Sprint;
-            movementAction = playerInputAction.WalkInput.Movement;
-            stepSoundManager = GetComponent<StepSoundManager2>();
-            sprintAction.started += _ => setSprintSound(walkState.Run);
-            sprintAction.canceled += _ => setSprintSound(walkState.Walk);
+
+                sprintAction = playerInputAction.WalkInput.Sprint;
+                movementAction = playerInputAction.WalkInput.Movement;
+                stepSoundManager = GetComponent<StepSoundManager2>();
+                sprintAction.started += _ => setSprintSound(walkState.Run);
+                sprintAction.canceled += _ => setSprintSound(walkState.Walk);
+            }
+            else
+            {
+                playerInputAction.WalkInput.Disable();
+            }
         }
 
         void Start()
@@ -72,8 +91,8 @@ namespace _Wormcatcher.Scripts.Inputs
             HandleSprintInput();
             MoveCharacter();
             time += Time.deltaTime;
-           
-            if (isWalking )
+
+            if (isWalking)
             {
                 stepSoundManager.StartSteps();
             }
@@ -81,7 +100,6 @@ namespace _Wormcatcher.Scripts.Inputs
             {
                 stepSoundManager.StopSteps();
             }
-            
         }
 
         private void setSprintSound(walkState walkState)
@@ -94,8 +112,8 @@ namespace _Wormcatcher.Scripts.Inputs
             Vector3 move = transform.right * xInput + transform.forward * zInput;
 
             controller.Move(move * currentSpeed * Time.deltaTime);
-            isWalking = move.magnitude > 0.2f; 
-            
+            isWalking = move.magnitude > 0.2f;
+
 
             velocity.y += gravity * Time.deltaTime;
 

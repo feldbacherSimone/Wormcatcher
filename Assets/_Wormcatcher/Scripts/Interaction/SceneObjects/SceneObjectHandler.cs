@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace _Wormcatcher.Scripts
+namespace _Wormcatcher.Scripts.Interaction.SceneObjects
 {
     /**
      * Hanldes showing and hiding the a scene object 
@@ -52,12 +51,13 @@ namespace _Wormcatcher.Scripts
             currentSceneObject.SetActive(true);
             //TODO animate model (float up) 
             sceneObject.State = true; 
+            sceneObject.OnHold(transform.position);
             DebugPrint("SpawnObject called");
         }
         
         public void DespawnObject()
         {
-            if (sceneObject == null)
+            if (sceneObject == null || currentSceneObject == null)
             {
                 return;
             }

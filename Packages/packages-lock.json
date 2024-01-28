@@ -126,10 +126,8 @@
       "version": "https://github.com/YarnSpinnerTool/YarnSpinner-Unity.git#current",
       "depth": 0,
       "source": "git",
-      "dependencies": {
-        "com.unity.textmeshpro": "1.4.1"
-      },
-      "hash": "80c1e26e8accf26a348806d75d660f95f487cc30"
+      "dependencies": {},
+      "hash": "6b09d3a4c47b1320d0f1da2f90ccf9617f3c436a"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

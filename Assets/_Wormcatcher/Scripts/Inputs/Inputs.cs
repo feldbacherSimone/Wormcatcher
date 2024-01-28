@@ -1,3 +1,4 @@
+using _Wormcatcher.Scripts.Interaction.SceneObjects;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

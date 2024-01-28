@@ -1,6 +1,9 @@
+using _Wormcatcher.Scripts.Audio;
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 
-namespace _Wormcatcher.Scripts
+namespace _Wormcatcher.Scripts.Interaction.SceneObjects
 {
     /// <summary>
     /// Scriptable object for scene object, handles the state of the object
@@ -11,6 +14,10 @@ namespace _Wormcatcher.Scripts
     public class SceneObject : ScriptableObject
     {
         [SerializeField] private GameObject model;
+        [SerializeField] private EventReference holdingSound;
+        [SerializeField] private EventReference usingSound;
+
+        private EventInstance instance; 
 
         public GameObject Model => model;
 
@@ -21,8 +28,22 @@ namespace _Wormcatcher.Scripts
             get => state;
             set => state = value;
         }
-        public void OnInteraction()
+
+        public void OnHold(Vector3 position )
         {
+            if (!holdingSound.IsNull)
+            {
+                AudioManager.Instance.PlayOneShot(holdingSound, position);
+            }
+        }
+        
+        
+        public void OnInteraction(Vector3 position)
+        {
+            if (!usingSound.IsNull)
+            {
+                AudioManager.Instance.PlayOneShot(usingSound, position);
+            }
             //TODO What happens when we use a scene object? sound?, Animation?
         }
     }

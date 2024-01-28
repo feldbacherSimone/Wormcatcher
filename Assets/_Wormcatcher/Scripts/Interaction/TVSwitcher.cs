@@ -1,12 +1,10 @@
-using System;
 using System.Collections;
 using FMOD.Studio;
 using FMODUnity;
-
 using UnityEngine;
 using STOP_MODE = FMOD.Studio.STOP_MODE;
 
-namespace _Wormcatcher.Scripts
+namespace _Wormcatcher.Scripts.Interaction
 {
     public class TVSwitcher : ModelSwitcher
     {

@@ -1,9 +1,6 @@
-
-using System;
-using FMODUnity;
 using UnityEngine;
 
-namespace _Wormcatcher.Scripts
+namespace _Wormcatcher.Scripts.Interaction
 
 /***
  * Base class for all interactions, implements the IInteractable interface, Interact() is called when the player interacts with an object.
