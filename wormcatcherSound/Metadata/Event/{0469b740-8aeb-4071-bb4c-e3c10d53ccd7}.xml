@@ -95,6 +95,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{317db26e-cd3a-4a5a-8ed5-006757080549}">
+		<property name="volume">
+			<value>-9.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{27f95ab0-4fa2-4e8f-aec1-52c0a8f82d2f}</destination>
 		</relationship>
@@ -267,7 +270,11 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{01e4f676-f3ff-449e-a790-66e6801f0f97}" />
-	<object class="SpatialiserEffect" id="{e7733c9b-2650-46fa-b78b-20e14af3d84e}" />
+	<object class="SpatialiserEffect" id="{e7733c9b-2650-46fa-b78b-20e14af3d84e}">
+		<property name="userLFELevel">
+			<value>-2</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{e8bc8b01-8abd-48d5-ad80-583c5a993dd0}" />
 	<object class="MultibandEqEffect" id="{69da19d7-ed61-4629-82ba-12c64aab2b73}">
 		<property name="filterTypeA">

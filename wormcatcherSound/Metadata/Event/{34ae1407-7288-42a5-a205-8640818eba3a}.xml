@@ -76,6 +76,9 @@
 		<relationship name="modules">
 			<destination>{e808d6f7-c102-4807-9690-de6093f2b2a6}</destination>
 		</relationship>
+		<relationship name="markers">
+			<destination>{b29d6b19-8bf5-427f-a17b-7bb8be041442}</destination>
+		</relationship>
 	</object>
 	<object class="ActionSheet" id="{c6aa33df-2085-49f8-9a5b-f26ce805efd6}">
 		<relationship name="modules">
@@ -127,6 +130,20 @@
 		</relationship>
 		<relationship name="output">
 			<destination>{b39d116b-eefb-4846-a855-1c104a9503dd}</destination>
+		</relationship>
+	</object>
+	<object class="LoopRegion" id="{b29d6b19-8bf5-427f-a17b-7bb8be041442}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="length">
+			<value>1</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{007a30ac-f692-4d1f-9b0b-fd9df9fbd199}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{574acb0e-8d18-41d8-b69d-de9ea87daa57}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{ac14ceea-fe88-427f-bd33-12979a9cccc4}">
@@ -196,11 +213,23 @@
 		<property name="filterTypeA">
 			<value>6</value>
 		</property>
+		<property name="filterTypeC">
+			<value>9</value>
+		</property>
 		<property name="frequencyA">
 			<value>191.352493</value>
 		</property>
+		<property name="frequencyC">
+			<value>6500</value>
+		</property>
 		<property name="qualityA">
 			<value>0.413965493</value>
+		</property>
+		<property name="qualityC">
+			<value>2.20000005</value>
+		</property>
+		<property name="gainC">
+			<value>-21</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{fe89d9e4-8eef-482c-934c-f5509e764f0e}" />

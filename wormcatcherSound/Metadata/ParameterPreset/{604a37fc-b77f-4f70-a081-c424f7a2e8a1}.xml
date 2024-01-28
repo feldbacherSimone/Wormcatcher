@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{604a37fc-b77f-4f70-a081-c424f7a2e8a1}">
+		<property name="name">
+			<value>Swirling</value>
+		</property>
+		<relationship name="folder">
+			<destination>{7efca07d-dfbf-4559-a901-e4c352e1a7de}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{d446e73d-2f21-4c99-8840-32f9e5aef2ad}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{d446e73d-2f21-4c99-8840-32f9e5aef2ad}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
