@@ -192,7 +192,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 962106c8cab59394e802ce3b4576455b,
         type: 3}
       propertyPath: m_TagString
-      value: Concrete
+      value: Wood
+      objectReference: {fileID: 0}
+    - target: {fileID: 5815930058960889454, guid: 962106c8cab59394e802ce3b4576455b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carpet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 962106c8cab59394e802ce3b4576455b, type: 3}
@@ -7614,6 +7619,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5535087674405009197, guid: 3686f078f416d8847bdcbca6daa6f3ee,
+        type: 3}
+      propertyPath: m_TagString
+      value: Carpet
       objectReference: {fileID: 0}
     - target: {fileID: 5669804331628920987, guid: 3686f078f416d8847bdcbca6daa6f3ee,
         type: 3}
