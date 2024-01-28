@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 3452388265367431501}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1963781293454579129
+--- !u!1 &936595636895302358
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,8 +39,58 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1275066808034266427}
-  - component: {fileID: 2311931559954665870}
+  - component: {fileID: 1449356383134451145}
+  - component: {fileID: 1283749261075347200}
+  m_Layer: 0
+  m_Name: OpenSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1449356383134451145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936595636895302358}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.09269965, y: 1.0098753, z: -0.35808602}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3452388265367431501}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1283749261075347200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936595636895302358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -354051463
+      Data2: 1104147484
+      Data3: 1656556679
+      Data4: -882142434
+    Path: event:/SFX/sfx_FridgeOpenClose
+--- !u!1 &998977045446176513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 408950659249981696}
+  - component: {fileID: 5970370163885496309}
   m_Layer: 0
   m_Name: CloseSound
   m_TagString: Untagged
@@ -48,13 +98,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1275066808034266427
+--- !u!4 &408950659249981696
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963781293454579129}
+  m_GameObject: {fileID: 998977045446176513}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.09269965, y: 1.0098753, z: -0.35808602}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -62,13 +112,13 @@ Transform:
   m_Father: {fileID: 3452388265367431501}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2311931559954665870
+--- !u!114 &5970370163885496309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1963781293454579129}
+  m_GameObject: {fileID: 998977045446176513}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
@@ -91,8 +141,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3452388265367431501}
   - component: {fileID: 2910417898185854628}
-  - component: {fileID: 2910417898185854638}
   - component: {fileID: 2910417898185854633}
+  - component: {fileID: 6304131890672657175}
   m_Layer: 0
   m_Name: DoorInterior
   m_TagString: Untagged
@@ -116,8 +166,8 @@ Transform:
   - {fileID: 2910417899874392009}
   - {fileID: 2910417899751240175}
   - {fileID: 2910417898651254830}
-  - {fileID: 6512927018312811848}
-  - {fileID: 1275066808034266427}
+  - {fileID: 1449356383134451145}
+  - {fileID: 408950659249981696}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: 0}
@@ -140,27 +190,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2910417898185854638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2639822386698105847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8450553a82fa9e458f087409e0eccc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debug: 0
-  active: 1
-  isOpen: 0
-  animator: {fileID: 2910417898185854628}
-  interactTrigger: Interact
-  lockedBool: Locked
-  InteractEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &2910417898185854633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,18 +210,7 @@ MonoBehaviour:
     action:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 3336906766594771259}
-          m_MethodName: RequestPlayOneShot
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 2910417898185854638}
+        - m_Target: {fileID: 6304131890672657175}
           m_MethodName: SetOpened
           m_Mode: 6
           m_Arguments:
@@ -208,7 +226,7 @@ MonoBehaviour:
     action:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 2910417898185854638}
+        - m_Target: {fileID: 6304131890672657175}
           m_MethodName: SetOpened
           m_Mode: 6
           m_Arguments:
@@ -219,17 +237,55 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 2311931559954665870}
-          m_MethodName: RequestPlayOneShot
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+--- !u!114 &6304131890672657175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2639822386698105847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803be7102da4405ea3ecb8c9febacc4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  active: 1
+  isOpen: 0
+  animator: {fileID: 0}
+  interactTrigger: Interact
+  lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  openEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1283749261075347200}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  closeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5970370163885496309}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2910417898651254825
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,7 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2910417898185854628}
-  doorMain: {fileID: 2910417898185854638}
+  doorMain: {fileID: 0}
 --- !u!1 &2910417899751240174
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,56 +463,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isRightSide: 1
   anim: {fileID: 2910417898185854628}
---- !u!1 &2925432148227631821
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6512927018312811848}
-  - component: {fileID: 3336906766594771259}
-  m_Layer: 0
-  m_Name: OpenSound
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6512927018312811848
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2925432148227631821}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09269965, y: 1.0098753, z: -0.35808602}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3452388265367431501}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3336906766594771259
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2925432148227631821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sound:
-    Guid:
-      Data1: 855692380
-      Data2: 1095166542
-      Data3: 1820840838
-      Data4: 480503946
-    Path: event:/SFX/sfx_DoorOpen
 --- !u!1 &5529905205069237604
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,13 +608,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  trueInteractionObject: {fileID: 2910417898185854638}
-  falseInteractionObject: {fileID: 2910417898185854638}
+  trueInteractionObject: {fileID: 0}
+  falseInteractionObject: {fileID: 0}
   trueInteractionEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2910417898185854638}
-        m_MethodName: SetLocked
+      - m_Target: {fileID: 6304131890672657175}
+        m_MethodName: SetOpened
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -616,7 +622,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1189046877126808146}
         m_MethodName: RequestPlayOneShot
@@ -632,8 +638,8 @@ MonoBehaviour:
   falseInteractionEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2910417898185854638}
-        m_MethodName: SetLocked
+      - m_Target: {fileID: 2639822386698105847}
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

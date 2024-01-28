@@ -13,8 +13,8 @@ namespace _Wormcatcher.Scripts
     public class ToggleAnimation : InteractionObject
     {
         public bool isOpen = false;
-        [SerializeField] private Animator animator;
-        [SerializeField] private string interactTrigger = "Interact";
+        [SerializeField] protected Animator animator;
+        [SerializeField] protected string interactTrigger = "Interact";
         [SerializeField] private string lockedBool = "Locked";
         [SerializeField] private UnityEvent InteractEvent;
 
