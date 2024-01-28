@@ -8,7 +8,7 @@ namespace _Wormcatcher.Scripts
 {
     public class ModelSwitcher  : InteractionObject
     {
-        [SerializeField] private bool isOn;
+        [SerializeField] protected bool isOn;
         [SerializeField] private GameObject[] OnObjects;
         [SerializeField] private GameObject[] OffObjects;
 
@@ -18,7 +18,7 @@ namespace _Wormcatcher.Scripts
             SwitchObjects(isOn);
         }
 
-        private void SwitchObjects(bool switchOn)
+        protected virtual void SwitchObjects(bool switchOn)
         {
             if(OnObjects == null && OffObjects == null)
                 return; DebugPrint("No GameObjects to switch!");

@@ -1614,6 +1614,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2708757264837983339}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &452348020 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 743479195431046825, guid: 846b49896810a94488ad1ec6451fba85,
+    type: 3}
+  m_PrefabInstance: {fileID: 1066343794}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &456245499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2976,6 +2982,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 582063139317997603, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 452348020}
     - target: {fileID: 743479196160101353, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_Name
@@ -3045,6 +3056,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3264859948194358838, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: baseReverb
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 3704757632406305793, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -3906,6 +3922,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: -2056706220931781711, guid: 8f47c6dc191449f4cb73591fa933bc50,
+        type: 3}
+      propertyPath: m_TagString
+      value: Concrete
+      objectReference: {fileID: 0}
     - target: {fileID: -1738981684626271507, guid: 8f47c6dc191449f4cb73591fa933bc50,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3936,10 +3957,20 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 3012624449819263352, guid: 8f47c6dc191449f4cb73591fa933bc50,
+        type: 3}
+      propertyPath: m_TagString
+      value: Concrete
+      objectReference: {fileID: 0}
     - target: {fileID: 4623644566721296600, guid: 8f47c6dc191449f4cb73591fa933bc50,
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623644566721296600, guid: 8f47c6dc191449f4cb73591fa933bc50,
+        type: 3}
+      propertyPath: m_TagString
+      value: Concrete
       objectReference: {fileID: 0}
     - target: {fileID: 7728052600891977405, guid: 8f47c6dc191449f4cb73591fa933bc50,
         type: 3}

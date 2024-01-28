@@ -5714,7 +5714,7 @@ PrefabInstance:
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.792
+      value: 3.05
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -5724,7 +5724,7 @@ PrefabInstance:
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.666
+      value: 3.97
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -14432,25 +14432,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1117144, y: 0.6701807, z: 0.10895586}
   m_Center: {x: 0, y: 0.06180644, z: -0.018721208}
---- !u!114 &1863345498690873557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863345498690873558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9534ec235fd82924cbefa22f578dbc49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debug: 0
-  active: 1
-  isOn: 0
-  OnObjects:
-  - {fileID: 1320552648656886183}
-  OffObjects:
-  - {fileID: 1863345498889416619}
 --- !u!1 &1863345498690873558
 GameObject:
   m_ObjectHideFlags: 0
@@ -14460,8 +14441,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1863345498690873559}
-  - component: {fileID: 1863345498690873557}
   - component: {fileID: 1863345498690873556}
+  - component: {fileID: 1863345498690873560}
   m_Layer: 0
   m_Name: TVSwitcher
   m_TagString: Untagged
@@ -14485,6 +14466,32 @@ Transform:
   m_Father: {fileID: 1863345499454048482}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1863345498690873560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863345498690873558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0b068a8b3d45f4928f7c73b32c45e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  active: 1
+  isOn: 0
+  OnObjects:
+  - {fileID: 1320552648656886183}
+  OffObjects:
+  - {fileID: 1863345498889416619}
+  tvEvent:
+    Guid:
+      Data1: 118144375
+      Data2: 1157491223
+      Data3: -623706455
+      Data4: -450162268
+    Path: event:/SFX/sfx_TV
 --- !u!4 &1863345498709372710
 Transform:
   m_ObjectHideFlags: 0
