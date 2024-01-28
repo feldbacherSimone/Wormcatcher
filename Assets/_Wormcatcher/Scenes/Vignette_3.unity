@@ -6633,6 +6633,18 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.124463156, y: 0.43938088, z: 0.004451871}
     m_Extent: {x: 0.13288604, y: 0.10000001, z: 0.30999994}
   m_DirtyAABB: 0
+--- !u!114 &1589370453 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6304131890672657175, guid: f3d3b39afe5c45d40869e9b3b6d6e243,
+    type: 3}
+  m_PrefabInstance: {fileID: 3582630491231779004}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 803be7102da4405ea3ecb8c9febacc4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1613165739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17454,6 +17466,11 @@ PrefabInstance:
       propertyPath: trueInteractionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2910417898651254831, guid: f3d3b39afe5c45d40869e9b3b6d6e243,
+        type: 3}
+      propertyPath: doorMain
+      value: 
+      objectReference: {fileID: 1589370453}
     - target: {fileID: 3452388265367431501, guid: f3d3b39afe5c45d40869e9b3b6d6e243,
         type: 3}
       propertyPath: m_LocalPosition.x

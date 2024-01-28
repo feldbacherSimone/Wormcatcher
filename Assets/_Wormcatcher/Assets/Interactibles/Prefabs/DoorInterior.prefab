@@ -76,11 +76,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound:
     Guid:
-      Data1: -354051463
-      Data2: 1104147484
-      Data3: 1656556679
-      Data4: -882142434
-    Path: event:/SFX/sfx_FridgeOpenClose
+      Data1: 855692380
+      Data2: 1095166542
+      Data3: 1820840838
+      Data4: 480503946
+    Path: event:/SFX/sfx_DoorOpen
 --- !u!1 &998977045446176513
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   debug: 0
   active: 1
   isOpen: 0
-  animator: {fileID: 0}
+  animator: {fileID: 2910417898185854628}
   interactTrigger: Interact
   lockedBool: Locked
   InteractEvent:
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2910417898185854628}
-  doorMain: {fileID: 0}
+  doorMain: {fileID: 6304131890672657175}
 --- !u!1 &2910417899751240174
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,13 +608,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   active: 1
-  trueInteractionObject: {fileID: 0}
-  falseInteractionObject: {fileID: 0}
+  trueInteractionObject: {fileID: 6304131890672657175}
+  falseInteractionObject: {fileID: 6304131890672657175}
   trueInteractionEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6304131890672657175}
-        m_MethodName: SetOpened
+        m_MethodName: SetLocked
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -622,7 +622,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1189046877126808146}
         m_MethodName: RequestPlayOneShot
@@ -638,8 +638,8 @@ MonoBehaviour:
   falseInteractionEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2639822386698105847}
-        m_MethodName: 
+      - m_Target: {fileID: 6304131890672657175}
+        m_MethodName: SetLocked
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
