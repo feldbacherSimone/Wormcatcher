@@ -45,6 +45,7 @@ public class StepSoundManager2 : MonoBehaviour
         if (isPlaying)
         {
             instance.set3DAttributes(transform.To3DAttributes());
+            setFloorType(CheckGroundType(transform));
         }
     }
 
@@ -103,6 +104,11 @@ public class StepSoundManager2 : MonoBehaviour
     public void setFootstepSpeed(walkState walkState)
     {
         instance.setParameterByNameWithLabel("FootstepsSpeed", walkState.ToString());
+    }
+
+    private void setFloorType(FloorType floorType)
+    {
+        instance.setParameterByNameWithLabel("Ground", floorType.ToString());
     }
 
     public void StopSteps()
