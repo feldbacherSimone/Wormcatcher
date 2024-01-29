@@ -25,6 +25,7 @@ namespace _Wormcatcher.Scripts
             SwitchSceneInternal("TransitionScene");
         }
 
+     
         private static void SwitchSceneInternal( String transition)
         {
             SceneManager.LoadScene(transition, LoadSceneMode.Additive);

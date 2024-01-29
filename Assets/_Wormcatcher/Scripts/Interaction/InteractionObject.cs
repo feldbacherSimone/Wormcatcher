@@ -12,7 +12,7 @@ namespace _Wormcatcher.Scripts.Interaction
         [SerializeField] private bool debug;
 
         private Collider collider;
-        [SerializeField]private bool active = true;
+        [SerializeField] private bool active = true;
 
         //[SerializeField] private EventReference sound;
         

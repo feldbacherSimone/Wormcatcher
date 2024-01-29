@@ -5,11 +5,11 @@ namespace _Wormcatcher.Scripts.Interaction
     public class ModelSwitcher  : InteractionObject
     {
         [SerializeField] protected bool isOn;
-        [SerializeField] private GameObject[] OnObjects;
-        [SerializeField] private GameObject[] OffObjects;
+        [SerializeField] protected GameObject[] OnObjects;
+        [SerializeField] protected GameObject[] OffObjects;
 
        
-        private void Awake()
+        protected virtual void Awake()
         {
             SwitchObjects(isOn);
         }
