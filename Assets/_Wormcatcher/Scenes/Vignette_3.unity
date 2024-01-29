@@ -3422,6 +3422,84 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729778135}
   m_Mesh: {fileID: 6447937603310448234, guid: dd3093a3a319b524e99b81e44f0c2c96, type: 3}
+--- !u!1 &751827471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 751827472}
+  - component: {fileID: 751827474}
+  - component: {fileID: 751827473}
+  m_Layer: 0
+  m_Name: FridgeBuzz
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &751827472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751827471}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.315, y: 0.228, z: -0.159}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2184623667314833472}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &751827473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751827471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffab0cf8e1195ec4bbc9f5b84a9589df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventEmitter: {fileID: 751827474}
+--- !u!114 &751827474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751827471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 770884073
+      Data2: 1339608414
+      Data3: -1429051762
+      Data4: -39507813
+    Path: event:/LocalisedAmbience/loc_amb_FridgeBuzz
+  Event: 
+  PlayEvent: 11
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params:
+  - Name: FridgeVerb
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &753124596 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3921655628968946807, guid: 671cf2d0245bc3d4b8173d5118d57f29,
@@ -5869,7 +5947,7 @@ PrefabInstance:
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.05
+      value: 1.8697839
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -5879,7 +5957,7 @@ PrefabInstance:
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.97
+      value: 1.0616056
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -5889,7 +5967,7 @@ PrefabInstance:
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.8516193
+      value: -0.91654134
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -5899,7 +5977,7 @@ PrefabInstance:
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5241608
+      value: -0.39994004
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -5914,7 +5992,7 @@ PrefabInstance:
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -116.77601
+      value: -227.14899
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -6375,6 +6453,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1863345497530287094}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1463517981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463517979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b9c4856750a234ebe4d30b2acb102c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sinkEvent:
+    Guid:
+      Data1: 1459728910
+      Data2: 1306079879
+      Data3: -515692618
+      Data4: 1915951490
+    Path: event:/SFX/sfx_Sink
+  startState: 0
 --- !u!1001 &1490188057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7305,6 +7403,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1863345499026188755}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1677892768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677892766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1b9c4856750a234ebe4d30b2acb102c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sinkEvent:
+    Guid:
+      Data1: 1459728910
+      Data2: 1306079879
+      Data3: -515692618
+      Data4: 1915951490
+    Path: event:/SFX/sfx_Sink
+  startState: 0
 --- !u!4 &1690132199 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5f212ec11543102459f7a15b537be313,
@@ -12455,7 +12573,18 @@ MonoBehaviour:
   lockedBool: Locked
   InteractEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1463517981}
+        m_MethodName: ToggleSinkSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &1863345497530287093
 Animator:
   serializedVersion: 3
@@ -12582,7 +12711,18 @@ MonoBehaviour:
   lockedBool: Locked
   InteractEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1677892768}
+        m_MethodName: ToggleSinkSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &1863345497535192015
 Animator:
   serializedVersion: 3
@@ -15740,6 +15880,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2261698519503403250}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 751827473}
+        m_MethodName: ToggleIntParameter
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: FridgeVerb
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1863345499047419815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16889,6 +17051,7 @@ Transform:
   - {fileID: 7530956042809471721}
   - {fileID: 2429357532712970210}
   - {fileID: 1863345499287479202}
+  - {fileID: 751827472}
   m_Father: {fileID: 1863345498286220326}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16988,6 +17151,7 @@ GameObject:
   - component: {fileID: 5734585435607371231}
   - component: {fileID: 1863345499047419815}
   - component: {fileID: 1863345499047419813}
+  - component: {fileID: 2261698519503403250}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -16995,6 +17159,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2261698519503403250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261698519503403249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -354051463
+      Data2: 1104147484
+      Data3: 1656556679
+      Data4: -882142434
+    Path: event:/SFX/sfx_FridgeOpenClose
 --- !u!23 &2262597347932376461
 MeshRenderer:
   m_ObjectHideFlags: 0

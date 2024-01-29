@@ -3329,6 +3329,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882413248}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &954200883 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3264859948194358838, guid: 846b49896810a94488ad1ec6451fba85,
+    type: 3}
+  m_PrefabInstance: {fileID: 1066343794}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b677022958d32c94ab87aebc7611fee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1004032766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3553,17 +3565,17 @@ PrefabInstance:
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.64
+      value: 1.59
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.221
+      value: 1.646
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.2
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -3618,7 +3630,7 @@ PrefabInstance:
     - target: {fileID: 3264859948194358838, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: baseReverb
-      value: 0.4
+      value: 0.64
       objectReference: {fileID: 0}
     - target: {fileID: 3704757632406305793, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -3958,7 +3970,8 @@ MonoBehaviour:
   player: {fileID: 1119380016}
   playerMovement: {fileID: 1135695537}
   mouseLook: {fileID: 1954673596}
-  overrideSpawnPoints: 0
+  stepSoundManager2: {fileID: 954200883}
+  overrideSpawnPoints: 1
 --- !u!4 &1117998251
 Transform:
   m_ObjectHideFlags: 0
@@ -6166,7 +6179,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1786134388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.51, y: -2.24, z: -1.76}
+  m_LocalPosition: {x: -0.85, y: -2.24, z: 9.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1117998251}
@@ -6843,7 +6856,18 @@ MonoBehaviour:
   lockedBool: Locked
   InteractEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 484352505554826208}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!95 &1999099020
 Animator:
   serializedVersion: 3
@@ -7333,6 +7357,7 @@ GameObject:
   - component: {fileID: 6219112411004995313}
   - component: {fileID: 1999099017}
   - component: {fileID: 1999099019}
+  - component: {fileID: 484352505554826208}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -7340,6 +7365,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &484352505554826208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484352505554826207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -354051463
+      Data2: 1104147484
+      Data3: 1656556679
+      Data4: -882142434
+    Path: event:/SFX/sfx_FridgeOpenClose
 --- !u!4 &543450651734750062
 Transform:
   m_ObjectHideFlags: 0

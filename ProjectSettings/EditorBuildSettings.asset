@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/_Wormcatcher/Scenes/Testing/InteractionTesting.unity
     guid: 1f1a731ff56797a4bb5a700c15686d89
   - enabled: 1
+    path: Assets/_Wormcatcher/Scenes/Vignette_3.unity
+    guid: 26f8761c2ffcec247b34a21da912b684
+  - enabled: 1
     path: Assets/_Wormcatcher/Scenes/Vignette_1.unity
     guid: 8694d42fb5c421f40afcaa9d3bbc33a8
   - enabled: 1
@@ -20,9 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Wormcatcher/Scenes/Vignette_2.unity
     guid: 5503e87ae12825049ae981d435906424
-  - enabled: 1
-    path: Assets/_Wormcatcher/Scenes/Vignette_3.unity
-    guid: 26f8761c2ffcec247b34a21da912b684
   - enabled: 1
     path: Assets/_Wormcatcher/Scenes/Vignette_4.unity
     guid: e5fd674fddb6e344996b3921d275a62b

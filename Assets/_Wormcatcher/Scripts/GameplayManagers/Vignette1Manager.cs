@@ -12,6 +12,7 @@ public class Vignette1Manager : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private MouseLook mouseLook;
+    [SerializeField] private StepSoundManager2 stepSoundManager2;
 
     [SerializeField] private bool overrideSpawnPoints;
 
@@ -36,6 +37,7 @@ public class Vignette1Manager : MonoBehaviour
             case 1:
                 playerMovement.DisableWalk();
                 mouseLook.SetLookAngle(100, spawnPositions[1].rotation.eulerAngles.y);
+                stepSoundManager2.setReverb(0.2f);
                 break;
             default: 
                 break;
