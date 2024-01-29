@@ -78,13 +78,13 @@ namespace _Wormcatcher.Scripts.Inputs
             if (true)
             {
                 // get mouse inputs 
-                mouseX = mouseMovement.ReadValue<Vector2>().x * mouseSensitivity * Time.deltaTime;
-                mouseY = mouseMovement.ReadValue<Vector2>().y * mouseSensitivity * Time.deltaTime;
+                mouseX = mouseMovement.ReadValue<Vector2>().x * mouseSensitivity/100;
+                mouseY = mouseMovement.ReadValue<Vector2>().y * mouseSensitivity/100;
 
                 if (smoothMovement && Time.timeScale > 0)
                 {
-                    xAccumulator = Mathf.Lerp(xAccumulator, mouseX, snappiness * Time.deltaTime);
-                    yAccumulator = Mathf.Lerp(yAccumulator, mouseY, snappiness * Time.deltaTime);
+                    xAccumulator = Mathf.Lerp(xAccumulator, mouseX, snappiness/100);
+                    yAccumulator = Mathf.Lerp(yAccumulator, mouseY, snappiness/100);
                     
                     // up/down rotation 
                     xRoation -= yAccumulator;
