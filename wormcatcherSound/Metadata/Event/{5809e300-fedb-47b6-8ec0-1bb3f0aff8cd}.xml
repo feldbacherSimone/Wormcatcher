@@ -5,7 +5,7 @@
 			<value>amb_Master</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{c427108b-9cf3-4614-89aa-0ae88ad409cf}</destination>
@@ -404,7 +404,6 @@
 		<relationship name="effects">
 			<destination>{a916eeb6-6d49-4458-a285-271e4b81d87c}</destination>
 			<destination>{3d461236-0021-4bd5-8f4f-8ba1cc12bdd9}</destination>
-			<destination>{a0dbf356-0ada-46eb-9c77-4b69f34012d4}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{00f4c85f-d7ab-4a20-8b1b-d87c73b08ed6}" />
@@ -494,14 +493,6 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{3d461236-0021-4bd5-8f4f-8ba1cc12bdd9}" />
-	<object class="SpatialiserEffect" id="{a0dbf356-0ada-46eb-9c77-4b69f34012d4}">
-		<property name="distanceRolloffType">
-			<value>3</value>
-		</property>
-		<property name="extentMode">
-			<value>2</value>
-		</property>
-	</object>
 	<object class="AutomationCurve" id="{5a2a5799-9e9e-4158-bbdf-13e9813a2b75}">
 		<relationship name="parameter">
 			<destination>{1fdacf3e-d589-41b1-826b-e91fd90cb6f9}</destination>
