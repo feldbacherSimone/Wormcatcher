@@ -9,7 +9,7 @@ namespace _Wormcatcher.Scripts
         Nice,
         Mean
     }
-    
+
     public enum PlayerAction
     {
         ToggleLight,
@@ -17,7 +17,6 @@ namespace _Wormcatcher.Scripts
 
     public static class PlayerData
     {
-
         private static int vignette;
 
         public static int Vignette
@@ -29,13 +28,13 @@ namespace _Wormcatcher.Scripts
 
         private static Dictionary<PlayerStat, int> playerStats = new Dictionary<PlayerStat, int>
         {
-            {PlayerStat.Nice, 0},
-            {PlayerStat.Mean, 0},
+            { PlayerStat.Nice, 0 },
+            { PlayerStat.Mean, 0 },
         };
 
         private static Dictionary<PlayerAction, bool> playerActions = new Dictionary<PlayerAction, bool>
         {
-            { PlayerAction.ToggleLight, true}
+            { PlayerAction.ToggleLight, true }
         };
 
         private static int vignette1Position = 0;
@@ -49,28 +48,29 @@ namespace _Wormcatcher.Scripts
 
         public static void UpdateStat(PlayerStat stat, int amount)
         {
-            playerStats[stat] += amount; 
+            playerStats[stat] += amount;
         }
 
         public static void SetStat(PlayerStat stat, int amount)
         {
-            playerStats[stat] = amount; 
+            playerStats[stat] = amount;
         }
-        
+
         public static void SetAction(PlayerAction playerAction)
         {
-            playerActions[playerAction] = true; 
+            playerActions[playerAction] = true;
         }
+
         public static bool GetActionValue(PlayerAction playerAction)
         {
-            return playerActions[playerAction]; 
+            return playerActions[playerAction];
         }
 
         public static int GetStat(PlayerStat stat)
         {
             return playerStats[stat];
         }
-        
+
         public static void PrintAllStats()
         {
             Debug.Log("Player Stats:");
@@ -78,6 +78,7 @@ namespace _Wormcatcher.Scripts
             {
                 Debug.Log($"{stat.Key}: {stat.Value}");
             }
+
             foreach (var action in playerActions)
             {
                 Debug.Log($"{action.Key}: {action.Value}");

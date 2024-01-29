@@ -1,8 +1,9 @@
 ﻿using System;
+using _Wormcatcher.Scripts.Interaction.SceneObjects;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace _Wormcatcher.Scripts
+namespace _Wormcatcher.Scripts.Interaction
 {
     /// <summary>
     /// Handles all the player input and logic for interacting with objects

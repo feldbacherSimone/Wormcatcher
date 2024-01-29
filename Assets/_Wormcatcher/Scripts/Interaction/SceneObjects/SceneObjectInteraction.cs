@@ -1,4 +1,6 @@
 using System;
+using _Wormcatcher.Scripts.Interaction;
+using _Wormcatcher.Scripts.Interaction.SceneObjects;
 using UnityEngine;
 
 namespace _Wormcatcher.Scripts

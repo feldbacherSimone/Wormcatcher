@@ -1,4 +1,4 @@
-namespace _Wormcatcher.Scripts
+namespace _Wormcatcher.Scripts.Interaction
 {
     public interface IInteractable
     {

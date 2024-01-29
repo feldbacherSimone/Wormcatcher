@@ -25,11 +25,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41822453}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.42099994, z: 1.193}
+  m_LocalPosition: {x: 0, y: 0, z: 1.193}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6776153794198133593}
-  m_RootOrder: 2
+  m_Father: {fileID: 743479195431046838}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &41822455
 MonoBehaviour:
@@ -148,7 +148,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6776153794198133593}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &296385794229262878
 GameObject:
@@ -337,6 +337,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 860751846}
+  - {fileID: 41822454}
   m_Father: {fileID: 6776153794198133593}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -603,7 +604,6 @@ Transform:
   m_Children:
   - {fileID: 743479195279676482}
   - {fileID: 743479195431046838}
-  - {fileID: 41822454}
   - {fileID: 1416829606}
   m_Father: {fileID: 743479196160101367}
   m_RootOrder: 0
@@ -676,6 +676,7 @@ MonoBehaviour:
   rayLength: 3.94
   baseReverb: 0
   baseSwirling: 0
+  isPlaying: 0
   debug: 1
 --- !u!1 &2394850708014224578
 GameObject:

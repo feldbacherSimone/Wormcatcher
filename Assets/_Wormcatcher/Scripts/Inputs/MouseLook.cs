@@ -26,6 +26,12 @@ namespace _Wormcatcher.Scripts.Inputs
         
         private Quaternion lastRotation;
 
+        public void SetLookAngle(float angle, float initRotation)
+        {
+            limitLookAngle = true;
+            this.initRotation = initRotation; 
+            lookAngle = angle;
+        }
         public float MouseSensitivity
         {
             get => mouseSensitivity;

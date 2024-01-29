@@ -1,6 +1,7 @@
 
 using UnityEngine;
 using System;
+using _Wormcatcher.Scripts.Interaction;
 using UnityEngine.Events;
 
 
