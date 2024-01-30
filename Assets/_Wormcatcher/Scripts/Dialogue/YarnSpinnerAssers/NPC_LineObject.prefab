@@ -198,6 +198,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cabdbdfdd44c0034c8c9f4609ba3cd3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  talkSound:
+    Guid:
+      Data1: -1434418743
+      Data2: 1134191985
+      Data3: 855514800
+      Data4: 1054689066
+    Path: event:/UI/sfx_UI_Dialogue
   canvasGroup: {fileID: 5847276412120993753}
   lineContainerObject: {fileID: 5847276412210637838}
   lineTextField: {fileID: 5847276411951382271}

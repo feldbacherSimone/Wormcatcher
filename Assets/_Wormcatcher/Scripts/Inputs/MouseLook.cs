@@ -18,6 +18,7 @@ namespace _Wormcatcher.Scripts.Inputs
 
         [SerializeField] private bool limitLookAngle;
         [SerializeField] float lookAngle;
+        [SerializeField] float lookAngleVert;
         public float[] MouseSensitivityBounds => mouseSensitivityBounds;
 
         [SerializeField] private float[] mouseSensitivityBounds = { 10, 80 };
@@ -89,10 +90,8 @@ namespace _Wormcatcher.Scripts.Inputs
                     // up/down rotation 
                     xRoation -= yAccumulator;
                     xRoation = Mathf.Clamp(xRoation, -90f, 90f);
+                    if (limitLookAngle) xRoation = Mathf.Clamp(xRoation, -lookAngleVert, lookAngleVert);
                     transform.localRotation = Quaternion.Euler(xRoation, 0f, 0f);
-
-
-                    
 
                     // left/right rotation
                     playerBody.Rotate(Vector3.up * xAccumulator);
@@ -109,6 +108,7 @@ namespace _Wormcatcher.Scripts.Inputs
                 // up/down rotation 
                 xRoation -= mouseY;
                 xRoation = Mathf.Clamp(xRoation, -90f, 90f);
+                if(limitLookAngle) xRoation = Mathf.Clamp(xRoation, -lookAngleVert, lookAngleVert);
                 transform.localRotation = Quaternion.Euler(xRoation, 0f, 0f);
 
                 // left/right rotation
