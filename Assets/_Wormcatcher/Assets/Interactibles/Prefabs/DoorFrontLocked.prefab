@@ -443,6 +443,7 @@ GameObject:
   - component: {fileID: 2708757264477802829}
   - component: {fileID: 2708757264477802830}
   - component: {fileID: 2708757264477802828}
+  - component: {fileID: 7269975746610490693}
   m_Layer: 0
   m_Name: DoorFrontLocked
   m_TagString: Untagged
@@ -508,7 +509,18 @@ MonoBehaviour:
   lockedBool: Locked
   InteractEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7269975746610490693}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2708757264477802828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,6 +568,25 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &7269975746610490693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2708757264477802824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 2013454163
+      Data2: 1251241845
+      Data3: -338682177
+      Data4: -2023998673
+    Path: event:/SFX/sfc_DoorRattle
 --- !u!1 &2708757264561054016
 GameObject:
   m_ObjectHideFlags: 0
