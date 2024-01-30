@@ -2,6 +2,7 @@
 using _Wormcatcher.Scripts.Audio;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using Debug = FMOD.Debug;
 
 namespace _Wormcatcher.Scripts.Inputs
@@ -19,6 +20,15 @@ namespace _Wormcatcher.Scripts.Inputs
             get => movable;
             set => movable = value;
         }
+
+        public bool Active
+        {
+            get => activeOnStart;
+            set => activeOnStart = value;
+        }
+
+        [Tooltip("This is just for vignette 1 to ensure that the position can be changed before any movement code is executed")]
+        [SerializeField] private bool activeOnStart = true;
 
         // Input 
         private PlayerInputAction playerInputAction;
@@ -56,9 +66,10 @@ namespace _Wormcatcher.Scripts.Inputs
 
         public void DisableWalk()
         {
-            movable = false; 
+            movable = false;
             playerInputAction.WalkInput.Disable();
         }
+
         private void Awake()
         {
             playerInputAction = new PlayerInputAction();
@@ -87,8 +98,10 @@ namespace _Wormcatcher.Scripts.Inputs
         // Update is called once per frame
         void Update()
         {
-            if(!playerInputAction.WalkInput.enabled) return;
+            if (!activeOnStart) return;
+            if (!controller.enabled) controller.enabled = true; 
             HandleGravity();
+            if (!playerInputAction.WalkInput.enabled) return;
             HandleSprintInput();
             MoveCharacter();
             time += Time.deltaTime;
@@ -128,7 +141,7 @@ namespace _Wormcatcher.Scripts.Inputs
 
         private void HandleSprintInput()
         {
-            if(!playerInputAction.WalkInput.enabled) return;
+            if (!playerInputAction.WalkInput.enabled) return;
             Boolean sprintInput = sprintAction.ReadValue<float>() != 0;
 
             currentSpeed = sprintInput

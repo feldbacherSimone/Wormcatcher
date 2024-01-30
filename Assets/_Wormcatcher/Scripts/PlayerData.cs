@@ -39,7 +39,7 @@ namespace _Wormcatcher.Scripts
             { PlayerAction.FinishV1Dialogue, true},
         };
 
-        private static int v1Progress;
+        private static int v1Progress = 0;
 
         public static int V1Progress
         {
@@ -47,18 +47,7 @@ namespace _Wormcatcher.Scripts
             set => v1Progress = value;
         }
 
-        private static Transform[] vignette1Positions = new Transform[3];
-
-        public static Transform GetV1Position(int i)
-        {
-            return vignette1Positions[i];
-        }
-
-        public static void SetV1Position(int i, Transform transform)
-        {
-            vignette1Positions[i] = transform;
-        }
-
+      
         public static void UpdateStat(PlayerStat stat, int amount)
         {
             playerStats[stat] += amount;

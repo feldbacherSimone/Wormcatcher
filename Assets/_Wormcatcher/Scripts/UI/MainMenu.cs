@@ -19,6 +19,7 @@ namespace _Wormcatcher.Scripts.UI
             });
             playButton.onClick.AddListener(() =>
             {
+                PlayerData.V1Progress = 0; 
                 SceneLoader.SwitchScene(1);
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false; 

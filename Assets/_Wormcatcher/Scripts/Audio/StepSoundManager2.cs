@@ -133,7 +133,10 @@ public class StepSoundManager2 : MonoBehaviour
         Debug.Log("No ground hit");
         return FloorType.None;
     }
-    
+    private void OnDisable()
+    {
+        instance.stop(STOP_MODE.ALLOWFADEOUT);
+    }
     private void DebugPrint(String message)
     {
         if (debug)

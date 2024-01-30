@@ -49,6 +49,7 @@ namespace _Wormcatcher.Scripts.GameplayManagers
         public void ChangePosition(int i)
         {
             PlayerData.V1Progress = i;
+            Debug.Log($"Player v1 progress is {PlayerData.V1Progress}");
         }
 
         public void SetState()
@@ -63,39 +64,25 @@ namespace _Wormcatcher.Scripts.GameplayManagers
                 case TestPosition.Apartment: PlayerData.V1Progress = 2; break;
             }
         }
-
-        private void Start()
-        {
-            SetState();
-            CheckSpawn();
-        }
+        
 
         private void Awake()
         {
-            for (int i = 0; i < spawnPositions.Length; i++)
-            {
-                PlayerData.SetV1Position(i, spawnPositions[i]);
-            }
             if(overrideSpawnPoints) return;
-            Debug.Log($"Spawn is {PlayerData.GetV1Position(PlayerData.V1Progress)}");
-            player.transform.position = PlayerData.GetV1Position(PlayerData.V1Progress).position;
-            player.transform.rotation = PlayerData.GetV1Position(PlayerData.V1Progress).rotation;
+            SetState();
+            player.transform.position = spawnPositions[PlayerData.V1Progress].position;
+            player.transform.rotation = spawnPositions[PlayerData.V1Progress].rotation;
+            CheckSpawn();
+            playerMovement.Active = true; 
         }
 
         private void CheckSpawn()
         {
             if (overrideSpawnPoints) return;
-
-            Debug.Log($"Spawn is {PlayerData.GetV1Position(PlayerData.V1Progress)}");
-            player.transform.position = PlayerData.GetV1Position(PlayerData.V1Progress).position;
-            player.transform.rotation = PlayerData.GetV1Position(PlayerData.V1Progress).rotation;
+            
             switch (PlayerData.V1Progress)
             {
                 case 0:
-                    for (int i = 0; i < spawnPositions.Length; i++)
-                    {
-                        PlayerData.SetV1Position(i, spawnPositions[i]);
-                    }
                     break;
                 case 1:
                     playerMovement.DisableWalk();
