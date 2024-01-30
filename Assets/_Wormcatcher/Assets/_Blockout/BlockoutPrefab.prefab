@@ -1343,7 +1343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1635847888486270212
 Transform:
   m_ObjectHideFlags: 0
@@ -2410,6 +2410,9 @@ MonoBehaviour:
   - {fileID: 1320552650033903173}
   OffObjects:
   - {fileID: 1863345497582714953}
+  interactionEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1863345497785714486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5451,6 +5454,9 @@ MonoBehaviour:
   OnObjects:
   - {fileID: 1520676301453922697}
   OffObjects: []
+  interactionEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &5538200768180145118
 BoxCollider:
   m_ObjectHideFlags: 0
