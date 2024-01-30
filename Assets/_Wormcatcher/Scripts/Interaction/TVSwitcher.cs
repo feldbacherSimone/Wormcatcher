@@ -39,6 +39,11 @@ namespace _Wormcatcher.Scripts.Interaction
                 base.SwitchObjects(false);
             }
         }
+        
+        private void OnDisable()
+        {
+            instance.stop(STOP_MODE.ALLOWFADEOUT);
+        }
     }
     
 }

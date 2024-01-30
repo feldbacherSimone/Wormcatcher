@@ -13,6 +13,7 @@ namespace _Wormcatcher.Scripts
     public enum PlayerAction
     {
         ToggleLight,
+        FinishV1Dialogue,
     }
 
     public static class PlayerData
@@ -34,7 +35,8 @@ namespace _Wormcatcher.Scripts
 
         private static Dictionary<PlayerAction, bool> playerActions = new Dictionary<PlayerAction, bool>
         {
-            { PlayerAction.ToggleLight, true }
+            { PlayerAction.ToggleLight, false },
+            { PlayerAction.FinishV1Dialogue, true},
         };
 
         private static int v1Progress;
@@ -70,6 +72,7 @@ namespace _Wormcatcher.Scripts
         public static void SetAction(PlayerAction playerAction)
         {
             playerActions[playerAction] = true;
+            Debug.Log($"Action {playerAction} is now true");
         }
 
         public static bool GetActionValue(PlayerAction playerAction)

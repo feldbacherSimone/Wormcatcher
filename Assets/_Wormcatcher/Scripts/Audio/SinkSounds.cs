@@ -32,6 +32,10 @@ namespace _Wormcatcher.Scripts.Audio
         startState = false; 
       }
     }
+    private void OnDisable()
+    {
+      instance.stop(STOP_MODE.ALLOWFADEOUT);
+    }
 
     IEnumerator StopSink(float waitTime)
     {

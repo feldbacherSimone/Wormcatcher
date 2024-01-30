@@ -338,3 +338,12 @@
 [LOG] SoundI::release                          :     shelf_open-006 (0000020C4BB18248)
 [LOG] SoundI::release                          :  (0000020A5715FCF8)
 [LOG] SoundI::release                          :     squeakytap (0000020C4607DBC8)
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.

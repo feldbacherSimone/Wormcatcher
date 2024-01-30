@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace _Wormcatcher.Scripts.Interaction
 {
@@ -8,6 +9,7 @@ namespace _Wormcatcher.Scripts.Interaction
         [SerializeField] protected GameObject[] OnObjects;
         [SerializeField] protected GameObject[] OffObjects;
 
+        [SerializeField] private UnityEvent interactionEvent; 
        
         protected virtual void Awake()
         {
@@ -39,6 +41,7 @@ namespace _Wormcatcher.Scripts.Interaction
 
             isOn = !isOn;
             SwitchObjects(isOn);
+           interactionEvent.Invoke();
         }
     }
 }

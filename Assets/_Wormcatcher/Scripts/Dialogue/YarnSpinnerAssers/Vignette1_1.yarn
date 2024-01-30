@@ -18,7 +18,8 @@ PC: Feeling any better?
 Partner: No, not really. How was work?
 
 PC: Work is work, is work, you know. 
-PC: That's that look for?
+<<first_letter>> 
+PC: What's that look for?
 
 Partner: You ought to remove thy hat in the presence of God, honey.
 
@@ -45,11 +46,12 @@ Partner: I feel sick.
     PC: Anyway, back to you. 
 <<endif>>
 
-
+<<first_letter>> 
 PC: You feel sick?
 
 Partner: I've been in bed all day today. It's getting worse...
 
+<<first_letter>> 
 PC: All day? Did you at least-
 
 Partner: Look, I didn't do the dishes, okay?

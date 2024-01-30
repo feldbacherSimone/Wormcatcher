@@ -1,4 +1,5 @@
-﻿using FMODUnity;
+﻿using System;
+using FMODUnity;
 using UnityEngine;
 
 namespace _Wormcatcher.Scripts.Audio
@@ -21,7 +22,7 @@ namespace _Wormcatcher.Scripts.Audio
         {
             RuntimeManager.PlayOneShot(sound, worldPos);
         }
-    
-       
+
+     
     }
 }

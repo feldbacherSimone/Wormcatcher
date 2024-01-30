@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using _Wormcatcher.Scripts.Inputs;
 using _Wormcatcher.Scripts.Interaction.SceneObjects;
 using UnityEditor;
@@ -27,8 +28,10 @@ namespace _Wormcatcher.Scripts.GameplayManagers
         [SerializeField] private bool playTest;
         [SerializeField] private SceneObjectHandler sceneObjectHandler; 
         [SerializeField] private GameObject staticCloset; 
-        [SerializeField] private GameObject interactiveClost; 
-    
+        [SerializeField] private GameObject interactiveClost;
+
+        [FormerlySerializedAs("waterplane")] [SerializeField] private GameObject waterPlane;
+        [SerializeField] private Vector3 waterTopPos; 
         public bool PlayTest
         {
             get => playTest;
@@ -73,6 +76,10 @@ namespace _Wormcatcher.Scripts.GameplayManagers
             {
                 PlayerData.SetV1Position(i, spawnPositions[i]);
             }
+            if(overrideSpawnPoints) return;
+            Debug.Log($"Spawn is {PlayerData.GetV1Position(PlayerData.V1Progress)}");
+            player.transform.position = PlayerData.GetV1Position(PlayerData.V1Progress).position;
+            player.transform.rotation = PlayerData.GetV1Position(PlayerData.V1Progress).rotation;
         }
 
         private void CheckSpawn()
@@ -117,9 +124,34 @@ namespace _Wormcatcher.Scripts.GameplayManagers
             ChangePosition(2);
             SceneLoader.SwitchScene(1);
         }
-        
-        
-    }
 
-  
+        public void OnFinishDialogue()
+        {
+            PlayerData.SetAction(PlayerAction.FinishV1Dialogue);
+        }
+
+        public void CheckDishCondition()
+        {
+            Debug.Log($"Condition is {PlayerData.GetActionValue(PlayerAction.FinishV1Dialogue)}");
+            if (PlayerData.GetActionValue(PlayerAction.FinishV1Dialogue))
+            {
+                Debug.Log("Ending Vignette 1");
+                playerMovement.DisableWalk();
+                StartCoroutine(RiseWater(0.02f));
+            }
+        }
+
+    
+
+        IEnumerator RiseWater(float speed)
+        {
+            while (Vector3.Distance(waterPlane.transform.position, waterTopPos) > 0.001)
+            {
+                
+                waterPlane.transform.position = Vector3.MoveTowards(waterPlane.transform.position, waterTopPos, speed*Time.deltaTime);
+                yield return null;
+            }
+            SceneLoader.SwitchScene(2);
+        }
+    }
 }

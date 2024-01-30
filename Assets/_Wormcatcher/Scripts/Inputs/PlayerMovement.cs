@@ -87,6 +87,7 @@ namespace _Wormcatcher.Scripts.Inputs
         // Update is called once per frame
         void Update()
         {
+            if(!playerInputAction.WalkInput.enabled) return;
             HandleGravity();
             HandleSprintInput();
             MoveCharacter();
@@ -100,6 +101,11 @@ namespace _Wormcatcher.Scripts.Inputs
             {
                 stepSoundManager.StopSteps();
             }
+        }
+
+        private void OnDisable()
+        {
+            playerInputAction.WalkInput.Disable();
         }
 
         private void setSprintSound(walkState walkState)
@@ -122,6 +128,7 @@ namespace _Wormcatcher.Scripts.Inputs
 
         private void HandleSprintInput()
         {
+            if(!playerInputAction.WalkInput.enabled) return;
             Boolean sprintInput = sprintAction.ReadValue<float>() != 0;
 
             currentSpeed = sprintInput
