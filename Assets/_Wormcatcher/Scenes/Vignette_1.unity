@@ -4895,6 +4895,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookPlants_Clutter
       objectReference: {fileID: 0}
+    - target: {fileID: 7064601355626852506, guid: 37d791ade843cac4c9b0dba8082157fd,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.839
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064601355626852506, guid: 37d791ade843cac4c9b0dba8082157fd,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.496
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37d791ade843cac4c9b0dba8082157fd, type: 3}
 --- !u!1 &1504267354
