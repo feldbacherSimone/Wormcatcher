@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 7111700474922620638}
   - component: {fileID: 2627265230120127892}
   - component: {fileID: 8717117436804255352}
+  - component: {fileID: 3185606706673943489}
   m_Layer: 0
   m_Name: HangKey
   m_TagString: Untagged
@@ -99,6 +100,39 @@ MonoBehaviour:
   OffObjects: []
   hangClothes: {fileID: 0}
   clothingItem: 1
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3185606706673943489}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3185606706673943489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073490758268972152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -623640151
+      Data2: 1223784100
+      Data3: 1334039701
+      Data4: -2136336924
+    Path: event:/SFX/sfx_Keys
 --- !u!1 &3559621833688136272
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,6 +144,7 @@ GameObject:
   - component: {fileID: 1231645185640035049}
   - component: {fileID: 5803123923352059917}
   - component: {fileID: 7653145813009447812}
+  - component: {fileID: 225501733351741353}
   m_Layer: 0
   m_Name: HangShoes
   m_TagString: Untagged
@@ -164,6 +199,39 @@ MonoBehaviour:
   OffObjects: []
   hangClothes: {fileID: 0}
   clothingItem: 1
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 225501733351741353}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &225501733351741353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3559621833688136272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 1917920901
+      Data2: 1074649598
+      Data3: -980709446
+      Data4: -1830181546
+    Path: event:/SFX/sfx_Schachtel
 --- !u!95 &6167809147769601371
 Animator:
   serializedVersion: 3
@@ -246,6 +314,7 @@ GameObject:
   - component: {fileID: 8804859387851706214}
   - component: {fileID: 3956089604236403953}
   - component: {fileID: 2410008869330057258}
+  - component: {fileID: 4783536592550279046}
   m_Layer: 0
   m_Name: HangCoat
   m_TagString: Untagged
@@ -300,6 +369,39 @@ MonoBehaviour:
   OffObjects: []
   hangClothes: {fileID: 0}
   clothingItem: 0
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4783536592550279046}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4783536592550279046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9199604986361174727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -881698604
+      Data2: 1255890926
+      Data3: 1039570095
+      Data4: -1174037789
+    Path: event:/SFX/sfx_Cloth
 --- !u!1001 &5276049774989426807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -484,9 +586,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29ee284b1e45e8642a63024b6fecd59e, type: 3}
---- !u!4 &5914014389558356645 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 29ee284b1e45e8642a63024b6fecd59e,
+--- !u!1 &6892328107399306622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 738029966392299568, guid: 29ee284b1e45e8642a63024b6fecd59e,
     type: 3}
   m_PrefabInstance: {fileID: 6167809146852855118}
   m_PrefabAsset: {fileID: 0}
@@ -496,9 +598,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6167809146852855118}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6892328107399306622 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 738029966392299568, guid: 29ee284b1e45e8642a63024b6fecd59e,
+--- !u!4 &5914014389558356645 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 29ee284b1e45e8642a63024b6fecd59e,
     type: 3}
   m_PrefabInstance: {fileID: 6167809146852855118}
   m_PrefabAsset: {fileID: 0}

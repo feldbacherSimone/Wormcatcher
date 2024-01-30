@@ -4621,8 +4621,8 @@ MonoBehaviour:
   playerMovement: {fileID: 1135695537}
   mouseLook: {fileID: 1954673596}
   stepSoundManager2: {fileID: 954200883}
-  overrideSpawnPoints: 1
-  playTest: 0
+  overrideSpawnPoints: 0
+  playTest: 1
   sceneObjectHandler: {fileID: 0}
   staticCloset: {fileID: 1670727488}
   interactiveClost: {fileID: 434606263}
@@ -7709,7 +7709,7 @@ PrefabInstance:
     - target: {fileID: 4193186413482855172, guid: 9140231022a06be4a8e27544a7963bc3,
         type: 3}
       propertyPath: m_Name
-      value: Atmosphere (1)
+      value: Atmosphere
       objectReference: {fileID: 0}
     - target: {fileID: 4193186413482855175, guid: 9140231022a06be4a8e27544a7963bc3,
         type: 3}

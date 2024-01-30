@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using FMODUnity;
+using UnityEngine;
+using UnityEngine.Events;
 using Yarn.Compiler;
 
 namespace _Wormcatcher.Scripts.Interaction
@@ -7,7 +9,7 @@ namespace _Wormcatcher.Scripts.Interaction
     {
         [SerializeField] private HangClothes hangClothes;
         [SerializeField] private Clothing clothingItem;
-
+        [SerializeField] private UnityEvent interactEvent; 
         protected override void Awake()
         {
             foreach (GameObject obj in OnObjects)
@@ -24,6 +26,7 @@ namespace _Wormcatcher.Scripts.Interaction
             }
             DebugPrint("Objects toggled to " + isOn);
             hangClothes.HangItem(clothingItem);
+            interactEvent.Invoke();
             Active = false;
         }
     }
