@@ -75,7 +75,7 @@ namespace _Wormcatcher.Scripts.Inputs
 
            
             lastRotation = playerBody.rotation; 
-            if (true)
+            if (Time.timeScale > 0)
             {
                 // get mouse inputs 
                 mouseX = mouseMovement.ReadValue<Vector2>().x * mouseSensitivity/100;

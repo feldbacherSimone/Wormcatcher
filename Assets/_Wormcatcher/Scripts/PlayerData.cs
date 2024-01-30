@@ -37,14 +37,25 @@ namespace _Wormcatcher.Scripts
             { PlayerAction.ToggleLight, true }
         };
 
-        private static int vignette1Position = 0;
+        private static int v1Progress;
 
-        public static int Vignette1Position
+        public static int V1Progress
         {
-            get => vignette1Position;
-            set => vignette1Position = value;
+            get => v1Progress;
+            set => v1Progress = value;
         }
 
+        private static Transform[] vignette1Positions = new Transform[3];
+
+        public static Transform GetV1Position(int i)
+        {
+            return vignette1Positions[i];
+        }
+
+        public static void SetV1Position(int i, Transform transform)
+        {
+            vignette1Positions[i] = transform;
+        }
 
         public static void UpdateStat(PlayerStat stat, int amount)
         {

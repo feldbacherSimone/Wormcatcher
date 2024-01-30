@@ -5,6 +5,7 @@ using _Wormcatcher.Scripts.Dialogue;
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -44,8 +45,9 @@ namespace _Wormcatcher.Scripts
 
 
         [SerializeField] [Min(0)] internal float typewriterEffectSpeed = 0f;
-        
 
+        private bool isSelected; 
+        private InputAction interactAction; 
         public bool UseTypewriterEffect
         {
             get => useTypewriterEffect;
@@ -94,6 +96,18 @@ namespace _Wormcatcher.Scripts
         {
             canvasGroup.alpha = 0;
             canvasGroup.blocksRaycasts = false;
+            PlayerInputAction playerInputAction= new PlayerInputAction();
+            interactAction = playerInputAction.WalkInput.Interact;
+            interactAction.Enable();
+
+        }
+
+        private void Update()
+        {
+            if (!expanded && isSelected && interactAction.triggered)
+            {
+                ExpandText();
+            }
         }
 
         private void Reset()
@@ -399,6 +413,11 @@ namespace _Wormcatcher.Scripts
 
         public void OnPointerClick(PointerEventData eventData)
         {
+           ExpandText();
+        }
+
+        private void ExpandText()
+        {
             if (hideLineOnStart)
             {
                 lineText.color = backgroundColor;
@@ -410,6 +429,7 @@ namespace _Wormcatcher.Scripts
 
         public void OnPointerEnter(PointerEventData eventData)
         {
+            isSelected = true;
             if (hideLineOnStart)
             {
                 lineText.color = backgroundColor; 
@@ -418,8 +438,9 @@ namespace _Wormcatcher.Scripts
 
         public void OnPointerExit(PointerEventData eventData)
         {
+            isSelected = false;
             if (hideLineOnStart && !expanded)
-                lineBackground.color = backgroundHighlightColor;
+                lineText.color = backgroundHighlightColor;
         }
     }
 }

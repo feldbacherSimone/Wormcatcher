@@ -1,4 +1,5 @@
-﻿using _Wormcatcher.Scripts.Inputs;
+﻿using System;
+using _Wormcatcher.Scripts.Inputs;
 using _Wormcatcher.Scripts.Interaction.SceneObjects;
 using UnityEditor;
 using UnityEngine;
@@ -25,7 +26,8 @@ namespace _Wormcatcher.Scripts.GameplayManagers
         [SerializeField] private bool overrideSpawnPoints;
         [SerializeField] private bool playTest;
         [SerializeField] private SceneObjectHandler sceneObjectHandler; 
-
+        [SerializeField] private GameObject staticCloset; 
+        [SerializeField] private GameObject interactiveClost; 
     
         public bool PlayTest
         {
@@ -43,7 +45,7 @@ namespace _Wormcatcher.Scripts.GameplayManagers
 
         public void ChangePosition(int i)
         {
-            PlayerData.Vignette1Position = i;
+            PlayerData.V1Progress = i;
         }
 
         public void SetState()
@@ -53,9 +55,9 @@ namespace _Wormcatcher.Scripts.GameplayManagers
             overrideSpawnPoints = false; 
             switch (testPositions)
             {
-                case TestPosition.Hallway: PlayerData.Vignette1Position = 0; break;
-                case TestPosition.Mudroom: PlayerData.Vignette1Position = 1; break;
-                case TestPosition.Apartment: PlayerData.Vignette1Position = 2; break;
+                case TestPosition.Hallway: PlayerData.V1Progress = 0; break;
+                case TestPosition.Mudroom: PlayerData.V1Progress = 1; break;
+                case TestPosition.Apartment: PlayerData.V1Progress = 2; break;
             }
         }
 
@@ -65,14 +67,29 @@ namespace _Wormcatcher.Scripts.GameplayManagers
             CheckSpawn();
         }
 
+        private void Awake()
+        {
+            for (int i = 0; i < spawnPositions.Length; i++)
+            {
+                PlayerData.SetV1Position(i, spawnPositions[i]);
+            }
+        }
+
         private void CheckSpawn()
         {
             if (overrideSpawnPoints) return;
 
-            player.transform.position = spawnPositions[PlayerData.Vignette1Position].position;
-            player.transform.rotation = spawnPositions[PlayerData.Vignette1Position].rotation;
-            switch (PlayerData.Vignette1Position)
+            Debug.Log($"Spawn is {PlayerData.GetV1Position(PlayerData.V1Progress)}");
+            player.transform.position = PlayerData.GetV1Position(PlayerData.V1Progress).position;
+            player.transform.rotation = PlayerData.GetV1Position(PlayerData.V1Progress).rotation;
+            switch (PlayerData.V1Progress)
             {
+                case 0:
+                    for (int i = 0; i < spawnPositions.Length; i++)
+                    {
+                        PlayerData.SetV1Position(i, spawnPositions[i]);
+                    }
+                    break;
                 case 1:
                     playerMovement.DisableWalk();
                     mouseLook.SetLookAngle(100, spawnPositions[1].rotation.eulerAngles.y);
@@ -81,6 +98,8 @@ namespace _Wormcatcher.Scripts.GameplayManagers
                     break;
                 case 2:
                     SceneObjectHandler._instance.Active = false; 
+                    staticCloset.SetActive(true);
+                    interactiveClost.SetActive(false);
                     break;
                 default:
                     break;

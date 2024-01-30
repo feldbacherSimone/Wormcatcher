@@ -79,6 +79,7 @@ namespace _Wormcatcher.Scripts.UI
         void Resume()
         {
             Cursor.lockState = CursorLockMode.Locked;
+            playerInputAction.WalkInput.MouseLook.Enable();
             Cursor.visible = false; 
 
             pauseScreenGameObject.SetActive(false);
