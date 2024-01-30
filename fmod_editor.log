@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000158788BE5E8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001FA97CE5768 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -19,24 +19,317 @@
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] SystemI::close                           : Closed.
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001FAA02B1388, queue head = 000001FA40629628, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FAA02B1388
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FA41EBE620
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Slide', format=5, channels=2, frequency=48000, lengthbytes=141248, lengthpcm=766959, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.401733.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFC, Stack Size: 65536, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FAA02B1388
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001FA3E8DB588, queue head = 000001FA40629628, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FA3E8DB588
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FA3E8DB588
+[LOG] SoundI::release                          : Slide (000001FAA02B1388)
+[LOG] SoundI::release                          :     Slide (000001FA8FDA4C48)
+[LOG] SoundI::release                          :     Slide (000001FA3E8DB588)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006FF406EEB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC14533FA0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC14533F60
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC14534080
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC14534140
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001FA9DD514B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='UIButton-008', format=5, channels=2, frequency=48000, lengthbytes=4128, lengthpcm=65192, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.218140.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006FF406EEB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC14533FA0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC14533F60
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC14534080
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC14534140
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001FA9DD514B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='UIButton-002', format=5, channels=2, frequency=48000, lengthbytes=4096, lengthpcm=65192, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.523132.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006FF406EEB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC14533FA0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC14533F60
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC14534080
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC14534140
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001FA9DD514B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='UIButton-004', format=5, channels=2, frequency=48000, lengthbytes=3936, lengthpcm=65192, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.405853.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006FF406EEB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC14533FA0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC14533F60
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC14534080
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC14534140
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001FA9DD514B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='UIButton-001', format=5, channels=2, frequency=48000, lengthbytes=3904, lengthpcm=65192, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.405121.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006FF406EEB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC14533FA0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC14533F60
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC14534080
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC14534140
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001FA9DD514B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='UIButton-012', format=5, channels=2, frequency=48000, lengthbytes=3712, lengthpcm=65192, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.317566.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006FF406EEB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC14533FA0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC14533F60
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC14534080
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC14534140
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001FA9DD514B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='UIButton-006', format=5, channels=2, frequency=48000, lengthbytes=3904, lengthpcm=65192, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.370605.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006FF406EEB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC14533FA0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC14533F60
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC14534080
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC14534140
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001FA9DD514B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='UIButton-007', format=5, channels=2, frequency=48000, lengthbytes=4096, lengthpcm=65192, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.311890.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006FF406EEB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC14533FA0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC14533F60
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC14534080
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC14534140
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001FA9DD514B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='UIButton-010', format=5, channels=2, frequency=48000, lengthbytes=3808, lengthpcm=65192, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.433014.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006FF406EEB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC14533FA0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC14533F60
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC14534080
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC14534140
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001FA9DD514B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='UIButton-009', format=5, channels=2, frequency=48000, lengthbytes=3744, lengthpcm=65192, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.218353.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006FF406EEB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC14533FA0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC14533F60
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC14534080
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC14534140
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001FA9DD514B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='UIButton-011', format=5, channels=2, frequency=48000, lengthbytes=3968, lengthpcm=65192, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.405975.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006FF406EEB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC14533FA0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC14533F60
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC14534080
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC14534140
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001FA9DD514B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='UIButton-003', format=5, channels=2, frequency=48000, lengthbytes=3872, lengthpcm=65192, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.624847.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000006FF406EEB8
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFC14533FA0
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFC14533F60
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFC14534080
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFC14534140
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 000001FA9DD514B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='UIButton-005', format=5, channels=2, frequency=48000, lengthbytes=4032, lengthpcm=65192, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.444580.
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001FAA02B1DA8, queue head = 000001FA40629628, queue count = 0
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001FAA02B1F58, queue head = 000001FA40629628, queue count = 1
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FAA02B1DA8
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FA41EBE760
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Dialogue1_1', format=5, channels=2, frequency=48000, lengthbytes=115104, lengthpcm=492256, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.208191.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FAA02B1DA8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FAA02B1F58
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FA41EBE620
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Dialogue2_1', format=5, channels=2, frequency=48000, lengthbytes=145984, lengthpcm=656096, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.185181.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FAA02B1F58
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/SFX.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000001FAA02B16E8, queue head = 000001FA40629628, queue count = 0
+[LOG] SystemI::createSound                     : filename = wormcatcherSound/Build/Desktop/SFX.bank : mode 02010082
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FAA02B16E8
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6985184
+[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 000001FAA02B1898, queue head = 000001FA40629628, queue count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FA41EBE8A0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Dialogue1_1', format=5, channels=2, frequency=48000, lengthbytes=115104, lengthpcm=492256, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.208191.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FAA02B16E8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001FAA02B1898
+[LOG] SystemI::createSoundInternal             :     Create name='wormcatcherSound/Build/Desktop/SFX.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 6985184
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 52480
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001FA41EBE4E0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Dialogue2_1', format=5, channels=2, frequency=48000, lengthbytes=145984, lengthpcm=656096, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.185181.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001FAA02B1898
+[LOG] SoundI::release                          : Dialogue2_1 (000001FAA02B1F58)
+[LOG] SoundI::release                          :     Dialogue2_1 (000001FA459AD838)
+[LOG] SoundI::release                          :     Dialogue2_1 (000001FA9E598E18)
+[LOG] SoundI::release                          : Dialogue1_1 (000001FAA02B1DA8)
+[LOG] SoundI::release                          :     Dialogue1_1 (000001FA459AA0F8)
+[LOG] SoundI::release                          :     Dialogue1_1 (000001FA9E599178)
+[LOG] SoundI::release                          : Dialogue2_1 (000001FAA02B1898)
+[LOG] SoundI::release                          :     Dialogue2_1 (000001FA459AAAB8)
+[LOG] SoundI::release                          :     Dialogue2_1 (000001FA3E8DB588)
+[LOG] SoundI::release                          : Dialogue1_1 (000001FAA02B16E8)
+[LOG] SoundI::release                          :     Dialogue1_1 (000001FA459AA778)
+[LOG] SoundI::release                          :     Dialogue1_1 (000001FA3E8DB3D8)
+[LOG] SoundI::release                          :  (000001FAD867D738)
+[LOG] SoundI::release                          :     UIButton-001 (000001FA8FDA6308)
+[LOG] SoundI::release                          :  (000001FAD867EB58)
+[LOG] SoundI::release                          :     UIButton-002 (000001FA8FDA45C8)
+[LOG] SoundI::release                          :  (000001FAD867FE08)
+[LOG] SoundI::release                          :     UIButton-003 (000001FA459A93F8)
+[LOG] SoundI::release                          :  (000001FAD867BBE8)
+[LOG] SoundI::release                          :     UIButton-004 (000001FA8FDA5948)
+[LOG] SoundI::release                          :  (000001FAD867EFA8)
+[LOG] SoundI::release                          :     UIButton-005 (000001FA459A9C18)
+[LOG] SoundI::release                          :  (000001FAD867E428)
+[LOG] SoundI::release                          :     UIButton-006 (000001FA8FDA4DE8)
+[LOG] SoundI::release                          :  (000001FAD867BD58)
+[LOG] SoundI::release                          :     UIButton-007 (000001FA8FDA5608)
+[LOG] SoundI::release                          :  (000001FAD867BA78)
+[LOG] SoundI::release                          :     UIButton-008 (000001FA8FDA40E8)
+[LOG] SoundI::release                          :  (000001FAD867F568)
+[LOG] SoundI::release                          :     UIButton-009 (000001FA459AD358)
+[LOG] SoundI::release                          :  (000001FAD867E708)
+[LOG] SoundI::release                          :     UIButton-010 (000001FA8FDA64A8)
+[LOG] SoundI::release                          :  (000001FAD867FB28)
+[LOG] SoundI::release                          :     UIButton-011 (000001FA459AA438)
+[LOG] SoundI::release                          :  (000001FAD867DFD8)
+[LOG] SoundI::release                          :     UIButton-012 (000001FA8FDA4C48)

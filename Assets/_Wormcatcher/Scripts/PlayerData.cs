@@ -36,7 +36,7 @@ namespace _Wormcatcher.Scripts
         private static Dictionary<PlayerAction, bool> playerActions = new Dictionary<PlayerAction, bool>
         {
             { PlayerAction.ToggleLight, false },
-            { PlayerAction.FinishV1Dialogue, true},
+            { PlayerAction.FinishV1Dialogue, false},
         };
 
         private static int v1Progress = 0;

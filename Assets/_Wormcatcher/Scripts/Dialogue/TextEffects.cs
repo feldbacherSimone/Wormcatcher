@@ -61,6 +61,7 @@ namespace _Wormcatcher.Scripts
 
                 accumulator += Time.deltaTime;
 
+                Canvas.ForceUpdateCanvases();
                 yield return null;
             }
 
