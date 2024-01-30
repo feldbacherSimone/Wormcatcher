@@ -56,7 +56,14 @@
 			<destination>{41beda5d-095d-4478-b74f-c37ab2d01527}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{b328dafa-cca4-49cc-938c-d87a4f45902e}" />
+	<object class="EventAutomatableProperties" id="{b328dafa-cca4-49cc-938c-d87a4f45902e}">
+		<property name="minimumDistance">
+			<value>0.100000001</value>
+		</property>
+		<property name="maximumDistance">
+			<value>2.60000014</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{191398fd-5197-472b-9279-3d60b09f8dcd}" />
 	<object class="GroupTrack" id="{3bbc9225-ed62-42c6-b20b-215005fa5d8e}">
 		<relationship name="modules">
@@ -73,7 +80,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{83f736d6-1deb-4fe9-87b5-143d947674f5}">
 		<property name="volume">
-			<value>-10.5</value>
+			<value>-21.5</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{37947e1a-c503-465a-ac06-563db4d15517}</destination>
@@ -122,6 +129,7 @@
 	</object>
 	<object class="MixerBusEffectChain" id="{37947e1a-c503-465a-ac06-563db4d15517}">
 		<relationship name="effects">
+			<destination>{de07f24d-3ee0-495f-ae58-cf43c1f04c1d}</destination>
 			<destination>{9b4f7691-5e63-44cd-8fdb-05271ff48868}</destination>
 			<destination>{ad60d7ab-8405-40b9-8f37-64f3d849cf94}</destination>
 			<destination>{c5863f77-36df-406a-a690-4cfaf66b7b48}</destination>
@@ -161,6 +169,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{70935527-18d4-4510-ad95-02419eb22d3f}" />
+	<object class="SFXReverbEffect" id="{de07f24d-3ee0-495f-ae58-cf43c1f04c1d}">
+		<property name="decayTime">
+			<value>260</value>
+		</property>
+		<property name="wetLevel">
+			<value>-27.5</value>
+		</property>
+	</object>
 	<object class="MultibandEqEffect" id="{9b4f7691-5e63-44cd-8fdb-05271ff48868}">
 		<property name="filterTypeA">
 			<value>6</value>

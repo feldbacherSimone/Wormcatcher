@@ -90,10 +90,13 @@
 	<object class="MixerBusPanner" id="{32aaa478-ee32-4b3f-aa86-06179d6c77b5}" />
 	<object class="MultiSound" id="{24d907dd-e48a-4ba7-a98e-3a50230dd0c1}">
 		<property name="length">
-			<value>1.5</value>
+			<value>0.41999999999999998</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{40d18cfe-f1eb-48ed-a52d-0eed229778a8}</destination>
+		</relationship>
+		<relationship name="fadeOutCurve">
+			<destination>{cf04c652-f0bc-4fb8-bfcd-de33bc036687}</destination>
 		</relationship>
 		<relationship name="sounds">
 			<destination>{88648a01-e521-4153-b65d-6b82f2266bdf}</destination>
@@ -128,8 +131,16 @@
 			<value>pitch</value>
 		</property>
 		<property name="amount">
-			<value>5</value>
+			<value>21</value>
 		</property>
+	</object>
+	<object class="FadeCurve" id="{cf04c652-f0bc-4fb8-bfcd-de33bc036687}">
+		<relationship name="startPoint">
+			<destination>{73e20271-c237-4535-b1aa-51421dec6315}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{27c884bd-78a8-4b36-9fa3-463fc04facbc}</destination>
+		</relationship>
 	</object>
 	<object class="SingleSound" id="{88648a01-e521-4153-b65d-6b82f2266bdf}">
 		<relationship name="audioFile">
@@ -158,5 +169,24 @@
 	</object>
 	<object class="MixerBusPanner" id="{a035065b-e735-42c0-a428-fde836da03af}" />
 	<object class="MixerBusFader" id="{93d208f4-fbe1-4a10-a3dc-fba194172a20}" />
+	<object class="AutomationPoint" id="{73e20271-c237-4535-b1aa-51421dec6315}">
+		<property name="position">
+			<value>0.40000000000000002</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>0.25471893</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{27c884bd-78a8-4b36-9fa3-463fc04facbc}">
+		<property name="position">
+			<value>0.41999999999999998</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{c798f85f-febb-4dc1-8a0c-361bda90103d}" />
 </objects>
