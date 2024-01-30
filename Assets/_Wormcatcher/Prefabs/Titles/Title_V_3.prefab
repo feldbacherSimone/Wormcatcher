@@ -65,7 +65,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Is \there such \t\ta\n\tthing \tas \tinsanity \n\t\t\t\tamong \tpenguins"
+  m_text: "The Snail provides nourishement\r\nIts curves hold the promise of an even
+    greater \n                         illumination\r\nIn stark contrast to the\n                            
+    HOUSE\r\n\nThere the walls are black\r\n                                The Snail
+    is white\r\nThere the maze is threatening\r\n                              The
+    spiral is pleasing\r\nThere you descend\r\n                                  
+    The Snail ascends"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9192dd8f6e4df4b4eb0bc78021c9f483, type: 2}
   m_sharedMaterial: {fileID: -6917589276670986237, guid: 9192dd8f6e4df4b4eb0bc78021c9f483,
@@ -129,7 +134,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -73.25181, y: 0, z: -83.83053, w: 4.931207}
+  m_margin: {x: -73.25181, y: 0, z: -90.39665, w: 4.931207}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -148,6 +153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charactersPerSecond: 18.66
+  onTypewriterComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4396292276216320702
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4396292276216320703}
   m_Layer: 5
-  m_Name: Title
+  m_Name: Title_V_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
