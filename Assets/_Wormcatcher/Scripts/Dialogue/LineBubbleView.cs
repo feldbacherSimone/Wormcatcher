@@ -235,6 +235,7 @@ namespace _Wormcatcher.Scripts
 
         private IEnumerator RunLineInternal(LocalizedLine dialogueLine, Action onDialogueLineFinished)
         {
+            currentLineObject.StartSound();
             IEnumerator PresentLine()
             {
                 lineText.gameObject.SetActive(true);
@@ -330,7 +331,7 @@ namespace _Wormcatcher.Scripts
             yield return StartCoroutine(PresentLine());
 
             currentStopToken.Complete();
-
+            currentLineObject.StopSound();
             // All of our text should now be visible.
             lineText.maxVisibleCharacters = int.MaxValue;
 
@@ -358,6 +359,7 @@ namespace _Wormcatcher.Scripts
             }
 
             // Our presentation is complete; call the completion handler.
+            
             onDialogueLineFinished();
         }
 

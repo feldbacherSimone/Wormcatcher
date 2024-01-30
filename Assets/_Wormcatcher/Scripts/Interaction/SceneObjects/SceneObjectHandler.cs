@@ -48,7 +48,7 @@ namespace _Wormcatcher.Scripts.Interaction.SceneObjects
 
         public void SpawnObject()
         {
-            if (!active || sceneObject == null)
+            if (!active || sceneObject == null || Time.timeScale < 1)
             {
                 return;
             }

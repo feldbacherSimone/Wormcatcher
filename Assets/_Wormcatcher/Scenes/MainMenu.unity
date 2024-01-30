@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 17933741}
   - component: {fileID: 17933740}
   - component: {fileID: 17933739}
+  - component: {fileID: 17933742}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -240,6 +241,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17933737}
   m_CullTransparentMesh: 0
+--- !u!114 &17933742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17933737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9555d67220ef6104a98871f83ea85e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound:
+    Guid:
+      Data1: 554887567
+      Data2: 1291867352
+      Data3: 34571188
+      Data4: 2113475539
+    Path: event:/UI/sfx_UI_Click
+  hoverSound:
+    Guid:
+      Data1: 554887567
+      Data2: 1291867352
+      Data3: 34571188
+      Data4: 2113475539
+    Path: event:/UI/sfx_UI_Click
 --- !u!1 &134413598
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +553,7 @@ GameObject:
   - component: {fileID: 237181788}
   - component: {fileID: 237181787}
   - component: {fileID: 237181786}
+  - component: {fileID: 237181789}
   m_Layer: 5
   m_Name: ControlsButton
   m_TagString: Untagged
@@ -633,6 +661,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237181784}
   m_CullTransparentMesh: 0
+--- !u!114 &237181789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237181784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9555d67220ef6104a98871f83ea85e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound:
+    Guid:
+      Data1: 554887567
+      Data2: 1291867352
+      Data3: 34571188
+      Data4: 2113475539
+    Path: event:/UI/sfx_UI_Click
+  hoverSound:
+    Guid:
+      Data1: 554887567
+      Data2: 1291867352
+      Data3: 34571188
+      Data4: 2113475539
+    Path: event:/UI/sfx_UI_Click
 --- !u!4 &243912299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5327088920293448736, guid: bd12f2d1183ee1c439aeb9bda55bf0cc,
@@ -651,6 +705,7 @@ GameObject:
   - component: {fileID: 250116163}
   - component: {fileID: 250116162}
   - component: {fileID: 250116161}
+  - component: {fileID: 250116164}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -758,6 +813,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 250116159}
   m_CullTransparentMesh: 0
+--- !u!114 &250116164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250116159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9555d67220ef6104a98871f83ea85e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound:
+    Guid:
+      Data1: 554887567
+      Data2: 1291867352
+      Data3: 34571188
+      Data4: 2113475539
+    Path: event:/UI/sfx_UI_Click
+  hoverSound:
+    Guid:
+      Data1: 554887567
+      Data2: 1291867352
+      Data3: 34571188
+      Data4: 2113475539
+    Path: event:/UI/sfx_UI_Click
 --- !u!1 &398835620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,6 +1172,75 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &844079722
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6270083826253298569, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.524473
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3902266
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.5034072
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270083826253298571, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb112f4ca8b1eae468aa57fd6e0c1c7f, type: 3}
 --- !u!1 &945010527
 GameObject:
   m_ObjectHideFlags: 3
@@ -1214,6 +1364,7 @@ GameObject:
   - component: {fileID: 983568040}
   - component: {fileID: 983568039}
   - component: {fileID: 983568038}
+  - component: {fileID: 983568041}
   m_Layer: 5
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -1321,6 +1472,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983568036}
   m_CullTransparentMesh: 0
+--- !u!114 &983568041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983568036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9555d67220ef6104a98871f83ea85e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound:
+    Guid:
+      Data1: 554887567
+      Data2: 1291867352
+      Data3: 34571188
+      Data4: 2113475539
+    Path: event:/UI/sfx_UI_Click
+  hoverSound:
+    Guid:
+      Data1: 554887567
+      Data2: 1291867352
+      Data3: 34571188
+      Data4: 2113475539
+    Path: event:/UI/sfx_UI_Click
 --- !u!4 &1272253870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5c6f891d7e7c2454cb2e3d694b58473c,
@@ -1857,7 +2034,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -26.500122, y: -492.40015}
+  m_AnchoredPosition: {x: -26.5, y: -492.40002}
   m_SizeDelta: {x: -161.34277, y: -1038.8754}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1618130575

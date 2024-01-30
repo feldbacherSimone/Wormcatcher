@@ -622,6 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movable: 1
+  activeOnStart: 1
   controller: {fileID: 63110171445187586}
   groundCheck: {fileID: 1416829606}
   baseSpeed: 2
@@ -1092,6 +1093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 170723925277949893}
   - component: {fileID: 6501551652270537984}
+  - component: {fileID: 6118397935942560816}
   m_Layer: 10
   m_Name: Slider
   m_TagString: Untagged
@@ -1171,6 +1173,25 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6118397935942560816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4008412986039808674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c580662bc4a02644c93c82227a947b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderSound:
+    Guid:
+      Data1: -1690284986
+      Data2: 1166766741
+      Data3: 769870244
+      Data4: 1996499928
+    Path: event:/UI/sfx_UI_ButtonSlide
 --- !u!1 &4268126769892875138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,6 +1751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4078793228139439620}
   - component: {fileID: 7689568495709513077}
+  - component: {fileID: 4175394707141639835}
   m_Layer: 10
   m_Name: Slider
   m_TagString: Untagged
@@ -1809,6 +1831,25 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4175394707141639835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6076381912909105942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c580662bc4a02644c93c82227a947b0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderSound:
+    Guid:
+      Data1: -1690284986
+      Data2: 1166766741
+      Data3: 769870244
+      Data4: 1996499928
+    Path: event:/UI/sfx_UI_ButtonSlide
 --- !u!1 &6212759479620206383
 GameObject:
   m_ObjectHideFlags: 0
@@ -2268,6 +2309,7 @@ GameObject:
   - component: {fileID: 3996654652410568368}
   - component: {fileID: 4116881700310587575}
   - component: {fileID: 2442652521523952788}
+  - component: {fileID: 2964847975760645725}
   m_Layer: 10
   m_Name: ResumeButton
   m_TagString: Untagged
@@ -2375,6 +2417,32 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2964847975760645725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7365068501721733026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9555d67220ef6104a98871f83ea85e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound:
+    Guid:
+      Data1: 554887567
+      Data2: 1291867352
+      Data3: 34571188
+      Data4: 2113475539
+    Path: event:/UI/sfx_UI_Click
+  hoverSound:
+    Guid:
+      Data1: 554887567
+      Data2: 1291867352
+      Data3: 34571188
+      Data4: 2113475539
+    Path: event:/UI/sfx_UI_Click
 --- !u!1 &7385496237988328938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,6 +2589,7 @@ GameObject:
   - component: {fileID: 2490059515930886379}
   - component: {fileID: 7505283017783158135}
   - component: {fileID: 350296847388584520}
+  - component: {fileID: 5274538467721693526}
   m_Layer: 10
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -2628,6 +2697,32 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5274538467721693526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7597906874433879994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9555d67220ef6104a98871f83ea85e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickSound:
+    Guid:
+      Data1: 554887567
+      Data2: 1291867352
+      Data3: 34571188
+      Data4: 2113475539
+    Path: event:/UI/sfx_UI_Click
+  hoverSound:
+    Guid:
+      Data1: 554887567
+      Data2: 1291867352
+      Data3: 34571188
+      Data4: 2113475539
+    Path: event:/UI/sfx_UI_Click
 --- !u!1 &7869266664939132046
 GameObject:
   m_ObjectHideFlags: 0
