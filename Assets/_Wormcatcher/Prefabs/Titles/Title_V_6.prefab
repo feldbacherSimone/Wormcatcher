@@ -65,7 +65,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Is \there such \t\ta\n\tthing \tas \tinsanity \n\t\t\t\tamong \tpenguins"
+  m_text: "Little solace comes\n   to those\n                 who     grieve\nWhen
+    thoughts keep drifting\nas walls\n               keep            shifting\n                                           
+    and this great \n       BLUE \nworld of                            OURS\n                         
+    seems\n       a \n           HOUSE \n                          of\n                                               
+    leaves"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9192dd8f6e4df4b4eb0bc78021c9f483, type: 2}
   m_sharedMaterial: {fileID: -6917589276670986237, guid: 9192dd8f6e4df4b4eb0bc78021c9f483,
@@ -147,7 +151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82eee8a629818fa4fbdf33d0689be1b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charactersPerSecond: 18.66
+  charactersPerSecond: 25
+  onTypewriterComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4396292276216320702
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4396292276216320703}
   m_Layer: 5
-  m_Name: Title
+  m_Name: Title_V_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

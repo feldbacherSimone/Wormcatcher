@@ -1,0 +1,29 @@
+﻿title: End
+tags:
+---
+
+<<change_speed 30>>
+Partner: You know I'm sick. 
+
+-> PC: I need help too 
+    <<update_stat Nice 2>>
+-> PC: I can't always
+    <<update_stat Mean 2>>
+
+Partner: I am trying to get better.  
+
+-> PC: Are you really? 
+    <<update_stat Mean 2>>
+-> PC: I know, I know
+    <<update_stat Nice 2>>
+
+Partner: Do you know how it feels.
+Partner: To be me?
+Partner: To not get help from the one person I love?
+
+-> PC: You are hard to love. 
+    <<update_stat Mean 2>>
+-> PC: I still love you...so much. 
+    <<update_stat Nice 2>>
+
+===

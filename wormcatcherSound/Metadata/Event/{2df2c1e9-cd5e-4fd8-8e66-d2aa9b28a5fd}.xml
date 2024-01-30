@@ -62,7 +62,14 @@
 			<destination>{41beda5d-095d-4478-b74f-c37ab2d01527}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{9aa1047d-5b7e-4d97-bca3-6fd534abc3f8}" />
+	<object class="EventAutomatableProperties" id="{9aa1047d-5b7e-4d97-bca3-6fd534abc3f8}">
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+		<property name="maximumDistance">
+			<value>1</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{235ba0f5-2a75-41df-ab44-505b10aa48a3}" />
 	<object class="GroupTrack" id="{1b96c99f-c65f-43d6-bf91-13943a09cc45}">
 		<relationship name="modules">
@@ -257,13 +264,13 @@
 			<value>9</value>
 		</property>
 		<property name="frequencyA">
-			<value>67.9084778</value>
+			<value>146.169739</value>
 		</property>
 		<property name="frequencyD">
 			<value>1616.77271</value>
 		</property>
 		<property name="qualityA">
-			<value>0.309310347</value>
+			<value>0.393034458</value>
 		</property>
 		<property name="gainD">
 			<value>-17.5862064</value>

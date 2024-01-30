@@ -1,0 +1,80 @@
+﻿title: V1
+tags:
+---
+
+<<change_speed 20>>
+<<first_letter>> 
+PC: H- Hello?
+
+Partner: Oh hey, You just get in?
+
+->PC:Yeah.
+    <<update_stat Mean 0>>
+->PC:Like always, 8 o'clock. Did I wake you up?
+    <<update_stat Nice 1>>
+
+PC: Feeling any better?
+
+Partner: No, not really. How was work?
+
+PC: Work is work, is work, you know. 
+<<first_letter>> 
+PC: What's that look for?
+
+Partner: You ought to remove thy hat in the presence of God, honey.
+
+PC: What?
+
+Partner: This is a sickbed. I was taught those are sacred.
+
+->PC: We've been over this. You aren't sick.
+    <<update_stat Mean 2>>
+->PC: Look at you, a proper Catholic. You told me you were agnostic.
+    <<update_stat Nice 1>>
+
+Partner: I feel sick.
+
+<<if get_player_action("ToggleLight")>>
+    Partner: Were you fucking with the light switch?
+    ->PC: Yup.
+        <<update_stat Mean 1>>
+    ->PC: Stop avoiding the subject. You still feel down?
+        <<update_stat Nice 2>>
+        
+    Partner: Turning on a light once uses as much power as running it for a week, just FYI.
+    PC: Did you consider that before turning on your desk lamp? 
+    PC: Anyway, back to you. 
+<<endif>>
+
+<<first_letter>> 
+PC: You feel sick?
+
+Partner: I've been in bed all day today. It's getting worse...
+
+<<first_letter>> 
+PC: All day? Did you at least-
+
+Partner: Look, I didn't do the dishes, okay?
+
+->PC: Yeah, I saw. I'll take care of it. 
+    <<update_stat Nice 1>>
+->PC: Great. Great. I guess you'll have to wait on dinner then. Good.
+    <<update_stat Mean 0>>
+
+    Partner: Look, don't bother with dinner for me. I'm sorry okay? I'm not that hungry.
+    Partner: I can do them tomorrow morning if you want.
+    PC: No, I'll go take care of it. 
+
+PC: I wish you'd go see a doctor.
+
+Partner: In my condition?
+
+PC: What Condition? Look, you seem your usual peachy self to me. 
+PC: Can't you give me one symptom?
+
+Partner: Exhaustion.
+Partner: Listen, let's talk about this tomorrow. I'm not in the mood for this....
+Partner: Domestic stuff.
+===
+
+

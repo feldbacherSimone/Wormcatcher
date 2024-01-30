@@ -163,7 +163,7 @@
 	<object class="GainEffect" id="{4fdcd2f7-264a-4f36-ac4b-4d3d19937133}" />
 	<object class="GainEffect" id="{9f61e86e-81b5-4929-9e7c-13dec1a7d34b}">
 		<property name="gain">
-			<value>-7.5</value>
+			<value>4.5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{b871b029-ab40-4039-86ea-f0ca100a9e9d}" />

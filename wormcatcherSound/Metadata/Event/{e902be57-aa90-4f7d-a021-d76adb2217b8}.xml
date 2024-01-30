@@ -56,7 +56,14 @@
 			<destination>{41beda5d-095d-4478-b74f-c37ab2d01527}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{8acaa6d3-30ee-4cc9-b4b5-08eed9cfbb18}" />
+	<object class="EventAutomatableProperties" id="{8acaa6d3-30ee-4cc9-b4b5-08eed9cfbb18}">
+		<property name="minimumDistance">
+			<value>0</value>
+		</property>
+		<property name="maximumDistance">
+			<value>2.4000001</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{71496834-620f-4d93-8d43-e64e0ab8b366}" />
 	<object class="GroupTrack" id="{0d9859ce-94af-4803-a54d-f6e9a8a2d807}">
 		<relationship name="modules">
@@ -75,6 +82,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{22ada47f-be70-4ce7-852b-7221548580c7}">
+		<property name="volume">
+			<value>1.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{dcd51ea5-7d8a-47a6-9165-ae114c794b6c}</destination>
 		</relationship>
@@ -153,25 +163,25 @@
 			<value>3</value>
 		</property>
 		<property name="frequencyA">
-			<value>623.349548</value>
+			<value>2073.13403</value>
 		</property>
 		<property name="frequencyC">
-			<value>1398.49707</value>
+			<value>3073.21704</value>
 		</property>
 		<property name="frequencyE">
-			<value>11336.5264</value>
+			<value>10876.3604</value>
 		</property>
 		<property name="qualityA">
-			<value>0.974517226</value>
+			<value>0.413965493</value>
 		</property>
 		<property name="qualityC">
 			<value>1.85000002</value>
 		</property>
 		<property name="qualityE">
-			<value>0.413965493</value>
+			<value>0.476758599</value>
 		</property>
 		<property name="gainC">
-			<value>-19.6551723</value>
+			<value>-22.7586212</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{657df378-6540-4cd0-8c60-57871f04b723}" />
