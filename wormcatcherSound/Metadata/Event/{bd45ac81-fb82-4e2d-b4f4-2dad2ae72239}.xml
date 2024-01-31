@@ -5,7 +5,7 @@
 			<value>sfx_DoorClose</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{2ad18ad4-74c2-46f4-a6e2-67f2cb172468}</destination>
@@ -129,6 +129,7 @@
 		<relationship name="effects">
 			<destination>{22796bb2-8d25-49a7-9049-9662c167ba7b}</destination>
 			<destination>{1dbabc4c-e83d-4185-95b4-afafe9b73fe1}</destination>
+			<destination>{12e6b7bb-bc4d-471b-8c10-d0ba0783a125}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{465ae5ff-c132-4006-b8c0-e917216eb377}" />
@@ -160,5 +161,6 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{1dbabc4c-e83d-4185-95b4-afafe9b73fe1}" />
+	<object class="SpatialiserEffect" id="{12e6b7bb-bc4d-471b-8c10-d0ba0783a125}" />
 	<object class="MixerBusFader" id="{4203367d-df51-48e3-bae5-43a80972460a}" />
 </objects>

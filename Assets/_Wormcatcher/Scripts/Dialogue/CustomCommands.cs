@@ -12,7 +12,6 @@ namespace _Wormcatcher.Scripts
         [SerializeField] private DialogueRunner dialogueRunner;
         [SerializeField] private LineBubbleView lineBubbleView;
         [SerializeField] private BubbleOptionView bubbleOptionView;
-        [SerializeField] private Animator animator;
 
         private void Awake()
         {
@@ -32,10 +31,6 @@ namespace _Wormcatcher.Scripts
             dialogueRunner.AddCommandHandler<String>(
                 "change_line",
                 ChangeLine
-            );
-            dialogueRunner.AddCommandHandler<int>(
-                "change_stage",
-                ChangeStage
             );
         }
 
@@ -78,11 +73,6 @@ namespace _Wormcatcher.Scripts
         private void ChangeLine(String line)
         {
             lineBubbleView.LineSwap = line;
-        }
-
-        private void ChangeStage(int i)
-        {
-            animator.SetInteger("Stage", i);
         }
     }
 }
