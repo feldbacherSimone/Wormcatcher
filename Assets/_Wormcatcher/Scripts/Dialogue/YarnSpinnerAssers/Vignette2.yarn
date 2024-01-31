@@ -1,0 +1,117 @@
+﻿title: V2
+tags:
+---
+
+<<change_speed 15>>
+Date: How was traffic? 
+
+-> PC: Kind of a nightmare, they're doing construction downtown 
+-> PC: Yeah, it was... fine I guess.
+
+
+Date: So... on your profile you said you liked...eating out?
+
+<<first_letter>> 
+PC: Sustenance, I love that. I mean who doesn't?
+
+Date: Sort of the thing you write if you don't know what else to write. 
+Date: Like... I love adventures, I love movies..
+
+PC: ... I like to travel. I know.
+
+Date: It's been a while since I’ve had a first date. What kind of conversations do people even have on those?
+
+PC: It’s been a while for me too. 
+
+Date: So you just broke up?
+
+PC: I guess 
+
+-> PC: They had - have this Condition - complicated to explain - and it just didn’t work out for me
+        <<update_stat Mean 2>>
+-> PC: but it doesn’t matter now. I’m here with you
+        <<update_stat Nice 1>>
+
+Date: I’m glad you could make it - they have the best fish here. 
+<<first_letter>> 
+PC: Not a huge fan of seafood usually
+
+Date: Next cliché question: Wha do you do for work?
+
+PC: Just pushing documents, e-mails that sort of thing. 
+PC: Also there is a worm in my food?
+
+Date: Ah yes, the office grind. I’ve come to love excel though. 
+<<first_letter>> 
+PC:  - It's wriggling? -
+
+Date: These pivot tables - just a fantastic feature. 
+
+PC: Do you not see the worm? 
+
+Date: Also great for keeping track of the office swear jar entries. 
+Date: Do you use Excel for work? Any tables you’re pivoting?
+
+<<first_letter>> 
+PC: I've used it before - but the worm?
+
+Date: Mhm. So - have you thought about having kids?
+<<change_stage 1>>
+<<wait 5>>
+<<first_letter>> 
+PC: H- Hi?
+
+<<change_speed 30>>
+Date: My research into the Void Diaries have left me utterly in awe of what Merplat’s theorem has done for us scholars of Lasckivism. We’re at a pivotal moment of enlightment - an opening of mind so to say - of wht really is ossible when it comes to film. 
+
+<<change_speed 15>>
+-> PC: Merplat’s my favourite 
+    <<update_stat Mean 1>>
+-> PC: What’s the void diaries?
+    <<update_stat Nice 1>>
+
+<<change_speed 60>>
+Date: Of course, nothing even gets close to Celvikiy’s use of the third person in this sort of- transcendental, interactive way. 
+Date: Not even the staunchest exponents of liminal hermeneutics would disagree I daresay.
+
+PC: I- 
+
+<<change_speed 70>>
+Date: Of course, my contribution to the Codices of the BFJ Criteria collection where a big part of the emergence of cannibalistic traditions within the liminal hermeneutics of cinema.
+
+PC: Your contributions?
+<<change_stage 2>>
+<<change_speed 80>>
+Date: Climactic voidelessness, as elucidated by Celviky, embodies an avant-garde approach to storytelling, 
+Date: one that vehemently challenges conventional cinematic resolutions. 
+Date: It is a deliberate negation of the expected crescendo, a rejection of catharsis in favor of thematic and psychological dissonance. 
+Date: Within this aesthetic paradigm, climaxes remain conspicuously absent, suspended in a state of perpetual ambiguity. 
+<<change_stage 3>>
+Date: Characters' arcs do not resolve neatly; narratives remain suspended, poised on the precipice of fulfillment, leaving audiences in a perpetual state of suspension.
+
+
+<<wait 5>>
+Date: So - do you prefer cats or dogs?
+
+<<change_line "Who is Celviky?">>
+-> PC: Cat
+    <<update_stat Nice 1>>
+-> PC: Dog
+    <<update_stat Mean 1>>
+
+Date: Never heard of him? Should I?
+
+-> PC: Nevermind 
+-> PC: We just talked about him?
+
+Date: Okay - 
+
+Date: I gotta head out early tomorrow. Do you want to get the bill?
+
+-> PC: Already? 
+    <<update_stat Mean 2>>
+-> PC: Yeah - I’m tired
+    <<update_stat Nice 1>>
+
+
+===
