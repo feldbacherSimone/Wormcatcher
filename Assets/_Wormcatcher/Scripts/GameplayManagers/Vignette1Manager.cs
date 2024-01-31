@@ -69,11 +69,7 @@ namespace _Wormcatcher.Scripts.GameplayManagers
 
         private void Awake()
         {
-            if (overrideSpawnPoints)
-            {
-                playerMovement.Active = true;
-                return;
-            }
+            if(overrideSpawnPoints) return;
             SetState();
             player.transform.position = spawnPositions[PlayerData.V1Progress].position;
             player.transform.rotation = spawnPositions[PlayerData.V1Progress].rotation;

@@ -1,13 +1,48 @@
 fileFormatVersion: 2
-guid: 415014be8c8bade4ba11a949c456c97c
+guid: 429baf6971d6aa94b9c2c87d1f0d7a1b
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackPlastic
+    second: {fileID: 2100000, guid: 723e89ea999902e42a05185c5905c351, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CartonDark
+    second: {fileID: 2100000, guid: 850c6985f12ee57479cc99c60ae7fd0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CartonLight
+    second: {fileID: 2100000, guid: 98ee305ca4a70054889cbaad93c04680, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DVDCovers
+    second: {fileID: 2100000, guid: ab66025be73c5c74bb3cd64da70931d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metall
+    second: {fileID: 2100000, guid: 12b529b3b5f4adf43a130b8561a84039, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodMat
+    second: {fileID: 2100000, guid: 42392a7b46fb07449aad4384213977c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: portrait3
+    second: {fileID: 2100000, guid: 3a7b85a2c2ee6f645a3faa8e8153633e, type: 2}
   materials:
     materialImportMode: 1
-    materialName: 0
-    materialSearch: 1
+    materialName: 1
+    materialSearch: 2
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
