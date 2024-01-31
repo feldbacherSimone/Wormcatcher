@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afe092dce8fe1ac49a41a0d861a1810e, type: 3}
   m_Name: DVD1
   m_EditorClassIdentifier: 
-  model: {fileID: 0}
+  model: {fileID: 7264237053949746466, guid: 5ac5dd8988a399a4ca4647e112049334, type: 3}
   holdingSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1588866032
+      Data2: 1166003856
+      Data3: 1131199130
+      Data4: -28763794
+    Path: event:/SFX/sfx_papers
   usingSound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1588866032
+      Data2: 1166003856
+      Data3: 1131199130
+      Data4: -28763794
+    Path: event:/SFX/sfx_papers
   state: 1
