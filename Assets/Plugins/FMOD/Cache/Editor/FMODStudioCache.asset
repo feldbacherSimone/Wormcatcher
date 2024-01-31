@@ -97,7 +97,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638412685798637042
+  lastModified: 638410959308817129
   FileSizes:
   - Name: Desktop
     Value: 1220
@@ -459,7 +459,11 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Footies.bank
   Name: Footies
   StudioPath: bank:/Footies
+<<<<<<< Updated upstream
   lastModified: 638423082292609760
+=======
+  lastModified: 638422865434562481
+>>>>>>> Stashed changes
   FileSizes:
   - Name: Desktop
     Value: 181856
@@ -852,7 +856,11 @@ MonoBehaviour:
   - {fileID: -8274890527474066257}
   StringsBanks:
   - {fileID: 6722575401642249363}
+<<<<<<< Updated upstream
   cacheTime: 638423082293520328
+=======
+  cacheTime: 638423068159575340
+>>>>>>> Stashed changes
   cacheVersion: 131608
 --- !u!114 &270963226839330967
 MonoBehaviour:
@@ -896,7 +904,11 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
+<<<<<<< Updated upstream
   lastModified: 638423067796505573
+=======
+  lastModified: 638423068157578572
+>>>>>>> Stashed changes
   FileSizes:
   - Name: Desktop
     Value: 25113984
@@ -1018,7 +1030,11 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
+<<<<<<< Updated upstream
   lastModified: 638423082293520328
+=======
+  lastModified: 638423068159575340
+>>>>>>> Stashed changes
   FileSizes:
   - Name: Desktop
     Value: 7369888
@@ -1116,7 +1132,11 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
+<<<<<<< Updated upstream
   lastModified: 638423067797792417
+=======
+  lastModified: 638423068158954071
+>>>>>>> Stashed changes
   FileSizes:
   - Name: Desktop
     Value: 11470336
@@ -1324,7 +1344,11 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< Updated upstream
   lastModified: 638423067796890446
+=======
+  lastModified: 638423068157913893
+>>>>>>> Stashed changes
   FileSizes:
   - Name: Desktop
     Value: 3448
@@ -1368,7 +1392,11 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Loc_Ambience.bank
   Name: Loc_Ambience
   StudioPath: bank:/Loc_Ambience
+<<<<<<< Updated upstream
   lastModified: 638423082292975489
+=======
+  lastModified: 638423068157913893
+>>>>>>> Stashed changes
   FileSizes:
   - Name: Desktop
     Value: 5156928
