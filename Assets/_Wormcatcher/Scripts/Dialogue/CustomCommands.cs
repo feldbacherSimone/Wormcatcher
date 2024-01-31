@@ -14,6 +14,8 @@ namespace _Wormcatcher.Scripts
         [SerializeField] private BubbleOptionView bubbleOptionView;
         [SerializeField] private Animator animator;
 
+        [SerializeField] private DVDInteraction[] dvds;
+
         private void Awake()
         {
             dialogueRunner.AddCommandHandler(
@@ -37,6 +39,12 @@ namespace _Wormcatcher.Scripts
                 "change_stage",
                 ChangeStage
             );
+            dialogueRunner.AddCommandHandler(
+                "unset_dvds",
+                UnsetDvds
+            );
+            dialogueRunner.AddCommandHandler<String>(
+                "set_action", SetPlayerAction);
         }
 
         [YarnFunction("get_player_action")]
@@ -49,6 +57,20 @@ namespace _Wormcatcher.Scripts
 
             Debug.LogError($"Invalid playerStat: {playerActionName}");
             return false;
+        }
+
+        private void SetPlayerAction(string playerActionName)
+        {
+            Debug.Log(playerActionName);
+            if (Enum.TryParse<PlayerAction>(playerActionName, out var parsedAction))
+            {
+                PlayerData.SetAction(parsedAction);
+            }
+            else
+            {
+                Debug.LogError($"Invalid playerStat: {playerActionName}");
+            }
+
         }
 
         private void ToggleFirstLetterDialogue()
@@ -83,6 +105,14 @@ namespace _Wormcatcher.Scripts
         private void ChangeStage(int i)
         {
             animator.SetInteger("Stage", i);
+        }
+
+        private void UnsetDvds()
+        {
+            foreach (var dvd in dvds)
+            {
+                dvd.PutDvdDown();
+            }
         }
     }
 }

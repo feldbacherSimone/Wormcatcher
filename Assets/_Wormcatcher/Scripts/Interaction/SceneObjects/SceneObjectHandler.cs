@@ -9,6 +9,13 @@ namespace _Wormcatcher.Scripts.Interaction.SceneObjects
     {
         [SerializeField] private bool objectIsActive;
         [SerializeField] private SceneObject sceneObject;
+
+        public SceneObject SceneObject
+        {
+            get => sceneObject;
+            set => sceneObject = value;
+        }
+
         [SerializeField] private bool debug;
 
         [SerializeField] private bool active = true;
@@ -79,6 +86,11 @@ namespace _Wormcatcher.Scripts.Interaction.SceneObjects
             currentSceneObject.SetActive(false);
             sceneObject.State = false; 
             DebugPrint("DespawnObject called");
+        }
+
+        public void DestroySceneObject()
+        {
+            Destroy(currentSceneObject);
         }
 
         public void DebugPrint(string msg)

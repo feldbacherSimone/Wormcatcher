@@ -91,6 +91,7 @@ PC: Still up for a movie night?
 
 Partner:Oh, enticing... we've got some new DVDs from that subscription. Check the shelf.
 
+<<set_action "FinishedDialogueV3">>
 === 
 
 title: V3_Dvd1
@@ -101,8 +102,9 @@ PC: Who are you?
 
 Partner: I am Death.
 
-PC: Iconic. But not really feeling ready to "Seal" the deal.
-
+PC: Iconic. 
+PC: But not really feeling ready to "Seal" the deal.
+<<unset_dvds>>
 === 
 
 title: V3_Dvd2
@@ -116,7 +118,7 @@ Partner: Too cryptic.
 PC: I thought you liked Lynch?
 
 Partner: Not today.
-
+<<unset_dvds>>
 === 
 
 title: V3_Dvd3
@@ -130,7 +132,7 @@ Partner: Get out.
 Partner: For this alone it's a no from me.
 
 PC: So-ve-it.
-
+<<unset_dvds>>
 === 
 
 title: V3_Dvd4
@@ -138,6 +140,9 @@ tags:
 ---
 
 PC: In the mood for some Regina George?
+Partner: No...
+<<unset_dvds>>
+
 
 === 
 
@@ -147,11 +152,12 @@ tags:
 
 Partner: What about that one at the end?
 
-PC: "The Faded Christ"? I thought you did not like Celviky.
+PC: "The Faded Christ"? 
+PC: I thought you did not like Celviky.
 
 Partner: I'm full of surprises. And I've heard that one is a bit less tedious.
 
 PC: Your wish - My command. 
 
-
+<<set_action "DvdFetched">>
 ===

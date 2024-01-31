@@ -47,7 +47,10 @@ MonoBehaviour:
   debug: 0
   active: 1
   nodeName: 
+  dialogueRunner: {fileID: 0}
   sceneObjectHandler: {fileID: 0}
+  original: {fileID: 0}
+  sceneObject: {fileID: 0}
 --- !u!1001 &5693781646621556386
 PrefabInstance:
   m_ObjectHideFlags: 0

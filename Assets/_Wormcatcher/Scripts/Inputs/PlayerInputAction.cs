@@ -98,6 +98,69 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""V1"",
+                    ""type"": ""Button"",
+                    ""id"": ""d41fd5a0-fde5-41cc-b0cc-8837b74a8527"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""V2"",
+                    ""type"": ""Button"",
+                    ""id"": ""f504ffed-7c4f-4f1e-83ea-d6cc9380f8e4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""New action"",
+                    ""type"": ""Button"",
+                    ""id"": ""891c0436-6290-48e6-8299-f08774acaa38"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""V3"",
+                    ""type"": ""Button"",
+                    ""id"": ""c5268c30-f702-4620-8629-2d5583a120bb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""V4"",
+                    ""type"": ""Button"",
+                    ""id"": ""3e7fd104-0a8c-4913-aff2-131984f9df9d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""V5"",
+                    ""type"": ""Button"",
+                    ""id"": ""097364d8-65ad-402a-ac87-adccc9107e1b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""V6"",
+                    ""type"": ""Button"",
+                    ""id"": ""0ed877cc-f986-4d51-ab06-d329c1f2c310"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -298,6 +361,94 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                     ""action"": ""Pause Game"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""65cca8d7-2926-4a68-9247-66679e6aa66d"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""V1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""96219a2a-6683-465a-9483-7f4885996a38"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""V2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""03281e3d-0e6a-45e6-85c4-62586055543e"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""V2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""901a67d2-6c64-46ee-b959-a4b34b518f79"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""New action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""06db8c99-7a47-43a7-8909-7c2fe88e732f"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""V3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2577c92c-b3f4-4d9f-8b54-25fafbbd63d7"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""V4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a5c6a3db-db40-4992-ad4c-7b855bcc9c16"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""V5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6c3290b9-0c3b-4fe7-9aeb-4b879e4027ae"",
+                    ""path"": ""<Keyboard>/6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""V6"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -353,6 +504,13 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         m_WalkInput_MousePosition = m_WalkInput.FindAction("MousePosition", throwIfNotFound: true);
         m_WalkInput_MenuZoom = m_WalkInput.FindAction("MenuZoom", throwIfNotFound: true);
         m_WalkInput_PauseGame = m_WalkInput.FindAction("Pause Game", throwIfNotFound: true);
+        m_WalkInput_V1 = m_WalkInput.FindAction("V1", throwIfNotFound: true);
+        m_WalkInput_V2 = m_WalkInput.FindAction("V2", throwIfNotFound: true);
+        m_WalkInput_Newaction = m_WalkInput.FindAction("New action", throwIfNotFound: true);
+        m_WalkInput_V3 = m_WalkInput.FindAction("V3", throwIfNotFound: true);
+        m_WalkInput_V4 = m_WalkInput.FindAction("V4", throwIfNotFound: true);
+        m_WalkInput_V5 = m_WalkInput.FindAction("V5", throwIfNotFound: true);
+        m_WalkInput_V6 = m_WalkInput.FindAction("V6", throwIfNotFound: true);
         // StaticInput
         m_StaticInput = asset.FindActionMap("StaticInput", throwIfNotFound: true);
         m_StaticInput_Newaction = m_StaticInput.FindAction("New action", throwIfNotFound: true);
@@ -423,6 +581,13 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
     private readonly InputAction m_WalkInput_MousePosition;
     private readonly InputAction m_WalkInput_MenuZoom;
     private readonly InputAction m_WalkInput_PauseGame;
+    private readonly InputAction m_WalkInput_V1;
+    private readonly InputAction m_WalkInput_V2;
+    private readonly InputAction m_WalkInput_Newaction;
+    private readonly InputAction m_WalkInput_V3;
+    private readonly InputAction m_WalkInput_V4;
+    private readonly InputAction m_WalkInput_V5;
+    private readonly InputAction m_WalkInput_V6;
     public struct WalkInputActions
     {
         private @PlayerInputAction m_Wrapper;
@@ -435,6 +600,13 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         public InputAction @MousePosition => m_Wrapper.m_WalkInput_MousePosition;
         public InputAction @MenuZoom => m_Wrapper.m_WalkInput_MenuZoom;
         public InputAction @PauseGame => m_Wrapper.m_WalkInput_PauseGame;
+        public InputAction @V1 => m_Wrapper.m_WalkInput_V1;
+        public InputAction @V2 => m_Wrapper.m_WalkInput_V2;
+        public InputAction @Newaction => m_Wrapper.m_WalkInput_Newaction;
+        public InputAction @V3 => m_Wrapper.m_WalkInput_V3;
+        public InputAction @V4 => m_Wrapper.m_WalkInput_V4;
+        public InputAction @V5 => m_Wrapper.m_WalkInput_V5;
+        public InputAction @V6 => m_Wrapper.m_WalkInput_V6;
         public InputActionMap Get() { return m_Wrapper.m_WalkInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -468,6 +640,27 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 @PauseGame.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnPauseGame;
                 @PauseGame.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnPauseGame;
                 @PauseGame.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnPauseGame;
+                @V1.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV1;
+                @V1.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV1;
+                @V1.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV1;
+                @V2.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV2;
+                @V2.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV2;
+                @V2.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV2;
+                @Newaction.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnNewaction;
+                @Newaction.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnNewaction;
+                @Newaction.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnNewaction;
+                @V3.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV3;
+                @V3.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV3;
+                @V3.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV3;
+                @V4.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV4;
+                @V4.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV4;
+                @V4.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV4;
+                @V5.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV5;
+                @V5.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV5;
+                @V5.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV5;
+                @V6.started -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV6;
+                @V6.performed -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV6;
+                @V6.canceled -= m_Wrapper.m_WalkInputActionsCallbackInterface.OnV6;
             }
             m_Wrapper.m_WalkInputActionsCallbackInterface = instance;
             if (instance != null)
@@ -496,6 +689,27 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
                 @PauseGame.started += instance.OnPauseGame;
                 @PauseGame.performed += instance.OnPauseGame;
                 @PauseGame.canceled += instance.OnPauseGame;
+                @V1.started += instance.OnV1;
+                @V1.performed += instance.OnV1;
+                @V1.canceled += instance.OnV1;
+                @V2.started += instance.OnV2;
+                @V2.performed += instance.OnV2;
+                @V2.canceled += instance.OnV2;
+                @Newaction.started += instance.OnNewaction;
+                @Newaction.performed += instance.OnNewaction;
+                @Newaction.canceled += instance.OnNewaction;
+                @V3.started += instance.OnV3;
+                @V3.performed += instance.OnV3;
+                @V3.canceled += instance.OnV3;
+                @V4.started += instance.OnV4;
+                @V4.performed += instance.OnV4;
+                @V4.canceled += instance.OnV4;
+                @V5.started += instance.OnV5;
+                @V5.performed += instance.OnV5;
+                @V5.canceled += instance.OnV5;
+                @V6.started += instance.OnV6;
+                @V6.performed += instance.OnV6;
+                @V6.canceled += instance.OnV6;
             }
         }
     }
@@ -561,6 +775,13 @@ public partial class @PlayerInputAction : IInputActionCollection2, IDisposable
         void OnMousePosition(InputAction.CallbackContext context);
         void OnMenuZoom(InputAction.CallbackContext context);
         void OnPauseGame(InputAction.CallbackContext context);
+        void OnV1(InputAction.CallbackContext context);
+        void OnV2(InputAction.CallbackContext context);
+        void OnNewaction(InputAction.CallbackContext context);
+        void OnV3(InputAction.CallbackContext context);
+        void OnV4(InputAction.CallbackContext context);
+        void OnV5(InputAction.CallbackContext context);
+        void OnV6(InputAction.CallbackContext context);
     }
     public interface IStaticInputActions
     {
