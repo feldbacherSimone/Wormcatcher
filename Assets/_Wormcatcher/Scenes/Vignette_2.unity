@@ -353,7 +353,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sharedProfile
       value: 
-      objectReference: {fileID: 11400000, guid: 7db28cb20ba8b4646abcf48628c6be8a,
+      objectReference: {fileID: 11400000, guid: b0b443c4b84379f479dfb17516641f4e,
         type: 2}
     - target: {fileID: 6275145923318561290, guid: 2cc92bdf1de2aaf4b94787f6d2e7b050,
         type: 3}
