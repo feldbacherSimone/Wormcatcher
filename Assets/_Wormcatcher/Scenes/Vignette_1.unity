@@ -1298,6 +1298,21 @@ PrefabInstance:
       propertyPath: m_Data.m_SourceObjects.m_Item0.transform
       value: 
       objectReference: {fileID: 231964173}
+    - target: {fileID: 2235361956081570070, guid: cac75577c19ec2943995f6ed12a40869,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2235361956081570070, guid: cac75577c19ec2943995f6ed12a40869,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -33.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2235361956081570070, guid: cac75577c19ec2943995f6ed12a40869,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -11.4
+      objectReference: {fileID: 0}
     - target: {fileID: 3202852687814248703, guid: cac75577c19ec2943995f6ed12a40869,
         type: 3}
       propertyPath: onNodeComplete.m_PersistentCalls.m_Calls.Array.size
@@ -3942,14 +3957,14 @@ MonoBehaviour:
   playerMovement: {fileID: 1135695537}
   mouseLook: {fileID: 1954673596}
   stepSoundManager2: {fileID: 954200883}
-  overrideSpawnPoints: 0
+  overrideSpawnPoints: 1
   playTest: 0
   sceneObjectHandler: {fileID: 0}
   staticCloset: {fileID: 1670727488}
   interactiveClost: {fileID: 434606263}
   waterPlane: {fileID: 54496267}
   waterTopPos: {x: 2.223, y: 1.8, z: -0.079}
-  testPositions: 1
+  testPositions: 0
 --- !u!4 &1117998251
 Transform:
   m_ObjectHideFlags: 0

@@ -256,7 +256,7 @@ MonoBehaviour:
   playerMovement: {fileID: 1246188892}
   mouseLook: {fileID: 1246188891}
   stepSoundManager2: {fileID: 1246188890}
-  overrideSpawnPoints: 1
+  overrideSpawnPoints: 0
   playTest: 0
   sceneObjectHandler: {fileID: 1246188889}
   staticCloset: {fileID: 2140965118}
