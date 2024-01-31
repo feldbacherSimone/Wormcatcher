@@ -852,7 +852,7 @@ MonoBehaviour:
   - {fileID: -8274890527474066257}
   StringsBanks:
   - {fileID: 6722575401642249363}
-  cacheTime: 638423017104618467
+  cacheTime: 638423031148916061
   cacheVersion: 131608
 --- !u!114 &270963226839330967
 MonoBehaviour:
@@ -976,8 +976,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 0
-  MaxDistance: 2.4
+  MinDistance: 0.4
+  MaxDistance: 5.2000003
   Length: 59748
 --- !u!114 &3112618691462046857
 MonoBehaviour:
@@ -1018,7 +1018,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638423017104618467
+  lastModified: 638423031148916061
   FileSizes:
   - Name: Desktop
     Value: 7370688
@@ -1306,8 +1306,8 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 8302074749563852684}
-  MinDistance: 0.1
-  MaxDistance: 2.4
+  MinDistance: 1.2
+  MaxDistance: 9.400001
   Length: 19000
 --- !u!114 &6722575401642249363
 MonoBehaviour:
@@ -1368,7 +1368,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Loc_Ambience.bank
   Name: Loc_Ambience
   StudioPath: bank:/Loc_Ambience
-  lastModified: 638423017098278105
+  lastModified: 638423031147680748
   FileSizes:
   - Name: Desktop
     Value: 5156928
@@ -1452,7 +1452,7 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: -4551529033993375059}
-  MinDistance: 0
+  MinDistance: 0.1
   MaxDistance: 1
   Length: 26500
 --- !u!114 &7701410228694622203
@@ -1506,7 +1506,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 0
+  MinDistance: 0.1
   MaxDistance: 2.8
   Length: 47920
 --- !u!114 &8015596922868874346
