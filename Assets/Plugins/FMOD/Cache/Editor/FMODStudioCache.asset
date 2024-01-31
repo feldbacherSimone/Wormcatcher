@@ -22,7 +22,7 @@ MonoBehaviour:
   - {fileID: 3215915905116117971}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -459,10 +459,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Footies.bank
   Name: Footies
   StudioPath: bank:/Footies
-  lastModified: 638422538286913517
+  lastModified: 638423068942167089
   FileSizes:
   - Name: Desktop
-    Value: 181696
+    Value: 181856
   Exists: 1
 --- !u!114 &-4114721476358620977
 MonoBehaviour:
@@ -566,7 +566,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 3215915905116117971}
   IsStream: 0
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -852,7 +852,7 @@ MonoBehaviour:
   - {fileID: -8274890527474066257}
   StringsBanks:
   - {fileID: 6722575401642249363}
-  cacheTime: 638423031148916061
+  cacheTime: 638423068942167089
   cacheVersion: 131608
 --- !u!114 &270963226839330967
 MonoBehaviour:
@@ -1018,10 +1018,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638423031148916061
+  lastModified: 638423068033380442
   FileSizes:
   - Name: Desktop
-    Value: 7370688
+    Value: 7369888
   Exists: 1
 --- !u!114 &3383946071980174235
 MonoBehaviour:
@@ -1071,11 +1071,11 @@ MonoBehaviour:
   Banks:
   - {fileID: 3215915905116117971}
   IsStream: 1
-  Is3D: 1
+  Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 8.2
   Length: 750
 --- !u!114 &3665037441457749099
 MonoBehaviour:
@@ -1368,7 +1368,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Loc_Ambience.bank
   Name: Loc_Ambience
   StudioPath: bank:/Loc_Ambience
-  lastModified: 638423031147680748
+  lastModified: 638423068032549816
   FileSizes:
   - Name: Desktop
     Value: 5156928
@@ -1452,8 +1452,8 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: -4551529033993375059}
-  MinDistance: 0.1
-  MaxDistance: 1
+  MinDistance: 1.8000001
+  MaxDistance: 3.6000001
   Length: 26500
 --- !u!114 &7701410228694622203
 MonoBehaviour:
@@ -1665,7 +1665,7 @@ MonoBehaviour:
   - {fileID: 3215915905116117971}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
