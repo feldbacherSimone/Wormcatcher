@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6968277043640913853}
   - component: {fileID: 6968277043640913854}
   - component: {fileID: 6968277043640913855}
+  - component: {fileID: 6034723395954353125}
   - component: {fileID: 6968277043640913852}
   m_Layer: 0
   m_Name: Soda2
@@ -67,6 +68,25 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6034723395954353125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6968277043640913858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 883823623
+      Data2: 1118139016
+      Data3: 1082525090
+      Data4: 985304705
+    Path: event:/SFX/sfx_plasticbottle
 --- !u!114 &6968277043640913852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,7 +107,18 @@ MonoBehaviour:
   lockedBool: Locked
   InteractEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6034723395954353125}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6968277043908353827
 GameObject:
   m_ObjectHideFlags: 0
