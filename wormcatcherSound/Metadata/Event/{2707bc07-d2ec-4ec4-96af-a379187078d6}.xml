@@ -419,6 +419,9 @@
 		<property name="length">
 			<value>0.40000000000000036</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{9d17e4cb-3570-47f5-a7e7-5a9d081e945b}</destination>
+		</relationship>
 		<relationship name="audioFile">
 			<destination>{01649d64-08ff-4915-ad21-0013de58ca45}</destination>
 		</relationship>
@@ -1082,6 +1085,14 @@
 			<destination>{919560e2-0ed7-44e8-a824-be5ca571ad8d}</destination>
 		</relationship>
 	</object>
+	<object class="RandomizerModulator" id="{9d17e4cb-3570-47f5-a7e7-5a9d081e945b}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>9</value>
+		</property>
+	</object>
 	<object class="Automator" id="{bbdf6f74-f77c-437d-8719-d0a57e5ca5c3}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>volume</value>
@@ -1234,7 +1245,7 @@
 			<value>pitch</value>
 		</property>
 		<property name="amount">
-			<value>9</value>
+			<value>14</value>
 		</property>
 	</object>
 	<object class="FadeCurve" id="{acb4e08e-2d3b-4177-ba1e-56473e5a8fb5}">
