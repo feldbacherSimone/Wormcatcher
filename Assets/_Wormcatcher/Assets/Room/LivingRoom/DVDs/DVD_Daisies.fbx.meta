@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: bd3c963fa6c75804e85adaf6ed56ceaa
+guid: b876784109a4dd146bd7d4905e771d93
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DVDCovers
+    second: {fileID: 2100000, guid: a96e5d7338bc2094e8d8d4e28efd8b77, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

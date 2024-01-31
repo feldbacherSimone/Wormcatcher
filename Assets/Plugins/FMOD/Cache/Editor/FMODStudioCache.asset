@@ -97,12 +97,12 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638410959308817129
+  lastModified: 638421240665727240
   FileSizes:
   - Name: Desktop
     Value: 1220
   Exists: 1
---- !u!114 &-8050989985117227748
+--- !u!114 &-8053045015473899051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,51 +112,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/music_amb_Jazz_v2
+  m_Name: event:/SFX/sfx_Door_Sliding
   m_EditorClassIdentifier: 
-  Path: event:/Music/music_amb_Jazz_v2
+  Path: event:/SFX/sfx_Door_Sliding
   Guid:
-    Data1: 99955764
-    Data2: 1336230007
-    Data3: -1966877310
-    Data4: -1710325833
+    Data1: -136588474
+    Data2: 1287950549
+    Data3: -1276037961
+    Data4: -1998602202
   Banks:
-  - {fileID: 3752584071770330045}
+  - {fileID: 3215915905116117971}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 345600
---- !u!114 &-7403938501374878836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/music_amb_Jazz_v1
-  m_EditorClassIdentifier: 
-  Path: event:/Music/music_amb_Jazz_v1
-  Guid:
-    Data1: -1665654847
-    Data2: 1339955176
-    Data3: -809878865
-    Data4: 1639507926
-  Banks:
-  - {fileID: 3752584071770330045}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters:
-  - {fileID: -1984626609508296655}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 174405
+  Length: 2000
 --- !u!114 &-7257871539724725410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,11 +431,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Footies.bank
   Name: Footies
   StudioPath: bank:/Footies
-<<<<<<< Updated upstream
-  lastModified: 638423082292609760
-=======
-  lastModified: 638422865434562481
->>>>>>> Stashed changes
+  lastModified: 638423162170395334
   FileSizes:
   - Name: Desktop
     Value: 181856
@@ -658,6 +626,33 @@ MonoBehaviour:
   MinDistance: 0.1
   MaxDistance: 2.6000001
   Length: 400
+--- !u!114 &-2359504058612007353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/music_amb_Jazz_v2
+  m_EditorClassIdentifier: 
+  Path: event:/Music/music_amb_Jazz_v2
+  Guid:
+    Data1: 99955764
+    Data2: 1336230007
+    Data3: -1966877310
+    Data4: -1710325833
+  Banks:
+  - {fileID: 3752584071770330045}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 345600
 --- !u!114 &-2094398617793386750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,30 +684,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 2900
---- !u!114 &-1984626609508296655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/music_amb_Jazz_v1/ReverbMusic
-  m_EditorClassIdentifier: 
-  Name: ReverbMusic
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2240943837
-    data2: 323744129
-  Type: 0
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-1073151450799404698
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,19 +819,16 @@ MonoBehaviour:
   - {fileID: -8703552094032804950}
   - {fileID: -7091260707869264968}
   - {fileID: 8789555518402276363}
-  - {fileID: -8050989985117227748}
-  - {fileID: -7403938501374878836}
+  - {fileID: -2359504058612007353}
+  - {fileID: 1471364502464305966}
+  - {fileID: -8053045015473899051}
   EditorParameters:
   - {fileID: 3112618691462046857}
   MasterBanks:
   - {fileID: -8274890527474066257}
   StringsBanks:
   - {fileID: 6722575401642249363}
-<<<<<<< Updated upstream
-  cacheTime: 638423082293520328
-=======
-  cacheTime: 638423068159575340
->>>>>>> Stashed changes
+  cacheTime: 638423162231935073
   cacheVersion: 131608
 --- !u!114 &270963226839330967
 MonoBehaviour:
@@ -904,11 +872,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-<<<<<<< Updated upstream
-  lastModified: 638423067796505573
-=======
-  lastModified: 638423068157578572
->>>>>>> Stashed changes
+  lastModified: 638423162231935073
   FileSizes:
   - Name: Desktop
     Value: 25113984
@@ -964,6 +928,58 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1050
+--- !u!114 &1341176153831246956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/music_amb_Jazz_v1/ReverbMusic
+  m_EditorClassIdentifier: 
+  Name: ReverbMusic
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2240943837
+    data2: 323744129
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &1471364502464305966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/music_amb_Jazz_v1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/music_amb_Jazz_v1
+  Guid:
+    Data1: -1665654847
+    Data2: 1339955176
+    Data3: -809878865
+    Data4: 1639507926
+  Banks:
+  - {fileID: 3752584071770330045}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1341176153831246956}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 174405
 --- !u!114 &1731039137945792321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1030,14 +1046,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-<<<<<<< Updated upstream
-  lastModified: 638423082293520328
-=======
-  lastModified: 638423068159575340
->>>>>>> Stashed changes
+  lastModified: 638423162157782912
   FileSizes:
   - Name: Desktop
-    Value: 7369888
+    Value: 7705472
   Exists: 1
 --- !u!114 &3383946071980174235
 MonoBehaviour:
@@ -1132,11 +1144,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-<<<<<<< Updated upstream
-  lastModified: 638423067797792417
-=======
-  lastModified: 638423068158954071
->>>>>>> Stashed changes
+  lastModified: 638423162211536057
   FileSizes:
   - Name: Desktop
     Value: 11470336
@@ -1344,14 +1352,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-<<<<<<< Updated upstream
-  lastModified: 638423067796890446
-=======
-  lastModified: 638423068157913893
->>>>>>> Stashed changes
+  lastModified: 638423162195782490
   FileSizes:
   - Name: Desktop
-    Value: 3448
+    Value: 3488
   Exists: 1
 --- !u!114 &6951711160529909927
 MonoBehaviour:
@@ -1392,11 +1396,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Loc_Ambience.bank
   Name: Loc_Ambience
   StudioPath: bank:/Loc_Ambience
-<<<<<<< Updated upstream
-  lastModified: 638423082292975489
-=======
-  lastModified: 638423068157913893
->>>>>>> Stashed changes
+  lastModified: 638423162184291314
   FileSizes:
   - Name: Desktop
     Value: 5156928

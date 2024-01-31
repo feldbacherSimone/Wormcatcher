@@ -9,9 +9,23 @@ namespace _Wormcatcher.Scripts.Interaction.SceneObjects
     {
         [SerializeField] private bool objectIsActive;
         [SerializeField] private SceneObject sceneObject;
+
+        public SceneObject SceneObject
+        {
+            get => sceneObject;
+            set => sceneObject = value;
+        }
+
         [SerializeField] private bool debug;
 
         [SerializeField] private bool active = true;
+        [SerializeField] private bool alwaysActive;
+
+        public bool AlwaysActive
+        {
+            get => alwaysActive;
+            set => alwaysActive = value;
+        }
 
         public bool Active
         {
@@ -65,13 +79,18 @@ namespace _Wormcatcher.Scripts.Interaction.SceneObjects
         
         public void DespawnObject()
         {
-            if (!active || sceneObject == null || currentSceneObject == null)
+            if (!active || sceneObject == null || currentSceneObject == null || alwaysActive)
             {
                 return;
             }
             currentSceneObject.SetActive(false);
             sceneObject.State = false; 
             DebugPrint("DespawnObject called");
+        }
+
+        public void DestroySceneObject()
+        {
+            Destroy(currentSceneObject);
         }
 
         public void DebugPrint(string msg)

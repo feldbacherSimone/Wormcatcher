@@ -22,6 +22,8 @@ namespace _Wormcatcher.Scripts.GameplayManagers
         [SerializeField] private GameObject staticCloset;
         [SerializeField] private GameObject interactiveClost;
 
+        [SerializeField] private DVDInteraction[] dvdInteractions;
+
         public bool PlayTest
         {
             get => playTest;
@@ -106,8 +108,19 @@ namespace _Wormcatcher.Scripts.GameplayManagers
             {
                 case 0:
                     PlayerData.SetAction(PlayerAction.FinishedDialogueV3);
+                    foreach (var dvdInteraction in dvdInteractions)
+                    {
+                        dvdInteraction.Active = true;
+                    }
                     break;
             }
         }
+
+        public void EndVignette3()
+        {
+        SceneLoader.SwitchScene(4);    
+        }
+
+   
     }
 }
