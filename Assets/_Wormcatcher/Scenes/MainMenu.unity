@@ -262,11 +262,11 @@ MonoBehaviour:
     Path: event:/UI/sfx_UI_Click
   hoverSound:
     Guid:
-      Data1: 554887567
-      Data2: 1291867352
-      Data3: 34571188
-      Data4: 2113475539
-    Path: event:/UI/sfx_UI_Click
+      Data1: 1588866032
+      Data2: 1166003856
+      Data3: 1131199130
+      Data4: -28763794
+    Path: event:/SFX/sfx_papers
 --- !u!1 &134413598
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,11 +682,11 @@ MonoBehaviour:
     Path: event:/UI/sfx_UI_Click
   hoverSound:
     Guid:
-      Data1: 554887567
-      Data2: 1291867352
-      Data3: 34571188
-      Data4: 2113475539
-    Path: event:/UI/sfx_UI_Click
+      Data1: 1588866032
+      Data2: 1166003856
+      Data3: 1131199130
+      Data4: -28763794
+    Path: event:/SFX/sfx_papers
 --- !u!4 &243912299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5327088920293448736, guid: bd12f2d1183ee1c439aeb9bda55bf0cc,
@@ -834,11 +834,11 @@ MonoBehaviour:
     Path: event:/UI/sfx_UI_Click
   hoverSound:
     Guid:
-      Data1: 554887567
-      Data2: 1291867352
-      Data3: 34571188
-      Data4: 2113475539
-    Path: event:/UI/sfx_UI_Click
+      Data1: 1588866032
+      Data2: 1166003856
+      Data3: 1131199130
+      Data4: -28763794
+    Path: event:/SFX/sfx_papers
 --- !u!1 &398835620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,11 +1493,11 @@ MonoBehaviour:
     Path: event:/UI/sfx_UI_Click
   hoverSound:
     Guid:
-      Data1: 554887567
-      Data2: 1291867352
-      Data3: 34571188
-      Data4: 2113475539
-    Path: event:/UI/sfx_UI_Click
+      Data1: 1588866032
+      Data2: 1166003856
+      Data3: 1131199130
+      Data4: -28763794
+    Path: event:/SFX/sfx_papers
 --- !u!4 &1272253870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5c6f891d7e7c2454cb2e3d694b58473c,

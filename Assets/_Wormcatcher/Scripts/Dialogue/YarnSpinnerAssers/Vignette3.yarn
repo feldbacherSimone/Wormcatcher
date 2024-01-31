@@ -1,4 +1,4 @@
-title: V3
+title: V3_Greeting
 tags:
 ---
 
@@ -12,36 +12,45 @@ PC: It is I, my love
 Partner: Hmmm.
 Partner: You may proceed
 
-Partner: Go wash your hands, you filthy animal.
+<<if get_player_action("HandsWashed") == false>>
+    Partner: Go wash your hands, you filthy animal.
+    
+    ->PC: Such tender words from my lover.
+        <<update_stat Nice 1>>
+    ->PC: No need to be rude.
+<<endif>>
+=== 
 
-->PC: Such tender words from my lover.
-    <<update_stat Nice 1>>
-->PC: No need to be rude.
-
-*** New Node***
-//if the player tries to interact with the kitchen sink
-
+title: V3_KitchenSink
+tags:
+---
 Partner: I called the plumber today, should be fixed by tomorrow.
+=== 
 
-*** New Node*** --> starts when player sits down
+title: V3_Conversation
+tags:
+---
 
 Partner: A mucky pup no more.
 
-PC:  How did you know I had a hankering for mash? And are those your..
+<<first_letter>>
+PC:  How did you know I had a hankering for mash? 
+PC:  And are those your..
 
-Partner:  ... my peas de resistance? In all their minty gloriness 
+Partner:  ... my peas de resistance? In all their minty gloriness. 
 
-Partner:Excel treat you nicely today.
+Partner: Excel treat you nicely today?
 
-PC: The gods of the picot table were merciful at last. And Helen...
+PC: The gods of the picot table
+PC: were merciful at last. And Helen...
 
-Partner:  Yes?! 
+Partner: Yes?! 
 
 PC: She wasn't a complete cunt!
 
 Partner: Rejoice
 
-So what's the occasion for all this?
+PC: So what's the occasion for all this?
  
 Partner: Well... I told you about the grant? For the project?
 
@@ -50,7 +59,8 @@ Partner: Well... I told you about the grant? For the project?
 ->PC: Yes?! For the string installation?
     <<update_stat Nice 1>>
 
-Partner: The interview went really well! They said I'm in the final three.
+Partner: The interview went really well! 
+Partner: They said I'm in the final three.
 
 ->PC: I know you'll get it.
     <<update_stat Nice 2>>
@@ -66,7 +76,9 @@ Partner: If this doesn't work out...
 
 PC: I'm proud of you anyway for going for it.
 
-PC: Who knows, maybe if everything works out we can finally travel to
+PC: Who knows, 
+PC: maybe if everything works out 
+PC: we can finally travel to...
 
 ->PC: Samarkand
     <<update_stat Nice 1>>
@@ -79,7 +91,11 @@ PC: Still up for a movie night?
 
 Partner:Oh, enticing... we've got some new DVDs from that subscription. Check the shelf.
 
-*** New Node*** --> starts when player interacts with dvds
+=== 
+
+title: V3_Dvd1
+tags:
+---
 
 PC: Who are you?
 
@@ -87,7 +103,11 @@ Partner: I am Death.
 
 PC: Iconic. But not really feeling ready to "Seal" the deal.
 
-*** New Node*** --> starts when player interacts with next dvd
+=== 
+
+title: V3_Dvd2
+tags:
+---
 
 PC: We haven't seen this one in a while?
 
@@ -97,7 +117,11 @@ PC: I thought you liked Lynch?
 
 Partner: Not today.
 
-*** New Node*** --> starts when player interacts with next dvd
+=== 
+
+title: V3_Dvd3
+tags:
+---
 
 PC: Czech this out.
 
@@ -107,11 +131,19 @@ Partner: For this alone it's a no from me.
 
 PC: So-ve-it.
 
-*** New Node*** --> starts when player interacts with next dvd
+=== 
+
+title: V3_Dvd4
+tags:
+---
 
 PC: In the mood for some Regina George?
 
-*** New Node*** --> starts when player interacts with next dvd
+=== 
+
+title: V3_Dvd5
+tags:
+---
 
 Partner: What about that one at the end?
 

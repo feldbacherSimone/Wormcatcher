@@ -17,7 +17,7 @@ namespace _Wormcatcher.Scripts
         [SerializeField] TextMeshProUGUI text;
         //[SerializeField] bool showCharacterName = false;
         [SerializeField] internal UnityEngine.Events.UnityEvent onCharacterTyped;
-        [SerializeField] private LineLayout lineLayout; 
+        [SerializeField] private LineObject lineObject; 
         private bool revealOnHover;
 
         public bool RevealOnHover
@@ -116,6 +116,7 @@ namespace _Wormcatcher.Scripts
         {
             if (!revealOnHover && !expanded && !isRevealing)
             {
+                lineObject.PlayClickSound();
                 StartCoroutine(RevealOption());
             }
             else if(expanded)
@@ -132,6 +133,7 @@ namespace _Wormcatcher.Scripts
             
             if (expanded || !revealOnHover)
             {
+                lineObject.PlayHoverSound();
                 base.Select();
             }
             else if (!isRevealing && RevealOnHover)

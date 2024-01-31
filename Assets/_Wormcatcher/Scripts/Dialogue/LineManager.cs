@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using _Wormcatcher.Scripts.Dialogue;
 using UnityEngine.Serialization;
 using Yarn.Unity;
 using UnityEngine.UI;
@@ -22,6 +23,11 @@ namespace _Wormcatcher.Scripts
         [SerializeField] private GameObject playerLineRef;
         [SerializeField] private GameObject npcLineRef;
 
+        [SerializeField] private bool overrideLineLayout; 
+        [SerializeField] float maxWidth = 77;
+        [SerializeField] private float minWidth = 10;
+        [SerializeField] private int minPadding = 10;
+        [SerializeField] private int maxPadding = 87;
         private int count = 0;
 
         public void ClearLines()
@@ -37,6 +43,7 @@ namespace _Wormcatcher.Scripts
         {
             LineObject newLine = null;
             GameObject currentRef;
+            
 
             // read character name and decide where to place line
             switch (name)
@@ -54,8 +61,13 @@ namespace _Wormcatcher.Scripts
             newLine = newLineObject.GetComponent<LineObject>();
             newLineObject.transform.SetSiblingIndex(transform.childCount - 2);
             newLineObject.name = "Line_" + ++count;
-           
-            
+
+            if (overrideLineLayout)
+            {
+                LineLayout lineLayout = newLineObject.GetComponent<LineLayout>();
+                if(lineLayout !=null){ lineLayout.SetParamerters(maxWidth, minWidth, minPadding, maxPadding);}
+            }
+
             linesObjects.Add(newLineObject);
 
             // Delete Overflowing Lines; 

@@ -424,6 +424,7 @@ namespace _Wormcatcher.Scripts
             {
                 lineText.color = backgroundColor;
                 hideLineOnStart = false;
+                currentLineObject.PlayClickSound();
                 StartCoroutine(RunLineInternal(currentDialogueLine, dialogueLineFinished));
                 expanded = true;
             }
@@ -434,6 +435,7 @@ namespace _Wormcatcher.Scripts
             isSelected = true;
             if (hideLineOnStart)
             {
+                currentLineObject.PlayHoverSound();
                 lineText.color = backgroundColor; 
             }
         }

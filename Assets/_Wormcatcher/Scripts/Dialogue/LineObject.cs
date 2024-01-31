@@ -1,4 +1,5 @@
 using System;
+using _Wormcatcher.Scripts.Audio;
 using _Wormcatcher.Scripts.Dialogue;
 using FMOD.Studio;
 using FMODUnity;
@@ -16,6 +17,8 @@ namespace _Wormcatcher.Scripts
     {
 
         [SerializeField] private EventReference talkSound; 
+        [SerializeField] private EventReference hoverSound; 
+        [SerializeField] private EventReference clickSound; 
         [SerializeField] private CanvasGroup canvasGroup; // to give to the line view
         [SerializeField] private GameObject lineContainerObject;
         [SerializeField] private TextMeshProUGUI lineTextField;
@@ -40,6 +43,15 @@ namespace _Wormcatcher.Scripts
         private void OnDisable()
         {
             StopSound();
+        }
+
+        public void PlayHoverSound()
+        {
+            AudioManager.Instance.PlayOneShot(hoverSound, transform.position);
+        }
+        public void PlayClickSound()
+        {
+            AudioManager.Instance.PlayOneShot(clickSound, transform.position);
         }
     }
 }

@@ -8,15 +8,16 @@ using UnityEngine.Serialization;
 
 namespace _Wormcatcher.Scripts.GameplayManagers
 {
-    public class Vignette1Manager : MonoBehaviour
+    public enum TestPosition
+    {
+        Hallway,
+        Mudroom,
+        Apartment
+    }
+    public class Vignette1Manager : VignetteManager
     {
         
-        public enum TestPosition
-        {
-            Hallway,
-            Mudroom,
-            Apartment
-        }
+     
 
         [SerializeField] private Transform[] spawnPositions;
 
@@ -106,7 +107,7 @@ namespace _Wormcatcher.Scripts.GameplayManagers
             SceneLoader.SwitchScene(1);
         }
 
-        public void ChangeToApartment()
+        public override void ChangeToApartment()
         {
             ChangePosition(2);
             SceneLoader.SwitchScene(1);

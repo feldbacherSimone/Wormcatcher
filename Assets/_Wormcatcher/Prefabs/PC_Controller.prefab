@@ -400,6 +400,7 @@ MonoBehaviour:
   initRotation: 0
   limitLookAngle: 0
   lookAngle: 360
+  lookAngleVert: 0
   mouseSensitivityBounds:
   - 10
   - 40
@@ -2438,11 +2439,11 @@ MonoBehaviour:
     Path: event:/UI/sfx_UI_Click
   hoverSound:
     Guid:
-      Data1: 554887567
-      Data2: 1291867352
-      Data3: 34571188
-      Data4: 2113475539
-    Path: event:/UI/sfx_UI_Click
+      Data1: 1588866032
+      Data2: 1166003856
+      Data3: 1131199130
+      Data4: -28763794
+    Path: event:/SFX/sfx_papers
 --- !u!1 &7385496237988328938
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,11 +2719,11 @@ MonoBehaviour:
     Path: event:/UI/sfx_UI_Click
   hoverSound:
     Guid:
-      Data1: 554887567
-      Data2: 1291867352
-      Data3: 34571188
-      Data4: 2113475539
-    Path: event:/UI/sfx_UI_Click
+      Data1: 1588866032
+      Data2: 1166003856
+      Data3: 1131199130
+      Data4: -28763794
+    Path: event:/SFX/sfx_papers
 --- !u!1 &7869266664939132046
 GameObject:
   m_ObjectHideFlags: 0

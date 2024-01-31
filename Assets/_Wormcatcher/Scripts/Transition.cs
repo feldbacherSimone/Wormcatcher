@@ -18,10 +18,13 @@ namespace _Wormcatcher.Scripts
             StartCoroutine(TextEffects.FadeIn(canvasGroup, 2.0f, () =>
             {
                 SceneLoader.LoadNextScene();
+                
                 int currentVignette = PlayerData.Vignette;
                 GameObject currentTitle = currentVignette != 0 ? titles[currentVignette] : menuTitle;
                 GameObject.Instantiate(currentTitle, canvas.transform);
+                
                 SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+                
                 AnimateText typewriter = FindObjectOfType<AnimateText>();
                 if (typewriter != null)
                 {

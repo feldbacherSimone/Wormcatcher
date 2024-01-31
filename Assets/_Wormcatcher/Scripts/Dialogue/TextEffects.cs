@@ -82,9 +82,37 @@ namespace _Wormcatcher.Scripts
                 if (i < fullText.Length)
                 {
                     char letter = fullText[i];
-                    textComponent.text = fullText.Substring(0, i + 1);
 
-                    onLetterCallback?.Invoke(letter);
+                    // Check if the current character is a space
+                    if (letter == ' ')
+                    {
+                        // Find consecutive spaces
+                        int consecutiveSpaces = 0;
+                        while (i + consecutiveSpaces < fullText.Length && fullText[i + consecutiveSpaces] == ' ')
+                        {
+                            consecutiveSpaces++;
+                        }
+
+                        // Display all consecutive spaces at the same time
+                        if (consecutiveSpaces > 1)
+                        {
+                            textComponent.text = fullText.Substring(0, i + consecutiveSpaces);
+
+                            i += consecutiveSpaces - 1; // Skip the consecutive spaces
+                        }
+                        else
+                        {
+                            // Display a single space
+                            textComponent.text = fullText.Substring(0, i + 1);
+                            onLetterCallback?.Invoke(letter);
+                        }
+                    }
+                    else
+                    {
+                        // Display non-space characters
+                        textComponent.text = fullText.Substring(0, i + 1);
+                        onLetterCallback?.Invoke(letter);
+                    }
                 }
                 else
                 {

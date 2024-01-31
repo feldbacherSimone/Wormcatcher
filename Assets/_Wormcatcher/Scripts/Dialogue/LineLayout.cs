@@ -23,6 +23,14 @@ namespace _Wormcatcher.Scripts.Dialogue
         [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField] private RectTransform rectTransform;
 
+
+        public void SetParamerters(float maxWidth, float minWidth, int minPadding, int maxPadding)
+        {
+            this.maxWidth = maxWidth;
+            this.minWidth = minWidth;
+            this.maxPadding = maxPadding;
+            this.minPadding = minPadding; 
+        }
         private void Start()
         {
             rectTransform = (rectTransform == null)

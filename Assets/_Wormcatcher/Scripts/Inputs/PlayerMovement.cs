@@ -66,6 +66,7 @@ namespace _Wormcatcher.Scripts.Inputs
 
         public void DisableWalk()
         {
+            if(playerInputAction == null) return;
             movable = false;
             playerInputAction.WalkInput.Disable();
         }

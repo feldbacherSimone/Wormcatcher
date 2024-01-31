@@ -1,39 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &2040098125786995972
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5603874004261083486}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.09329283, y: 1.5300477, z: 0.95298725}
-  m_Center: {x: -0.0018270612, y: 0.017376425, z: -0.009426386}
---- !u!114 &2040098125786995974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5603874004261083486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8450553a82fa9e458f087409e0eccc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debug: 0
-  active: 1
-  isOpen: 0
-  animator: {fileID: 2040098125786995970}
-  interactTrigger: Interact
-  lockedBool: Locked
-  InteractEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!95 &2040098125786995970
 Animator:
   serializedVersion: 3
@@ -183,6 +149,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2040098125786995972
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5603874004261083486}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09329283, y: 1.5300477, z: 0.95298725}
+  m_Center: {x: -0.0018270612, y: 0.017376425, z: -0.009426386}
+--- !u!114 &2040098125786995974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5603874004261083486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8450553a82fa9e458f087409e0eccc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  active: 1
+  isOpen: 0
+  animator: {fileID: 2040098125786995970}
+  interactTrigger: Interact
+  lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &67514976759783470
 PrefabInstance:
   m_ObjectHideFlags: 0

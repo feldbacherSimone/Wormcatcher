@@ -13,7 +13,7 @@ public enum Clothing
 public class HangClothes : MonoBehaviour
 {
     private readonly Dictionary<Clothing, bool> clothingHung = new Dictionary<Clothing, bool>();
-    [SerializeField] private Vignette1Manager vignette1Manager;
+    [SerializeField] private VignetteManager vignette1Manager;
    
     private void InitializeDictionary()
     {

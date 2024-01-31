@@ -7,11 +7,14 @@ namespace _Wormcatcher.Scripts.Interaction
     public class DialogeInteraction : InteractionObject
     {
         [SerializeField] private String startNode;
-        [SerializeField] private DialogueRunner dialogueRunner; 
+        [SerializeField] private DialogueRunner dialogueRunner;
+
+        [SerializeField] private bool useCondition;
+        [SerializeField] private PlayerAction condition;
         
         public override void Interact()
         {
-            if(!Active)
+            if(!Active ||(useCondition && !PlayerData.GetActionValue(condition)))
                 return;
             
             base.Interact();
