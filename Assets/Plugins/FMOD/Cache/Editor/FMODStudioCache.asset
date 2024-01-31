@@ -97,7 +97,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638410959308817129
+  lastModified: 638423351858926673
   FileSizes:
   - Name: Desktop
     Value: 1220
@@ -407,7 +407,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Footies.bank
   Name: Footies
   StudioPath: bank:/Footies
-  lastModified: 638423083580432584
+  lastModified: 638423351858245795
   FileSizes:
   - Name: Desktop
     Value: 181856
@@ -804,7 +804,7 @@ MonoBehaviour:
   - {fileID: -8274890527474066257}
   StringsBanks:
   - {fileID: 6722575401642249363}
-  cacheTime: 638423365420726356
+  cacheTime: 638423363268324565
   cacheVersion: 131608
 --- !u!114 &270963226839330967
 MonoBehaviour:
@@ -848,7 +848,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638423365418743735
+  lastModified: 638423363267408284
   FileSizes:
   - Name: Desktop
     Value: 25113984
@@ -1022,7 +1022,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638423365420726356
+  lastModified: 638423351861572704
   FileSizes:
   - Name: Desktop
     Value: 7705248
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638423365420130271
+  lastModified: 638423363268324565
   FileSizes:
   - Name: Desktop
     Value: 11470336
@@ -1328,7 +1328,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638423365419139632
+  lastModified: 638423351858946589
   FileSizes:
   - Name: Desktop
     Value: 3440
@@ -1372,7 +1372,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Loc_Ambience.bank
   Name: Loc_Ambience
   StudioPath: bank:/Loc_Ambience
-  lastModified: 638423365419129602
+  lastModified: 638423351858856241
   FileSizes:
   - Name: Desktop
     Value: 5156928

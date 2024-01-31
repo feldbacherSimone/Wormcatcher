@@ -1,4 +1,4 @@
-﻿title: Phone
+﻿title: Memes
 tags:
 ---
 
@@ -16,7 +16,14 @@ PC: Weren't you supposed to...
 
 PC: [interruption] Yeah yeah** 
 
-*** New Node*** --> starts when player interacts with partner/ comes close
+===
+
+
+
+
+title: Storms
+tags:
+---
 
 PC: You shouldn't be watching this stuff.
 PC: It makes you anxious.
@@ -32,8 +39,15 @@ Partner: Shh... this one is EF 3.
 
 PC: But...
 
-*** New Node*** --> starts when player interacts with partner/ comes close
+===
 
+
+
+
+
+title: Worms
+tags:
+---
 
 Partner: I think I have worms.
 
@@ -48,8 +62,15 @@ PC: You're anxious, that's it.
 Partner: I know it's serious.
 Partner: Especially for someone with my condition.
 
-*** New Node*** --> starts when player interacts with partner/ comes close
+===
 
+
+
+
+
+title: People
+tags:
+---
 
 Partner: I can't look at this?
 
@@ -64,7 +85,14 @@ Partner: What they're doing to people like me. You. What they're saying about us
 
 Partner: You're not helping
 
-*** New Node*** --> starts when player interacts with partner/ comes close
+===
+
+
+
+
+title: Pills
+tags:
+---
 
 
 Partner: I'm so tired.
@@ -85,6 +113,5 @@ PC:  Me?
 Partner: Zyprexa? That's you.
 
 PC: I don't...
-
 
 ===
