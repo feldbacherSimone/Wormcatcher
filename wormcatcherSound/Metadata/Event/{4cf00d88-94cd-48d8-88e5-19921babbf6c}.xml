@@ -5,7 +5,7 @@
 			<value>sfx_LightSwitch</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{2ad18ad4-74c2-46f4-a6e2-67f2cb172468}</destination>
@@ -132,7 +132,6 @@
 			<destination>{de07f24d-3ee0-495f-ae58-cf43c1f04c1d}</destination>
 			<destination>{9b4f7691-5e63-44cd-8fdb-05271ff48868}</destination>
 			<destination>{ad60d7ab-8405-40b9-8f37-64f3d849cf94}</destination>
-			<destination>{c5863f77-36df-406a-a690-4cfaf66b7b48}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{8976de88-8ac7-4c10-b81d-fc46fd282ac1}" />
@@ -189,7 +188,6 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{ad60d7ab-8405-40b9-8f37-64f3d849cf94}" />
-	<object class="SpatialiserEffect" id="{c5863f77-36df-406a-a690-4cfaf66b7b48}" />
 	<object class="AutomationPoint" id="{d7df268b-a006-4a5d-957e-73d0f9033f31}">
 		<property name="position">
 			<value>0.38</value>
