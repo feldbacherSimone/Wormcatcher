@@ -25,4 +25,10 @@ public class DialogueOnTriggerEnter : MonoBehaviour
         if(triggered) return;
         fishDialogueRunner.StartDialogue(nodeName);
     }
+    
+    public void TriggerDialogue(string node)
+    {
+        if(triggered) return;
+        fishDialogueRunner.StartDialogue(node);
+    }
 }
