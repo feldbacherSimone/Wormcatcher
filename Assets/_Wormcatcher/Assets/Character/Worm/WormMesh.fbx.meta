@@ -18,10 +18,25 @@ ModelImporter:
   - first:
       74: 1779002178900007485
     second: metarig|Stage2In
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WormBody
+    second: {fileID: 2100000, guid: 8d15a6eb1844cff4da3f8f01618ce328, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WormOtter
+    second: {fileID: 2100000, guid: 67b6b77bd01e6eb418867cc83fe63aa6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WormSuit
+    second: {fileID: 2100000, guid: 376d8d46bd807154a924f385a20701a7, type: 2}
   materials:
     materialImportMode: 1
-    materialName: 0
+    materialName: 1
     materialSearch: 1
     materialLocation: 1
   animations:
