@@ -79,7 +79,7 @@ namespace _Wormcatcher.Scripts.GameplayManagers
         {
             if (overrideSpawnPoints) return;
 
-            switch (PlayerData.V1Progress)
+            switch (PlayerData.V3Progress)
             {
                 case 0:
                     playerMovement.DisableWalk();
@@ -99,6 +99,7 @@ namespace _Wormcatcher.Scripts.GameplayManagers
         public override void ChangeToApartment()
         {
             ChangePosition(1);
+            PlayerData.V3Progress = 1; 
             SceneLoader.SwitchScene(3);
         }
 
@@ -118,9 +119,7 @@ namespace _Wormcatcher.Scripts.GameplayManagers
 
         public void EndVignette3()
         {
-        SceneLoader.SwitchScene(4);    
+            SceneLoader.SwitchScene(4);
         }
-
-   
     }
 }

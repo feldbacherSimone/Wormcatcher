@@ -98,6 +98,9 @@ MonoBehaviour:
   OnObjects:
   - {fileID: 2728294114301658}
   OffObjects: []
+  interactionEvent:
+    m_PersistentCalls:
+      m_Calls: []
   hangClothes: {fileID: 0}
   clothingItem: 1
   interactEvent:
@@ -197,6 +200,9 @@ MonoBehaviour:
   OnObjects:
   - {fileID: 6892328107399306622}
   OffObjects: []
+  interactionEvent:
+    m_PersistentCalls:
+      m_Calls: []
   hangClothes: {fileID: 0}
   clothingItem: 1
   interactEvent:
@@ -227,11 +233,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound:
     Guid:
-      Data1: 1917920901
-      Data2: 1074649598
-      Data3: -980709446
-      Data4: -1830181546
-    Path: event:/SFX/sfx_Schachtel
+      Data1: 1070607189
+      Data2: 1285722728
+      Data3: 342468483
+      Data4: 1602151505
+    Path: event:/SFX/sfx_ShoesPutdown
 --- !u!95 &6167809147769601371
 Animator:
   serializedVersion: 3
@@ -367,6 +373,9 @@ MonoBehaviour:
   OnObjects:
   - {fileID: 5985652851837874342}
   OffObjects: []
+  interactionEvent:
+    m_PersistentCalls:
+      m_Calls: []
   hangClothes: {fileID: 0}
   clothingItem: 0
   interactEvent:
