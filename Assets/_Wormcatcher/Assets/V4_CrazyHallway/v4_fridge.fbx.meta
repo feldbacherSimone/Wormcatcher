@@ -1,33 +1,13 @@
 fileFormatVersion: 2
-guid: 3bac80414b52fbb499478eabd880d319
+guid: 6f148745efa594641ab7d10851dee82b
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Metall
-    second: {fileID: 2100000, guid: 12b529b3b5f4adf43a130b8561a84039, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PlasticMat
-    second: {fileID: 2100000, guid: f5140d4195ae6874f8cc0889bc9d395d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WoodMat
-    second: {fileID: 2100000, guid: 42392a7b46fb07449aad4384213977c3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "plastict\xFCrkis"
-    second: {fileID: 2100000, guid: 790d5cbd4b5951643bb084f6090a2f26, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
-    materialName: 1
-    materialSearch: 2
+    materialName: 0
+    materialSearch: 1
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4

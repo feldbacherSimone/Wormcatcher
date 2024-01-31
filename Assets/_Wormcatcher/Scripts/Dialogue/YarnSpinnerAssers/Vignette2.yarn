@@ -8,6 +8,7 @@ Date: How was traffic?
 -> PC: Kind of a nightmare, they're doing construction downtown 
 -> PC: Yeah, it was... fine I guess.
 
+
 Date: So... on your profile you said you liked...eating out?
 
 <<first_letter>> 
@@ -55,8 +56,9 @@ Date: Do you use Excel for work? Any tables you’re pivoting?
 PC: I've used it before - but the worm?
 
 Date: Mhm. So - have you thought about having kids?
-
-
+<<change_stage 1>>
+<<wait 5>>
+<<first_letter>> 
 PC: H- Hi?
 
 <<change_speed 30>>
@@ -78,15 +80,17 @@ PC: I-
 Date: Of course, my contribution to the Codices of the BFJ Criteria collection where a big part of the emergence of cannibalistic traditions within the liminal hermeneutics of cinema.
 
 PC: Your contributions?
-
+<<change_stage 2>>
 <<change_speed 80>>
 Date: Climactic voidelessness, as elucidated by Celviky, embodies an avant-garde approach to storytelling, 
 Date: one that vehemently challenges conventional cinematic resolutions. 
 Date: It is a deliberate negation of the expected crescendo, a rejection of catharsis in favor of thematic and psychological dissonance. 
 Date: Within this aesthetic paradigm, climaxes remain conspicuously absent, suspended in a state of perpetual ambiguity. 
+<<change_stage 3>>
 Date: Characters' arcs do not resolve neatly; narratives remain suspended, poised on the precipice of fulfillment, leaving audiences in a perpetual state of suspension.
 
 
+<<wait 5>>
 Date: So - do you prefer cats or dogs?
 
 <<change_line "Who is Celviky?">>

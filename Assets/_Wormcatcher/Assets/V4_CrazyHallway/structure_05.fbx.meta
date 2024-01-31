@@ -1,28 +1,13 @@
 fileFormatVersion: 2
-guid: 3574fa1326c5eba48bf56be74276d67f
+guid: 3a4e22f29725fa74295d595593dd9908
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: beton_raw
-    second: {fileID: 2100000, guid: c8eb8387af79be44eb217bc40619242e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: beton_white
-    second: {fileID: 2100000, guid: 0f81d52c459701c40be654aa89e3d10e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: runningWater
-    second: {fileID: 2100000, guid: 97192188ba1cbd44c90342e2b804898a, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
-    materialName: 1
-    materialSearch: 2
+    materialName: 0
+    materialSearch: 1
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
@@ -51,7 +36,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1

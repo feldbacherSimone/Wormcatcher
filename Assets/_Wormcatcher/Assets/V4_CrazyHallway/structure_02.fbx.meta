@@ -1,93 +1,13 @@
 fileFormatVersion: 2
-guid: 402e993bef8dfc24f8cad5634b91bca4
+guid: c0ab8e4fa56159149bc79443d9119f61
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BlackPlastic
-    second: {fileID: 2100000, guid: 723e89ea999902e42a05185c5905c351, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: DirtyDishes
-    second: {fileID: 2100000, guid: 7557f4b2db1c3524fa251916b93483d6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Fabric2_Green
-    second: {fileID: 2100000, guid: 28a04f37f7ca3e24d9af47952ab81c6b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Lamp_GlowWarm
-    second: {fileID: 2100000, guid: 44b3baa6e20b6994e869d4d09968ebbe, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Metall
-    second: {fileID: 2100000, guid: 12b529b3b5f4adf43a130b8561a84039, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PlasticMat
-    second: {fileID: 2100000, guid: f5140d4195ae6874f8cc0889bc9d395d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WoodDarkMat
-    second: {fileID: 2100000, guid: 66f7732b8689f5a4eb19a8a4b9c240bd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WoodLightMat
-    second: {fileID: 2100000, guid: ce4d29eb974212143a84f55b0cafb6e9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WoodMat
-    second: {fileID: 2100000, guid: 42392a7b46fb07449aad4384213977c3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: beton_raw
-    second: {fileID: 2100000, guid: c8eb8387af79be44eb217bc40619242e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: beton_white
-    second: {fileID: 2100000, guid: 0f81d52c459701c40be654aa89e3d10e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: food
-    second: {fileID: 2100000, guid: 48a5cf2d54f7df64699018ba92005130, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: glassMat
-    second: {fileID: 2100000, guid: 8d902efb33cbfb847a079ccce0419a5d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: portrait1
-    second: {fileID: 2100000, guid: 68c8b15e4b21b284c9cce63367fbad54, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: portrait2
-    second: {fileID: 2100000, guid: 298b68eda398bd947bad3314f3da6e4c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: portrait3
-    second: {fileID: 2100000, guid: 3a7b85a2c2ee6f645a3faa8e8153633e, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
-    materialName: 1
-    materialSearch: 2
+    materialName: 0
+    materialSearch: 1
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
@@ -116,7 +36,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1

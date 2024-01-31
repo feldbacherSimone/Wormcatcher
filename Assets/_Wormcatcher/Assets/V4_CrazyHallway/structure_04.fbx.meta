@@ -1,53 +1,13 @@
 fileFormatVersion: 2
-guid: 9c06d0b40441d2148baefae0363b4cef
+guid: 971d041c53af0cf4e80ca2558bffd41f
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Metall
-    second: {fileID: 2100000, guid: 12b529b3b5f4adf43a130b8561a84039, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Portriat4
-    second: {fileID: 2100000, guid: 3b156f1c9fe86314e870f641a36ecfd3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WoodDarkMat
-    second: {fileID: 2100000, guid: 66f7732b8689f5a4eb19a8a4b9c240bd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WoodLightMat
-    second: {fileID: 2100000, guid: ce4d29eb974212143a84f55b0cafb6e9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: WoodMat
-    second: {fileID: 2100000, guid: 42392a7b46fb07449aad4384213977c3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: beton_raw
-    second: {fileID: 2100000, guid: c8eb8387af79be44eb217bc40619242e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: beton_white
-    second: {fileID: 2100000, guid: 0f81d52c459701c40be654aa89e3d10e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: runningWater
-    second: {fileID: 2100000, guid: 97192188ba1cbd44c90342e2b804898a, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
-    materialName: 1
-    materialSearch: 2
+    materialName: 0
+    materialSearch: 1
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
@@ -76,7 +36,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
