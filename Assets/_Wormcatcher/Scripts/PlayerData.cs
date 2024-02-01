@@ -17,6 +17,7 @@ namespace _Wormcatcher.Scripts
         HandsWashed, 
         FinishedDialogueV3, 
         DvdFetched,
+        FinishV4Dialogue,
     }
 
     public static class PlayerData
@@ -41,8 +42,9 @@ namespace _Wormcatcher.Scripts
             { PlayerAction.ToggleLight, false },
             { PlayerAction.FinishV1Dialogue, false},
             { PlayerAction.HandsWashed, false},
-            { PlayerAction.FinishedDialogueV3, true},
+            { PlayerAction.FinishedDialogueV3, false},
             { PlayerAction.DvdFetched, false},
+            { PlayerAction.FinishV4Dialogue , false}
         };
 
         private static int v1Progress = 0;

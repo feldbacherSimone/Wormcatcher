@@ -25,34 +25,13 @@ namespace _Wormcatcher.Scripts.GameplayManagers
         [SerializeField] private PlayerMovement playerMovement;
         [SerializeField] private MouseLook mouseLook;
         [SerializeField] private StepSoundManager2 stepSoundManager2;
-        [SerializeField] private bool overrideSpawnPoints;
-        [SerializeField] private bool playTest;
         [SerializeField] private SceneObjectHandler sceneObjectHandler; 
         [SerializeField] private GameObject staticCloset; 
         [SerializeField] private GameObject interactiveClost;
 
         [FormerlySerializedAs("waterplane")] [SerializeField] private GameObject waterPlane;
         [SerializeField] private Vector3 waterTopPos; 
-        public bool PlayTest
-        {
-            get => playTest;
-            set => playTest = value;
-        }
-
-        public TestPosition TestPositions
-        {
-            get => testPositions;
-            set => testPositions = value;
-        }
         
-        [SerializeField] private TestPosition testPositions;
-
-        public void ChangePosition(int i)
-        {
-            PlayerData.V1Progress = i;
-            Debug.Log($"Player v1 progress is {PlayerData.V1Progress}");
-        }
-
         public void SetState()
         {
             if(!playTest) return;
@@ -66,7 +45,6 @@ namespace _Wormcatcher.Scripts.GameplayManagers
             }
         }
         
-
         private void Awake()
         {
             if (overrideSpawnPoints)
@@ -107,13 +85,13 @@ namespace _Wormcatcher.Scripts.GameplayManagers
 
         public void ChangeToMudroom(float time)
         {
-            ChangePosition(1);
+            ChangePosition(1, 1);
             SceneLoader.SwitchScene(1);
         }
 
         public override void ChangeToApartment()
         {
-            ChangePosition(2);
+            ChangePosition(2, 1);
             SceneLoader.SwitchScene(1);
         }
 
@@ -132,8 +110,7 @@ namespace _Wormcatcher.Scripts.GameplayManagers
                 StartCoroutine(RiseWater(0.02f));
             }
         }
-
-    
+        
 
         IEnumerator RiseWater(float speed)
         {

@@ -2938,12 +2938,12 @@ PrefabInstance:
     - target: {fileID: 7340457496646159853, guid: 610591ffc1beafd42ac5c9ecb3986b69,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7340457496646159853, guid: 610591ffc1beafd42ac5c9ecb3986b69,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7340457496646159853, guid: 610591ffc1beafd42ac5c9ecb3986b69,
         type: 3}
@@ -3563,6 +3563,31 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!1 &927491800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1360236241005061581, guid: 5068d5d1eac9a1843aecabb3758f045a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610296229}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &927491802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927491800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 1231941614
+      Data2: 1240400300
+      Data3: 158738320
+      Data4: 1125573162
+    Path: event:/SFX/sfx_KeysDoorOpen
 --- !u!1 &930374103
 GameObject:
   m_ObjectHideFlags: 0
@@ -3933,6 +3958,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4583741789801358153, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 41822454, guid: 846b49896810a94488ad1ec6451fba85, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.2
@@ -4345,6 +4375,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d99ad0b654f96c43a5c5002825ab40b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  overrideSpawnPoints: 0
+  playTest: 0
+  testPositions: 0
   spawnPositions:
   - {fileID: 1786134389}
   - {fileID: 727595320}
@@ -4353,14 +4386,11 @@ MonoBehaviour:
   playerMovement: {fileID: 1135695537}
   mouseLook: {fileID: 1954673596}
   stepSoundManager2: {fileID: 954200883}
-  overrideSpawnPoints: 0
-  playTest: 0
   sceneObjectHandler: {fileID: 0}
   staticCloset: {fileID: 1670727488}
   interactiveClost: {fileID: 434606263}
   waterPlane: {fileID: 54496267}
   waterTopPos: {x: 2.223, y: 1.8, z: -0.079}
-  testPositions: 0
 --- !u!4 &1117998251
 Transform:
   m_ObjectHideFlags: 0
@@ -5819,6 +5849,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorFrontLocked (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2708757264477802830, guid: 5068d5d1eac9a1843aecabb3758f045a,
+        type: 3}
+      propertyPath: InteractEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2708757264477802831, guid: 5068d5d1eac9a1843aecabb3758f045a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5877,7 +5912,7 @@ PrefabInstance:
     - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
         type: 3}
       propertyPath: trueInteractionEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
         type: 3}
@@ -5923,6 +5958,31 @@ PrefabInstance:
         type: 3}
       propertyPath: trueInteractionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
+        type: 3}
+      propertyPath: trueInteractionEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
+        type: 3}
+      propertyPath: trueInteractionEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
+        type: 3}
+      propertyPath: trueInteractionEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 927491802}
+    - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
+        type: 3}
+      propertyPath: trueInteractionEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: RequestPlayOneShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
+        type: 3}
+      propertyPath: trueInteractionEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2708757263776369275, guid: 5068d5d1eac9a1843aecabb3758f045a, type: 3}

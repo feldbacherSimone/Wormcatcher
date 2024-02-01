@@ -16,33 +16,15 @@ namespace _Wormcatcher.Scripts.GameplayManagers
         [SerializeField] private PlayerMovement playerMovement;
         [SerializeField] private MouseLook mouseLook;
         [SerializeField] private StepSoundManager2 stepSoundManager2;
-        [SerializeField] private bool overrideSpawnPoints;
-        [SerializeField] private bool playTest;
+        
         [SerializeField] private SceneObjectHandler sceneObjectHandler;
         [SerializeField] private GameObject staticCloset;
         [SerializeField] private GameObject interactiveClost;
 
         [SerializeField] private DVDInteraction[] dvdInteractions;
 
-        public bool PlayTest
-        {
-            get => playTest;
-            set => playTest = value;
-        }
-
-        public TestPosition TestPositions
-        {
-            get => testPositions;
-            set => testPositions = value;
-        }
-
-        [SerializeField] private TestPosition testPositions;
-
-        public void ChangePosition(int i)
-        {
-            PlayerData.V1Progress = i;
-            Debug.Log($"Player v1 progress is {PlayerData.V3Progress}");
-        }
+        
+      
 
         public void SetState()
         {
@@ -98,8 +80,7 @@ namespace _Wormcatcher.Scripts.GameplayManagers
 
         public override void ChangeToApartment()
         {
-            ChangePosition(1);
-            PlayerData.V3Progress = 1; 
+            ChangePosition(1, 3);
             SceneLoader.SwitchScene(3);
         }
 

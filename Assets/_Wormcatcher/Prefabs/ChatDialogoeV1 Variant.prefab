@@ -184,17 +184,17 @@ PrefabInstance:
     - target: {fileID: 2725773622861548628, guid: 610591ffc1beafd42ac5c9ecb3986b69,
         type: 3}
       propertyPath: backgroundHighlightColor.r
-      value: 1
+      value: 0.5377358
       objectReference: {fileID: 0}
     - target: {fileID: 2725773622861548628, guid: 610591ffc1beafd42ac5c9ecb3986b69,
         type: 3}
       propertyPath: backgroundHighlightColor.g
-      value: 1
+      value: 0.5377358
       objectReference: {fileID: 0}
     - target: {fileID: 2725773622861548628, guid: 610591ffc1beafd42ac5c9ecb3986b69,
         type: 3}
       propertyPath: backgroundHighlightColor.b
-      value: 1
+      value: 0.5377358
       objectReference: {fileID: 0}
     - target: {fileID: 2725773622861548629, guid: 610591ffc1beafd42ac5c9ecb3986b69,
         type: 3}

@@ -47,6 +47,7 @@ MonoBehaviour:
   sceneObject: {fileID: 0}
   debug: 0
   active: 1
+  alwaysActive: 0
 --- !u!1 &860751845
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +320,7 @@ GameObject:
   - component: {fileID: 639102040}
   - component: {fileID: -4583741789801358153}
   - component: {fileID: 5655998579498082466}
+  - component: {fileID: 3712634015473723465}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: Player
@@ -540,6 +542,18 @@ MonoBehaviour:
   EnableRollingFlicker: 1
   RollingFlickerFactor: 0.28
   RollingVSyncTime: 1.0031
+--- !u!114 &3712634015473723465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743479195431046827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 194e5a5579960c1419deb154ed15ee29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &743479196160101353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1243,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 587, y: -311.49512}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 362.71, y: 184.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3828379062742613908
 CanvasRenderer:
@@ -1519,7 +1533,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 581.945, y: -30}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 366.92, y: 91.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2144208041987188053
 CanvasRenderer:
@@ -2760,7 +2774,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 581.94507, y: -45.505}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 364.81, y: 91.01}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4225922461465722024
 CanvasRenderer:
