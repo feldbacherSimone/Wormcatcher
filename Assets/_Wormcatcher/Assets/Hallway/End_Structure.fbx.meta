@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Hall_Walls
-    second: {fileID: 2100000, guid: 49e6ecfbb37c623478e59d77fd2e6e5f, type: 2}
+    second: {fileID: 2100000, guid: 224c2fda14126174f838ada741cf508e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -33,7 +33,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lampGlowPurple
-    second: {fileID: 2100000, guid: 089320b614b919b4ca34e3155ca9064d, type: 2}
+    second: {fileID: 2100000, guid: 8617aee6a56b68344a4edd341a50c816, type: 2}
   materials:
     materialImportMode: 1
     materialName: 1

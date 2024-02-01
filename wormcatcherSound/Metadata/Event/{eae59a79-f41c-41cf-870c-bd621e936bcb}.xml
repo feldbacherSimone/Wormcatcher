@@ -180,7 +180,7 @@
 			<destination>{ed165c40-2cfd-485e-b2f7-75bb66a10419}</destination>
 		</relationship>
 		<relationship name="triggerConditions">
-			<destination>{27b5608f-6ec0-4239-8472-4af5f88155d9}</destination>
+			<destination>{01e26dff-3cf2-4b1c-97ce-5c506825c113}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{d79cdfc7-29fe-4144-9ffa-ecfd16479cdd}">
@@ -204,19 +204,10 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{50886489-c504-4d1e-8ff2-b1ea90abfff7}" />
-	<object class="ParameterCondition" id="{27b5608f-6ec0-4239-8472-4af5f88155d9}">
-		<property name="minimum">
-			<value>0</value>
+	<object class="EventCondition" id="{01e26dff-3cf2-4b1c-97ce-5c506825c113}">
+		<property name="eventState">
+			<value>1</value>
 		</property>
-		<property name="maximum">
-			<value>0</value>
-		</property>
-		<property name="isInverted">
-			<value>true</value>
-		</property>
-		<relationship name="parameter">
-			<destination>{a0443d58-5e2e-4c98-8489-0bd6b3105568}</destination>
-		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{5ce36d1e-f8be-41cf-ba1a-042d96dc45c6}" />
 	<object class="AutomationPoint" id="{7767c805-03c8-4e53-9a5b-71ece7293f68}">

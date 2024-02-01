@@ -14,7 +14,7 @@ Date: So... on your profile you said you liked...eating out?
 <<first_letter>> 
 PC: Sustenance, I love that. I mean who doesn't?
 
-Date: Sort of the thing you write if you don't know what else to write. 
+Date: Sort of the thing you write in your bio if you don't know what else to write. 
 Date: Like... I love adventures, I love movies..
 
 PC: ... I like to travel. I know.
@@ -38,8 +38,8 @@ PC: Not a huge fan of seafood usually
 
 Date: Next cliché question: Wha do you do for work?
 
-PC: Just pushing documents, e-mails that sort of thing. 
-PC: Also there is a worm in my food?
+PC: Just pushing around documents, sending e-mails that sort of thing. 
+PC: Also - there is a worm in my food?
 
 Date: Ah yes, the office grind. I’ve come to love excel though. 
 <<first_letter>> 
@@ -62,7 +62,7 @@ Date: Mhm. So - have you thought about having kids?
 PC: H- Hi?
 
 <<change_speed 30>>
-Date: My research into the Void Diaries have left me utterly in awe of what Merplat’s theorem has done for us scholars of Lasckivism. We’re at a pivotal moment of enlightment - an opening of mind so to say - of wht really is ossible when it comes to film. 
+Date: My research into the Void Diaries have left me utterly in awe of what Merplat’s theorem has done for us scholars of Lasckivism. We’re at a pivotal moment of enlightment - an opening of mind so to say - of wht really is possible when it comes to film. 
 
 <<change_speed 15>>
 -> PC: Merplat’s my favourite 
@@ -72,12 +72,12 @@ Date: My research into the Void Diaries have left me utterly in awe of what Merp
 
 <<change_speed 60>>
 Date: Of course, nothing even gets close to Celvikiy’s use of the third person in this sort of- transcendental, interactive way. 
-Date: Not even the staunchest exponents of liminal hermeneutics would disagree I daresay.
+Date: Not even the staunchest exponents of liminal hermeneutics would disagree I daresay. A sort of return to the contact zone approach layed out in Clifford's Zelven report where the negotiation of polycentric third spaces supplement the concrete analysis of the body. 
 
 PC: I- 
 
 <<change_speed 70>>
-Date: Of course, my contribution to the Codices of the BFJ Criteria collection where a big part of the emergence of cannibalistic traditions within the liminal hermeneutics of cinema.
+Date: Of course, my contribution to the Codices of the BFJ Criteria collection where a big part of the emergence of cannibalistic traditions within the liminal hermeneutics of cinema. In the interpretative phenomenological analysis of the dispositive of mind one can find suprising elucidation. 
 
 PC: Your contributions?
 <<change_stage 2>>

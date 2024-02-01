@@ -7185,6 +7185,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorMudroom
       objectReference: {fileID: 0}
+    - target: {fileID: 2910417899874392013, guid: f3d3b39afe5c45d40869e9b3b6d6e243,
+        type: 3}
+      propertyPath: isRightSide
+      value: 86
+      objectReference: {fileID: 0}
+    - target: {fileID: 2910417899874392013, guid: f3d3b39afe5c45d40869e9b3b6d6e243,
+        type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3452388265367431501, guid: f3d3b39afe5c45d40869e9b3b6d6e243,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7484,6 +7494,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787049490056779578, guid: 80922e3bb29653046bfb796a68001a2c,
+        type: 3}
+      propertyPath: active
+      value: 57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787049490056779578, guid: 80922e3bb29653046bfb796a68001a2c,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787049490056779578, guid: 80922e3bb29653046bfb796a68001a2c,
+        type: 3}
+      propertyPath: interactTrigger
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787049490056779578, guid: 80922e3bb29653046bfb796a68001a2c,
+        type: 3}
+      propertyPath: lockedBool
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80922e3bb29653046bfb796a68001a2c, type: 3}

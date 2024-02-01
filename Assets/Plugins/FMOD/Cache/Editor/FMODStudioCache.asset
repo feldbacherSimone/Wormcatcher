@@ -97,7 +97,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638421240665727240
+  lastModified: 638423351858926673
   FileSizes:
   - Name: Desktop
     Value: 1220
@@ -344,30 +344,6 @@ MonoBehaviour:
   - Walk
   - Run
   Exists: 1
---- !u!114 &-4666162316173047186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/sfx_FridgeOpenClose/FridgeClose
-  m_EditorClassIdentifier: 
-  Name: FridgeClose
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 3191390115
-    data2: 4029556658
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &-4551529033993375059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -431,7 +407,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Footies.bank
   Name: Footies
   StudioPath: bank:/Footies
-  lastModified: 638423162170395334
+  lastModified: 638423351858245795
   FileSizes:
   - Name: Desktop
     Value: 181856
@@ -828,7 +804,7 @@ MonoBehaviour:
   - {fileID: -8274890527474066257}
   StringsBanks:
   - {fileID: 6722575401642249363}
-  cacheTime: 638423162231935073
+  cacheTime: 638423363268324565
   cacheVersion: 131608
 --- !u!114 &270963226839330967
 MonoBehaviour:
@@ -872,7 +848,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638423162231935073
+  lastModified: 638423363267408284
   FileSizes:
   - Name: Desktop
     Value: 25113984
@@ -979,7 +955,7 @@ MonoBehaviour:
   - {fileID: 1341176153831246956}
   MinDistance: 1
   MaxDistance: 20
-  Length: 174405
+  Length: 232000
 --- !u!114 &1731039137945792321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1004,7 +980,7 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 0.4
+  MinDistance: 0.7
   MaxDistance: 5.2000003
   Length: 59748
 --- !u!114 &3112618691462046857
@@ -1046,10 +1022,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638423162157782912
+  lastModified: 638423351861572704
   FileSizes:
   - Name: Desktop
-    Value: 7705472
+    Value: 7705248
   Exists: 1
 --- !u!114 &3383946071980174235
 MonoBehaviour:
@@ -1144,7 +1120,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638423162211536057
+  lastModified: 638423363268324565
   FileSizes:
   - Name: Desktop
     Value: 11470336
@@ -1352,10 +1328,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638423162195782490
+  lastModified: 638423351858946589
   FileSizes:
   - Name: Desktop
-    Value: 3488
+    Value: 3440
   Exists: 1
 --- !u!114 &6951711160529909927
 MonoBehaviour:
@@ -1396,7 +1372,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Loc_Ambience.bank
   Name: Loc_Ambience
   StudioPath: bank:/Loc_Ambience
-  lastModified: 638423162184291314
+  lastModified: 638423351858856241
   FileSizes:
   - Name: Desktop
     Value: 5156928
@@ -1534,8 +1510,8 @@ MonoBehaviour:
   Is3D: 1
   IsOneShot: 0
   Parameters: []
-  MinDistance: 0.1
-  MaxDistance: 2.8
+  MinDistance: 0.3
+  MaxDistance: 3
   Length: 47920
 --- !u!114 &8015596922868874346
 MonoBehaviour:
@@ -1560,8 +1536,7 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters:
-  - {fileID: -4666162316173047186}
+  Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 6000
@@ -1643,7 +1618,7 @@ MonoBehaviour:
   - {fileID: 4175193635732110813}
   MinDistance: 1
   MaxDistance: 20
-  Length: 110985
+  Length: 123985
 --- !u!114 &8754529777121729059
 MonoBehaviour:
   m_ObjectHideFlags: 0
