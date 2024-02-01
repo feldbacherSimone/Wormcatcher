@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 51b2f0210d264fb4baff1d805036605e
+guid: b045bc4d8f30c0c429a4091531c6c064
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,18 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Hall_Floor
-    second: {fileID: 2100000, guid: 6f9542bddadcbf046a7966e830d65251, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Hall_Walls
-    second: {fileID: 2100000, guid: 224c2fda14126174f838ada741cf508e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Lamp_GlowWarm
-    second: {fileID: 2100000, guid: 44b3baa6e20b6994e869d4d09968ebbe, type: 2}
+      name: EndingDoors
+    second: {fileID: 2100000, guid: 13bf69354c2f52d45a49bcbd7db7523b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -27,13 +17,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: blackPlastic
-    second: {fileID: 2100000, guid: 723e89ea999902e42a05185c5905c351, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: lampGlowPurple
-    second: {fileID: 2100000, guid: 8617aee6a56b68344a4edd341a50c816, type: 2}
+      name: WoodDarkMat
+    second: {fileID: 2100000, guid: 66f7732b8689f5a4eb19a8a4b9c240bd, type: 2}
   materials:
     materialImportMode: 1
     materialName: 1
@@ -66,7 +51,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1

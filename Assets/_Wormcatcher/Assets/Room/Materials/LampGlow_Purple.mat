@@ -7,10 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: runningWater
-  m_Shader: {fileID: 4800000, guid: b4f039d8717f646419a1271225c1adc7, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
+  m_Name: LampGlow_Purple
+  m_Shader: {fileID: 4800000, guid: 878159d452632f74e91c9809616c230c, type: 3}
+  m_ShaderKeywords: _EMISSION
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -36,13 +36,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 97da4c0244fbd044b856c73fc2177073, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 66558e8fd7783264a95e3f1cd1544d2a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1564f0169cd08e446a5ec193bed00dbd, type: 3}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 9.064033}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -68,7 +68,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
-    - _SnapStrength: 1
+    - _SnapStrength: 1.2
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Transparency: 1
@@ -76,4 +76,4 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
