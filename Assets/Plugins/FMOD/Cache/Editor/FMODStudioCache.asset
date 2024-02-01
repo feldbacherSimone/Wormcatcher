@@ -97,7 +97,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638423351858926673
+  lastModified: 638410959308817129
   FileSizes:
   - Name: Desktop
     Value: 1220
@@ -407,7 +407,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Footies.bank
   Name: Footies
   StudioPath: bank:/Footies
-  lastModified: 638423351858245795
+  lastModified: 638423083580432584
   FileSizes:
   - Name: Desktop
     Value: 181856
@@ -798,13 +798,15 @@ MonoBehaviour:
   - {fileID: -2359504058612007353}
   - {fileID: 1471364502464305966}
   - {fileID: -8053045015473899051}
+  - {fileID: 8298895806768340325}
+  - {fileID: 7488715299924296829}
   EditorParameters:
   - {fileID: 3112618691462046857}
   MasterBanks:
   - {fileID: -8274890527474066257}
   StringsBanks:
   - {fileID: 6722575401642249363}
-  cacheTime: 638423363268324565
+  cacheTime: 638423466810465229
   cacheVersion: 131608
 --- !u!114 &270963226839330967
 MonoBehaviour:
@@ -848,7 +850,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638423363267408284
+  lastModified: 638423365418743735
   FileSizes:
   - Name: Desktop
     Value: 25113984
@@ -1022,7 +1024,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638423351861572704
+  lastModified: 638423365420726356
   FileSizes:
   - Name: Desktop
     Value: 7705248
@@ -1120,7 +1122,7 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638423363268324565
+  lastModified: 638423365420130271
   FileSizes:
   - Name: Desktop
     Value: 11470336
@@ -1328,10 +1330,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638423351858946589
+  lastModified: 638423466810465229
   FileSizes:
   - Name: Desktop
-    Value: 3440
+    Value: 3530
   Exists: 1
 --- !u!114 &6951711160529909927
 MonoBehaviour:
@@ -1372,10 +1374,10 @@ MonoBehaviour:
   Path: wormcatcherSound/Build/Desktop/Loc_Ambience.bank
   Name: Loc_Ambience
   StudioPath: bank:/Loc_Ambience
-  lastModified: 638423351858856241
+  lastModified: 638423466810394327
   FileSizes:
   - Name: Desktop
-    Value: 5156928
+    Value: 7151072
   Exists: 1
 --- !u!114 &7413727231598131807
 MonoBehaviour:
@@ -1431,6 +1433,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 156331
+--- !u!114 &7488715299924296829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/LocalisedAmbience/loc_amb_Waterfall
+  m_EditorClassIdentifier: 
+  Path: event:/LocalisedAmbience/loc_amb_Waterfall
+  Guid:
+    Data1: 1192440823
+    Data2: 1188184862
+    Data3: 45553566
+    Data4: -21303570
+  Banks:
+  - {fileID: 6992243341726998979}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0.5
+  MaxDistance: 7
+  Length: 154860
 --- !u!114 &7552901926170048168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1567,6 +1596,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1500
+--- !u!114 &8298895806768340325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/LocalisedAmbience/loc_amb_Waterfall_Reversed
+  m_EditorClassIdentifier: 
+  Path: event:/LocalisedAmbience/loc_amb_Waterfall_Reversed
+  Guid:
+    Data1: -425414229
+    Data2: 1222460627
+    Data3: -419742336
+    Data4: -735031030
+  Banks:
+  - {fileID: 6992243341726998979}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0.7
+  MaxDistance: 5.8
+  Length: 154860
 --- !u!114 &8302074749563852684
 MonoBehaviour:
   m_ObjectHideFlags: 0
