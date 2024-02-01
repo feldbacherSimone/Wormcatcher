@@ -33,7 +33,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: lampGlowPurple
-    second: {fileID: 2100000, guid: 089320b614b919b4ca34e3155ca9064d, type: 2}
+    second: {fileID: 2100000, guid: 8617aee6a56b68344a4edd341a50c816, type: 2}
   materials:
     materialImportMode: 1
     materialName: 1

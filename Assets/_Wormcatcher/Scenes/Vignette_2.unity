@@ -923,37 +923,37 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: bead07bf72792b3429ba2c0876c17e68,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.033926904
+      value: 0.024813486
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bead07bf72792b3429ba2c0876c17e68,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.097
+      value: -1.101
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bead07bf72792b3429ba2c0876c17e68,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.19462994
+      value: -0.17941946
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bead07bf72792b3429ba2c0876c17e68,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.76040214
+      value: -0.6746843
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bead07bf72792b3429ba2c0876c17e68,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.2981834
+      value: -0.5599427
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bead07bf72792b3429ba2c0876c17e68,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.06271155
+      value: -0.35629386
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bead07bf72792b3429ba2c0876c17e68,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5735351
+      value: 0.32298604
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bead07bf72792b3429ba2c0876c17e68,
         type: 3}
@@ -968,7 +968,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: bead07bf72792b3429ba2c0876c17e68,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -127.38601
+      value: -192.491
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bead07bf72792b3429ba2c0876c17e68,
         type: 3}
@@ -1982,5 +1982,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
