@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -11,7 +12,14 @@ namespace _Wormcatcher.Scripts.UI
         [SerializeField] private Button playButton; 
         [SerializeField] private Button settingButton; 
         [SerializeField] private Button controlsButton;
+        [SerializeField] private Button backButtonControl;
+        [SerializeField] private Button backButtonSettings;
 
+        [SerializeField] private float fadeSpeed = 1;
+
+        [SerializeField] private CanvasGroup mainScreen;
+        [SerializeField] private CanvasGroup settingsScreen;
+        [SerializeField] private CanvasGroup controlScreen;
         private PlayerInputAction playerInputAction;
         private InputAction v1Switch;
         private InputAction v2Switch;
@@ -99,7 +107,47 @@ namespace _Wormcatcher.Scripts.UI
             controlsButton.onClick.AddListener(() =>
             {
                 Debug.Log("controlls Pressed ");
+                
+                StartCoroutine(FadeMenu(mainScreen, controlScreen));
+           
             });
+            
+            /*backButtonSettings.onClick.AddListener(() =>
+            {
+                Debug.Log("back Settings Pressed ");
+                
+                //StartCoroutine(FadeMenu(settingsScreen, mainScreen));
+           
+            });*/
+            
+            backButtonControl.onClick.AddListener(() =>
+            {
+                Debug.Log(" back controlls Pressed ");
+                
+                StartCoroutine(FadeMenu(controlScreen, mainScreen));
+           
+            });
+        }
+
+        IEnumerator FadeMenu(CanvasGroup c1, CanvasGroup c2)
+        {
+            float t = 0; 
+            while (c1.alpha > 0)
+            {
+                c1.alpha = Mathf.Lerp(1, 0, t);
+                t += Time.deltaTime * fadeSpeed;
+                yield return null;
+            }
+            c1.gameObject.SetActive(false);
+            c2.gameObject.SetActive(true);
+            c2.alpha = 0;
+            t = 0;
+            while (c2.alpha < 1)
+            {
+                c2.alpha = Mathf.Lerp(0, 1, t);
+                t += Time.deltaTime * fadeSpeed;
+                yield return null; 
+            }
         }
     }
 }
