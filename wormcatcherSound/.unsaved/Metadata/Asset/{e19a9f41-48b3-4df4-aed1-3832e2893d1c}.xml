@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{e19a9f41-48b3-4df4-aed1-3832e2893d1c}">
+		<property name="assetPath">
+			<value>WormAnim/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2f930e37-c42b-41f8-b734-0157cf260748}</destination>
+		</relationship>
+	</object>
+</objects>
