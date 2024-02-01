@@ -53,7 +53,8 @@ namespace _Wormcatcher.Scripts
                 while (accumulator >= secondsPerLetter)
                 {
                     Canvas.ForceUpdateCanvases();
-                    visibleCharacters += 1;
+                    if(visibleCharacters < fullLine.Length)
+                        visibleCharacters += 1;
                     String newText = fullLine.Substring(0, visibleCharacters);
                     text.text = newText;
                     onCharacterTyped?.Invoke();

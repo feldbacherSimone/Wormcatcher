@@ -402,6 +402,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6114726856269624589, guid: 555912bdbc4f5ad4396069671de789ca,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2c34f6ebd91a4c049abe108ee2261519, type: 2}
     - target: {fileID: 919132149155446097, guid: 555912bdbc4f5ad4396069671de789ca,
         type: 3}
       propertyPath: m_Name
@@ -780,6 +785,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3704757632406305793, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3911533511127521471, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -799,6 +809,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939674058046779345, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8062581582358081633, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -5954,7 +5969,7 @@ MeshRenderer:
   - {fileID: 2100000, guid: 850c6985f12ee57479cc99c60ae7fd0b, type: 2}
   - {fileID: 2100000, guid: 66f7732b8689f5a4eb19a8a4b9c240bd, type: 2}
   - {fileID: 2100000, guid: e8771bdd03311084ba1da50606ac0893, type: 2}
-  - {fileID: 2100000, guid: 64748d11e4c713d40beca820e16eef0c, type: 2}
+  - {fileID: 2100000, guid: 9b978e14289556145b8bc931e8b8efd2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

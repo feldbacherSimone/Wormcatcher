@@ -1686,6 +1686,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &641410264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 641410265}
+  - component: {fileID: 641410266}
+  m_Layer: 0
+  m_Name: RattleSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &641410265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641410264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 887144398}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &641410266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641410264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 2013454163
+      Data2: 1251241845
+      Data3: -338682177
+      Data4: -2023998673
+    Path: event:/SFX/sfc_DoorRattle
 --- !u!1 &650942360
 GameObject:
   m_ObjectHideFlags: 0
@@ -2023,7 +2073,7 @@ PrefabInstance:
     - target: {fileID: 2725773622817112266, guid: 610591ffc1beafd42ac5c9ecb3986b69,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.985
+      value: 1.833
       objectReference: {fileID: 0}
     - target: {fileID: 2725773622817112266, guid: 610591ffc1beafd42ac5c9ecb3986b69,
         type: 3}
@@ -2195,7 +2245,7 @@ PrefabInstance:
     - target: {fileID: 2725773623633331575, guid: 610591ffc1beafd42ac5c9ecb3986b69,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.009075262
+      value: 0.009075256
       objectReference: {fileID: 0}
     - target: {fileID: 2725773623633331575, guid: 610591ffc1beafd42ac5c9ecb3986b69,
         type: 3}
@@ -2210,7 +2260,7 @@ PrefabInstance:
     - target: {fileID: 2725773623633331575, guid: 610591ffc1beafd42ac5c9ecb3986b69,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.15325111
+      value: 0.15325102
       objectReference: {fileID: 0}
     - target: {fileID: 2725773623633331575, guid: 610591ffc1beafd42ac5c9ecb3986b69,
         type: 3}
@@ -2676,6 +2726,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882413248}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &887144398 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2708757263776369252, guid: 5068d5d1eac9a1843aecabb3758f045a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1610296229}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &908980435 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 860751847, guid: 846b49896810a94488ad1ec6451fba85,
@@ -4960,6 +5016,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
         type: 3}
+      propertyPath: falseInteractionEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
+        type: 3}
       propertyPath: alwaysSendFalse
       value: 0
       objectReference: {fileID: 0}
@@ -5026,6 +5087,36 @@ PrefabInstance:
     - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
         type: 3}
       propertyPath: trueInteractionEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
+        type: 3}
+      propertyPath: falseInteractionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
+        type: 3}
+      propertyPath: falseInteractionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
+        type: 3}
+      propertyPath: falseInteractionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
+        type: 3}
+      propertyPath: falseInteractionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 641410266}
+    - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
+        type: 3}
+      propertyPath: falseInteractionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: RequestPlayOneShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 8018628099112205775, guid: 5068d5d1eac9a1843aecabb3758f045a,
+        type: 3}
+      propertyPath: falseInteractionEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents:
