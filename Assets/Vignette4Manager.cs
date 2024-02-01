@@ -18,7 +18,7 @@ public class Vignette4Manager : VignetteManager
     [SerializeField] private SceneObjectHandler sceneObjectHandler; 
     public override void ChangeToApartment()
     {
-        throw new System.NotImplementedException();
+        SceneLoader.SwitchScene(5);
     }
     
     private void Awake()
@@ -32,4 +32,6 @@ public class Vignette4Manager : VignetteManager
         player.transform.rotation = spawn.rotation;
         playerMovement.Active = true; 
     }
+    
+    
 }

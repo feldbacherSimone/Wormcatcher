@@ -44,7 +44,7 @@ namespace _Wormcatcher.Scripts
             { PlayerAction.HandsWashed, false},
             { PlayerAction.FinishedDialogueV3, false},
             { PlayerAction.DvdFetched, false},
-            { PlayerAction.FinishV4Dialogue , true}
+            { PlayerAction.FinishV4Dialogue , false}
         };
 
         private static int v1Progress = 0;

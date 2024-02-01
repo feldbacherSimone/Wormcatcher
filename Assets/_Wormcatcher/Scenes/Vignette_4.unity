@@ -1050,7 +1050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c4669e05afb5214ebd2f723b3c68174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideSpawnPoints: 1
+  overrideSpawnPoints: 0
   playTest: 0
   testPositions: 0
   spawn: {fileID: 1315689643}
@@ -1664,7 +1664,7 @@ PrefabInstance:
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.42
+      value: 2.62
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -1674,7 +1674,7 @@ PrefabInstance:
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.14
+      value: -3.69
       objectReference: {fileID: 0}
     - target: {fileID: 743479196160101367, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
@@ -4947,22 +4947,22 @@ PrefabInstance:
     - target: {fileID: 5993413547577026560, guid: 7e3ae298fb87c5a4b94f437aa18c0b8a,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.01230282
+      value: 0.023584377
       objectReference: {fileID: 0}
     - target: {fileID: 5993413547577026560, guid: 7e3ae298fb87c5a4b94f437aa18c0b8a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.97877896
+      value: -0.9488573
       objectReference: {fileID: 0}
     - target: {fileID: 5993413547577026560, guid: 7e3ae298fb87c5a4b94f437aa18c0b8a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.061750617
+      value: 0.07307785
       objectReference: {fileID: 0}
     - target: {fileID: 5993413547577026560, guid: 7e3ae298fb87c5a4b94f437aa18c0b8a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.195006
+      value: 0.30622426
       objectReference: {fileID: 0}
     - target: {fileID: 5993413547577026560, guid: 7e3ae298fb87c5a4b94f437aa18c0b8a,
         type: 3}
@@ -10031,5 +10031,30 @@ PrefabInstance:
       propertyPath: stepSoundManager2
       value: 
       objectReference: {fileID: 308407402}
+    - target: {fileID: 3298512961598110881, guid: ba9300d95f187f245833bd061df80b12,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3298512961598110881, guid: ba9300d95f187f245833bd061df80b12,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422957783125498807, guid: ba9300d95f187f245833bd061df80b12,
+        type: 3}
+      propertyPath: trueInteractionEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 275477264}
+    - target: {fileID: 7422957783125498807, guid: ba9300d95f187f245833bd061df80b12,
+        type: 3}
+      propertyPath: trueInteractionEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ChangeToApartment
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422957783125498807, guid: ba9300d95f187f245833bd061df80b12,
+        type: 3}
+      propertyPath: trueInteractionEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba9300d95f187f245833bd061df80b12, type: 3}
