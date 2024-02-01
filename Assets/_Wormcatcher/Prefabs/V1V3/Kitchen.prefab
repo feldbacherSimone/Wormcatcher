@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 166578789478059211}
   - component: {fileID: 166578789478059215}
   - component: {fileID: 166578789478059213}
+  - component: {fileID: 6539734475728736832}
   m_Layer: 0
   m_Name: DrawerRoot
   m_TagString: Untagged
@@ -81,7 +82,18 @@ MonoBehaviour:
   lockedBool: Locked
   InteractEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6539734475728736832}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &166578789478059215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -108,6 +120,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2581916, y: 0.010402084, z: 0.6022306}
   m_Center: {x: 0.12542796, y: 0.34444937, z: 0.016148867}
+--- !u!114 &6539734475728736832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166578789478059208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -136588474
+      Data2: 1287950549
+      Data3: -1276037961
+      Data4: -1998602202
+    Path: event:/SFX/sfx_Door_Sliding
 --- !u!114 &6780801260216828911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,6 +332,7 @@ GameObject:
   - component: {fileID: 8656084227226130459}
   - component: {fileID: 8656084227226130458}
   - component: {fileID: 8656084227226130461}
+  - component: {fileID: 1853623437576162678}
   m_Layer: 0
   m_Name: DrawerRoot
   m_TagString: Untagged
@@ -402,7 +434,37 @@ MonoBehaviour:
   lockedBool: Locked
   InteractEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1853623437576162678}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1853623437576162678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838171304191417220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -136588474
+      Data2: 1287950549
+      Data3: -1276037961
+      Data4: -1998602202
+    Path: event:/SFX/sfx_Door_Sliding
 --- !u!1 &1861697121905370347
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +544,56 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &2074718236420709944
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7267020972004135301}
+  - component: {fileID: 1195152483491009709}
+  m_Layer: 0
+  m_Name: CloseSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7267020972004135301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074718236420709944}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.03699994, y: 0, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7060369219136705260}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1195152483491009709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074718236420709944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -71525894
+      Data2: 1087876077
+      Data3: 1027031706
+      Data4: -669601241
+    Path: event:/SFX/sfx_ShelfDoorOpen
 --- !u!114 &8656084228443660943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1150,6 +1262,56 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &5743623695978136727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2189689013535350556}
+  - component: {fileID: 581630820699048975}
+  m_Layer: 0
+  m_Name: CloseSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2189689013535350556
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743623695978136727}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7060369218778671099}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &581630820699048975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5743623695978136727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -71525894
+      Data2: 1087876077
+      Data3: 1027031706
+      Data4: -669601241
+    Path: event:/SFX/sfx_ShelfDoorOpen
 --- !u!1 &5955086884895917740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,6 +1733,8 @@ Transform:
   m_Children:
   - {fileID: 7060369220302566911}
   - {fileID: 7060369219774923766}
+  - {fileID: 5504062508415623145}
+  - {fileID: 2189689013535350556}
   m_Father: {fileID: 7060369218267976615}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1612,12 +1776,34 @@ MonoBehaviour:
     id: 80271631
     action:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 581630820699048975}
+          m_MethodName: RequestPlayOneShot
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: Toggle Light Off
     id: 632949337
     action:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 8983068338285519544}
+          m_MethodName: RequestPlayOneShot
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &7060369218922184995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1799,6 +1985,8 @@ Transform:
   m_Children:
   - {fileID: 7060369219614748932}
   - {fileID: 7060369219430158164}
+  - {fileID: 3964487930100418535}
+  - {fileID: 7267020972004135301}
   m_Father: {fileID: 7060369218267976615}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1840,12 +2028,34 @@ MonoBehaviour:
     id: 80271631
     action:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 1195152483491009709}
+          m_MethodName: RequestPlayOneShot
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: Toggle Light Off
     id: 632949337
     action:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 5947301604953210608}
+          m_MethodName: RequestPlayOneShot
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &7060369219138245591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +2067,7 @@ GameObject:
   - component: {fileID: 7060369219138245590}
   - component: {fileID: 7060369219138245588}
   - component: {fileID: 7060369219138245589}
+  - component: {fileID: 4241463068199412325}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -1911,7 +2122,37 @@ MonoBehaviour:
   lockedBool: Locked
   InteractEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4241463068199412325}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4241463068199412325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7060369219138245591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -71525894
+      Data2: 1087876077
+      Data3: 1027031706
+      Data4: -669601241
+    Path: event:/SFX/sfx_ShelfDoorOpen
 --- !u!1 &7060369219204057278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,6 +2164,7 @@ GameObject:
   - component: {fileID: 7060369219204057277}
   - component: {fileID: 7060369219204057275}
   - component: {fileID: 7060369219204057276}
+  - component: {fileID: 7325937611783066426}
   m_Layer: 0
   m_Name: Root
   m_TagString: Untagged
@@ -1977,7 +2219,48 @@ MonoBehaviour:
   lockedBool: Locked
   InteractEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7325937611783066426}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7325937611783066426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7060369219204057278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -354051463
+      Data2: 1104147484
+      Data3: 1656556679
+      Data4: -882142434
+    Path: event:/SFX/sfx_FridgeOpenClose
 --- !u!1 &7060369219241710628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2372,6 +2655,56 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.33270928, y: 0.00000029802322, z: 0.014854251}
     m_Extent: {x: 0.3327094, y: 0.28008628, z: 0.02232495}
   m_DirtyAABB: 0
+--- !u!1 &7149046211361855466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3964487930100418535}
+  - component: {fileID: 5947301604953210608}
+  m_Layer: 0
+  m_Name: OpenSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3964487930100418535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7149046211361855466}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.03699994, y: 0, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7060369219136705260}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5947301604953210608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7149046211361855466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -71525894
+      Data2: 1087876077
+      Data3: 1027031706
+      Data4: -669601241
+    Path: event:/SFX/sfx_ShelfDoorOpen
 --- !u!1 &7440998182443388784
 GameObject:
   m_ObjectHideFlags: 0
@@ -2931,6 +3264,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: CheckDishCondition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8656084228051168033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3006,6 +3350,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8656084228303287452}
         m_MethodName: ToggleSinkSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: CheckDishCondition
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3305,6 +3660,56 @@ MonoBehaviour:
     action:
       m_PersistentCalls:
         m_Calls: []
+--- !u!1 &8448848202979800893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5504062508415623145}
+  - component: {fileID: 8983068338285519544}
+  m_Layer: 0
+  m_Name: OpenSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5504062508415623145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448848202979800893}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7060369218778671099}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8983068338285519544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8448848202979800893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -71525894
+      Data2: 1087876077
+      Data3: 1027031706
+      Data4: -669601241
+    Path: event:/SFX/sfx_ShelfDoorOpen
 --- !u!1 &8495802879081375874
 GameObject:
   m_ObjectHideFlags: 0
@@ -4285,6 +4690,7 @@ GameObject:
   - component: {fileID: 8656084226963212733}
   - component: {fileID: 8656084226963212730}
   - component: {fileID: 8656084226963212731}
+  - component: {fileID: 371034500192901010}
   m_Layer: 0
   m_Name: DrawerRoot
   m_TagString: Untagged
@@ -4352,7 +4758,18 @@ MonoBehaviour:
   lockedBool: Locked
   InteractEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 371034500192901010}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &8656084226963212730
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4379,6 +4796,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2581916, y: 0.010402084, z: 0.6022306}
   m_Center: {x: 0.12542796, y: 0.34444937, z: 0.016148867}
+--- !u!114 &371034500192901010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656084226963212729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -136588474
+      Data2: 1287950549
+      Data3: -1276037961
+      Data4: -1998602202
+    Path: event:/SFX/sfx_Door_Sliding
 --- !u!1 &8656084227024285782
 GameObject:
   m_ObjectHideFlags: 0
@@ -4748,7 +5184,7 @@ MonoBehaviour:
       Data4: -39507813
     Path: event:/LocalisedAmbience/loc_amb_FridgeBuzz
   Event: 
-  PlayEvent: 11
+  PlayEvent: 1
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
@@ -4757,7 +5193,7 @@ MonoBehaviour:
   Params:
   - Name: FridgeVerb
     Value: 0
-  OverrideAttenuation: 0
+  OverrideAttenuation: 1
   OverrideMinDistance: 0.1
   OverrideMaxDistance: 1
 --- !u!114 &8656084227098709392
@@ -5265,6 +5701,7 @@ GameObject:
   - component: {fileID: 8656084227340592979}
   - component: {fileID: 8656084227340592976}
   - component: {fileID: 8656084227340592977}
+  - component: {fileID: 1848608978177623743}
   m_Layer: 0
   m_Name: DrawerRoot
   m_TagString: Untagged
@@ -5332,7 +5769,18 @@ MonoBehaviour:
   lockedBool: Locked
   InteractEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1848608978177623743}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &8656084227340592976
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5359,6 +5807,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2581916, y: 0.010402084, z: 0.6022306}
   m_Center: {x: 0.12542796, y: 0.34444937, z: 0.016148867}
+--- !u!114 &1848608978177623743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656084227340592975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -136588474
+      Data2: 1287950549
+      Data3: -1276037961
+      Data4: -1998602202
+    Path: event:/SFX/sfx_Door_Sliding
 --- !u!1 &8656084227448527112
 GameObject:
   m_ObjectHideFlags: 0
@@ -6610,6 +7077,7 @@ GameObject:
   - component: {fileID: 8656084227917004606}
   - component: {fileID: 8656084227917004607}
   - component: {fileID: 8656084227917004604}
+  - component: {fileID: 1850921018320165420}
   m_Layer: 0
   m_Name: DrawerRoot
   m_TagString: Untagged
@@ -6677,7 +7145,18 @@ MonoBehaviour:
   lockedBool: Locked
   InteractEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1850921018320165420}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &8656084227917004607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6704,6 +7183,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2581916, y: 0.010402084, z: 0.6022306}
   m_Center: {x: 0.12542796, y: 0.34444937, z: 0.016148867}
+--- !u!114 &1850921018320165420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656084227917004602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -136588474
+      Data2: 1287950549
+      Data3: -1276037961
+      Data4: -1998602202
+    Path: event:/SFX/sfx_Door_Sliding
 --- !u!1 &8656084227935452439
 GameObject:
   m_ObjectHideFlags: 0
@@ -8584,15 +9082,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aceadce2e5058154eb70a7361d94865d, type: 3}
---- !u!1 &7870622765357910506 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: aceadce2e5058154eb70a7361d94865d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7060369218408019131}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7381893577102758736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: aceadce2e5058154eb70a7361d94865d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7060369218408019131}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7870622765357910506 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: aceadce2e5058154eb70a7361d94865d,
     type: 3}
   m_PrefabInstance: {fileID: 7060369218408019131}
   m_PrefabAsset: {fileID: 0}
@@ -8930,12 +9428,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1eea234b6100c3f428f5a81701b7e63d, type: 3}
---- !u!1 &7870622765131991334 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1eea234b6100c3f428f5a81701b7e63d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7060369219120444535}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5160674681544455066 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2766650679379986413, guid: 1eea234b6100c3f428f5a81701b7e63d,
@@ -8945,6 +9437,12 @@ GameObject:
 --- !u!4 &7381893576390333340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1eea234b6100c3f428f5a81701b7e63d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7060369219120444535}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7870622765131991334 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1eea234b6100c3f428f5a81701b7e63d,
     type: 3}
   m_PrefabInstance: {fileID: 7060369219120444535}
   m_PrefabAsset: {fileID: 0}
@@ -9152,15 +9650,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80922e3bb29653046bfb796a68001a2c, type: 3}
---- !u!1 &3410656009145454302 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5669589876316750292, guid: 80922e3bb29653046bfb796a68001a2c,
-    type: 3}
-  m_PrefabInstance: {fileID: 7060369219445608202}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2563810703868208098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4787049488818695400, guid: 80922e3bb29653046bfb796a68001a2c,
+    type: 3}
+  m_PrefabInstance: {fileID: 7060369219445608202}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3410656009145454302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5669589876316750292, guid: 80922e3bb29653046bfb796a68001a2c,
     type: 3}
   m_PrefabInstance: {fileID: 7060369219445608202}
   m_PrefabAsset: {fileID: 0}

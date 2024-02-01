@@ -27,6 +27,11 @@ public class StepSoundManager2 : MonoBehaviour
     [SerializeField] private float baseReverb = 0; 
     [SerializeField] private float baseSwirling = 0;
 
+    public EventInstance Instance
+    {
+        get => instance;
+        set => instance = value;
+    }
 
     [SerializeField]private bool isPlaying;
     [SerializeField]private bool debug; 
