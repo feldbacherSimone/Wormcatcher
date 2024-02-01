@@ -52,6 +52,7 @@ namespace _Wormcatcher.Scripts
                 // time for.
                 while (accumulator >= secondsPerLetter)
                 {
+                    Canvas.ForceUpdateCanvases();
                     visibleCharacters += 1;
                     String newText = fullLine.Substring(0, visibleCharacters);
                     text.text = newText;
@@ -61,7 +62,7 @@ namespace _Wormcatcher.Scripts
 
                 accumulator += Time.deltaTime;
 
-                Canvas.ForceUpdateCanvases();
+                
                 yield return null;
             }
 
@@ -84,6 +85,18 @@ namespace _Wormcatcher.Scripts
                     char letter = fullText[i];
 
                     // Check if the current character is a space
+                    if (letter == '<')
+                    {
+                        if (i + 14 > fullText.Length - 1)
+                        {
+                            onCompleteCallback?.Invoke();
+                            break;
+                        }
+                        textComponent.text = fullText.Substring(0, i + 14);
+                        i += 14; 
+                        
+                        continue;
+                    }
                     if (letter == ' ')
                     {
                         // Find consecutive spaces

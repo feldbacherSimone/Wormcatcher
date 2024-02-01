@@ -35,7 +35,7 @@ public class AnimateText : MonoBehaviour
 
     private void OnLetterPlaced(char letter)
     {
-        Debug.Log("Letter placed: " + letter);
+        //Debug.Log("Letter placed: " + letter);
     }
   
 }

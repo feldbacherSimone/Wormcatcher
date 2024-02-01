@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 18}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4396292275778085041
@@ -65,16 +65,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "sometimes \r\nthe ceiling drops\n                               down on
-    Him\r\ngetting \r\r\nprogressively \r\n                                     
-    lower\r\nand\r\n                lower\r\nuntil it begins to graze his head, only
-    to shift a few minutes later\r\n                                     rising\r\nhigher\r\n                      
-    and \r\nhigher\r\n                                           until\r\nit disappears                                     
-    altogether\r\nsometimes\r\nthe                            hallway\r\nwid                                        
-    ens\r\nuntil at              one \r\n\r                          point\r                 
-    HE\r\nswears                               he \r\nis              moving\r\ndown\r         
-    some\r\n                                                      enourmous\r\n                               
-    plateau"
+  m_text: "sometimes \r\nthe ceiling drops\n                             <color=\"white\">
+    down on Him\r</color>\ngetting \r\r\nprogressively \r\n                                      
+    <color=\"white\">lower\r</color>\nand\r\n                lower\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9192dd8f6e4df4b4eb0bc78021c9f483, type: 2}
   m_sharedMaterial: {fileID: -6917589276670986237, guid: 9192dd8f6e4df4b4eb0bc78021c9f483,
@@ -193,6 +186,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 146}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}

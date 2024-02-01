@@ -20,7 +20,8 @@ namespace _Wormcatcher.Scripts
                 SceneLoader.LoadNextScene();
                 
                 int currentVignette = PlayerData.Vignette;
-                GameObject currentTitle = currentVignette != 0 ? titles[currentVignette] : menuTitle;
+                Debug.Log($"CurrentVignette is {currentVignette}");
+                GameObject currentTitle = currentVignette != 0 ? titles[currentVignette-1] : menuTitle;
                 GameObject.Instantiate(currentTitle, canvas.transform);
                 
                 SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());

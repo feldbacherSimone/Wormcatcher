@@ -267,6 +267,68 @@ MonoBehaviour:
       Data3: 1131199130
       Data4: -28763794
     Path: event:/SFX/sfx_papers
+--- !u!1 &75796338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 75796340}
+  - component: {fileID: 75796339}
+  m_Layer: 0
+  m_Name: MainMenuMusik
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &75796339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75796338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1782017875
+      Data2: 1118268541
+      Data3: -1479093873
+      Data4: 659169421
+    Path: event:/Music/music_amb_Voices
+  Event: 
+  PlayEvent: 1
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &75796340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75796338}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.9875789, y: -1.4387445, z: -7.563623}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &134413598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1194,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 614590850}
-  m_LocalRotation: {x: 0.066505834, y: -0.009131836, z: 0.0006086565, w: 0.9977441}
+  m_LocalRotation: {x: 0.06650581, y: -0.009131871, z: 0.00060865865, w: 0.9977441}
   m_LocalPosition: {x: -2.50052, y: 3.426, z: -2.5225248}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2263,7 +2325,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680891098}
-  m_LocalRotation: {x: 0.066505834, y: -0.009131836, z: 0.0006086565, w: 0.9977441}
+  m_LocalRotation: {x: 0.06650581, y: -0.009131871, z: 0.00060865865, w: 0.9977441}
   m_LocalPosition: {x: -2.50052, y: 3.426, z: -2.5225248}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

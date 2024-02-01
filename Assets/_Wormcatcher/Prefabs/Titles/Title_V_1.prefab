@@ -65,7 +65,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Is \tthere such \t\ta\n\tthing \tas \tinsanity \n\t\t\t\tamong \tpenguins?"
+  m_text: "Is \tthere such \t\ta\n\tthing \tas \t<color=\"white\">insanity</color>
+    \n\t\t\t\tamong \tpenguins?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9192dd8f6e4df4b4eb0bc78021c9f483, type: 2}
   m_sharedMaterial: {fileID: -6917589276670986237, guid: 9192dd8f6e4df4b4eb0bc78021c9f483,

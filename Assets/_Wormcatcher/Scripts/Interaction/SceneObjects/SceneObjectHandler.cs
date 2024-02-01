@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace _Wormcatcher.Scripts.Interaction.SceneObjects
@@ -41,13 +42,14 @@ namespace _Wormcatcher.Scripts.Interaction.SceneObjects
         // there should only ever be one scene object per scene so we can use a sigelton
         private void Awake()
         {
-            if (_instance == null)
+            if (_instance != null)
             {
+                Destroy(_instance.gameObject);
                 _instance = this;
             }
             else
             {
-                 Destroy(this);
+                _instance = this;
             }
         }
 
@@ -100,6 +102,7 @@ namespace _Wormcatcher.Scripts.Interaction.SceneObjects
                 Debug.Log(msg);
             }
         }
+
         
     }
 }

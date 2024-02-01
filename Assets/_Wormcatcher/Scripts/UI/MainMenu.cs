@@ -23,6 +23,7 @@ namespace _Wormcatcher.Scripts.UI
         private void Awake()
         {
             playerInputAction = new PlayerInputAction();
+            playerInputAction.Enable();
             v1Switch = playerInputAction.WalkInput.V1;
             v1Switch.Enable();
             v2Switch = playerInputAction.WalkInput.V2;

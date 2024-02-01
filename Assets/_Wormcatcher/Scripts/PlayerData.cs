@@ -40,8 +40,8 @@ namespace _Wormcatcher.Scripts
         {
             { PlayerAction.ToggleLight, false },
             { PlayerAction.FinishV1Dialogue, false},
-            { PlayerAction.HandsWashed, true},
-            { PlayerAction.FinishedDialogueV3, false},
+            { PlayerAction.HandsWashed, false},
+            { PlayerAction.FinishedDialogueV3, true},
             { PlayerAction.DvdFetched, false},
         };
 
@@ -98,5 +98,7 @@ namespace _Wormcatcher.Scripts
                 Debug.Log($"{action.Key}: {action.Value}");
             }
         }
+        
+        
     }
 }

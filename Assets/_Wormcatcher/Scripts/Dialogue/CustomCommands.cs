@@ -1,4 +1,5 @@
 ﻿using System;
+using FMODUnity;
 using UnityEngine;
 using Yarn.Unity;
 
@@ -14,6 +15,7 @@ namespace _Wormcatcher.Scripts
         [SerializeField] private BubbleOptionView bubbleOptionView;
         [SerializeField] private Animator animator;
 
+        [SerializeField] private StudioEventEmitter musikEventEmitter;
         [SerializeField] private DVDInteraction[] dvds;
 
         private void Awake()
@@ -105,6 +107,11 @@ namespace _Wormcatcher.Scripts
         private void ChangeStage(int i)
         {
             animator.SetInteger("Stage", i);
+            if (i == 1)
+            {
+                musikEventEmitter.Stop();
+            }
+            
         }
 
         private void UnsetDvds()

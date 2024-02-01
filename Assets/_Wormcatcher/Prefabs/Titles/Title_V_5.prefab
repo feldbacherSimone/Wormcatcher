@@ -65,15 +65,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Do not disturb or hold up the \n                     penguin. \r\nStand
-    still and let him                       go \non                              
-    his way. \r\nHe's heading off into the interior of the \n               vast
-    \n                                             continent.\r\nHe's heading \n                     
-    towards \n                                      certain \n                                                       
-    death. \r\nIn our efforts to \n                              preserve \n                                         
-    endangered species\r\nwe seem to overlook something equally important \r\nHuman
-    life\n                     is part of an\n                         endless chain
-    of \ncatastrophies\r\n\r\nWe seem to be next. "
+  m_text: "Do not disturb or hold up the \n                      <color=\"white\">penguin.
+    </color>\nStand still and let him                       go \non                              
+    <color=\"white\">his way. \r</color>\nHe's heading off into the interior of the
+    \n               vast \n                                             continent.\r\n
+    <color=\"white\">He's heading </color>\n    "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9192dd8f6e4df4b4eb0bc78021c9f483, type: 2}
   m_sharedMaterial: {fileID: -6917589276670986237, guid: 9192dd8f6e4df4b4eb0bc78021c9f483,
@@ -192,6 +188,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 202}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}

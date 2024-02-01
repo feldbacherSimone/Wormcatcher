@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 194, y: 219}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4396292275778085041
@@ -65,12 +65,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "The Snail provides nourishement\r\nIts curves hold the promise of an even
-    greater \n                         illumination\r\nIn stark contrast to the\n                            
-    HOUSE\r\n\nThere the walls are black\r\n                                The Snail
-    is white\r\nThere the maze is threatening\r\n                              The
-    spiral is pleasing\r\nThere you descend\r\n                                  
-    The Snail ascends"
+  m_text: "<color=\"white\">The Snail provides nourishement\r</color>\nIts curves
+    hold the promise of an even greater \n                         <color=\"white\">illumination\r</color>\nIn
+    stark contrast to the\n                             <color=\"white\">HOUSE\r</color>\nThere
+    the walls are black\r\n                                <color=\"white\">The Snail
+    is white\r</color>\nThere the maze is threatening\r\n                             
+    <color=\"white\">The spiral is pleasing\r</color>\nThere you descend\r\n                                  
+    <color=\"white\">The Snail ascends\r</color>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9192dd8f6e4df4b4eb0bc78021c9f483, type: 2}
   m_sharedMaterial: {fileID: -6917589276670986237, guid: 9192dd8f6e4df4b4eb0bc78021c9f483,
@@ -98,8 +99,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.1
-  m_fontSizeBase: 22.1
+  m_fontSize: 15.8
+  m_fontSizeBase: 15.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -134,7 +135,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -73.25181, y: 0, z: -90.39665, w: 4.931207}
+  m_margin: {x: -73.25181, y: 0, z: 2.6798072, w: 4.931207}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
