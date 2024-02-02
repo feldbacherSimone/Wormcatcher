@@ -4680,7 +4680,7 @@ PrefabInstance:
     - target: {fileID: 5993413546778045883, guid: 7e3ae298fb87c5a4b94f437aa18c0b8a,
         type: 3}
       propertyPath: onNodeComplete.m_PersistentCalls.m_Calls.Array.size
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5993413546778045883, guid: 7e3ae298fb87c5a4b94f437aa18c0b8a,
         type: 3}
@@ -5483,6 +5483,7 @@ MonoBehaviour:
   - {fileID: 1104634903}
   - {fileID: 1500109652}
   - {fileID: 561857222}
+  - {fileID: 1641262265}
   backrooms:
   - {fileID: 1832347315}
   playerTransform: {fileID: 868423173}

@@ -353,7 +353,7 @@ PrefabInstance:
         type: 3}
       propertyPath: sharedProfile
       value: 
-      objectReference: {fileID: 11400000, guid: b0b443c4b84379f479dfb17516641f4e,
+      objectReference: {fileID: 11400000, guid: 7db28cb20ba8b4646abcf48628c6be8a,
         type: 2}
     - target: {fileID: 6275145923318561290, guid: 2cc92bdf1de2aaf4b94787f6d2e7b050,
         type: 3}
@@ -1433,6 +1433,25 @@ MonoBehaviour:
   - rig: {fileID: 1479170603}
     active: 1
   m_Effectors: []
+--- !u!114 &1479170605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1479170599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85fcf720cd4a4e588e65d2c665d0d5ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventReference:
+    Guid:
+      Data1: 998300238
+      Data2: 1223310645
+      Data3: 1966885293
+      Data4: -559388029
+    Path: event:/Ambience/amb_Worm
 --- !u!1 &1495254420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1961,12 +1980,14 @@ MonoBehaviour:
     Path: event:/Music/music_amb_Jazz_v1
   Event: 
   PlayEvent: 1
-  StopEvent: 0
+  StopEvent: 12
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
   AllowNonRigidbodyDoppler: 0
-  Params: []
+  Params:
+  - Name: ReverbMusic
+    Value: 0.14
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20

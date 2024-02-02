@@ -8,7 +8,6 @@ Date: How was traffic?
 -> PC: Kind of a nightmare, they're doing construction downtown 
 -> PC: Yeah, it was... fine I guess.
 
-
 Date: So... on your profile you said you liked...eating out?
 
 <<first_letter>> 
@@ -43,7 +42,7 @@ PC: sending e-mails that sort of thing.
 PC: Also - there is a worm in my food?
 
 Date: Ah yes, the office grind. I’ve come to love excel though. 
-<<first_letter>> 
+
 PC:  - It's wriggling? -
 
 Date: These pivot tables - just a fantastic feature. 

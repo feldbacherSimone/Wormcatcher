@@ -2362,6 +2362,7 @@ GameObject:
   - component: {fileID: 47803369816527262}
   - component: {fileID: 2156236986034594857}
   - component: {fileID: 3285238489405350522}
+  - component: {fileID: 8165159545161232608}
   m_Layer: 0
   m_Name: ReverbTrigger
   m_TagString: Untagged
@@ -2411,6 +2412,23 @@ MonoBehaviour:
   stepSoundManager2: {fileID: 0}
   parameterName: Reverb
   parameterValue: 0.73
+--- !u!114 &8165159545161232608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3510599057223461387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ba3679df4163f841ab517ce5e9209a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpTime: 3.81
+  doEasing: 1
+  EndFogStart: 5.1
+  EndFogEnd: 25.95
+  EndFogCol: {r: 0.3964934, g: 0.6615079, b: 0.8490566, a: 1}
 --- !u!1 &6224697201166079461
 GameObject:
   m_ObjectHideFlags: 0
