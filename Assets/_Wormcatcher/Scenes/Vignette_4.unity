@@ -5487,7 +5487,7 @@ MonoBehaviour:
   backrooms:
   - {fileID: 1832347315}
   playerTransform: {fileID: 868423173}
-  desiredPlayerScale: {x: 0.6, y: 0.6, z: 0.6}
+  desiredPlayerScale: {x: 0.4, y: 0.4, z: 0.4}
   fridgeAnimator: {fileID: 2129121333}
   shrinkSpeed: 1
 --- !u!65 &1133529359
