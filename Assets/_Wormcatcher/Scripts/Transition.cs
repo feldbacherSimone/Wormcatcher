@@ -24,7 +24,7 @@ namespace _Wormcatcher.Scripts
                 GameObject currentTitle = currentVignette != 0 ? titles[currentVignette-1] : menuTitle;
                 GameObject.Instantiate(currentTitle, canvas.transform);
                 
-                SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+                SceneManager.UnloadScene(SceneManager.GetActiveScene());
                 
                 AnimateText typewriter = FindObjectOfType<AnimateText>();
                 if (typewriter != null)
@@ -33,7 +33,11 @@ namespace _Wormcatcher.Scripts
                     typewriter.onTypewriterComplete.AddListener(() =>
                     {
                         StartCoroutine(TextEffects.FadeOut(canvasGroup, 1f,
-                            () => { SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene()); }));
+                            () =>
+                            {
+                                SceneManager.UnloadScene(SceneManager.GetActiveScene());
+                                SceneLoader.TransitionRunning = false; 
+                            }));
                     });
                 }
             }));

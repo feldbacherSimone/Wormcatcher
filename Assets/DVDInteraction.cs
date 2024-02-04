@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using _Wormcatcher.Scripts;
 using _Wormcatcher.Scripts.Interaction;
 using _Wormcatcher.Scripts.Interaction.SceneObjects;
 using UnityEngine;
 using Yarn.Unity;
+
 
 public class DVDInteraction : InteractionObject
 {
@@ -16,8 +18,17 @@ public class DVDInteraction : InteractionObject
     [SerializeField] private GameObject original;
     [SerializeField] private SceneObject sceneObject;
 
+    private DVDManager dvdManager; 
+
     [SerializeField] private TVSwitcher tvSwitcher; 
-    private bool dvdActive; 
+    private bool dvdActive;
+
+    private void Start()
+    {
+        dvdManager = transform.parent.GetComponent<DVDManager>();
+        if(dvdManager == null) Debug.LogWarning($"no DVD manager found in {name}", this);
+    }
+
     public override void Interact()
     {
         if(sceneObjectHandler.SceneObject != null || !PlayerData.GetActionValue(PlayerAction.FinishedDialogueV3)) return;
@@ -44,5 +55,6 @@ public class DVDInteraction : InteractionObject
         original.SetActive(true);
         sceneObjectHandler.DestroySceneObject();
         dvdActive = false;
+        dvdManager.CheckDvds(name);
     }
 }

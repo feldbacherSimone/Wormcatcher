@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using _Wormcatcher.Scripts.GameplayManagers;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public enum Clothing
 {
@@ -13,7 +14,7 @@ public enum Clothing
 public class HangClothes : MonoBehaviour
 {
     private readonly Dictionary<Clothing, bool> clothingHung = new Dictionary<Clothing, bool>();
-    [SerializeField] private VignetteManager vignette1Manager;
+    [SerializeField] private VignetteManager vignetteManager;
    
     private void InitializeDictionary()
     {
@@ -47,7 +48,7 @@ public class HangClothes : MonoBehaviour
         PrintDictionaryContent();
         if (AllClothesHung())
         {
-            vignette1Manager.ChangeToApartment();
+            vignetteManager.ChangeToApartment();
         }
     }
 

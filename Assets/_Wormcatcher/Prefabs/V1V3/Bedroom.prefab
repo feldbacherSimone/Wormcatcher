@@ -33,6 +33,70 @@ Transform:
   m_Father: {fileID: 6605037709700779490}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6605037709274257875
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4037765605038999518}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.073354006, y: 1.9932749, z: 1.1805667}
+  m_Center: {x: -0.42768276, y: 1.0724667, z: -0.2684845}
+--- !u!114 &6605037709274257874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4037765605038999518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8450553a82fa9e458f087409e0eccc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  active: 1
+  isOpen: 0
+  animator: {fileID: 6605037709274257869}
+  interactTrigger: Interact
+  lockedBool: Locked
+  InteractEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3297126732964871739}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3297126732964871739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4037765605038999518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: -136588474
+      Data2: 1287950549
+      Data3: -1276037961
+      Data4: -1998602202
+    Path: event:/SFX/sfx_Door_Sliding
 --- !u!1 &5251977666821981597
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +202,9 @@ MonoBehaviour:
   OffObjects:
   - {fileID: 6298467820780178937}
   - {fileID: 6605037710032568976}
+  interactionEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &5251977666821981596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -287,6 +354,25 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 0.95
   OverrideMaxDistance: 4.2
+--- !u!95 &6605037709274257869
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6298467821090710662}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f175f61798c85a4aa4a31b612caf45c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6605037708800752809
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,59 +466,6 @@ MonoBehaviour:
   OverrideAttenuation: 1
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
---- !u!95 &6605037709274257869
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6298467821090710662}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9f175f61798c85a4aa4a31b612caf45c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &6605037709274257875
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4037765605038999518}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.073354006, y: 1.9932749, z: 1.1805667}
-  m_Center: {x: -0.42768276, y: 1.0724667, z: -0.2684845}
---- !u!114 &6605037709274257874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4037765605038999518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8450553a82fa9e458f087409e0eccc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debug: 0
-  active: 1
-  isOpen: 0
-  animator: {fileID: 6605037709274257869}
-  interactTrigger: Interact
-  lockedBool: Locked
-  InteractEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &6605037709700779491
 GameObject:
   m_ObjectHideFlags: 0

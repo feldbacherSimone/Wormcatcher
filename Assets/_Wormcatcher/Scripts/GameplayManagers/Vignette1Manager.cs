@@ -14,37 +14,48 @@ namespace _Wormcatcher.Scripts.GameplayManagers
         Mudroom,
         Apartment
     }
+
     public class Vignette1Manager : VignetteManager
     {
-        
-     
-
         [SerializeField] private Transform[] spawnPositions;
 
         [SerializeField] private GameObject player;
         [SerializeField] private PlayerMovement playerMovement;
         [SerializeField] private MouseLook mouseLook;
         [SerializeField] private StepSoundManager2 stepSoundManager2;
-        [SerializeField] private SceneObjectHandler sceneObjectHandler; 
-        [SerializeField] private GameObject staticCloset; 
+        [SerializeField] private SceneObjectHandler sceneObjectHandler;
+        [SerializeField] private GameObject staticCloset;
         [SerializeField] private GameObject interactiveClost;
 
-        [FormerlySerializedAs("waterplane")] [SerializeField] private GameObject waterPlane;
-        [SerializeField] private Vector3 waterTopPos; 
-        
+        [FormerlySerializedAs("waterplane")] [SerializeField]
+        private GameObject waterPlane;
+
+        private bool iconShowed;
+
+        [SerializeField] private Vector3 waterTopPos;
+
+        [SerializeField] private CanvasGroup mouseIcon;
+        [SerializeField] private CanvasGroup eKey;
+
         public void SetState()
         {
-            if(!playTest) return;
+            if (!playTest) return;
 
-            overrideSpawnPoints = false; 
+            overrideSpawnPoints = false;
             switch (testPositions)
             {
-                case TestPosition.Hallway: PlayerData.V1Progress = 0; break;
-                case TestPosition.Mudroom: PlayerData.V1Progress = 1; break;
-                case TestPosition.Apartment: PlayerData.V1Progress = 2; break;
+                case TestPosition.Hallway:
+                    PlayerData.V1Progress = 0;
+                    break;
+                case TestPosition.Mudroom:
+                    PlayerData.V1Progress = 1;
+                    break;
+                case TestPosition.Apartment:
+                    PlayerData.V1Progress = 2;
+                    break;
             }
         }
-        
+
         private void Awake()
         {
             if (overrideSpawnPoints)
@@ -52,33 +63,33 @@ namespace _Wormcatcher.Scripts.GameplayManagers
                 playerMovement.Active = true;
                 return;
             }
+
             SetState();
             player.transform.position = spawnPositions[PlayerData.V1Progress].position;
             player.transform.rotation = spawnPositions[PlayerData.V1Progress].rotation;
             CheckSpawn();
-            playerMovement.Active = true; 
+            playerMovement.Active = true;
         }
 
         private void CheckSpawn()
         {
             if (overrideSpawnPoints) return;
-            
+
             switch (PlayerData.V1Progress)
             {
                 case 0:
+                    ShowLeftClickIcon();
                     break;
                 case 1:
                     playerMovement.DisableWalk();
                     mouseLook.SetLookAngle(100, spawnPositions[1].rotation.eulerAngles.y);
                     stepSoundManager2.setReverb(0.2f);
-                    SceneObjectHandler._instance.Active = false; 
+                    SceneObjectHandler._instance.Active = false;
                     break;
                 case 2:
-                    SceneObjectHandler._instance.Active = false; 
+                    SceneObjectHandler._instance.Active = false;
                     staticCloset.SetActive(true);
                     interactiveClost.SetActive(false);
-                    break;
-                default:
                     break;
             }
         }
@@ -110,17 +121,43 @@ namespace _Wormcatcher.Scripts.GameplayManagers
                 StartCoroutine(RiseWater(0.02f));
             }
         }
-        
 
         IEnumerator RiseWater(float speed)
         {
             while (Vector3.Distance(waterPlane.transform.position, waterTopPos) > 0.001)
             {
-                
-                waterPlane.transform.position = Vector3.MoveTowards(waterPlane.transform.position, waterTopPos, speed*Time.deltaTime);
+                waterPlane.transform.position =
+                    Vector3.MoveTowards(waterPlane.transform.position, waterTopPos, speed * Time.deltaTime);
                 yield return null;
             }
+
             SceneLoader.SwitchScene(2);
+        }
+
+        public void ShowLeftClickIcon()
+        {
+            StartCoroutine(ShowLeftClickIconInternal());
+        }
+
+        public void ShowEKeyIcon()
+        {
+            if (iconShowed) return;
+            StartCoroutine(TextEffects.FadeIn(eKey, 2.0f, () => { StartCoroutine(TextEffects.FadeOut(eKey, 2)); }));
+            iconShowed = true;
+        }
+
+        IEnumerator ShowLeftClickIconInternal()
+        {
+            yield return new WaitForSeconds(5);
+            sceneObjectHandler.SpawnObject();
+            StartCoroutine(TextEffects.FadeIn(mouseIcon, 2.0f,
+                () =>
+                {
+                    StartCoroutine(TextEffects.FadeOut(mouseIcon, 2, () =>
+                    {
+                        sceneObjectHandler.DespawnObject();
+                    }));
+                }));
         }
     }
 }

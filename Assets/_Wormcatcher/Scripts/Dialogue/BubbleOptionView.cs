@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using _Wormcatcher.Scripts.Dialogue;
+using _Wormcatcher.Scripts.Interaction;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -12,7 +13,7 @@ namespace _Wormcatcher.Scripts
     /// Handles a dialogue option 
     /// </summary>
     public class BubbleOptionView : UnityEngine.UI.Selectable, ISubmitHandler, IPointerClickHandler,
-        IPointerEnterHandler
+        IPointerEnterHandler, IPointerExitHandler
     {
         [SerializeField] TextMeshProUGUI text;
         //[SerializeField] bool showCharacterName = false;
@@ -117,11 +118,13 @@ namespace _Wormcatcher.Scripts
             if (!revealOnHover && !expanded && !isRevealing)
             {
                 lineObject.PlayClickSound();
+                SpriteSelectionResponse.instance.OnDeselect(gameObject);
                 StartCoroutine(RevealOption());
             }
             else if(expanded)
             {
                 InvokeOptionSelected();
+                SpriteSelectionResponse.instance.OnDeselect(gameObject);
             }
         }
 
@@ -130,16 +133,22 @@ namespace _Wormcatcher.Scripts
         public override void OnPointerEnter(PointerEventData eventData)
         {
             
-            
+            SpriteSelectionResponse.instance.OnSelect(gameObject);
             if (expanded || !revealOnHover)
             {
                 lineObject.PlayHoverSound();
                 base.Select();
+              
             }
             else if (!isRevealing && RevealOnHover)
             {
                 StartCoroutine(RevealOption());
             }
+        }
+
+        public override void OnPointerExit(PointerEventData eventData)
+        {
+            SpriteSelectionResponse.instance.OnDeselect(gameObject);
         }
 
         private IEnumerator RevealOption()

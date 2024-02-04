@@ -2,6 +2,7 @@ using Yarn.Unity;
 using System;
 using System.Collections;
 using _Wormcatcher.Scripts.Dialogue;
+using _Wormcatcher.Scripts.Interaction;
 using UnityEngine;
 using TMPro;
 using UnityEngine.EventSystems;
@@ -427,6 +428,7 @@ namespace _Wormcatcher.Scripts
                 currentLineObject.PlayClickSound();
                 StartCoroutine(RunLineInternal(currentDialogueLine, dialogueLineFinished));
                 expanded = true;
+                SpriteSelectionResponse.instance.OnDeselect(gameObject);
             }
         }
 
@@ -437,6 +439,7 @@ namespace _Wormcatcher.Scripts
             {
                 currentLineObject.PlayHoverSound();
                 lineText.color = backgroundColor; 
+                SpriteSelectionResponse.instance.OnSelect(gameObject);
             }
         }
 
@@ -444,7 +447,10 @@ namespace _Wormcatcher.Scripts
         {
             isSelected = false;
             if (hideLineOnStart && !expanded)
+            {
                 lineText.color = backgroundHighlightColor;
+                SpriteSelectionResponse.instance.OnDeselect(gameObject);
+            }
         }
     }
 }

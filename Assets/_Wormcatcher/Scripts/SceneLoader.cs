@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 namespace _Wormcatcher.Scripts
 {
     public static class SceneLoader
@@ -10,6 +11,14 @@ namespace _Wormcatcher.Scripts
         [SerializeField] private static String nextScene;
         [SerializeField] private static float fadeTime;
         private static String next;
+
+        private static bool transitionRunning;
+
+        public static bool TransitionRunning
+        {
+            get => transitionRunning;
+            set => transitionRunning = value;
+        }
 
         public static void SwitchToMenu()
         {
@@ -28,6 +37,12 @@ namespace _Wormcatcher.Scripts
      
         private static void SwitchSceneInternal( String transition)
         {
+            if (transitionRunning)
+            {
+                Debug.LogWarning("There is already a transition running");
+                return;
+            }
+            transitionRunning = true; 
             SceneManager.LoadScene(transition, LoadSceneMode.Additive);
             //SceneManager.LoadScene(next, LoadSceneMode.Additive);
         }

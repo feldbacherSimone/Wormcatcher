@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
+using _Wormcatcher.Scripts.Audio;
 using _Wormcatcher.Scripts.Inputs;
 using _Wormcatcher.Scripts.Interaction.SceneObjects;
+using FMODUnity;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -16,15 +18,15 @@ namespace _Wormcatcher.Scripts.GameplayManagers
         [SerializeField] private PlayerMovement playerMovement;
         [SerializeField] private MouseLook mouseLook;
         [SerializeField] private StepSoundManager2 stepSoundManager2;
-        
+
         [SerializeField] private SceneObjectHandler sceneObjectHandler;
         [SerializeField] private GameObject staticCloset;
         [SerializeField] private GameObject interactiveClost;
 
         [SerializeField] private DVDInteraction[] dvdInteractions;
 
-        
-      
+        [SerializeField] private EventReference tvSound;
+
 
         public void SetState()
         {
@@ -94,12 +96,14 @@ namespace _Wormcatcher.Scripts.GameplayManagers
                     {
                         dvdInteraction.Active = true;
                     }
+
                     break;
             }
         }
 
         public void EndVignette3()
         {
+            AudioManager.Instance.PlayOneShot(tvSound, player.transform.position);
             SceneLoader.SwitchScene(4);
         }
     }

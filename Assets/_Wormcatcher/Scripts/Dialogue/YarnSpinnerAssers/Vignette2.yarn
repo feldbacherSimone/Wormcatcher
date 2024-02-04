@@ -91,6 +91,7 @@ Date: Characters' arcs do not resolve neatly; narratives remain suspended, poise
 
 
 <<wait 5>>
+<<change_speed 15>>
 Date: So - do you prefer cats or dogs?
 
 <<change_line "Who is Celviky?">>
