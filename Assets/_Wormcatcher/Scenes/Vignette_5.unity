@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 33137844}
   - component: {fileID: 33137843}
   - component: {fileID: 33137846}
+  - component: {fileID: 33137847}
   m_Layer: 0
   m_Name: FishPlacholder
   m_TagString: Untagged
@@ -234,6 +235,39 @@ MonoBehaviour:
   dialogueRunner: {fileID: 2725773622861554529}
   useCondition: 0
   condition: 0
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 33137847}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &33137847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33137841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 1588866032
+      Data2: 1166003856
+      Data3: 1131199130
+      Data4: -28763794
+    Path: event:/SFX/sfx_papers
 --- !u!1 &65035662
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,6 +281,7 @@ GameObject:
   - component: {fileID: 65035666}
   - component: {fileID: 65035665}
   - component: {fileID: 65035664}
+  - component: {fileID: 65035668}
   m_Layer: 0
   m_Name: FishPlacholder
   m_TagString: Untagged
@@ -286,6 +321,20 @@ MonoBehaviour:
   dialogueRunner: {fileID: 2141571412}
   useCondition: 0
   condition: 0
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 33137847}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!136 &65035665
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -347,6 +396,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65035662}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &65035668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65035662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 1588866032
+      Data2: 1166003856
+      Data3: 1131199130
+      Data4: -28763794
+    Path: event:/SFX/sfx_papers
 --- !u!1001 &114633172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -814,6 +882,7 @@ GameObject:
   - component: {fileID: 385342425}
   - component: {fileID: 385342424}
   - component: {fileID: 385342423}
+  - component: {fileID: 385342427}
   m_Layer: 0
   m_Name: FishPlacholder
   m_TagString: Untagged
@@ -853,6 +922,20 @@ MonoBehaviour:
   dialogueRunner: {fileID: 416080773}
   useCondition: 0
   condition: 0
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 33137847}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!136 &385342424
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -914,6 +997,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385342421}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &385342427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385342421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 1588866032
+      Data2: 1166003856
+      Data3: 1131199130
+      Data4: -28763794
+    Path: event:/SFX/sfx_papers
 --- !u!1001 &408076564
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3911,6 +4013,7 @@ GameObject:
   - component: {fileID: 1532494189}
   - component: {fileID: 1532494188}
   - component: {fileID: 1532494187}
+  - component: {fileID: 1532494191}
   m_Layer: 0
   m_Name: FishPlacholder
   m_TagString: Untagged
@@ -3950,6 +4053,20 @@ MonoBehaviour:
   dialogueRunner: {fileID: 2052068221}
   useCondition: 0
   condition: 0
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 33137847}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!136 &1532494188
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4011,6 +4128,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532494185}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1532494191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532494185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 1588866032
+      Data2: 1166003856
+      Data3: 1131199130
+      Data4: -28763794
+    Path: event:/SFX/sfx_papers
 --- !u!1 &1640647616
 GameObject:
   m_ObjectHideFlags: 0
@@ -4839,6 +4975,7 @@ GameObject:
   - component: {fileID: 1932861256}
   - component: {fileID: 1932861255}
   - component: {fileID: 1932861254}
+  - component: {fileID: 1932861258}
   m_Layer: 0
   m_Name: FishPlacholder
   m_TagString: Untagged
@@ -4878,6 +5015,20 @@ MonoBehaviour:
   dialogueRunner: {fileID: 408076567}
   useCondition: 0
   condition: 0
+  interactEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 33137847}
+        m_MethodName: RequestPlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!136 &1932861255
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4939,6 +5090,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932861252}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1932861258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932861252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37561905c979804498fa5b763f64e79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound:
+    Guid:
+      Data1: 1588866032
+      Data2: 1166003856
+      Data3: 1131199130
+      Data4: -28763794
+    Path: event:/SFX/sfx_papers
 --- !u!1001 &2035791310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6368,10 +6538,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 70c1ae182662b5e47ac34f6a184bf50e, type: 2}
+  - {fileID: 2100000, guid: 3e2bc2c026e915b4e8b20674f84ad5ae, type: 2}
   - {fileID: 2100000, guid: ca8f4065183888d49accc51f95387cb5, type: 2}
   - {fileID: 2100000, guid: 4b817cbc826d2ad4e8bbbf44e1e37fb1, type: 2}
-  - {fileID: 2100000, guid: 84ac992f1c2562243b9172685bcf8bb4, type: 2}
+  - {fileID: 2100000, guid: 14612fbc9681cf541b8f13f4beda4c27, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6824,10 +6994,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 70c1ae182662b5e47ac34f6a184bf50e, type: 2}
+  - {fileID: 2100000, guid: 3e2bc2c026e915b4e8b20674f84ad5ae, type: 2}
   - {fileID: 2100000, guid: 4b817cbc826d2ad4e8bbbf44e1e37fb1, type: 2}
   - {fileID: 2100000, guid: ca8f4065183888d49accc51f95387cb5, type: 2}
-  - {fileID: 2100000, guid: 84ac992f1c2562243b9172685bcf8bb4, type: 2}
+  - {fileID: 2100000, guid: 14612fbc9681cf541b8f13f4beda4c27, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10432,10 +10602,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 70c1ae182662b5e47ac34f6a184bf50e, type: 2}
+  - {fileID: 2100000, guid: 3e2bc2c026e915b4e8b20674f84ad5ae, type: 2}
   - {fileID: 2100000, guid: e8771bdd03311084ba1da50606ac0893, type: 2}
   - {fileID: 2100000, guid: 4b817cbc826d2ad4e8bbbf44e1e37fb1, type: 2}
-  - {fileID: 2100000, guid: 953ef314eaf8ef9488c916d42a434e4c, type: 2}
+  - {fileID: 2100000, guid: a6584eeb7283fab49b2e05c2bd78aea1, type: 2}
   - {fileID: 2100000, guid: 84ac992f1c2562243b9172685bcf8bb4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -13682,6 +13852,31 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 2171129302355280991, guid: 962106c8cab59394e802ce3b4576455b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e2bc2c026e915b4e8b20674f84ad5ae, type: 2}
+    - target: {fileID: 2171129302355280991, guid: 962106c8cab59394e802ce3b4576455b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: 14612fbc9681cf541b8f13f4beda4c27, type: 2}
+    - target: {fileID: 2171129302355280991, guid: 962106c8cab59394e802ce3b4576455b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: ca8f4065183888d49accc51f95387cb5, type: 2}
+    - target: {fileID: 2171129302355280991, guid: 962106c8cab59394e802ce3b4576455b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b817cbc826d2ad4e8bbbf44e1e37fb1, type: 2}
+    - target: {fileID: 2171129302355280991, guid: 962106c8cab59394e802ce3b4576455b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 953ef314eaf8ef9488c916d42a434e4c, type: 2}
     - target: {fileID: 5815930058960889454, guid: 962106c8cab59394e802ce3b4576455b,
         type: 3}
       propertyPath: m_StaticEditorFlags

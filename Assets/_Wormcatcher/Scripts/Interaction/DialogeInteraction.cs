@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using Yarn.Unity;
 
 namespace _Wormcatcher.Scripts.Interaction
@@ -11,7 +12,7 @@ namespace _Wormcatcher.Scripts.Interaction
 
         [SerializeField] private bool useCondition;
         [SerializeField] private PlayerAction condition;
-        
+        [SerializeField] private UnityEvent interactEvent; 
         public override void Interact()
         {
             if(!Active ||(useCondition && !PlayerData.GetActionValue(condition)))
@@ -19,6 +20,7 @@ namespace _Wormcatcher.Scripts.Interaction
             
             base.Interact();
             dialogueRunner.StartDialogue(startNode);
+            interactEvent.Invoke();
             Active = false; 
         }
     }

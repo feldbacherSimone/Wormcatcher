@@ -15,11 +15,11 @@ MonoBehaviour:
   model: {fileID: 5322458958225402328, guid: 8aaa76f297d51e54a8ca6ee139c0e18c, type: 3}
   holdingSound:
     Guid:
-      Data1: 1290800520
-      Data2: 1222153421
-      Data3: -1843796600
-      Data4: 1824500507
-    Path: event:/SFX/sfx_LightSwitch
+      Data1: 412045916
+      Data2: 1117716561
+      Data3: -1014331250
+      Data4: -2034363372
+    Path: event:/SFX/sfx_Flashlight_Oneshot
   usingSound:
     Guid:
       Data1: 1290800520
