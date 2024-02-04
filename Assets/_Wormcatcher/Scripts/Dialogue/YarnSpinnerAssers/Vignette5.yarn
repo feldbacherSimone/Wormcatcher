@@ -3,19 +3,18 @@ tags:
 ---
 
 <<change_speed 30>>
+<<first_letter>>
 PC: What are you watching?
 
-
-<<first_letter>>
 Partner: Cats
 
 PC: The musical?
 Partner: Memes
 
-PC: Weren't you supposed to...
+PC: Weren't you supposed to-
 
-PC: [interruption] Yeah yeah** 
-
+Partner: Yeah yeah...
+<<wait 1>>
 ===
 
 
@@ -38,7 +37,7 @@ Partner: Big storms are soothing. You feel so small next to them.
 Partner: Shh... this one is EF 3.
 
 PC: But...
-
+<<wait 1>>
 ===
 
 
@@ -53,7 +52,7 @@ Partner: I think I have worms.
 
 -> PC: Why do you think that?
     <<update_stat Nice 1>>
--> PC: Stop being ridiculos.
+-> PC: Stop being ridiculous.
     <<update_stat Mean 2>>
 
 Partner: I can feel them crawling inside of me.
@@ -61,7 +60,7 @@ Partner: I can feel them crawling inside of me.
 PC: You're anxious, that's it.
 Partner: I know it's serious.
 Partner: Especially for someone with my condition.
-
+<<wait 1>>
 ===
 
 
@@ -84,7 +83,7 @@ Partner: What they're doing to people like me. You. What they're saying about us
     <<update_stat Mean 1>>
 
 Partner: You're not helping
-
+<<wait 1>>
 ===
 
 
@@ -113,5 +112,5 @@ PC:  Me?
 Partner: Zyprexa? That's you.
 
 PC: I don't...
-
+<<wait 1>>
 ===

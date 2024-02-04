@@ -38,7 +38,7 @@ public class Vignette5Manager : VignetteManager
     
     IEnumerator ShowLeftClickIconInternal()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(6);
    
         StartCoroutine(TextEffects.FadeIn(mouseIcon, 2.0f,
             () =>
@@ -48,5 +48,10 @@ public class Vignette5Manager : VignetteManager
                     
                 }));
             }));
+    }
+
+    public void EndVignette5()
+    {
+        SceneLoader.SwitchScene(6);
     }
 }
