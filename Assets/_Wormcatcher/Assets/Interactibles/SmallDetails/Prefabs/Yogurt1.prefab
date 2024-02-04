@@ -114,11 +114,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound:
     Guid:
-      Data1: 1505818355
-      Data2: 1252519551
-      Data3: 1466956735
-      Data4: 306129897
-    Path: event:/SFX/sfx_Meds
+      Data1: 883823623
+      Data2: 1118139016
+      Data3: 1082525090
+      Data4: 985304705
+    Path: event:/SFX/sfx_plasticbottle
 --- !u!1 &7203849383569094718
 GameObject:
   m_ObjectHideFlags: 0

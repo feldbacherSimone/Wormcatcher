@@ -168,6 +168,9 @@
 		<property name="decayTime">
 			<value>250</value>
 		</property>
+		<property name="wetLevel">
+			<value>-11.5</value>
+		</property>
 	</object>
 	<object class="MixerBusFader" id="{5cda8260-5cc1-4684-a1bc-3d9f2ff399c9}" />
 	<object class="AutomationPoint" id="{9061ac81-234d-4ccf-aa7e-6b0311168703}">

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{4b62820a-dc2b-4768-ba13-1bb02eb26c04}">
+		<property name="assetPath">
+			<value>583279__profispiesser__bg-sasc-cars-pass-by-medium-speed-busy-street-berlin-light-chatter-birds.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>169.20533333333333</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{2f930e37-c42b-41f8-b734-0157cf260748}</destination>
+		</relationship>
+	</object>
+</objects>
