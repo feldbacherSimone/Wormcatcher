@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{c79fd3bb-47f5-4411-b3e9-d60cfb8ff8bf}">
 		<property name="name">
-			<value>sfx_Flashlight</value>
+			<value>sfx_Flashlight_loop</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -32,6 +32,9 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{1c681e01-d80f-4a10-bd84-cc0cc57232e9}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{c0b76309-8f1a-4e8f-9367-96d7295d9473}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{44e0ef01-7d9e-4ccd-9a1a-50774754b293}">
