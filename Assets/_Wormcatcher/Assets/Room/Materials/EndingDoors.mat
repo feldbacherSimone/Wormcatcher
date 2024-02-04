@@ -68,7 +68,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
-    - _SnapStrength: 2
+    - _SnapStrength: 4
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Transparency: 1
