@@ -10,6 +10,7 @@ namespace Yarn.Unity.Generated
     {
         [SerializeField] private EventReference eventReference;
         private EventInstance instance;
+        private bool wormStarted; 
 
         private void Start()
         {
@@ -25,15 +26,17 @@ namespace Yarn.Unity.Generated
 
         public void StartSound()
         {
+            if(wormStarted) return;
             Debug.Log($"Sound Started");
             instance.setParameterByName("wurmSteps", 1);
             instance.start();
+            wormStarted = true;
         }
 
         public void Stop()
         {
             Debug.Log("SoundStopped");
-            instance.stop(STOP_MODE.ALLOWFADEOUT);
+            instance.stop(STOP_MODE.IMMEDIATE);
         }
     }
 }
