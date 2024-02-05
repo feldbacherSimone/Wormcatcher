@@ -3651,7 +3651,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f91c452dc707c447abe3014352f9cb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  overrideSpawnPoints: 1
+  overrideSpawnPoints: 0
   playTest: 0
   testPositions: 0
   player: {fileID: 1349202708}

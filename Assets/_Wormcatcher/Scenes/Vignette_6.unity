@@ -3990,7 +3990,7 @@ MonoBehaviour:
   lerpTime: 8
   doEasing: 1
   EndFogStart: 2
-  EndFogEnd: 125
+  EndFogEnd: 55.37
   EndFogCol: {r: 0.29369882, g: 0.36596513, b: 0.3773585, a: 1}
 --- !u!1 &880263330
 GameObject:
@@ -4550,6 +4550,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939674058046779345, guid: 846b49896810a94488ad1ec6451fba85,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8062581582358081633, guid: 846b49896810a94488ad1ec6451fba85,
         type: 3}
