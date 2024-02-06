@@ -3,10 +3,12 @@ using System.Collections;
 using _Wormcatcher.Scripts.Audio;
 using _Wormcatcher.Scripts.Inputs;
 using _Wormcatcher.Scripts.Interaction.SceneObjects;
+using FMOD.Studio;
 using FMODUnity;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Serialization;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 namespace _Wormcatcher.Scripts.GameplayManagers
 {
@@ -26,7 +28,7 @@ namespace _Wormcatcher.Scripts.GameplayManagers
         [SerializeField] private DVDInteraction[] dvdInteractions;
 
         [SerializeField] private EventReference tvSound;
-
+        private EventInstance instance; 
 
         public void SetState()
         {
@@ -103,8 +105,15 @@ namespace _Wormcatcher.Scripts.GameplayManagers
 
         public void EndVignette3()
         {
-            AudioManager.Instance.PlayOneShot(tvSound, player.transform.position);
+            instance = RuntimeManager.CreateInstance(tvSound);
+            instance.set3DAttributes(transform.To3DAttributes());
+            instance.start();
             SceneLoader.SwitchScene(4);
+        }
+
+        public void OnDisable()
+        {
+            instance.stop(STOP_MODE.IMMEDIATE);
         }
     }
 }
